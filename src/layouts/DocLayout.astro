@@ -37,7 +37,7 @@ const { title, currentEpisode } = Astro.props;
           {sorted.map((ep) => (
             <li>
               <a
-                href={`/episodes/${ep.data.episode}`}
+                href={`/blog/${ep.data.episode}`}
                 class:list={{
                   "sidebar-link": true,
                   "sidebar-link--active": currentEpisode === ep.data.episode,

@@ -41,7 +41,7 @@ const bugTypeNames = Object.keys(bookletData.bug_type_counts).slice(0, 40);
 
     <div class="search-results" id="searchResults">
       {index.map((ep) => (
-        <a href={`/episodes/${ep.episode}`} class="search-result-item" data-episode={ep.episode} data-keywords={ep.keywords.join(" ")} data-title={ep.title}>
+        <a href={`/blog/${ep.episode}`} class="search-result-item" data-episode={ep.episode} data-keywords={ep.keywords.join(" ")} data-title={ep.title}>
           <div class="result-top">
             <span class="result-num">#{String(ep.episode).padStart(3, "0")}</span>
           </div>

@@ -55,7 +55,7 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
             </summary>
             <div class="bug-type-detail">
               {bugs.map((b) => (
-                <a href={`/episodes/${b.episode}`} class="bug-ref">
+                <a href={`/blog/${b.episode}`} class="bug-ref">
                   <span class="bug-ref-ep">#{String(b.episode).padStart(3, "0")}</span>
                   <span class="bug-ref-title">{b.title}</span>
                 </a>
@@ -76,7 +76,7 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
             <div class="guest-name">{g.name}</div>
             <div class="guest-episodes">
               Episodes: {g.episodes.slice(0, 5).map((ep) => (
-                <a href={`/episodes/${ep}`} class="guest-ep">#{String(ep).padStart(3, "0")}</a>
+                <a href={`/blog/${ep}`} class="guest-ep">#{String(ep).padStart(3, "0")}</a>
               )).join(", ")}
               {g.episodes.length > 5 && <span class="guest-more">+{g.episodes.length - 5} more</span>}
             </div>
@@ -104,7 +104,7 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
               <ul class="tech-items">
                 {items.map((t) => (
                   <li class="tech-item">
-                    <a href={`/episodes/${t.episode}`} class="tech-name">{t.name}</a>
+                    <a href={`/blog/${t.episode}`} class="tech-name">{t.name}</a>
                     {t.description && <span class="tech-desc"> — {t.description}</span>}
                     <span class="tech-ep">Episode {t.episode}</span>
                   </li>
@@ -125,7 +125,7 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
         {data.suggestions.slice(0, 40).map((a) => (
           <div class="advice-card">
             <p class="advice-text">{a.text}</p>
-            <a href={`/episodes/${a.episode}`} class="advice-ep">Episode {a.episode}</a>
+            <a href={`/blog/${a.episode}`} class="advice-ep">Episode {a.episode}</a>
           </div>
         ))}
       </div>
