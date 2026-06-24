@@ -1,0 +1,291 @@
+---
+import DocLayout from "@layouts/DocLayout.astro";
+import searchIndex from "../data/search-index.json";
+import bookletData from "../data/booklet-data.json";
+// Sort by episode number
+const index = [...searchIndex].sort((a, b) => a.episode - b.episode);
+const bugTypeNames = Object.keys(bookletData.bug_type_counts).slice(0, 40);
+---
+
+<DocLayout title="Search — CTBBP">
+  <div class="search-page">
+    <div class="search-header">
+      <div class="search-label">SEARCH</div>
+      <h1>Search Episodes</h1>
+      <p class="search-sub">Search across all 179 episodes by title, keyword, bug type, or technique.</p>
+    </div>
+
+    <div class="search-controls">
+      <div class="search-input-wrap">
+        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M14 14l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Search episodes, bugs, techniques…"
+          autofocus
+        />
+        <span class="search-hint" id="searchHint">Type to search</span>
+      </div>
+
+      <div class="search-filters" id="searchFilters">
+        <span class="search-filter-label">Quick filters:</span>
+        {bugTypeNames.slice(0, 12).map((type) => (
+          <button class="search-filter-tag" data-filter={type}>{type}</button>
+        ))}
+      </div>
+    </div>
+
+    <div class="search-results" id="searchResults">
+      {index.map((ep) => (
+        <a href={`/episodes/${ep.episode}`} class="search-result-item" data-episode={ep.episode} data-keywords={ep.keywords.join(" ")} data-title={ep.title}>
+          <div class="result-top">
+            <span class="result-num">#{String(ep.episode).padStart(3, "0")}</span>
+          </div>
+          <div class="result-title">{ep.title}</div>
+          <div class="result-snippet">{ep.snippet.slice(0, 200)}</div>
+          <div class="result-keywords">
+            {ep.keywords.slice(0, 5).map((kw) => (
+              <span class="result-kw">{kw}</span>
+            ))}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</DocLayout>
+
+<script>
+  const input = document.getElementById("searchInput");
+  const hint = document.getElementById("searchHint");
+  const results = document.getElementById("searchResults");
+  const items = results.querySelectorAll(".search-result-item");
+  const filterTags = document.querySelectorAll(".search-filter-tag");
+
+  function filterResults() {
+    const q = (input?.value || "").toLowerCase().trim();
+    let count = 0;
+    items.forEach((item) => {
+      const title = item.dataset.title?.toLowerCase() || "";
+      const keywords = item.dataset.keywords?.toLowerCase() || "";
+      const ep = item.dataset.episode || "";
+      const matches = !q || title.includes(q) || keywords.includes(q) || ep === q;
+      item.style.display = matches ? "" : "none";
+      if (matches) count++;
+    });
+    if (hint) {
+      hint.textContent = q ? `${count} result${count !== 1 ? "s" : ""}` : `${items.length} episodes`;
+    }
+  }
+
+  if (input) {
+    input.addEventListener("input", filterResults);
+    // Also filter on load
+    filterResults();
+  }
+
+  // Quick filter tags
+  filterTags.forEach((tag) => {
+    tag.addEventListener("click", () => {
+      const filter = tag.dataset.filter;
+      if (input) {
+        input.value = filter;
+        filterResults();
+        input.focus();
+      }
+    });
+  });
+</script>
+
+<style>
+  .search-page {
+    padding-bottom: 3rem;
+  }
+
+  .search-header {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .search-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+
+  .search-header h1 {
+    font-family: var(--font-body);
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+
+  .search-sub {
+    margin-top: 0.35rem;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+  }
+
+  /* Input */
+  .search-controls {
+    margin-bottom: 1.5rem;
+  }
+
+  .search-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+
+  .search-input {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    padding: 0.75rem 1rem 0.75rem 3rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--border);
+  }
+
+  .search-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .search-hint {
+    position: absolute;
+    right: 1rem;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    pointer-events: none;
+  }
+
+  /* Filter tags */
+  .search-filters {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+  }
+
+  .search-filter-label {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+    margin-right: 0.25rem;
+  }
+
+  .search-filter-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: var(--font-body);
+    transition: border-color 0.12s, color 0.12s;
+  }
+
+  .search-filter-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-bg);
+  }
+
+  /* Results */
+  .search-results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .search-result-item {
+    display: block;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s;
+  }
+
+  .search-result-item:hover {
+    border-color: var(--accent);
+  }
+
+  .result-top {
+    margin-bottom: 0.2rem;
+  }
+
+  .result-num {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .result-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.3;
+  }
+
+  .result-snippet {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+    margin-top: 0.3rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .result-keywords {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    margin-top: 0.4rem;
+  }
+
+  .result-kw {
+    font-size: 0.65rem;
+    padding: 0.1rem 0.45rem;
+    background: var(--bg-code);
+    border: 1px solid var(--border-light);
+    border-radius: 999px;
+    color: var(--text-tertiary);
+  }
+
+  @media (max-width: 640px) {
+    .search-header h1 { font-size: 1.35rem; }
+    .search-input { font-size: 0.9rem; }
+  }
+</style>

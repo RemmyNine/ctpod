@@ -1,0 +1,449 @@
+---
+import DocLayout from "@layouts/DocLayout.astro";
+import bookletData from "../data/booklet-data.json";
+
+const data = bookletData;
+const bugTypeEntries = Object.entries(data.bugs_by_type).sort((a, b) => b[1].length - a[1].length);
+const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<DocLayout title="Reference Booklet — CTBBP">
+  <div class="booklet">
+    <header class="booklet-header">
+      <div class="booklet-label">Reference Booklet</div>
+      <h1>The CTBBP Compendium</h1>
+      <p class="booklet-sub">
+        A comprehensive cross-episode reference cataloging every bug, technique,
+        guest, and piece of advice across all 179 episodes.
+      </p>
+    </header>
+
+    <!-- Stats -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">{data.total_episodes}</div>
+        <div class="stat-label">Episodes</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">{data.total_bugs}</div>
+        <div class="stat-label">Bugs Documented</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">{data.total_techniques}</div>
+        <div class="stat-label">Techniques</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">{data.total_guests}</div>
+        <div class="stat-label">Guests</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">{data.suggestions_count}</div>
+        <div class="stat-label">Pieces of Advice</div>
+      </div>
+    </section>
+
+    <!-- Bug Type Quick Reference -->
+    <section class="booklet-section">
+      <h2>Vulnerability Catalog</h2>
+      <p>Every bug type encountered across episodes, with episode references.</p>
+      <div class="bug-type-grid">
+        {bugTypeEntries.slice(0, 30).map(([type, bugs]) => (
+          <details class="bug-type-card">
+            <summary class="bug-type-summary">
+              <span class="bug-type-name">{type}</span>
+              <span class="bug-type-count">{bugs.length} episode{bugs.length > 1 ? "s" : ""}</span>
+            </summary>
+            <div class="bug-type-detail">
+              {bugs.map((b) => (
+                <a href={`/episodes/${b.episode}`} class="bug-ref">
+                  <span class="bug-ref-ep">#{String(b.episode).padStart(3, "0")}</span>
+                  <span class="bug-ref-title">{b.title}</span>
+                </a>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <!-- Guest Roster -->
+    <section class="booklet-section">
+      <h2>Guest Roster</h2>
+      <p>All guest hackers and researchers who appeared on the podcast.</p>
+      <div class="guest-grid">
+        {data.guests.map((g) => (
+          <div class="guest-card">
+            <div class="guest-name">{g.name}</div>
+            <div class="guest-episodes">
+              Episodes: {g.episodes.slice(0, 5).map((ep) => (
+                <a href={`/episodes/${ep}`} class="guest-ep">#{String(ep).padStart(3, "0")}</a>
+              )).join(", ")}
+              {g.episodes.length > 5 && <span class="guest-more">+{g.episodes.length - 5} more</span>}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Technique Index -->
+    <section class="booklet-section">
+      <h2>Technique Index</h2>
+      <p>All hacking techniques and primitives cataloged from every episode. Search by keyword.</p>
+      <div class="technique-list">
+        {(() => {
+          // Group by first letter
+          const groups = {};
+          sortedTechniques.forEach((t) => {
+            const letter = t.name[0].toUpperCase();
+            if (!groups[letter]) groups[letter] = [];
+            groups[letter].push(t);
+          });
+          return Object.entries(groups).map(([letter, items]) => (
+            <div class="tech-group">
+              <h3 class="tech-letter">{letter}</h3>
+              <ul class="tech-items">
+                {items.map((t) => (
+                  <li class="tech-item">
+                    <a href={`/episodes/${t.episode}`} class="tech-name">{t.name}</a>
+                    {t.description && <span class="tech-desc"> — {t.description}</span>}
+                    <span class="tech-ep">Episode {t.episode}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ));
+        })()}
+      </div>
+    </section>
+
+
+    <!-- Advice / Quotes -->
+    <section class="booklet-section">
+      <h2>Wisdom from the Pod</h2>
+      <p>A selection of notable advice and quotes from hackers across all episodes.</p>
+      <div class="advice-list">
+        {data.suggestions.slice(0, 40).map((a) => (
+          <div class="advice-card">
+            <p class="advice-text">{a.text}</p>
+            <a href={`/episodes/${a.episode}`} class="advice-ep">Episode {a.episode}</a>
+          </div>
+        ))}
+      </div>
+      <p class="advice-footnote">
+        Showing 40 of {data.suggestions_count} recorded pieces of advice.
+      </p>
+    </section>
+  </div>
+</DocLayout>
+
+<style>
+  .booklet {
+    padding-bottom: 3rem;
+  }
+
+  .booklet-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .booklet-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+
+  .booklet-header h1 {
+    font-family: var(--font-body);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+
+  .booklet-sub {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: var(--font-body);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.15rem;
+  }
+
+  /* Sections */
+  .booklet-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .booklet-section h2 {
+    font-family: var(--font-body);
+    font-size: 1.4rem;
+    margin: 0 0 0.35rem;
+  }
+
+  .booklet-section > p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  /* Bug Type Grid */
+  .bug-type-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .bug-type-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .bug-type-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.6rem 0.85rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    background: var(--bg-card);
+    transition: background 0.12s;
+  }
+
+  .bug-type-summary:hover {
+    background: var(--accent-subtle);
+  }
+
+  .bug-type-name {
+    font-weight: 500;
+    color: var(--text);
+  }
+
+  .bug-type-count {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+  }
+
+  .bug-type-detail {
+    padding: 0.5rem 0.85rem 0.65rem;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    background: var(--bg);
+  }
+
+  .bug-ref {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.15rem 0.25rem;
+    border-radius: var(--radius-xs);
+  }
+
+  .bug-ref:hover {
+    background: var(--accent-subtle);
+    color: var(--text);
+  }
+
+  .bug-ref-ep {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+  }
+
+  /* Guests */
+  .guest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 0.65rem;
+  }
+
+  .guest-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.85rem;
+    background: var(--bg-card);
+  }
+
+  .guest-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+  }
+
+  .guest-episodes {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    margin-top: 0.2rem;
+  }
+
+  .guest-ep {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .guest-ep:hover {
+    text-decoration: underline;
+  }
+
+  .guest-more {
+    color: var(--text-tertiary);
+    margin-left: 0.25rem;
+  }
+
+  /* Techniques */
+  .technique-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .tech-group {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .tech-letter {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.5rem 0.85rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-light);
+    color: var(--accent);
+  }
+
+  .tech-items {
+    list-style: none;
+    padding: 0.4rem 0;
+    margin: 0;
+  }
+
+  .tech-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.35rem;
+    padding: 0.25rem 0.85rem;
+    font-size: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .tech-item:hover {
+    background: var(--accent-subtle);
+  }
+
+  .tech-name {
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .tech-name:hover {
+    color: var(--accent);
+  }
+
+  .tech-desc {
+    color: var(--text-secondary);
+  }
+
+  .tech-ep {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+
+  /* Advice */
+  .advice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .advice-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.85rem;
+    background: var(--bg-card);
+    transition: border-color 0.15s;
+  }
+
+  .advice-card:hover {
+    border-color: var(--accent);
+  }
+
+  .advice-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .advice-ep {
+    font-size: 0.7rem;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 0.3rem;
+    display: inline-block;
+  }
+
+  .advice-ep:hover {
+    text-decoration: underline;
+  }
+
+  .advice-footnote {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+    text-align: center;
+  }
+
+  @media (max-width: 640px) {
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .booklet-header h1 { font-size: 1.5rem; }
+  }
+</style>

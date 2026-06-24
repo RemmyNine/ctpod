@@ -1,0 +1,448 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { getCollection } from "astro:content";
+
+const episodes = await getCollection("episodes");
+const sorted = episodes.sort((a, b) => b.data.episode - a.data.episode);
+const { title, currentEpisode } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">
+          <svg width="20" height="20" viewBox="0 0 30 30" fill="none">
+            <circle cx="15" cy="15" r="13.5" stroke="currentColor" stroke-width="2" />
+            <path d="M11 12.5a4 4 0 018 0c0 2-2 3-2 5v.5a1 1 0 01-1 1h-2a1 1 0 01-1-1v-.5c0-2-2-3-2-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            <circle cx="15" cy="10.5" r="2" fill="currentColor" />
+          </svg>
+          <span>CTBBP</span>
+        </a>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="sidebar-search">
+        <input type="text" class="sidebar-input" id="episodeSearch" placeholder="Search episodes..." />
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="sidebar-label">Episodes</div>
+        <ul class="sidebar-list" id="episodeList">
+          {sorted.map((ep) => (
+            <li>
+              <a
+                href={`/episodes/${ep.data.episode}`}
+                class:list={{
+                  "sidebar-link": true,
+                  "sidebar-link--active": currentEpisode === ep.data.episode,
+                }}
+              >
+                <span class="sidebar-num">{String(ep.data.episode).padStart(3, "0")}</span>
+                <span class="sidebar-title">{ep.data.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-llm">AI-generated — verify against originals</div>
+        <div class="sidebar-ext">
+          <a href="https://criticalthinkingpodcast.io" target="_blank" rel="noopener">Podcast</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- Main -->
+    <div class="main">
+      <!-- Top bar -->
+      <div class="topbar">
+        <button class="topbar-menu" id="menuBtn" aria-label="Toggle sidebar">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M3 5h12M3 9h12M3 13h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <div class="topbar-title">
+          {currentEpisode ? `Episode ${currentEpisode}` : "Home"}
+        </div>
+        <div class="topbar-actions">
+          <a href="/search" class="topbar-btn">
+            <svg width="15" height="15" viewBox="0 0 18 18" fill="none">
+              <circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 12l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <span>Search</span>
+          </a>
+        </div>
+      </div>
+      <main class="content">
+        <slot />
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+    const menuBtn = document.getElementById("menuBtn");
+    const closeBtn = document.getElementById("sidebarClose");
+    const searchInput = document.getElementById("episodeSearch");
+    const episodeList = document.getElementById("episodeList");
+
+    function openSidebar() {
+      sidebar.classList.add("sidebar--open");
+      overlay.classList.add("sidebar-overlay--visible");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeSidebar() {
+      sidebar.classList.remove("sidebar--open");
+      overlay.classList.remove("sidebar-overlay--visible");
+      document.body.style.overflow = "";
+    }
+
+    if (menuBtn) menuBtn.addEventListener("click", openSidebar);
+    if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
+    if (overlay) overlay.addEventListener("click", closeSidebar);
+
+    if (searchInput && episodeList) {
+      searchInput.addEventListener("input", () => {
+        const q = searchInput.value.toLowerCase();
+        const items = episodeList.querySelectorAll("li");
+        items.forEach((li) => {
+          const text = li.textContent?.toLowerCase() || "";
+          li.style.display = text.includes(q) ? "" : "none";
+        });
+      });
+    }
+  </script>
+</BaseLayout>
+
+<style is:global>
+  /* === Layout === */
+  .layout {
+    display: flex;
+    min-height: 100vh;
+    background: var(--bg);
+  }
+
+  /* === Sidebar === */
+  .sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: var(--bg-card);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+  }
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 16px 14px;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+  }
+
+  .sidebar-logo:hover {
+    color: var(--accent);
+  }
+
+  .sidebar-close {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: var(--radius-xs);
+  }
+
+  .sidebar-close:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+
+  .sidebar-search {
+    padding: 12px 14px;
+  }
+
+  .sidebar-input {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 13px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .sidebar-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-bg);
+  }
+
+  .sidebar-input::placeholder {
+    color: var(--text-tertiary);
+  }
+
+  .sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+    padding: 6px 8px;
+  }
+
+  .sidebar-nav::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .sidebar-nav::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 99px;
+  }
+
+  .sidebar-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 8px 6px;
+  }
+
+  .sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-list li {
+    padding: 0;
+    margin: 1px 0;
+  }
+
+  .sidebar-link {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 6px 8px;
+    font-size: 13px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+    line-height: 1.35;
+    border-radius: var(--radius-xs);
+  }
+
+  .sidebar-link:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+
+  .sidebar-link--active {
+    background: var(--accent-bg);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .sidebar-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+    width: 2.4em;
+    text-align: right;
+  }
+
+  .sidebar-link--active .sidebar-num {
+    color: var(--accent);
+  }
+
+  .sidebar-title {
+    line-height: 1.35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .sidebar-footer {
+    padding: 12px 14px;
+    border-top: 1px solid var(--border-light);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .sidebar-llm {
+    font-size: 11px;
+    color: var(--text-tertiary);
+    line-height: 1.4;
+  }
+
+  .sidebar-ext a {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .sidebar-ext a:hover {
+    color: var(--accent);
+  }
+
+  /* === Overlay === */
+  .sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 98;
+  }
+
+  /* === Main === */
+  .main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topbar {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-light);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(8px);
+  }
+
+  .topbar-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: var(--radius-xs);
+  }
+
+  .topbar-menu:hover {
+    background: var(--bg-hover);
+  }
+
+  .topbar-title {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-secondary);
+  }
+
+  .topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .topbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 10px;
+    border-radius: var(--radius-xs);
+    color: var(--text-tertiary);
+    text-decoration: none;
+    font-size: 12px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .topbar-btn:hover {
+    background: var(--bg-hover);
+    color: var(--text);
+  }
+
+  .content {
+    flex: 1;
+    width: 100%;
+    padding: 32px 48px 56px;
+  }
+
+  /* Larger screens */
+  @media (min-width: 1400px) {
+    .content {
+      padding: 40px 64px 64px;
+    }
+  }
+
+  /* Tablet */
+  @media (max-width: 820px) {
+    .sidebar {
+      position: fixed;
+      left: -280px;
+      top: 0;
+      bottom: 0;
+      z-index: 99;
+      transition: left 0.25s ease;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .sidebar--open {
+      left: 0;
+    }
+
+    .sidebar-close {
+      display: block;
+    }
+
+    .sidebar-overlay--visible {
+      display: block;
+    }
+
+    .topbar {
+      display: flex;
+    }
+
+    .topbar-menu {
+      display: block;
+    }
+
+    .content {
+      padding: 20px 20px 40px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .content {
+      padding: 16px 14px 32px;
+    }
+  }
+</style>

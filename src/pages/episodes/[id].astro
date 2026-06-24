@@ -1,0 +1,315 @@
+---
+import DocLayout from "@layouts/DocLayout.astro";
+import { getCollection } from "astro:content";
+import bookletData from "../../data/booklet-data.json";
+
+export async function getStaticPaths() {
+  const episodes = await getCollection("episodes");
+  return episodes.map((ep) => ({
+    params: { id: String(ep.data.episode) },
+    props: { entry: ep },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const prev = entry.data.episode > 1 ? entry.data.episode - 1 : null;
+const next = entry.data.episode < 179 ? entry.data.episode + 1 : null;
+
+// Find tools mentioned in this episode from booklet data
+const epNum = entry.data.episode;
+const epsTools = bookletData.techniques
+  .filter((t: any) => t.episode === epNum)
+  .map((t: any) => t.name)
+  .slice(0, 8);
+
+// Find guests for this episode
+const epsGuests = bookletData.guests.filter((g: any) =>
+  g.episodes.includes(epNum)
+);
+
+// Find bug types for this episode
+const epsBugTypes: string[] = [];
+for (const [type, bugs] of Object.entries(bookletData.bug_type_counts)) {
+  const matching = (bookletData as any).bugs_by_type[type]?.filter(
+    (b: any) => b.episode === epNum
+  );
+  if (matching?.length > 0) {
+    epsBugTypes.push(type);
+  }
+}
+---
+
+<DocLayout title={`Episode ${entry.data.episode} — ${entry.data.title}`} currentEpisode={epNum}>
+  <article class="episode-article">
+    <header class="episode-header">
+      <div class="episode-meta">
+        <a href="/" class="back-link">← All episodes</a>
+      </div>
+      <div class="episode-number-badge">Episode {entry.data.episode}</div>
+      <h1 class="episode-title">{entry.data.title}</h1>
+
+      <!-- Tools & Guests bar -->
+      <div class="episode-meta-bar">
+        {epsGuests.length > 0 && (
+          <div class="meta-section">
+            <span class="meta-label">Guests</span>
+            <div class="meta-items">
+              {epsGuests.map((g: any) => (
+                <span class="meta-item meta-item--guest">{g.name}</span>
+              ))}
+            </div>
+          </div>
+        )}
+        {epsTools.length > 0 && (
+          <div class="meta-section">
+            <span class="meta-label">Techniques</span>
+            <div class="meta-items">
+              {epsTools.slice(0, 6).map((t: string) => {
+                const techEntry = (bookletData as any).techniques_by_name?.[t];
+                const epRefs = techEntry?.slice(0, 3) || [];
+                return (
+                  <a href={`/episodes/${epRefs[0] || epNum}`} class="meta-item meta-item--tech">{t}</a>
+                );
+              })}
+            </div>
+          </div>
+        )}
+        {epsBugTypes.length > 0 && (
+          <div class="meta-section">
+            <span class="meta-label">Bug Types</span>
+            <div class="meta-items">
+              {epsBugTypes.slice(0, 4).map((bt) => (
+                <a href={`/search?q=${encodeURIComponent(bt)}`} class="meta-item meta-item--bug">{bt}</a>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </header>
+
+    <div class="content">
+      <Content />
+    </div>
+
+    <nav class="episode-nav">
+      {prev ? (
+        <a href={`/episodes/${prev}`} class="nav-link nav-prev">
+          <span class="nav-arrow">←</span>
+          <span class="nav-label">Episode {prev}</span>
+        </a>
+      ) : (
+        <div></div>
+      )}
+      {next ? (
+        <a href={`/episodes/${next}`} class="nav-link nav-next">
+          <span class="nav-label">Episode {next}</span>
+          <span class="nav-arrow">→</span>
+        </a>
+      ) : (
+        <div></div>
+      )}
+    </nav>
+  </article>
+</DocLayout>
+
+<style>
+  .episode-article {
+    padding-bottom: 3rem;
+  }
+
+  .episode-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .episode-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .back-link {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+  }
+
+  .back-link:hover {
+    color: var(--accent);
+  }
+
+  .episode-number-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.3rem;
+  }
+
+  .episode-title {
+    font-family: var(--font-body);
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--text);
+  }
+
+  /* Tools & Guests bar */
+  .episode-meta-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+  }
+
+  .meta-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .meta-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    width: 5em;
+    padding-top: 0.1rem;
+  }
+
+  .meta-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+
+  .meta-item {
+    font-size: 0.72rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+
+  .meta-item--guest {
+    background: var(--green-bg);
+    color: var(--green);
+    font-weight: 500;
+  }
+
+  .meta-item--tech {
+    background: var(--blue-bg);
+    color: var(--blue);
+  }
+
+  .meta-item--tech:hover {
+    background: var(--blue);
+    color: var(--text-on-accent);
+  }
+
+  .meta-item--bug {
+    background: var(--orange-bg);
+    color: var(--orange);
+  }
+
+  .meta-item--bug:hover {
+    background: var(--orange);
+    color: var(--text-on-accent);
+  }
+
+  /* Content */
+  .content {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+
+  .content :global(h3) {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-top: 1.75rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .content :global(h3:first-child) {
+    margin-top: 0;
+  }
+
+  .content :global(ul) {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .content :global(li) {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-top: 0.25rem;
+  }
+
+  .content :global(li::before) {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .content :global(hr) {
+    margin: 1.75rem 0;
+  }
+
+  /* Navigation */
+  .episode-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 0.85rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: border-color 0.15s, color 0.15s;
+  }
+
+  .nav-link:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .nav-next { justify-content: flex-end; }
+  .nav-prev { justify-content: flex-start; }
+  .nav-arrow { font-size: 1.1rem; line-height: 1; }
+
+  @media (max-width: 640px) {
+    .episode-title { font-size: 1.35rem; }
+    .episode-nav { grid-template-columns: 1fr; }
+    .meta-section { flex-direction: column; gap: 0.25rem; }
+    .meta-label { width: auto; }
+  }
+</style>
