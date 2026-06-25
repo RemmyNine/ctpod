@@ -70,8 +70,6 @@ episode: 90
 - `rhynorater.github.io/signin?next=https://accounts.youtube.com/...` — Justin's gadget link
 - Rebane's Telegram account theft writeup (`lira.horse`)
 
-# CTBB Episode Analyst Notes — Batch 6 (Episodes 091–108)
----
 
 ### 📘 Episode Booklet
 

@@ -87,8 +87,7 @@ episode: 126
 ### AI Takeaway
 Rez0's AI bug journey shows a clear progression from simple jailbreaks to sophisticated chains combining invisible injection, CSRF, and XSS. The $5k-$10k payouts from Google for prompt injection in Google Docs demonstrate that AI-specific vulnerabilities can command real bounties when the exploitation chain is complete.
 
-# CTBB Episodes 127–144 — Structured Analyst Notes
----
+
 
 ### 📘 Episode Booklet
 

@@ -42,8 +42,6 @@ episode: 144
 - "Don't treat full-time like a 9-to-5. Use the flexibility." (All)
 - "Don't isolate yourself when working remotely." (Vitor)
 
-# CTBB Episode Analysis: Batch 9 (Episodes 145–162)
----
 
 ### 📘 Episode Booklet
 

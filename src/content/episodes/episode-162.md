@@ -35,8 +35,6 @@ episode: 162
 - "I would love to see pen testing level up to the level where it actually does what everyone's promising. But put me on the far end of skeptic for full autonomous AI pen testing."
 - Joseph: "If you're still in a position where you're not using AI in your bug hunting, you've got to lean in."
 
-# CTBB Episode Analysis: Episodes 163-179
----
 
 ### 📘 Episode Booklet
 

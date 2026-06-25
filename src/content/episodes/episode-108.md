@@ -93,8 +93,6 @@ episode: 108
 ### AI Takeaway
 SaaS misconfigurations are the ultimate "find once, exploit everywhere" bug class. ServiceNow's widget architecture (API endpoints that accept table/column names) and Salesforce's Apex/Aura framework create an enormous, largely untapped attack surface. The pattern of "become an expert, find undocumented endpoints, test access controls" applies to every major SaaS platform.
 
-# CTBB Episode Analyst Notes — Batch 7 (Episodes 109–126)
----
 
 ### 📘 Episode Booklet
 

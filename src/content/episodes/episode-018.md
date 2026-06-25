@@ -80,8 +80,7 @@ episode: 18
 ### AI Takeaway
 The Git config injection technique (1024-byte line boundary) is both elegant and broadly applicable: any parser that reads fixed-sized chunks and processes text content is vulnerable to misalignment attacks. Combined with the "second definition wins" rule for `[core]` sections, an attacker can inject arbitrary Git config directives including `core.fsmonitor` or `core.hooksPath`.
 
-# CTBB Episodes 019–036 — Structured Analyst Notes
----
+
 
 ### 📘 Episode Booklet
 

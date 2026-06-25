@@ -58,8 +58,6 @@ episode: 72
 - "If you want unauthenticated RCE, work backwards from sinks. The apps are too large to trace forward from sources."
 - On data type smuggling: "We live in the details. Any RFC that creates edge cases in data representation is a bug farming ground."
 
-# CTBB Episode Analysis — Batch 5 (Episodes 73–90)
----
 
 ### 📘 Episode Booklet
 

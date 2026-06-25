@@ -49,8 +49,6 @@ episode: 54
 ### AI Takeaway
 The GitLab ATO is one of the simplest yet most impactful bugs: a single parameter type confusion (`email` string vs `email[]` array) in a password reset flow. The invisible Unicode tag character attack is a foundational LLM injection vector — the characters are invisible to humans but fully readable by models, making prompt injection undetectable.
 
-# CTBB Episode Analyst Notes — Batch 4 (Episodes 55–72)
----
 
 ### 📘 Episode Booklet
 
