@@ -1,0 +1,7 @@
+name = "ctpod"
+compatibility_date = "2026-06-24"
+compatibility_flags = ["global_fetch_strictly_public", "nodejs_compat"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"

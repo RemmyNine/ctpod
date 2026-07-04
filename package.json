@@ -5,10 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "npx wrangler deploy"
   },
   "dependencies": {
     "astro": "^5.7.0",
     "rehype-sanitize": "^6.0.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4"
   }
 }
