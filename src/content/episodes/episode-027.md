@@ -4,6 +4,7 @@ episode: 27
 ---
 
 
+
 # Episode 27 Top 7 Esoteric Web Vulnerabilities
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis  
@@ -173,3 +174,21 @@ Seven esoteric vulnerability classes that aren't mainstream but yield high-impac
 1. **Seven esoteric vulnerability classes that aren't mainstream but yield high-impac**
 2. **Config file injection: escape the templated config block (e.g., DNSMasq, dhcpd, **
 3. **Client-side path traversal: control a path in the browser that gets loaded as a **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Information disclosure** — IIS Short Name Enumeration — Information disclosure ([search](/search?q=Information%20disclosure))
+- **Path traversal** — Nginx alias traversal — Path traversal ([search](/search?q=Path%20traversal))
+- **RCE** — Citrix ShareFile RCE via AES padding oracle — RCE ([search](/search?q=RCE))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Client-side path traversal** — also in [#027](/episodes/27)
+- **Config file injection** — also in [#027](/episodes/27)
+- **Cookie jar overflow** — also in [#027](/episodes/27)
+- **XS-Leak via PDF postMessage** — also in [#027](/episodes/27)
+- **XS-Leak via frame counting** — also in [#027](/episodes/27)
+

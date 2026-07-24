@@ -4,6 +4,7 @@ episode: 174
 ---
 
 
+
 # Episode 174 Saving Bug Bounty Programs + AMPScript, tessl & GPT-5.5
 
 ### TL;DR
@@ -167,3 +168,22 @@ Salesforce Marketing Cloud AMPscript injection: double evaluation via `TreatAsCo
 1. **Salesforce Marketing Cloud AMPscript injection: double evaluation via `TreatAsCo**
 2. **[ ] AMPscript injection: when limited by payload length, host payload on externa**
 3. **[ ] CBC bit-flip trick: pad first ciphertext block with 8 null bytes → recover I**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2026-41940)** — cPanel Auth Bypass (CVE-2026-41940) ([search](/search?q=2026-41940)))
+- **AMPscript Double-Eval Template Injection** — Salesforce Marketing Cloud — AMPscript Double-Eval Template Injection ([search](/search?q=AMPscript%20Double-Eval%20Template%20Injection))
+- **CBC Bit-Flipping IV Recovery** — Salesforce Marketing Cloud — CBC Bit-Flipping IV Recovery ([search](/search?q=CBC%20Bit-Flipping%20IV%20Recovery))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AMPscript payload length bypass** — also in [#174](/episodes/174)
+- **CBC null-byte IV recovery** — also in [#174](/episodes/174)
+- **Git config fallback RCE** — also in [#174](/episodes/174)
+- **Skill description formatting** — also in [#174](/episodes/174)
+- **Tessl Skill Optimizer** — also in [#174](/episodes/174)
+- **cPanel session CRLF injection** — also in [#174](/episodes/174)
+

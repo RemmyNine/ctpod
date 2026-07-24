@@ -4,6 +4,7 @@ episode: 162
 ---
 
 
+
 # Episode 162 HackerOne Training AI on Bug Bounty Data?
 
 ### TL;DR
@@ -99,3 +100,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Alex Rice (HackerOne CTO/Founder) addresses community concerns about TOS section**
 2. **Researcher retains IP** — not transferred to HackerOne or customer (customer get**
 3. **No GenAI training on submissions** — reporting is for spam classifiers and aggre**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

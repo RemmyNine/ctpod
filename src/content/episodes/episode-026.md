@@ -4,6 +4,7 @@ episode: 26
 ---
 
 
+
 # Episode 26 Client-side Quirks & Browser Hacks
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis  
@@ -152,3 +153,19 @@ Deep dive into HTML parsing quirks, XSS vectors, CSS injection, DOM clobbering
 1. **Deep dive into HTML parsing quirks, XSS vectors, CSS injection, DOM clobbering**
 2. **`popovertarget="=" + `<input id="= ...">` can create double-equals HTML attribut**
 3. **`<math>` tag in Firefox enables XSS via any element — `<math><a href="javascript**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **XSS** — Math ML Firefox XSS — XSS ([search](/search?q=XSS))
+- **XSS (HTML injection)** — popovertarget XSS — XSS (HTML injection) ([search](/search?q=XSS%20(HTML%20injection)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Base tag in body** — also in [#026](/episodes/26)
+- **DOM clobbering with multiple elements** — also in [#026](/episodes/26)
+- **Double-equals attribute bypass** — also in [#026](/episodes/26)
+- **JS `import()` for XSS payloads** — also in [#026](/episodes/26)
+

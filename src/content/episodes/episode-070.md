@@ -4,6 +4,7 @@ episode: 70
 ---
 
 
+
 # Episode 70 NahamCon and CSP Bypasses Everywhere
 
 **Guests:** Ben (NahamSec), Justin Gardner, Joel Margolis
@@ -125,3 +126,14 @@ Meta's bug bounty is one of the best-run programs: up to 300K bounties, loyalty 
 1. **Meta's bug bounty is one of the best-run programs: up to 300K bounties, loyalty **
 2. **Meta program highlights: they give time-limited authorization to explore beyond **
 3. **Google JSONP endpoints for CSP bypass: search for `?callback=` or `?jsonp=` para**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Ben (NahamSec)** — also appears in [#070](/episodes/70)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

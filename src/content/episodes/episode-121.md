@@ -4,6 +4,7 @@ episode: 121
 ---
 
 
+
 # Episode 121 Slonser's Image Injection 0-day → ATO & New Caido Collab Plugin
 
 ### TL;DR
@@ -191,3 +192,21 @@ Slonser's Chrome 0-day: `Link` header in image response sets `referrerpolicy=uns
 1. **Slonser's Chrome 0-day: `Link` header in image response sets `referrerpolicy=uns**
 2. **Any image injection (img src, CSS background, font-face) can be exploited with `**
 3. **The `Link` header technique works recursively: multiple `Link` headers create a **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Git Secrets Recovery** — "How I Made $64k from Deleted Files" — Git Secrets Recovery ([search](/search?q=Git%20Secrets%20Recovery))
+- **RCE via Exposed MCP Servers** — MCP "May Cause Pwnage" — RCE via Exposed MCP Servers ([search](/search?q=RCE%20via%20Exposed%20MCP%20Servers))
+- **day — Link Header Referrer Leak** — Slonser's Chrome 0-day — Link Header Referrer Leak ([search](/search?q=day%20—%20Link%20Header%20Referrer%20Leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Git dangling object recovery** — also in [#121](/episodes/121)
+- **Link header media queries** — also in [#121](/episodes/121)
+- **Link header referrer leak** — also in [#121](/episodes/121)
+- **`evt.composedPath()` sandbox escape** — also in [#121](/episodes/121)
+- **import() for XSS** — also in [#121](/episodes/121)
+

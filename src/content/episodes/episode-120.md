@@ -4,6 +4,7 @@ episode: 120
 ---
 
 
+
 # Episode 120 Space Raccoon — From Day Zero to Zero Day
 
 ### TL;DR
@@ -182,3 +183,20 @@ Book "From Day Zero to Zero Day" covers vulnerability research methodology acros
 1. **Book "From Day Zero to Zero Day" covers vulnerability research methodology acros**
 2. **Binary taxonomy**: Identify binary type first — Java (.jar) can be decompiled to**
 3. **Dynamic analysis**: Hook OS-level API calls (Windows API, browser APIs) not just**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Full Remote Exploitation** — Smart Weighing Machines — Full Remote Exploitation ([search](/search?q=Full%20Remote%20Exploitation))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Auto-generated POC graphs** — also in [#120](/episodes/120)
+- **Binary taxonomy first** — also in [#120](/episodes/120)
+- **Conditional corruption** — also in [#120](/episodes/120)
+- **Hook OS APIs with Frida** — also in [#120](/episodes/120)
+- **Sink-to-source** — also in [#120](/episodes/120)
+- **`version()` for SQLi WAF bypass** — also in [#120](/episodes/120)
+

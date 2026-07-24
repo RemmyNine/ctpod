@@ -4,6 +4,7 @@ episode: 127
 ---
 
 
+
 # Episode 127 Drama, PDF as JS Chaos, Bounty Profile Apps, And More
 
 **Source:** Show notes (feed) — condensed; only description available.
@@ -175,3 +176,22 @@ XSS Doctor published a PDF/JS polyglot CSP bypass (valid PDF + valid JS in one f
 1. **XSS Doctor published a PDF/JS polyglot CSP bypass (valid PDF + valid JS in one f**
 2. **[ ] Test PDF/JS polyglots in CSP environments — PDF magic bytes can coexist with**
 3. **[ ] For arbitrary file write on Windows: use BMP polyglot (no compression, BGR b**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **AI markdown image exfil** — EchoLeak — AI markdown image exfil ([search](/search?q=AI%20markdown%20image%20exfil))
+- **CSP bypass** — PDF/JS Polyglot CSP Bypass — CSP bypass ([search](/search?q=CSP%20bypass))
+- **RCE** — OBS WebSocket → BMP Polyglot → RCE — RCE ([search](/search?q=RCE))
+- **XSS** — Firefox `<object>`/`<embed>` `codebase` XSS — XSS ([search](/search?q=XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cloud egress differential testing** — also in [#127](/episodes/127)
+- **Polyglot file smuggling** — also in [#127](/episodes/127)
+- **RAG spraying** — also in [#127](/episodes/127)
+- **Reference-style markdown links** — also in [#127](/episodes/127)
+- **`codebase` attribute abuse** — also in [#127](/episodes/127)
+

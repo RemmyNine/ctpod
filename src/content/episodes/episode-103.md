@@ -4,6 +4,7 @@ episode: 103
 ---
 
 
+
 # Episode 103 Getting ANSI about Unicode Normalization
 
 **Host:** Justin Gardner (Rhynorater)
@@ -167,3 +168,20 @@ Worst Fit (Orange Tsai): Unicode normalization maps YEN SIGN (U+00A5) to backsla
 1. **Worst Fit (Orange Tsai): Unicode normalization maps YEN SIGN (U+00A5) to backsla**
 2. **Unicode normalization maps YEN SIGN (U+00A5) → backslash, FULLWIDTH SOLIDUS → sl**
 3. **Ruby on Rails: JSON body not starting with `{` → stored in `params[_json]` — mid**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **DOS on Major Sites** — Unicode Cookie — DOS on Major Sites ([search](/search?q=DOS%20on%20Major%20Sites))
+- **Site POST Without Content-Type** — Cross-Site POST Without Content-Type ([search](/search?q=Site%20POST%20Without%20Content-Type))
+- **Unicode Normalization to Backslash** — Worst Fit — Unicode Normalization to Backslash ([search](/search?q=Unicode%20Normalization%20to%20Backslash))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Blob body CSRF bypass** — also in [#103](/episodes/103)
+- **Unicode cookie bomb** — also in [#103](/episodes/103)
+- **Unicode normalization payloads** — also in [#103](/episodes/103)
+- **`_json` param smuggling** — also in [#103](/episodes/103)
+

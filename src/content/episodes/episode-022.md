@@ -4,6 +4,7 @@ episode: 22
 ---
 
 
+
 # Episode 22 Chipping Away at Hardware Hacking
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis  
@@ -81,3 +82,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Episode focused on hardware hacking tools and techniques**
 2. **Only show notes exist for this episode — minimal technical content extracted**
 3. **NahamCon had a strong bug bounty track**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

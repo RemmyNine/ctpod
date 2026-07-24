@@ -4,6 +4,7 @@ episode: 41
 ---
 
 
+
 # Episode 41 Mini Masterclass — Attack Vector Ideation
 
 ### TL;DR
@@ -116,3 +117,15 @@ Framework for generating endless attack vectors when stuck on a web app
 1. **Framework for generating endless attack vectors when stuck on a web app**
 2. **First step: proxy all traffic but don't look at it — just use the app end-to-end**
 3. **Dump docs to eReader and read them like a book; annotate every "CANNOT", limit, **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Client-side path analysis** — also in [#041](/episodes/41)
+- **RBAC matrixing** — also in [#041](/episodes/41)
+

@@ -4,6 +4,7 @@ episode: 111
 ---
 
 
+
 # Episode 111 How to Bypass DOMPurify in Bug Bounty with Kevin Mizu
 
 ### TL;DR
@@ -200,3 +201,22 @@ Deep dive into DOMPurify hooks: `uponSanitizeAttribute` with `forceKeepAttribute
 1. **Deep dive into DOMPurify hooks: `uponSanitizeAttribute` with `forceKeepAttribute**
 2. **Set a breakpoint/logpoint at the beginning of DOMPurify's `sanitize` function to**
 3. **`forceKeepAttribute` in `uponSanitizeAttribute` hook skips the ALL-IMPORTANT reg**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2022-JP Charset Sniffing** — Encoding Differential: ISO-2022-JP Charset Sniffing ([search](/search?q=2022-JP%20Charset%20Sniffing))
+- **a-Bug: Session Fixation ATO Chain** — Bring-a-Bug: Session Fixation ATO Chain ([search](/search?q=a-Bug:%20Session%20Fixation%20ATO%20Chain))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CID scheme for DOMPurify fingerprinting** — also in [#111](/episodes/111)
+- **DOM clobbering via form/input** — also in [#111](/episodes/111)
+- **DOMPurify config inspection via breakpoint** — also in [#111](/episodes/111)
+- **Mutation XSS via attribute encapsulation** — also in [#111](/episodes/111)
+- **Namespace confusion (SVG)** — also in [#111](/episodes/111)
+- **Second-order DOMPurify bypass** — also in [#111](/episodes/111)
+- **`<plaintext>` tag for blind debugging** — also in [#111](/episodes/111)
+

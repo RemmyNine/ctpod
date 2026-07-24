@@ -4,6 +4,7 @@ episode: 6
 ---
 
 
+
 # Episode 6 Mobile Hacking Attack Vectors with Teknogeek (Joel Margolis)
 
 ### TL;DR
@@ -173,3 +174,27 @@ Android intent filters, activities, and exported components — attack surface f
 1. **Android intent filters, activities, and exported components — attack surface for**
 2. **`AndroidManifest.xml` lists activities, services, broadcast receivers, content p**
 3. **Activities with intent filters and no explicit `android:exported="false"` are im**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Authentication Bypass** — [Episode 6] Red App WebView Cookie Bypass — Authentication Bypass ([search](/search?q=Authentication%20Bypass))
+- **of-Sale App — WebSocket Key Reset → Session Takeover** — Shopify Point-of-Sale App — WebSocket Key Reset → Session Takeover ([search](/search?q=of-Sale%20App%20—%20WebSocket%20Key%20Reset%20→%20Session%20Takeover))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Activity enumeration** — also in [#006](/episodes/6)
+- **Chrome inspect for WebViews** — also in [#006](/episodes/6)
+- **GetSchemas** — also in [#006](/episodes/6)
+- **JADX deobfuscation** — also in [#006](/episodes/6)
+- **WebView audit checklist** — also in [#006](/episodes/6)
+- **scrcpy** — also in [#006](/episodes/6), [#014](/episodes/14)
+
+**Advice:**
+- *""If you see a WebView, look for JavaScript interfaces — they can be really dangerous" — Joel"*
+- *""If you can get your URL open inside a WebView, you have a launchpad for other attacks" — Joel"*
+- *""If you find an app that forces re-auth, try the forgot password flow — it might inject cookies into a WebView" — Justin"*
+- *+1 more pieces of advice*
+

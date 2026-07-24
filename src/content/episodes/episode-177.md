@@ -4,6 +4,7 @@ episode: 177
 ---
 
 
+
 # Episode 177 2x Google RCE with VRP Legend BruteCat
 
 ### TL;DR
@@ -153,3 +154,21 @@ Google RCE #1: Found `listWorkflowExecutionLogs` leaking internal workflow logs 
 1. **Google RCE #1: Found `listWorkflowExecutionLogs` leaking internal workflow logs **
 2. **[ ] Google SRE handbook and BeyondProd are essential reading for Google infrastr**
 3. **[ ] First-party auth via client6 works for APIs that have the `client6.google.co**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Application Integration IDOR + Filter Injection** — Google RCE #2 — Application Integration IDOR + Filter Injection ([search](/search?q=Application%20Integration%20IDOR%20+%20Filter%20Injection))
+- **Cloud CRM API → Stubby RCE** — Google RCE #1 — Cloud CRM API → Stubby RCE ([search](/search?q=Cloud%20CRM%20API%20→%20Stubby%20RCE))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Binary search via AIP-160 filter** — also in [#177](/episodes/177)
+- **GSLB address alias** — also in [#177](/episodes/177)
+- **Report splitting strategy** — also in [#177](/episodes/177)
+- **Staging vs prod load balancer bypass** — also in [#177](/episodes/177)
+- **`x-goog-encode-response-if-executable: base64`** — also in [#177](/episodes/177)
+- **client6.google.com first-party auth** — also in [#177](/episodes/177)
+

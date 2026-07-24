@@ -4,6 +4,7 @@ episode: 124
 ---
 
 
+
 # Episode 124 Bug Bounty Lifestyle = Less Hacking Time?
 
 ### TL;DR
@@ -161,3 +162,18 @@ Supabase API URL operators: `?column=eq.value` can use `gt.`/`lt.` operators on 
 1. **Supabase API URL operators: `?column=eq.value` can use `gt.`/`lt.` operators on **
 2. **Supabase REST API uses `?column=eq.value` format; try `?column=gt.00000000-0000-**
 3. **Cross-origin click detection: poll `navigator.userActivation.isActive` on 0ms in**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Origin Iframe Click Detection via userActivation** — Cross-Origin Iframe Click Detection via userActivation ([search](/search?q=Origin%20Iframe%20Click%20Detection%20via%20userActivation))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Clipboard hijacking** — also in [#124](/episodes/124)
+- **Supabase UUID GT/LT** — also in [#124](/episodes/124)
+- **URL as window reference fallback** — also in [#124](/episodes/124)
+- **userActivation click detection** — also in [#124](/episodes/124)
+

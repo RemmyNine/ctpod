@@ -4,6 +4,7 @@ episode: 159
 ---
 
 
+
 # Episode 159 Google Cloud VRP with Cote and Darby Hopkins
 
 ### TL;DR
@@ -95,3 +96,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Google Cloud VRP team explains reward structure, panel process, tiers, and how t**
 2. **Tier system**: T1 = high-revenue, wide-attack-surface products (Cloud Storage); **
 3. **Panel process**: 4-6 hours reviewing ~15 reports; leader does deep-dive before p**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

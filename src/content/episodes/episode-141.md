@@ -4,6 +4,7 @@ episode: 141
 ---
 
 
+
 # Episode 141 Hacking the Pod — Google Docs 0-day & React CreateElement Exploits with Nick Copi (7urb0)
 
 **Source:** Full ASR transcript.
@@ -155,3 +156,20 @@ Nick left a ReDoS in the prep Google Doc: rich content paste → OOM crash.
 1. **Nick left a ReDoS in the prep Google Doc: rich content paste → OOM crash.**
 2. **[ ] Google Docs ReDoS via rich paste: inefficient regex causes hang.**
 3. **[ ] React `createElement(type, props, children)`: type=string → tag name. Props=**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **DoS** — Google Docs ReDoS — DoS ([search](/search?q=DoS))
+- **RCE** — Electron RCE via React XSS → IPC — RCE ([search](/search?q=RCE))
+- **XSS** — React CreateElement Sink — XSS ([search](/search?q=XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Attributes reference XSS** — also in [#141](/episodes/141)
+- **Electron IPC persistence** — also in [#141](/episodes/141)
+- **React createElement cheat sheet** — also in [#141](/episodes/141)
+- **Regex debug with `monitor()`** — also in [#141](/episodes/141)
+

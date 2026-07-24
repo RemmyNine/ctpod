@@ -4,6 +4,7 @@ episode: 156
 ---
 
 
+
 # Episode 156 Chill AMA from bugbounty.forum
 
 ### TL;DR
@@ -116,3 +117,12 @@ AMA format answering community questions from bugbounty.forum
 
 #### 11. The practical takeaway
 1. **AMA format answering community questions from bugbounty.forum**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Site ETag Length Leak — Data Exfiltration** — Cross-Site ETag Length Leak — Data Exfiltration ([search](/search?q=Site%20ETag%20Length%20Leak%20—%20Data%20Exfiltration))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

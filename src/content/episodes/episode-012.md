@@ -4,6 +4,7 @@ episode: 12
 ---
 
 
+
 # Episode 12 JHaddix on Hacker→Hacker CISO, OG Hacking Techniques, and Crazy Reports
 
 ### TL;DR
@@ -190,3 +191,26 @@ Jason Haddix interview: from bug bounty on Bugcrowd (SurveyMonkey era) to Ubisof
 1. **Jason Haddix interview: from bug bounty on Bugcrowd (SurveyMonkey era) to Ubisof**
 2. **Recursive recon: put company name (not domain) in scope, recursively spider to f**
 3. **COTS (commercial off-the-shelf) testing: install/demo the software yourself, map**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Full Admin Access** — CRM Authorization Bypass — Full Admin Access ([search](/search?q=Full%20Admin%20Access))
+- **Full Source Code Exposure** — Unsecured Jenkins + Sonatype Nexus — Full Source Code Exposure ([search](/search?q=Full%20Source%20Code%20Exposure))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Burp Analyze Target → Dynamic URLs** — also in [#012](/episodes/12)
+- **COTS/demo endpoint harvesting** — also in [#012](/episodes/12)
+- **Docker Hub for source code** — also in [#012](/episodes/12)
+- **Recursive recon with keyword scope** — also in [#012](/episodes/12)
+- **Sensitive acronym** — also in [#012](/episodes/12)
+
+**Advice:**
+- *""Recon doesn't find you bugs. It finds you more apps to hack." — Jason Haddix"*
+- *""If they bought another company, find the old demo portal — spider it, replay endpoints against the new instance" — Jason"*
+- *""Look at your fuzz results across all five dimensions: Status, Size, Words, Lines, Return Time" — Jason"*
+- *+1 more pieces of advice*
+

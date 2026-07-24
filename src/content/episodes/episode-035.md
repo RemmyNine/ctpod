@@ -4,6 +4,7 @@ episode: 35
 ---
 
 
+
 # Episode 35 King of Collaboration: Douglas Day (Archangel)
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis, Douglas Day (Archangel)  
@@ -142,3 +143,22 @@ Douglas is known for collaboration (9x Best Collaboration awards at live hacking
 1. **Douglas is known for collaboration (9x Best Collaboration awards at live hacking**
 2. **"No"s are bugs**: Every place the app tells you "no" (can't do this, disabled bu**
 3. **Auth matrix testing**: Create a spreadsheet of roles vs. endpoints; find cases w**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Douglas Day** — also appears in [#035](/episodes/35)
+
+**Bugs & Vulnerabilities:**
+- **ATO** — Intercom Identity Verification Bypass — ATO / Data leak ([search](/search?q=ATO))
+- **Data leak** — Intercom Identity Verification Bypass — ATO / Data leak ([search](/search?q=Data%20leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Canary reports** — also in [#035](/episodes/35)
+- **Intercom boot hijacking** — also in [#035](/episodes/35)
+- **No-centric testing** — also in [#035](/episodes/35)
+- **Permission matrix testing** — also in [#035](/episodes/35)
+

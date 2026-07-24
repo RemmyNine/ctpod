@@ -4,6 +4,7 @@ episode: 24
 ---
 
 
+
 # Episode 24 AI + Hacking with Daniel Miessler and Rez0
 
 **Guests/Hosts:** Justin Gardner, Daniel Miessler, Rez0 (Joseph Thacker)  
@@ -129,3 +130,21 @@ Using AI/LLMs for hacking tooling: meta-prompters, agents, local models for offe
 1. **Using AI/LLMs for hacking tooling: meta-prompters, agents, local models for offe**
 2. **For hacking WITH AI:** Use a meta-prompter that rewrites your short prompt to in**
 3. **For hacking AI:** Prompt injection is the primary vector; ask for system prompt,**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Daniel Miessler** — also appears in [#024](/episodes/24)
+- **Rez0** — also appears in [#024](/episodes/24)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AI plugin takeover** — also in [#024](/episodes/24)
+- **Burp log embedding** — also in [#024](/episodes/24)
+- **Meta-prompting** — also in [#024](/episodes/24)
+- **Tree-of-thought prompting** — also in [#024](/episodes/24)
+

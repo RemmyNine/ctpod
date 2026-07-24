@@ -4,6 +4,7 @@ episode: 55
 ---
 
 
+
 # Episode 55 Popping WordPress Plugins — Methodology Braindump
 
 **Guest:** Ram Gall (Wordfence)
@@ -187,3 +188,15 @@ Ram Gall from Wordfence walks the entire WordPress plugin vulnerability assessme
 1. **Ram Gall from Wordfence walks the entire WordPress plugin vulnerability assessme**
 2. **Audit plugins for `add_action('admin_init', …)` — triggers on any WP-admin page,**
 3. **Nonces are NOT access control — they are CSRF tokens; never assume a nonce is un**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Ram Gall (Wordfence)** — also appears in [#055](/episodes/55)
+
+**Bugs & Vulnerabilities:**
+- **Agent Header (Security Plugin)** — Unauthenticated Stored XSS via User-Agent Header (Security Plugin) ([search](/search?q=Agent%20Header%20(Security%20Plugin)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

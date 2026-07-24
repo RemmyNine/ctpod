@@ -3,7 +3,7 @@ import re, os, json
 SRC = "src/content/episodes"
 DATA = "src/data/booklet-data.json"
 
-with open(DATA) as f:
+with open(DATA, encoding="utf-8") as f:
     data = json.load(f)
 
 # Build lookups
@@ -43,7 +43,7 @@ for fname in sorted(os.listdir(SRC)):
     ep = int(m.group(1))
     path = os.path.join(SRC, fname)
 
-    with open(path) as f:
+    with open(path, encoding="utf-8") as f:
         content = f.read()
 
     # Strip frontmatter to get body
@@ -138,9 +138,9 @@ for fname in sorted(os.listdir(SRC)):
 
     # Append to file
     darsnameh = "\n".join(lines)
-    with open(path, "w") as f:
+    with open(path, "w", encoding="utf-8") as f:
         f.write(fm + body.rstrip() + darsnameh + "\n")
 
-    print(f"  ✓ {fname} — Darsnameh appended ({len(ep_guests)} guests, {len(unique_bugs)} bugs, {len(ep_tools)} techniques)")
+    print(f"  [+] {fname} - Darsnameh appended ({len(ep_guests)} guests, {len(unique_bugs)} bugs, {len(ep_tools)} techniques)")
 
 print("\nDone!")

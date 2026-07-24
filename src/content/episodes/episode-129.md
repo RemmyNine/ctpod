@@ -4,6 +4,7 @@ episode: 129
 ---
 
 
+
 # Episode 129 Is this how Bug Bounty Ends?
 
 **Source:** Show notes (feed) — condensed.
@@ -94,3 +95,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Rez0's "This Is How They Tell Me Bug Bounty Ends" — AI impact analysis.**
 2. **[ ] Expect human-in-the-loop hackbot singularity by end of year — 500-1000 vuln **
 3. **[ ] Hacker chain-of-thought is ideal AI training data.**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

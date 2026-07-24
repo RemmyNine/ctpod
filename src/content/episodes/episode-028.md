@@ -4,6 +4,7 @@ episode: 28
 ---
 
 
+
 # Episode 28 Surfin' with CSRFs
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis  
@@ -144,3 +145,18 @@ CSRF is not dead — SameSite=Lax changed the game but did not eliminate it
 1. **CSRF is not dead — SameSite=Lax changed the game but did not eliminate it**
 2. **SameSite=Lax (implicit, without explicit attribute) IS subject to the lax+post a**
 3. **Rails HEAD method goes to the GET route; `if request.get?` + `else` catches HEAD**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **CSRF** — GitHub OAuth CSRF via HEAD method — CSRF ([search](/search?q=CSRF))
+- **Cross-app request forgery** — Mobile CSRF via QR code / WebView (CARRF) — Cross-app request forgery ([search](/search?q=Cross-app%20request%20forgery))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Double-click action** — also in [#028](/episodes/28)
+- **Force re-login for CSRF** — also in [#028](/episodes/28)
+- **Referrer policy bypass** — also in [#028](/episodes/28)
+

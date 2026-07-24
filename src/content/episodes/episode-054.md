@@ -4,6 +4,7 @@ episode: 54
 ---
 
 
+
 # Episode 54 White Box Formulas — Vulnerable Coding Patterns
 
 ### TL;DR
@@ -131,3 +132,16 @@ Joel's HackerOne data scraping: top 10 programs pay 50% of all bounties; 75% of 
 1. **Joel's HackerOne data scraping: top 10 programs pay 50% of all bounties; 75% of **
 2. **75% of programs pay <$10K total over 90 days = lots of uncrowded programs with b**
 3. **GitLab ATO: passing an array instead of a single email caused password reset to **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2023-7028 — Account Takeover** — GitLab CVE-2023-7028 — Account Takeover ([search](/search?q=2023-7028%20—%20Account%20Takeover))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Array parameter injection** — also in [#054](/episodes/54)
+- **Unicode tag character prompt injection** — also in [#054](/episodes/54)
+

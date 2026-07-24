@@ -4,6 +4,7 @@ episode: 128
 ---
 
 
+
 # Episode 128 New Research in Blind SSRF and Self-XSS, and How to Architect Source-code Review AI Bots
 
 **Source:** Full ASR transcript.
@@ -171,3 +172,21 @@ Slonser's research: credentialless iframes are same-origin with regular iframes.
 1. **Slonser's research: credentialless iframes are same-origin with regular iframes.**
 2. **[ ] Credentialless iframe + login CSRF: credentialless iframe (no cookies) + fet**
 3. **[ ] FetchLater + redirect loop: POST via FetchLater with 300s timeout, 20x 307 r**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **SSRF escalation** — Blind SSRF → Full SSRF via Redirect Chain — SSRF escalation ([search](/search?q=SSRF%20escalation))
+- **Stored XSS-style persistence** — FetchLater + Redirect Loop — Stored XSS-style persistence ([search](/search?q=Stored%20XSS-style%20persistence))
+- **origin — Login CSRF enabler** — Credentialless iframe same-origin — Login CSRF enabler ([search](/search?q=origin%20—%20Login%20CSRF%20enabler))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Blind SSRF via redirect exhaustion** — also in [#128](/episodes/128)
+- **Credentialless iframe login CSRF** — also in [#128](/episodes/128)
+- **FetchLater persistence** — also in [#128](/episodes/128)
+- **Mandork** — also in [#128](/episodes/128)
+- **Sub-agent architecture** — also in [#128](/episodes/128)
+

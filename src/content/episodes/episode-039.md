@@ -4,6 +4,7 @@ episode: 39
 ---
 
 
+
 # Episode 39 The Art of Architectures
 
 ### TL;DR
@@ -143,3 +144,17 @@ Deep comparison of SPA+API vs traditional (direct endpoint) web architectures
 1. **Deep comparison of SPA+API vs traditional (direct endpoint) web architectures**
 2. **SPA + REST API: auth bearer tokens reach client side → XSS = instant ATO; stored**
 3. **Traditional architecture: more stored/reflected XSS, CSRF, web cache deception; **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **> OAuth Account Takeover (Evan Connolly — Tesla)** — Open Redirect -> OAuth Account Takeover (Evan Connolly — Tesla) ([search](/search?q=>%20OAuth%20Account%20Takeover%20(Evan%20Connolly%20—%20Tesla)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Perimeter injection** — also in [#039](/episodes/39)
+- **Secondary context path traversal** — also in [#039](/episodes/39)
+- **gRPC proto reverse engineering** — also in [#039](/episodes/39)
+

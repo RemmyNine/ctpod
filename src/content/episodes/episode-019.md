@@ -4,6 +4,7 @@ episode: 19
 ---
 
 
+
 # Episode 19 Audit Code, Earn Bounties (Part 2) + Zip-Snip, Sitecore, and more!
 
 **Guests/Hosts:** Justin Gardner (Rhynorater), Joel Margolis (Teknogeek)  
@@ -133,3 +134,17 @@ New `.zip` TLD creates phishing/social-engineering risk; an invisible space in a
 1. **New `.zip` TLD creates phishing/social-engineering risk; an invisible space in a**
 2. **When a new TLD matches a file extension (`.zip`, `.mov`, etc.), check for URL-pa**
 3. **Start source code review with config files (web.config, app config) to map route**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Auth bypass + LFD + Deserialization** — IIS Authorization bypass + LFD → Telerik Deserialization RCE — Auth bypass + LFD + Deserialization ([search](/search?q=Auth%20bypass%20+%20LFD%20+%20Deserialization))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Config-driven recon** — also in [#019](/episodes/19)
+- **Decompilation + debugging** — also in [#019](/episodes/19)
+- **Source-first code review** — also in [#019](/episodes/19)
+

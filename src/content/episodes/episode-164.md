@@ -4,6 +4,7 @@ episode: 164
 ---
 
 
+
 # Episode 164 Tommy DeVoss: From Black Hat to Bug Bounty LEGEND
 
 ### TL;DR
@@ -147,3 +148,17 @@ Tommy's origin story: Black hat in the 90s (IRC botnets, website defacements), c
 1. **Tommy's origin story: Black hat in the 90s (IRC botnets, website defacements), c**
 2. **[ ] Go back and re-test old SSRF reports with new encoding bypasses — Tommy got **
 3. **[ ] Test `os.path.join("/safe/prefix", attacker_path)` with absolute paths — Pyt**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Octal-Encoded AWS Metadata IP** — Yahoo SSRF — Octal-Encoded AWS Metadata IP ([search](/search?q=Octal-Encoded%20AWS%20Metadata%20IP))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Absolute path/URL injection** — also in [#164](/episodes/164)
+- **Octal IP encoding for SSRF bypass** — also in [#164](/episodes/164)
+- **Old SSRF regression testing** — also in [#164](/episodes/164)
+

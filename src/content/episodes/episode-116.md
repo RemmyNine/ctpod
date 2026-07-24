@@ -4,6 +4,7 @@ episode: 116
 ---
 
 
+
 # Episode 116 Auth Bypasses and Google VRP Writeups
 
 ### TL;DR
@@ -194,3 +195,22 @@ SAML Roulette: Ruby-SAML double-parse attack using XML doctype `ATTLIST` to hija
 1. **SAML Roulette: Ruby-SAML double-parse attack using XML doctype `ATTLIST` to hija**
 2. **SAML round-trip attack: when two parsers process the same XML (reXML for validat**
 3. **Use XML doctype `<!ATTLIST>` to override attribute values on signature elements **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **OAuth Token Leak via localhost Redirect** — Cloud Tools for Eclipse — OAuth Token Leak via localhost Redirect ([search](/search?q=OAuth%20Token%20Leak%20via%20localhost%20Redirect))
+- **Only Doc** — Google Apps Script: Editor List Leak from Read-Only Doc ([search](/search?q=Only%20Doc))
+- **Only to Form URL Leak** — Google Apps Script: Read-Only to Form URL Leak ([search](/search?q=Only%20to%20Form%20URL%20Leak))
+- **Unauthenticated ATO in GitLab (Ruby-SAML)** — SAML Roulette — Unauthenticated ATO in GitLab (Ruby-SAML) ([search](/search?q=Unauthenticated%20ATO%20in%20GitLab%20(Ruby-SAML)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Google Apps Script gadget chain** — also in [#116](/episodes/116)
+- **Next.js middleware bypass** — also in [#116](/episodes/116)
+- **OAuth localhost redirect abuse** — also in [#116](/episodes/116)
+- **SAML doctype attribute override** — also in [#116](/episodes/116)
+- **WS-Federation metadata for signed XML** — also in [#116](/episodes/116)
+

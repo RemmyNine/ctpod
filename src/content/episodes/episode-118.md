@@ -4,6 +4,7 @@ episode: 118
 ---
 
 
+
 # Episode 118 Hacking Happy Hour — 0days on Tap and SQLi Shots
 
 ### TL;DR
@@ -201,3 +202,24 @@ HackerOne Ruby version change caused hash parsing difference → `/reports/:id.j
 1. **HackerOne Ruby version change caused hash parsing difference → `/reports/:id.jso**
 2. **Ruby hash parsing changes between versions — migrating from one Ruby version to **
 3. **For Next.js middleware detection: send `x-nextjs-data: 1` and look for `x-nextjs**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Auth SQLi in Halo ITSM** — Pre-Auth SQLi in Halo ITSM ([search](/search?q=Auth%20SQLi%20in%20Halo%20ITSM))
+- **Configuration Data Leak ($25k)** — HackerOne `/reports/:id.json` — Configuration Data Leak ($25k) ([search](/search?q=Configuration%20Data%20Leak%20($25k)))
+- **Forwarded-Host** — React Router CPDoS via X-Forwarded-Host ([search](/search?q=Forwarded-Host))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Auth decorator scanning** — also in [#118](/episodes/118)
+- **CPDoS via X-Forwarded-Host** — also in [#118](/episodes/118)
+- **Capitals-only XSS via URL** — also in [#118](/episodes/118)
+- **Credentialless iframe** — also in [#118](/episodes/118)
+- **Next.js middleware detection with x-nextjs-data** — also in [#118](/episodes/118)
+- **Ruby hash parsing regression** — also in [#118](/episodes/118)
+- **`llms.txt` prompt injection polyglot** — also in [#118](/episodes/118)
+- **`version()` for SQLi** — also in [#118](/episodes/118)
+

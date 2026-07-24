@@ -4,6 +4,7 @@ episode: 56
 ---
 
 
+
 # Episode 56 Using Data Science to Win Bug Bounty — Mayonaise (Jon Colston)
 
 **Guest:** Jon Colston (Mayonaise / My Own Eyes)
@@ -125,3 +126,14 @@ Jon Colston transitioned from digital marketing analytics to bug bounty and appl
 1. **Jon Colston transitioned from digital marketing analytics to bug bounty and appl**
 2. **Measure everything — "what is not measured is not managed" (Peter Drucker). Trac**
 3. **Wrap every tool with a logging layer that records inputs/outputs/hits/duration t**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Jon Colston (Mayonaise / My Own Eyes)** — also appears in [#056](/episodes/56)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

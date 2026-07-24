@@ -4,6 +4,7 @@ episode: 139
 ---
 
 
+
 # Episode 139 James Kettle — Pwning in Prod & How to do Web Security Research
 
 **Source:** Show notes (feed) — condensed.
@@ -147,3 +148,21 @@ CVE-2022-22720: Apache pause-based client-side desync via MITM.
 1. **CVE-2022-22720: Apache pause-based client-side desync via MITM.**
 2. **[ ] `TRACE` + `Max-Forwards` doubles TRACE effectiveness — found by ChatGPT.**
 3. **[ ] Burp Inspector: view pseudo-headers, inject duplicates for HTTP/2.**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Based Client-Side Desync via MITM — Client-side desync (CVE-2022-22720)** — Apache Pause-Based Client-Side Desync via MITM — Client-side desync (CVE-2022-22720) ([search](/search?q=Based%20Client-Side%20Desync%20via%20MITM%20—%20Client-side%20desync%20(CVE-2022-22720)))
+- **Race condition** — Single Packet Attack — Race condition ([search](/search?q=Race%20condition))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Abandon comfort** — also in [#139](/episodes/139)
+- **Hunt forgotten knowledge** — also in [#139](/episodes/139)
+- **No idea too stupid** — also in [#139](/episodes/139)
+- **Pause-based desync** — also in [#139](/episodes/139)
+- **Single Packet Attack** — also in [#139](/episodes/139)
+- **TRACE + Max-Forwards** — also in [#139](/episodes/139)
+

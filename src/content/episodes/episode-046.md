@@ -4,6 +4,7 @@ episode: 46
 ---
 
 
+
 # Episode 46 The SAML Ramble
 
 ### TL;DR
@@ -151,3 +152,20 @@ Solo Justin episode on SAML (Security Assertion Markup Language) testing methodo
 1. **Solo Justin episode on SAML (Security Assertion Markup Language) testing methodo**
 2. **SAML is XML-based; every organization using SSO has SAML parsers in multiple lan**
 3. **Test every SAML endpoint for XSS in the SAMLRequest/SAMLResponse parameters**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Uber)** — SAML Signature Exclusion (OneLogin WordPress Plugin — Uber) ([search](/search?q=Uber)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Certificate Faking via KeyInfo** — also in [#046](/episodes/46)
+- **SSRF via x509 Certificate Authority Info Access (AIA) extension** — also in [#046](/episodes/46)
+- **Signature Exclusion** — also in [#046](/episodes/46)
+- **Token Recipient Confusion** — also in [#046](/episodes/46)
+- **XML Signature Wrapping** — also in [#046](/episodes/46)
+- **XSLT Transform** — also in [#046](/episodes/46)
+

@@ -4,6 +4,7 @@ episode: 119
 ---
 
 
+
 # Episode 119 Abusing Iframes from a Client-Side Hacker
 
 ### TL;DR
@@ -136,3 +137,20 @@ Iframe attributes deep dive: `src`, `srcdoc`, `csp`, `allow` (permission policy)
 1. **Iframe attributes deep dive: `src`, `srcdoc`, `csp`, `allow` (permission policy)**
 2. **Clickjacking is impactful when properly demonstrated: find a single-click "appro**
 3. **`srcdoc` attribute: creates new DOM, scripts execute (unlike innerHTML), same-or**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CSP attribute for script blocking** — also in [#119](/episodes/119)
+- **Cursor-following clickjacking** — also in [#119](/episodes/119)
+- **Open-faced iframe sandwich** — also in [#119](/episodes/119)
+- **Referrer policy on iframe** — also in [#119](/episodes/119)
+- **Window name hijacking** — also in [#119](/episodes/119)
+- **`srcdoc` script execution** — also in [#119](/episodes/119)
+- **`window.frames.length` cross-origin leak** — also in [#119](/episodes/119)
+

@@ -4,6 +4,7 @@ episode: 21
 ---
 
 
+
 # Episode 21 Chill Chat with Legendary DoD Hacker Corben Leo
 
 **Guests/Hosts:** Justin Gardner, Corben Leo (hacker_ / corben)  
@@ -123,3 +124,20 @@ Corben's journey: started hacking in high school (freshman), found bug bounty vi
 1. **Corben's journey: started hacking in high school (freshman), found bug bounty vi**
 2. **Load balancer identification: look at response headers (Kong, AWS ELB in SNI), t**
 3. **Map domains to IPs — build host-to-IP resolution into your recon pipeline; the s**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Corben Leo** — also appears in [#021](/episodes/21)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Copywriting for reports** — also in [#021](/episodes/21)
+- **Directory brute force on JS directories** — also in [#021](/episodes/21)
+- **Ingress endpoint cycling** — also in [#021](/episodes/21)
+- **Virtual-host brute force** — also in [#021](/episodes/21)
+

@@ -4,6 +4,7 @@ episode: 4
 ---
 
 
+
 # Episode 4 H1-407 Event Madness & Takeaways Part 2 w/ Special Guest Spaceraccoon
 
 ### TL;DR
@@ -158,3 +159,25 @@ Binary exploitation at live hacking events: desktop/binary targets are under-aud
 1. **Binary exploitation at live hacking events: desktop/binary targets are under-aud**
 2. **Desktop/binary apps in bug bounty are under-audited — big opportunity**
 3. **Reverse engineering levels: scripting languages (easiest) → C#/Java (intermediat**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **NTLM Hash Leak** — Responder + UNC Path Injection — NTLM Hash Leak ([search](/search?q=NTLM%20Hash%20Leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+- **www-form-urlencoded CSRF Bypass** — JSON → x-www-form-urlencoded CSRF Bypass ([search](/search?q=www-form-urlencoded%20CSRF%20Bypass))
+
+**Techniques:**
+- **Binary exploitation report writing** — also in [#004](/episodes/4)
+- **JSON→form-encoded CSRF** — also in [#004](/episodes/4)
+- **Meta referrer tag bypass** — also in [#004](/episodes/4)
+- **Responder for NTLM capture** — also in [#004](/episodes/4)
+
+**Advice:**
+- *""Not a lot of people are looking at desktop applications right now" — Space Raccoon on under-audited scope"*
+- *""Once I was really confident in understanding what I was supposed to be doing, I became a lot more confident" — Space Raccoon on binary exploitation training"*
+- *""Just read the docs" — recurring theme: how features are *supposed* to work vs how they actually work"*
+- *+1 more pieces of advice*
+

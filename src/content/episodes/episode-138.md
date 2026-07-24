@@ -4,6 +4,7 @@ episode: 138
 ---
 
 
+
 # Episode 138 Caido Tools and Workflows
 
 **Source:** Show notes (feed) — condensed.
@@ -97,3 +98,15 @@ EvenBetter plugin: Common Filters, Convert Workflow command palette.
 1. **EvenBetter plugin: Common Filters, Convert Workflow command palette.**
 2. **[ ] EvenBetter: Common Filters (5min/1h/6h/12h/24h), Ctrl+K for convert workflow**
 3. **[ ] Notes: Win+Shift+N → graphical Replay tab attachment.**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **RPC ID deobfuscation** — also in [#138](/episodes/138)
+- **Top-level nav highlighting** — also in [#138](/episodes/138)
+

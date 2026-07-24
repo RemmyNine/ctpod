@@ -4,6 +4,7 @@ episode: 146
 ---
 
 
+
 # Episode 146 Hacking Horror Stories
 
 ### TL;DR
@@ -154,3 +155,17 @@ Halloween special — three hosts share scariest bug stories
 
 #### 11. The practical takeaway
 1. **Halloween special — three hosts share scariest bug stories**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO** — IoT Tabletop Device Zero-Click SIP Exploit — RCE / ATO ([search](/search?q=ATO))
+- **ATO via XSS** — Open Banking Payment Injection → Bank Account Takeover — ATO via XSS ([search](/search?q=ATO%20via%20XSS))
+- **Click SIP Exploit — RCE** — IoT Tabletop Device Zero-Click SIP Exploit — RCE / ATO ([search](/search?q=Click%20SIP%20Exploit%20—%20RCE))
+- **Info Disclosure** — SSRF → Private Browser Extension Token Leakage — Info Disclosure / Network Access ([search](/search?q=Info%20Disclosure))
+- **Information Disclosure** — Yahoo LHE Source Code Leak via Web.zip — Information Disclosure ([search](/search?q=Information%20Disclosure))
+- **Network Access** — SSRF → Private Browser Extension Token Leakage — Info Disclosure / Network Access ([search](/search?q=Network%20Access))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

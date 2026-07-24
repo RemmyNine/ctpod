@@ -4,6 +4,7 @@ episode: 33
 ---
 
 
+
 # Episode 33 The Master of Hacker Show&Tell: Inti De Ceukelaire
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis, Inti De Ceukelaire (Inti / securinti)  
@@ -160,3 +161,22 @@ Inti is the "master of show & tell" at live hacking events; his presentation ski
 1. **Inti is the "master of show & tell" at live hacking events; his presentation ski**
 2. **CSS injection is more powerful than most think: you can reorder elements, add cu**
 3. **For live hacking events, set a goal (what data you want) and work backward; don'**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Inti De Ceukelaire** — also appears in [#033](/episodes/33)
+
+**Bugs & Vulnerabilities:**
+- **Phishing via CSS** — CSS Injection → Credential Harvesting — Phishing via CSS ([search](/search?q=Phishing%20via%20CSS))
+- **Slack takeover via email-to-ticket** — Ticket Trick — Slack takeover via email-to-ticket ([search](/search?q=Slack%20takeover%20via%20email-to-ticket))
+- **style Password Theft — Credential theft** — CAPTCHA-style Password Theft — Credential theft ([search](/search?q=style%20Password%20Theft%20—%20Credential%20theft))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CSS injection → phishing** — also in [#033](/episodes/33)
+- **Email-to-ticket hijacking** — also in [#033](/episodes/33)
+- **PostMessage for client-side auth** — also in [#033](/episodes/33)
+

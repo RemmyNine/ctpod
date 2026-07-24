@@ -4,6 +4,7 @@ episode: 144
 ---
 
 
+
 # Episode 144 Google's Top AI Hackers: Busfactor and Monke
 
 **Source:** Show notes (feed) — condensed.
@@ -132,3 +133,18 @@ Vitor + Kieran at Google LHE Mexico: 16 reports (14 valid), 2nd overall, Best AI
 1. **Vitor + Kieran at Google LHE Mexico: 16 reports (14 valid), 2nd overall, Best AI**
 2. **[ ] Google LHE: AI features are priority. Pay crit for exfiltration.**
 3. **[ ] PostMessage chain: no origin check + prototype pollution (JSON.parse+Object.**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO** — PostMessage → PPT → WS Override → XSS → ATO — ATO ([search](/search?q=ATO))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Iframe sandwich** — also in [#144](/episodes/144)
+- **LHE AI focus** — also in [#144](/episodes/144)
+- **PostMessage → PPT chain** — also in [#144](/episodes/144)
+- **Prototype pollution via config** — also in [#144](/episodes/144)
+

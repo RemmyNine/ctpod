@@ -4,6 +4,7 @@ episode: 163
 ---
 
 
+
 # Episode 163 Best Technical Takeaways from Portswigger Top 10 2025
 
 ### TL;DR
@@ -217,3 +218,27 @@ Parser differentials across different tech stacks (JS vs Erlang, JS vs Java)
 1. **Parser differentials across different tech stacks (JS vs Erlang, JS vs Java)**
 2. **[ ] When you see duplicate headers (e.g., two `Authorization` headers), check if**
 3. **[ ] Audit any YAML processing for parser differentials: `!!binary` tags, Merge (**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **.NET Framework RCE via HTTP Client Proxy + WSDL** — SOAPwn — .NET Framework RCE via HTTP Client Proxy + WSDL ([search](/search?q=.NET%20Framework%20RCE%20via%20HTTP%20Client%20Proxy%20+%20WSDL))
+- **Based Blind SSTI** — Boolean Error-Based Blind SSTI ([search](/search?q=Based%20Blind%20SSTI))
+- **Based SSTI — getattr Payload** — Error-Based SSTI — getattr Payload ([search](/search?q=Based%20SSTI%20—%20getattr%20Payload))
+- **Blind to Full Read via Redirect Chain** — Novel SSRF Technique — Blind to Full Read via Redirect Chain ([search](/search?q=Blind%20to%20Full%20Read%20via%20Redirect%20Chain))
+- **Multi-role Bypass** — Parser Differential — Multi-role Bypass ([search](/search?q=Multi-role%20Bypass))
+- **Site ETag Length Leak** — Cross-Site ETag Length Leak ([search](/search?q=Site%20ETag%20Length%20Leak))
+- **YAML `!!binary` Tag Confusion** — Parser Differential — YAML `!!binary` Tag Confusion ([search](/search?q=YAML%20`!!binary`%20Tag%20Confusion))
+- **test** — 10. Self-test ([search](/search?q=test))
+- *+1 more bug types*
+
+**Techniques:**
+- **Division-by-zero SSTI oracle** — also in [#163](/episodes/163)
+- **Duplicate header smuggling** — also in [#163](/episodes/163)
+- **ETag → If-None-Match reflection chain** — also in [#163](/episodes/163)
+- **Internal cache poisoning via framework-level caching** — also in [#163](/episodes/163)
+- **Multiple redirect status code chain escalation** — also in [#163](/episodes/163)
+- **ORM `__` operator injection** — also in [#163](/episodes/163)
+- **YAML `!!binary` tag abuse** — also in [#163](/episodes/163)
+

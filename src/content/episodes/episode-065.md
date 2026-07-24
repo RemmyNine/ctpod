@@ -4,6 +4,7 @@ episode: 65
 ---
 
 
+
 # Episode 65 Motivation and Methodology with Sam Curry (Zlz)
 
 **Guest:** Sam Curry
@@ -114,3 +115,14 @@ Sam Curry's hacking is driven by curiosity/interest, not money — "don't force 
 1. **Sam Curry's hacking is driven by curiosity/interest, not money — "don't force yo**
 2. **Bug bounty income is unstable even at the top — Sam experienced burnout after 4 **
 3. **Establishing "good intent" and a public track record as a white-hat researcher p**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Sam Curry** — also appears in [#065](/episodes/65)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

@@ -4,6 +4,7 @@ episode: 148
 ---
 
 
+
 # Episode 148 MCP Hacking Guide
 
 ### TL;DR
@@ -122,3 +123,14 @@ Justin solo episode covering Model Context Protocol (MCP) architecture, auth, in
 
 #### 11. The practical takeaway
 1. **Justin solo episode covering Model Context Protocol (MCP) architecture, auth, in**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Arbitrary File Read** — MCP Resources/templates — Arbitrary File Read ([search](/search?q=Arbitrary%20File%20Read))
+- **System Prompt Injection** — MCP `instructions` Field — System Prompt Injection ([search](/search?q=System%20Prompt%20Injection))
+- **Tool Hijacking** — MCP Tool Name Confusion — Tool Hijacking ([search](/search?q=Tool%20Hijacking))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

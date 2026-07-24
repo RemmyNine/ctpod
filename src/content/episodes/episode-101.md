@@ -4,6 +4,7 @@ episode: 101
 ---
 
 
+
 # Episode 101 CTBB Hijacked — Rez0__ on AI Attack Vectors with Johann Rehberger
 
 **Guest:** Johann Rehberger (Wunderwuzzi)
@@ -169,3 +170,23 @@ AI prompt injection data exfiltration via image/video rendering: make the LLM re
 1. **AI prompt injection data exfiltration via image/video rendering: make the LLM re**
 2. **First thing to try on any LLM: ask for markdown image rendering or HTML renderin**
 3. **System prompt extraction: try different languages (German works), or XML-tag-spl**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Johann Rehberger (Wunderwuzzi)** — also appears in [#101](/episodes/101)
+
+**Bugs & Vulnerabilities:**
+- **Conditional Prompt Injection + Data Exfiltration** — Microsoft 365 Copilot — Conditional Prompt Injection + Data Exfiltration ([search](/search?q=Conditional%20Prompt%20Injection%20+%20Data%20Exfiltration))
+- **HTML Image Tag Exfiltration** — Google AI Studio — HTML Image Tag Exfiltration ([search](/search?q=HTML%20Image%20Tag%20Exfiltration))
+- **Plugin Data Exfiltration via Video Creation** — Chat GPT — Plugin Data Exfiltration via Video Creation ([search](/search?q=Plugin%20Data%20Exfiltration%20via%20Video%20Creation))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Conditional prompt injection** — also in [#101](/episodes/101)
+- **Cross-language system prompt extraction** — also in [#101](/episodes/101)
+- **Invisible Unicode payloads** — also in [#101](/episodes/101)
+- **XML-tag-splitting** — also in [#101](/episodes/101)
+

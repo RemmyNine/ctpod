@@ -4,6 +4,7 @@ episode: 131
 ---
 
 
+
 # Episode 131 SL Cyber Writeups, Bug Bounty Metastrategy, and Orphaned Github Commits
 
 **Source:** Full ASR transcript.
@@ -160,3 +161,21 @@ GCP Metadata SSRF bypasses: extra slash, HTTP/0.9, semicolon.
 1. **GCP Metadata SSRF bypasses: extra slash, HTTP/0.9, semicolon.**
 2. **[ ] Test GCP metadata: `computeMetadata//v1/`, HTTP/0.9, `;` in URL — all bypass**
 3. **[ ] Cross-customer XSS: find CDN serving user content; check HTML upload served **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Credential disclosure** — Orphaned GitHub Commits — Credential disclosure ([search](/search?q=Credential%20disclosure))
+- **Credential leak** — DNN Unicode → NTLM Hash Leak — Credential leak ([search](/search?q=Credential%20leak))
+- **Metadata read** — GCP Metadata SSRF Bypass — Metadata read ([search](/search?q=Metadata%20read))
+- **Stored XSS** — AEM Cloud NPM Reverse Proxy XSS — Stored XSS ([search](/search?q=Stored%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Order of operations in sanitization** — also in [#131](/episodes/131)
+- **Redirect loop for blind SSRF** — also in [#131](/episodes/131)
+- **Tab character path traversal** — also in [#131](/episodes/131)
+- **Unicode normalization after sanitization** — also in [#131](/episodes/131)
+

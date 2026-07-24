@@ -4,6 +4,7 @@ episode: 29
 ---
 
 
+
 # Episode 29 Live Episode with Sean Yeoh — Assetnote Engineer
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis, Sean Yeoh (Assetnote)  
@@ -117,3 +118,19 @@ Sean Yeoh (Assetnote engineer) on building a production-grade recon architecture
 1. **Sean Yeoh (Assetnote engineer) on building a production-grade recon architecture**
 2. **For personal recon: keep it simple — janky Python scripts beat Kubernetes + even**
 3. **For scale: use NATS as message broker (lightweight, good visibility), avoid Rabb**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Sean Yeoh** — also appears in [#029](/episodes/29)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **DNS wildcard detection** — also in [#029](/episodes/29)
+- **Event-driven architecture** — also in [#029](/episodes/29)
+- **Profiling-first optimization** — also in [#029](/episodes/29)
+

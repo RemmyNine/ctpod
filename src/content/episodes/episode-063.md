@@ -4,6 +4,7 @@ episode: 63
 ---
 
 
+
 # Episode 63 JHaddix Returns
 
 **Guest:** Jason Haddix
@@ -120,3 +121,14 @@ JHaddix started Arcanum Information Security (consultancy) — the name comes fr
 1. **JHaddix started Arcanum Information Security (consultancy) — the name comes from**
 2. **RedLine stealer malware steals cookies AND creds — if you find a cred on a forum**
 3. **Five out of six recent red team engagements succeeded via credentials bought fro**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Jason Haddix** — also appears in [#063](/episodes/63)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

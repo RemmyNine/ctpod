@@ -4,6 +4,7 @@ episode: 157
 ---
 
 
+
 # Episode 157 Kernel Driver Exploits with Hypr
 
 ### TL;DR
@@ -108,3 +109,12 @@ Hypr (Enrique) discusses MediaTek kernel driver heap overflow (CVE-2025-27422) a
 
 #### 11. The practical takeaway
 1. **Hypr (Enrique) discusses MediaTek kernel driver heap overflow (CVE-2025-27422) a**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2025-27422) — LPE** — MediaTek Kernel Driver Heap Overflow (CVE-2025-27422) — LPE ([search](/search?q=2025-27422)%20—%20LPE))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

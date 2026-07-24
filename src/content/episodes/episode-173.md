@@ -4,6 +4,7 @@ episode: 173
 ---
 
 
+
 # Episode 173 Bug Bounty is Dead and AI Killed it
 
 ### TL;DR
@@ -104,3 +105,16 @@ So many AI-generated reports that programs can't keep up — Google dropped low/
 1. **So many AI-generated reports that programs can't keep up — Google dropped low/me**
 2. **[ ] Video POCs are increasingly required — some programs now request video-first**
 3. **[ ] Submission fees ($5+) drastically reduce low-quality AI slop — consider this**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **HackenProof's submission fee model** — also in [#173](/episodes/173)
+- **Signal-based submission slots** — also in [#173](/episodes/173)
+- **Video-first reporting** — also in [#173](/episodes/173)
+

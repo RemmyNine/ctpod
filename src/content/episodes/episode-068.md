@@ -4,6 +4,7 @@ episode: 68
 ---
 
 
+
 # Episode 68 0-days & HTMX-SS with Matthias (Matthias)
 
 **Guest:** Matthias (security researcher)
@@ -119,3 +120,16 @@ HTMX requires `unsafe-eval` in CSP for triggers — this alone is a global CSP b
 1. **HTMX requires `unsafe-eval` in CSP for triggers — this alone is a global CSP byp**
 2. **HTMX's `allowEval` config flag (default: true) must be set to `false` to prevent**
 3. **`HX-Redirect` response header: if you can inject response headers from a path HT**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Matthias (security researcher)** — also appears in [#068](/episodes/68)
+
+**Bugs & Vulnerabilities:**
+- **Attributes** — HTMX + DomPurify Bypass via data- Attributes ([search](/search?q=Attributes))
+- **Redirect to XSS** — HTMX HX-Redirect to XSS ([search](/search?q=Redirect%20to%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

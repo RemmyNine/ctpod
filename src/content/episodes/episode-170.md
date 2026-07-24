@@ -4,6 +4,7 @@ episode: 170
 ---
 
 
+
 # Episode 170 Claude Code + Tmux, Websockets, and Other Korea LHE Takeaways
 
 ### TL;DR
@@ -133,3 +134,17 @@ Claude Code + tmux reverse shell: pipe commands via `tmux send-keys` into an nc 
 1. **Claude Code + tmux reverse shell: pipe commands via `tmux send-keys` into an nc **
 2. **[ ] Use `tmux send-keys` to give Claude Code control of a reverse shell — works **
 3. **[ ] Record video POCs immediately when you find a bug (or even before, if you su**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Human tokens / mouth tokens** — also in [#170](/episodes/170)
+- **Protoscope for binary Protobuf** — also in [#170](/episodes/170)
+- **Regression testing against old AI exfiltration bugs** — also in [#170](/episodes/170)
+- **tmux + Claude Code for reverse shell control** — also in [#170](/episodes/170)
+

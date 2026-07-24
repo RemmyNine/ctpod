@@ -4,6 +4,7 @@ episode: 175
 ---
 
 
+
 # Episode 175 Rhyno's Hackbot Setup, Sick Bugs, and ZDI Drama
 
 ### TL;DR
@@ -157,3 +158,21 @@ Wormable AI exploit: Q-parameter prompt injection → GitHub connector → modif
 1. **Wormable AI exploit: Q-parameter prompt injection → GitHub connector → modify fi**
 2. **[ ] Q-parameter prompt injection: test every AI app for GET parameters that auto**
 3. **[ ] Ambiguous prompting: "go change my website" lets AI figure out the mechanism**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Parameter Prompt Injection → GitHub Auto-Deploy** — Wormable Q-Parameter Prompt Injection → GitHub Auto-Deploy ([search](/search?q=Parameter%20Prompt%20Injection%20→%20GitHub%20Auto-Deploy))
+- **Second-Order via Link Shortener + Embedded API Key** — Mobile CSPT — Second-Order via Link Shortener + Embedded API Key ([search](/search?q=Second-Order%20via%20Link%20Shortener%20+%20Embedded%20API%20Key))
+- **Social Media Mega-Crit** — Admin API Key in JS File — Social Media Mega-Crit ([search](/search?q=Social%20Media%20Mega-Crit))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Ambiguous prompting** — also in [#175](/episodes/175)
+- **PTY harness for Claude Code** — also in [#175](/episodes/175)
+- **Q-parameter prompt injection** — also in [#175](/episodes/175)
+- **Stop-hook for infinite loop** — also in [#175](/episodes/175)
+- **Validator agent with SSH resume** — also in [#175](/episodes/175)
+

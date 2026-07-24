@@ -4,6 +4,7 @@ episode: 142
 ---
 
 
+
 # Episode 142 Gr3pme's Full-Time Hunting Journey Update, Insane AI Research, and Some Light News
 
 **Source:** Show notes (feed) — condensed.
@@ -138,3 +139,20 @@ Brandon full-time since Jan: started Murtasec pen test company.
 1. **Brandon full-time since Jan: started Murtasec pen test company.**
 2. **[ ] WebSocket Turbo Intruder: threaded engine for race conditions; Ping of Death**
 3. **[ ] E2E apps: no server validation. File path traversal → DLL hijacking → RCE.**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **750)** — Facebook Messenger E2E Path Traversal → RCE — RCE ($111,750) ([search](/search?q=750)))
+- **AI routing bypass** — PROMISQROUTE — AI routing bypass ([search](/search?q=AI%20routing%20bypass))
+- **RCE ($111** — Facebook Messenger E2E Path Traversal → RCE — RCE ($111,750) ([search](/search?q=RCE%20($111))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AI model routing exploitation** — also in [#142](/episodes/142)
+- **DLL hijacking for E2E RCE** — also in [#142](/episodes/142)
+- **E2E client-side bypass** — also in [#142](/episodes/142)
+- **Split vulnerability by hackbot** — also in [#142](/episodes/142)
+

@@ -4,6 +4,7 @@ episode: 107
 ---
 
 
+
 # Episode 107 Bypassing Cross-Origin Browser Headers
 
 **Host:** Justin Gardner (Rhynorater)
@@ -120,3 +121,15 @@ Coop (Cross-Origin Opener Policy) severs window.opener relationships — kills p
 1. **Coop (Cross-Origin Opener Policy) severs window.opener relationships — kills pos**
 2. **Coop header values: `same-origin` (severs all cross-origin opener), `same-origin**
 3. **If you can get a Coop-protected page iframed into a non-Coop page, you can commu**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Coop bypass via iframe pivot** — also in [#107](/episodes/107)
+- **Third-party trust chain** — also in [#107](/episodes/107)
+

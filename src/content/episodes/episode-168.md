@@ -4,6 +4,7 @@ episode: 168
 ---
 
 
+
 # Episode 168 XSSDoctor — Client-side Path Traversal Research
 
 ### TL;DR
@@ -157,3 +158,22 @@ Comprehensive research on how 8 major frontend frameworks handle client-side pat
 1. **Comprehensive research on how 8 major frontend frameworks handle client-side pat**
 2. **[ ] CSPT exists beyond web apps — found in desktop apps, mobile apps, IoT; any H**
 3. **[ ] In Next.js, test server-side `await params` for auto-decoded path traversal **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Prod Upload → PostMessage → XSS → AI Home Automation Takeover** — Pre-Prod Upload → PostMessage → XSS → AI Home Automation Takeover ([search](/search?q=Prod%20Upload%20→%20PostMessage%20→%20XSS%20→%20AI%20Home%20Automation%20Takeover))
+- **Side Path Traversal via Fetch — Tab in URL** — Client-Side Path Traversal via Fetch — Tab in URL ([search](/search?q=Side%20Path%20Traversal%20via%20Fetch%20—%20Tab%20in%20URL))
+- **Signature Platform — Link Leak → Unauthorized Signing** — E-Signature Platform — Link Leak → Unauthorized Signing ([search](/search?q=Signature%20Platform%20—%20Link%20Leak%20→%20Unauthorized%20Signing))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Content-Disposition: attachment bypass via directory** — also in [#168](/episodes/168)
+- **Control-click from iframe → top-level navigation** — also in [#168](/episodes/168)
+- **Next.js `await params` vs `useParams` differential** — also in [#168](/episodes/168)
+- **React `useParams` double-URL-decoding** — also in [#168](/episodes/168)
+- **Splat/wildcard routes** — also in [#168](/episodes/168)
+- **Window.open from keydown event** — also in [#168](/episodes/168)
+

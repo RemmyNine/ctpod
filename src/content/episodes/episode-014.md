@@ -4,6 +4,7 @@ episode: 14
 ---
 
 
+
 # Episode 14 Mobile Hacking Dynamic Analysis w/ Frida + Random Hacker Stuff
 
 ### TL;DR
@@ -162,3 +163,25 @@ Frida dynamic analysis for Android: SSL pinning bypass, root detection bypass, f
 1. **Frida dynamic analysis for Android: SSL pinning bypass, root detection bypass, f**
 2. **Use ADB `logcat` with PID filter to find root detection/cert pinning error messa**
 3. **Custom SSL pinning: find `TLSConfig.setVerifyServer()` — hook it with Frida to r**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO (High)** — Custom SSL Pinning Bypass + Impersonation Function — ATO (High) ([search](/search?q=ATO%20(High)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Frida SSL unpin workflow** — also in [#014](/episodes/14)
+- **Frida native library polling** — also in [#014](/episodes/14)
+- **JADX → Frida snippet** — also in [#014](/episodes/14)
+- **Root AVD** — also in [#014](/episodes/14)
+- **scrcpy** — also in [#006](/episodes/6), [#014](/episodes/14)
+
+**Advice:**
+- *""Most SSL pinning is security-through-obscurity; bypass it and you'll find bugs others miss" — Justin"*
+- *""For custom pinning, search for `check`, `verify`, `certificate`, `pinning` in the code" — Joel"*
+- *""Use JADX-GUI → right click → 'Copy as Frida snippet' to get hook boilerplate instantly" — Justin"*
+- *+1 more pieces of advice*
+

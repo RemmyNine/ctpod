@@ -4,6 +4,7 @@ episode: 38
 ---
 
 
+
 # Episode 38 Mobile Hacking Maestro — Sergey Toshin (Baggy Pro)
 
 ### TL;DR
@@ -117,3 +118,15 @@ Sergey Toshin (Baggy Pro) — #1 hacker in Google Play Security Awards, #1 in Sa
 1. **Sergey Toshin (Baggy Pro) — #1 hacker in Google Play Security Awards, #1 in Sams**
 2. **Mobile hacking has far fewer competitors than web (~500 web vs ~5 mobile at the **
 3. **Use and contribute to Jadx decompiler; report decompilation bugs to keep the flo**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **1M in 4-5 months** — Google Play Security Rewards — 1M in 4-5 months ([search](/search?q=1M%20in%204-5%20months))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Host validation bypass via URI class mismatch** — also in [#038](/episodes/38)
+

@@ -4,6 +4,7 @@ episode: 176
 ---
 
 
+
 # Episode 176 600+ CVEs on Adobe AEM with Jim Green (GreenJam)
 
 ### TL;DR
@@ -180,3 +181,22 @@ AEM architecture: Author (internal) → Publisher (public) → Dispatcher (Apach
 1. **AEM architecture: Author (internal) → Publisher (public) → Dispatcher (Apache HT**
 2. **[ ] AEM selectors like `.rawcontent`, `.listparagraphs`, `.form` can bypass disp**
 3. **[ ] `querybuilder` on AEM = SQL for the JCR database — dump all content, metadat**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Dispatcher Bypass → JCR Enumeration** — Listparagraphs Selector — Dispatcher Bypass → JCR Enumeration ([search](/search?q=Dispatcher%20Bypass%20→%20JCR%20Enumeration))
+- **Stored XSS via 404 Reflection** — Rawcontent Selector — Stored XSS via 404 Reflection ([search](/search?q=Stored%20XSS%20via%20404%20Reflection))
+- **Universal Dispatcher Bypass** — Form Selector — Universal Dispatcher Bypass ([search](/search?q=Universal%20Dispatcher%20Bypass))
+- **encoding XSS** — jQuery.text() / .textContent Re-encoding XSS ([search](/search?q=encoding%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AEM selector chaining** — also in [#176](/episodes/176)
+- **Anonymous user in everyone group** — also in [#176](/episodes/176)
+- **CRX QuickStart install folder RCE** — also in [#176](/episodes/176)
+- **Dispatcher bypass via selectors** — also in [#176](/episodes/176)
+- **JCR dumping** — also in [#176](/episodes/176)
+

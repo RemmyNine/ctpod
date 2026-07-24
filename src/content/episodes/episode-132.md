@@ -4,6 +4,7 @@ episode: 132
 ---
 
 
+
 # Episode 132 Archive Testing Methodology with Mathias Karlsson
 
 **Source:** Show notes (feed) — condensed.
@@ -163,3 +164,23 @@ Archive Alchemist tool for archive vulnerability testing.
 1. **Archive Alchemist tool for archive vulnerability testing.**
 2. **[ ] Archive Alchemist: `archive-alchemist <archive> ls|cat|rm|add|replace` — ZIP**
 3. **[ ] ZIP Unicode Path: third filename location. Windows Explorer ignores bad CRC,**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Extension bypass** — Unzip Path Length Truncation — Extension bypass ([search](/search?q=Extension%20bypass))
+- **Filename confusion** — ZIP Unicode Path Parser Differential — Filename confusion ([search](/search?q=Filename%20confusion))
+- **RCE** — Symlink + LD_PRELOAD — RCE ([search](/search?q=RCE))
+- **Zip Empty Entry — Archive name reuse** — 7-Zip Empty Entry — Archive name reuse ([search](/search?q=Zip%20Empty%20Entry%20—%20Archive%20name%20reuse))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CRC invalidation differential** — also in [#132](/episodes/132)
+- **Multiple filenames in ZIP** — also in [#132](/episodes/132)
+- **Nullbyte in archive** — also in [#132](/episodes/132)
+- **Path length as oracle** — also in [#132](/episodes/132)
+- **Polyglot archives** — also in [#132](/episodes/132)
+- **`<>` in filename as OS oracle** — also in [#132](/episodes/132)
+

@@ -4,6 +4,7 @@ episode: 30
 ---
 
 
+
 # Episode 30 Recon Legend Shubs — From Burgers to Bounties
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis, Shubs (InfoSecAU / Assetnote)  
@@ -158,3 +159,22 @@ Shubs' origin story: worked at Hungry Jack's ($6/hr), first PayPal bounty ($1.5K
 1. **Shubs' origin story: worked at Hungry Jack's ($6/hr), first PayPal bounty ($1.5K**
 2. **IIS = easiest web server to hack; blue page = "I'm going to find criticals here"**
 3. **web.config contains machineKey/validationKey; LFD → web.config read → Telerik/RC**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Shubs** — also appears in [#030](/episodes/30)
+
+**Bugs & Vulnerabilities:**
+- **Auth bypass** — IIS Virtual Directory Path Traversal — Auth bypass ([search](/search?q=Auth%20bypass))
+- **LFD → RCE** — IIS Short Name + web.config → RCE chain — LFD → RCE ([search](/search?q=LFD%20→%20RCE))
+- **SSRF escalation** — SSRF → NTLMv2 hash capture — SSRF escalation ([search](/search?q=SSRF%20escalation))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Application pool confusion** — also in [#030](/episodes/30)
+- **Cookie-less session token injection (IIS/.NET)** — also in [#030](/episodes/30)
+- **Zero-day reporting strategy** — also in [#030](/episodes/30)
+

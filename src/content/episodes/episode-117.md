@@ -4,6 +4,7 @@ episode: 117
 ---
 
 
+
 # Episode 117 Hacking AI Series: Vulnus ex Machina — Part 1
 
 ### TL;DR
@@ -137,3 +138,18 @@ AI recon methodology: find AI features on support/contact pages, monitor for bet
 1. **AI recon methodology: find AI features on support/contact pages, monitor for bet**
 2. **Find AI features by monitoring developer blogs, beta programs, and product launc**
 3. **Email program managers: "Are you building anything AI-related? I'd love to test **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Google dorking for AI features** — also in [#117](/episodes/117)
+- **Sink identification** — also in [#117](/episodes/117)
+- **Source identification** — also in [#117](/episodes/117)
+- **Stagehand / browser-use** — also in [#117](/episodes/117)
+- **System prompt leak** — also in [#117](/episodes/117)
+

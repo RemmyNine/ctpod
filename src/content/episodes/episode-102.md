@@ -4,6 +4,7 @@ episode: 102
 ---
 
 
+
 # Episode 102 Building Web Hacking Micro Agents with Jason Haddix
 
 **Guest:** Jason Haddix
@@ -144,3 +145,17 @@ Micro-agents: narrow-purpose AI bots for specific hacking tasks (acquisition fin
 1. **Micro-agents: narrow-purpose AI bots for specific hacking tasks (acquisition fin**
 2. **Build micro-agents with very narrow scope: one vulnerability class, one task (fu**
 3. **Agent architecture: parse inputs → identify → send to specialist bots → execute **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Attention mechanism prompting** — also in [#102](/episodes/102)
+- **CTF persona technique** — also in [#102](/episodes/102)
+- **Micro-agent architecture** — also in [#102](/episodes/102)
+- **Obfuscation bot pattern** — also in [#102](/episodes/102)
+

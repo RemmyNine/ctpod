@@ -4,6 +4,7 @@ episode: 109
 ---
 
 
+
 # Episode 109 Creative Recon - Alternative Techniques
 
 ### TL;DR
@@ -166,3 +167,20 @@ DeepSeek exposed ClickHouse database found via nmap scan — dev DB wide open on
 1. **DeepSeek exposed ClickHouse database found via nmap scan — dev DB wide open on t**
 2. **When you find a dev database open to the internet (ClickHouse, etc.), query it —**
 3. **Test cookie parsing with `$Version=1` (capital V) to force legacy RFC parsing; t**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Git Credentials Belong To Us** — Clone2Leak — Git Credentials Belong To Us ([search](/search?q=Git%20Credentials%20Belong%20To%20Us))
+- **HttpOnly Cookie Theft via Legacy Parsing** — Cookie Sandwich Attack — HttpOnly Cookie Theft via Legacy Parsing ([search](/search?q=HttpOnly%20Cookie%20Theft%20via%20Legacy%20Parsing))
+- **Information Disclosure** — DeepSeek Exposed ClickHouse Database — Information Disclosure ([search](/search?q=Information%20Disclosure))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cache-geolocation de-anonymization** — also in [#109](/episodes/109)
+- **Cookie legacy-mode triggering** — also in [#109](/episodes/109)
+- **URL scan recon** — also in [#109](/episodes/109)
+- **Unicode line-terminator smuggling** — also in [#109](/episodes/109)
+

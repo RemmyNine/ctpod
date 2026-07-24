@@ -4,6 +4,7 @@ episode: 140
 ---
 
 
+
 # Episode 140 Crit Research Lab Update & Client-Side Tricks Galore
 
 **Source:** Show notes (feed) — condensed.
@@ -159,3 +160,22 @@ Critical Research Lab: micro ($20-50), full ($100-250), mega ($500) research bou
 1. **Critical Research Lab: micro ($20-50), full ($100-250), mega ($500) research bou**
 2. **[ ] Web Worker XSS: exploit → blob → drag-and-drop → main-origin XSS.**
 3. **[ ] CSRF via content-type: `text/plain;` passes `includes()` checks.**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **CSRF (CVE-2022-21703)** — CSRF via `text/plain;` — CSRF (CVE-2022-21703) ([search](/search?q=CSRF%20(CVE-2022-21703)))
+- **Cookie injection** — Cookie Prefix Bypass via strip() — Cookie injection ([search](/search?q=Cookie%20injection))
+- **Leak — Data exfiltration** — CSS Font-Leak — Data exfiltration ([search](/search?q=Leak%20—%20Data%20exfiltration))
+- **XSS escalation** — Web Worker XSS with Blobs — XSS escalation ([search](/search?q=XSS%20escalation))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AI business logic flaws** — also in [#140](/episodes/140)
+- **Frame counting for cross-site leaks** — also in [#140](/episodes/140)
+- **Invisible Unicode in AI spec** — also in [#140](/episodes/140)
+- **Named window references** — also in [#140](/episodes/140)
+- **postMessage hunting** — also in [#140](/episodes/140)
+

@@ -14,7 +14,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const prev = entry.data.episode > 1 ? entry.data.episode - 1 : null;
-const next = entry.data.episode < 179 ? entry.data.episode + 1 : null;
+const totalEpisodes = bookletData.total_episodes || 184;
+const next = entry.data.episode < totalEpisodes ? entry.data.episode + 1 : null;
 
 // Find tools mentioned in this episode from booklet data
 const epNum = entry.data.episode;

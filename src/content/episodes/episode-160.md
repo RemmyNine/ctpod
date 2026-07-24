@@ -4,6 +4,7 @@ episode: 160
 ---
 
 
+
 # Episode 160 Cloudflare Zero-days & Mail Unsubscribing for XSS
 
 ### TL;DR
@@ -114,3 +115,13 @@ Cloudflare WAF bypass: `/.well-known/acme-challenge/<any-valid-token>` → path 
 
 #### 11. The practical takeaway
 1. **Cloudflare WAF bypass: `/.well-known/acme-challenge/<any-valid-token>` → path tr**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Unsubscribe Header → SSRF** — List-Unsubscribe Header → SSRF / XSS ([search](/search?q=Unsubscribe%20Header%20→%20SSRF))
+- **XSS** — List-Unsubscribe Header → SSRF / XSS ([search](/search?q=XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

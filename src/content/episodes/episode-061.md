@@ -4,6 +4,7 @@ episode: 61
 ---
 
 
+
 # Episode 61 A Hacker on Wall Street — JR0ch17 (Jasmin Landry)
 
 **Guest:** Jasmin Landry (JR0ch17)
@@ -124,3 +125,14 @@ Jasmin found a meta tag `<meta name="referrer" content="unsafe-url">` bypasses D
 1. **Jasmin found a meta tag `<meta name="referrer" content="unsafe-url">` bypasses D**
 2. **Meta tag referrer policy works even when the `<meta>` element is removed from DO**
 3. **OAuth redirect_uri validation often allows path traversal — use `https://target.**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Jasmin Landry (JR0ch17)** — also appears in [#061](/episodes/61)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

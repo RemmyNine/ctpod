@@ -4,6 +4,7 @@ episode: 13
 ---
 
 
+
 # Episode 13 How to Find a Good BBP + Acropalypse + ZDI
 
 ### TL;DR
@@ -138,3 +139,24 @@ Acropalypse (Cropalypse): Google Pixel screenshot cropping tool left original im
 1. **Acropalypse (Cropalypse): Google Pixel screenshot cropping tool left original im**
 2. **For SSRF testing: test HTTPS→HTTP redirect — may bypass restrictive filters that**
 3. **ZDI requires 5-minute exploit demo window — race-condition-based attacks may fai**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO (High)** — OAuth Path Traversal + Google Analytics URL Leak — ATO (High) ([search](/search?q=ATO%20(High)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Acropalypse-like testing** — also in [#013](/episodes/13)
+- **Numeric IDOR mindset** — also in [#013](/episodes/13)
+- **Program selection checklist** — also in [#013](/episodes/13)
+- **SSRF filter bypass via HTTPS→HTTP redirect** — also in [#013](/episodes/13)
+
+**Advice:**
+- *""If an internal dupe has been open for 6+ months, should still pay — attacker will exploit it" — Justin"*
+- *""Medium bounties at 3K: that's where the real money is, not just crits" — Justin on program selection"*
+- *""Look at the gap between #1 and #2 on leaderboard — if it's someone who goes deep, that's interesting" — Joel"*
+- *+1 more pieces of advice*
+

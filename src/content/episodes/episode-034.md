@@ -4,6 +4,7 @@ episode: 34
 ---
 
 
+
 # Episode 34 Program vs Hacker Debate
 
 **Guests/Hosts:** Justin Gardner (representing hackers), Joel Margolis (representing program managers)  
@@ -94,3 +95,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Long-form debate on zero-day policies, disclosure, dupes, CVSS, budgets, triage,**
 2. **On zero-days**: Pay for impact, not fault. If a third-party product affects you,**
 3. **On disclosure**: Program terms bind you; going around them risks ban/legal. Use **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

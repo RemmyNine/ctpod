@@ -4,6 +4,7 @@ episode: 23
 ---
 
 
+
 # Episode 23 Hacker Loadouts
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis  
@@ -100,3 +101,14 @@ Both hosts discuss their physical hacking setups: desks, monitors, chairs, keybo
 1. **Both hosts discuss their physical hacking setups: desks, monitors, chairs, keybo**
 2. **Invest in your workspace: standing desk (Uplift), good chair (Herman Miller Aero**
 3. **Synergy software KVM — seamless mouse/keyboard across Windows, Mac, Linux**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Clamshell dock** — also in [#023](/episodes/23)
+

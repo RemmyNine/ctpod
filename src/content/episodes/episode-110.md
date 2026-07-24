@@ -4,6 +4,7 @@ episode: 110
 ---
 
 
+
 # Episode 110 Oauth Gadget Correlation and Common Attacks
 
 ### TL;DR
@@ -167,3 +168,19 @@ DOMPurify 3.2.3 bypass via HTML comment parsing difference (`<!` without `--` tr
 1. **DOMPurify 3.2.3 bypass via HTML comment parsing difference (`<!` without `--` tr**
 2. **When you find an OAuth client secret, use the client credentials flow (`grant_ty**
 3. **For client confusion attacks: if an app accepts an `id_token` or `token` directl**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **API Data Leak** — OAuth Client Credentials Abuse — API Data Leak ([search](/search?q=API%20Data%20Leak))
+- **Mutation XSS** — DOMPurify 3.2.3 Bypass — Mutation XSS ([search](/search?q=Mutation%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Client confusion attack** — also in [#110](/episodes/110)
+- **Device code flow as universal redirect** — also in [#110](/episodes/110)
+- **Mutable claims attack** — also in [#110](/episodes/110)
+- **OAuth gadget correlation** — also in [#110](/episodes/110)
+

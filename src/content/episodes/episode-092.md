@@ -4,6 +4,7 @@ episode: 92
 ---
 
 
+
 # Episode 92 SAML XPath Confusion, Chinese DNS Poisoning, and AI Powered 403 Bypasser
 
 **Hosts:** Justin Gardner (Rhynorater), Joel Margolis (Teknogeek)
@@ -175,3 +176,18 @@ Chinese Great Firewall DNS poisoning: ~700 keywords in subdomains cause DNS to r
 1. **Chinese Great Firewall DNS poisoning: ~700 keywords in subdomains cause DNS to r**
 2. **SAML signature validation XPath selection is a critical single point of failure **
 3. **DNS poisoning via the Great Firewall of China affects any domain with sensitive **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Fi Chipset 0-Click Buffer Overflow** — MediaTek Wi-Fi Chipset 0-Click Buffer Overflow ([search](/search?q=Fi%20Chipset%200-Click%20Buffer%20Overflow))
+- **One Payload for All** — XSS WAF Bypass — One Payload for All ([search](/search?q=One%20Payload%20for%20All))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Encoding mismatch WAF bypass** — also in [#092](/episodes/92)
+- **Forcing cookie order via path length** — also in [#092](/episodes/92)
+- **SAML assertion smuggling** — also in [#092](/episodes/92)
+

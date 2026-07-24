@@ -4,6 +4,7 @@ episode: 115
 ---
 
 
+
 # Episode 115 Mentee to Career Hacker — Mokusou (So Sakaguchi)
 
 *Show notes only — no full transcript available.*
@@ -89,3 +90,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 #### 11. The practical takeaway
 1. **Interview with So Sakaguchi (Mokusou), previously on Episode 40**
 2. **[Show notes only — limited technical detail]**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

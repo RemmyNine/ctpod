@@ -4,6 +4,7 @@ episode: 112
 ---
 
 
+
 # Episode 112 Interview with Ciarán Cotter (MonkeHack)
 
 ### TL;DR
@@ -185,3 +186,18 @@ Three bugs presented: complex postMessage ATO chain via OAuth fixation + iframe 
 1. **Three bugs presented: complex postMessage ATO chain via OAuth fixation + iframe **
 2. **In complex client-side chains, `window.open()` to victim page gives a window ref**
 3. **Double URL-encode a hash fragment: on first redirect it decodes once, on second **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Classpath oracle via error messages** — also in [#112](/episodes/112)
+- **DOM purging for frame-ancestors bypass** — also in [#112](/episodes/112)
+- **Double URL-encoded hash fragment** — also in [#112](/episodes/112)
+- **Iframe hop (same-origin frame navigation)** — also in [#112](/episodes/112)
+- **WebSocket pipeline frame smuggling** — also in [#112](/episodes/112)
+

@@ -4,6 +4,7 @@ episode: 62
 ---
 
 
+
 # Episode 62 Frontend Language Oddities
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -103,3 +104,11 @@ episode: 62
 1. **`form` attribute on `<input>` allows elements outside `<form>` to be included in**
 2. **`input type=image` acts as a submit button AND triggers `onerror` if `src` fails**
 3. **`form` attribute on inputs lets any element outside `<form>` participate in subm**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

@@ -4,6 +4,7 @@ episode: 60
 ---
 
 
+
 # Episode 60 Our Take on PortSwigger's Top 10 Web Hacking Techniques of 2023
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -109,3 +110,12 @@ James Kettle's "Smashing the state machine" (#1) — send last byte of multiple 
 1. **James Kettle's "Smashing the state machine" (#1) — send last byte of multiple HT**
 2. **For race conditions: HTTP/2 single-packet attack = group requests, withhold fina**
 3. **PHP filter chain generator is available — from LFI with no upload, read arbitrar**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Masato Kinugawa)** — Microsoft Teams Electron RCE (Pwn2Own 2023 — Masato Kinugawa) ([search](/search?q=Masato%20Kinugawa)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

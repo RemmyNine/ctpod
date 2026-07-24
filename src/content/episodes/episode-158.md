@@ -4,6 +4,7 @@ episode: 158
 ---
 
 
+
 # Episode 158 10hr Marathon Hack-Along Recap
 
 ### TL;DR
@@ -128,3 +129,11 @@ Charity hackalong recap: postMessage race condition, partial auth states, permis
 
 #### 11. The practical takeaway
 1. **Charity hackalong recap: postMessage race condition, partial auth states, permis**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

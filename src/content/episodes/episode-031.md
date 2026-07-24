@@ -4,6 +4,7 @@ episode: 31
 ---
 
 
+
 # Episode 31 Alex Chapman — The Man of Many Crits
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis, Alex Chapman (AJX Chapman)  
@@ -148,3 +149,22 @@ Alex's career: 16 years in security (Deloitte pen testing → smaller consultanc
 1. **Alex's career: 16 years in security (Deloitte pen testing → smaller consultancy **
 2. **Focus on sinks (exec, deserialization, file write) and work backwards to find in**
 3. **For headless Chrome exploitation: sandbox often disabled → easier RCE; GitHub Se**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Alex Chapman** — also appears in [#031](/episodes/31)
+
+**Bugs & Vulnerabilities:**
+- **File read** — JDBC connection string injection — File read/write ([search](/search?q=File%20read))
+- **RCE** — Perforce RCE via fake server — RCE ([search](/search?q=RCE))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+- **write** — JDBC connection string injection — File read/write ([search](/search?q=write))
+
+**Techniques:**
+- **Client-side exploitation of server-driven protocols** — also in [#031](/episodes/31)
+- **Protocol reverse engineering** — also in [#031](/episodes/31)
+- **Sink-first code review** — also in [#031](/episodes/31)
+

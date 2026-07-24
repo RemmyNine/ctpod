@@ -4,6 +4,7 @@ episode: 152
 ---
 
 
+
 # Episode 152 GeminiJack and Agentic Security with Sasi Levi
 
 ### TL;DR
@@ -112,3 +113,13 @@ Sasi Levi (Noma Security) presents Vertex AI/Gemini indirect prompt injection �
 
 #### 11. The practical takeaway
 1. **Sasi Levi (Noma Security) presents Vertex AI/Gemini indirect prompt injection → **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Data Exfiltration** — Vertex AI / Gemini Indirect Prompt Injection — Data Exfiltration ([search](/search?q=Data%20Exfiltration))
+- **Salesforce Agent Force Injection** — ForcedLeak — Salesforce Agent Force Injection ([search](/search?q=Salesforce%20Agent%20Force%20Injection))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

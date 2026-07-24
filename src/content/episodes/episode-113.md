@@ -4,6 +4,7 @@ episode: 113
 ---
 
 
+
 # Episode 113 Portswigger Top 10 2024 — Best Technical Takeaways
 
 ### TL;DR
@@ -209,3 +210,23 @@ Cookie tossing: partial cookie injection via semicolon, set domain+path to hijac
 1. **Cookie tossing: partial cookie injection via semicolon, set domain+path to hijac**
 2. **Cookie tossing: partial cookie injection via semicolon in cookie value → `Set-Co**
 3. **For OAuth, use `prompt=none` to skip account selection page (user must be logged**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Fit Unicode Encoding — Escape Injection** — Worst-Fit Unicode Encoding — Escape Injection ([search](/search?q=Fit%20Unicode%20Encoding%20—%20Escape%20Injection))
+- **Level SQL Injection via Integer Overflow** — Protocol-Level SQL Injection via Integer Overflow ([search](/search?q=Level%20SQL%20Injection%20via%20Integer%20Overflow))
+- **Partial Cookie Injection to Session Fixation** — Cookie Tossing — Partial Cookie Injection to Session Fixation ([search](/search?q=Partial%20Cookie%20Injection%20to%20Session%20Fixation))
+- **Wildcard Cache Deception** — ChatGPT Cache Deception — Wildcard Cache Deception ([search](/search?q=Wildcard%20Cache%20Deception))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cache path normalization discrepancy** — also in [#113](/episodes/113)
+- **Double-response-type OAuth** — also in [#113](/episodes/113)
+- **Prompt=None OAuth bypass** — also in [#113](/episodes/113)
+- **Symbolic link traversal** — also in [#113](/episodes/113)
+- **TE.,0 smuggling** — also in [#113](/episodes/113)
+- **Worst-fit Unicode characters** — also in [#113](/episodes/113)
+

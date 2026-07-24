@@ -4,6 +4,7 @@ episode: 7
 ---
 
 
+
 # Episode 7 PortSwigger Top 10, TruffleSecurity Drama, and More!
 
 ### TL;DR
@@ -169,3 +170,25 @@ TruffleSecurity XSS Hunter controversy: stats logging → community backlash →
 1. **TruffleSecurity XSS Hunter controversy: stats logging → community backlash → end**
 2. **For open redirects: try backslashes, `//`, combinations of slashes; they may byp**
 3. **Netlify IPX: `/_ipx/w_200` path; X-Forwarded-Proto header SSRF that accepted ful**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **CVE-2022-21449 (Psychic Signatures)** — Java ECDSA Signature Verification Bypass — CVE-2022-21449 (Psychic Signatures) ([search](/search?q=CVE-2022-21449%20(Psychic%20Signatures)))
+- **Open Redirect → SSRF → XSS** — Netlify Universal XSS — Open Redirect → SSRF → XSS ([search](/search?q=Open%20Redirect%20→%20SSRF%20→%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CRLF in URL path** — also in [#007](/episodes/7)
+- **Hop-by-hop header smuggling** — also in [#007](/episodes/7)
+- **Open redirect bypasses** — also in [#007](/episodes/7)
+- **Project Wycheproof** — also in [#007](/episodes/7)
+- **X-Forwarded-Proto header injection for SSRF** — also in [#007](/episodes/7)
+
+**Advice:**
+- *""Every time you see a JWT, try 'none' algorithm and empty/null signing key" — Justin"*
+- *""Read the documentation. Just read the freaking RFC" — on hop-by-hop headers"*
+- *""Open redirects: write them down, keep track, chain them" — Joel"*
+

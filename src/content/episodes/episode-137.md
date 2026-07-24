@@ -4,6 +4,7 @@ episode: 137
 ---
 
 
+
 # Episode 137 How We Do AI-Assisted Whitebox Review, New CSPT Gadgets, and Tools from SLCyber
 
 **Source:** Show notes (feed) — condensed.
@@ -141,3 +142,20 @@ Justin's AI code review: Gemini CLI analyzes SDK, identifies security controls v
 1. **Justin's AI code review: Gemini CLI analyzes SDK, identifies security controls v**
 2. **[ ] AI code review: analyze test files first — they reveal valued security contr**
 3. **[ ] CSPT + Cache Deception: append `.css` to force cache of authenticated respon**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Cache poisoning** — CSPT + Cache Deception — Cache poisoning ([search](/search?q=Cache%20poisoning))
+- **OAuth leak** — Code Assist OAuth postMessage Bypass — OAuth leak ([search](/search?q=OAuth%20leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Adjacent vulnerability discovery** — also in [#137](/episodes/137)
+- **Ebka (Caido MCP)** — also in [#137](/episodes/137)
+- **Slice (CodeQL + LLM)** — also in [#137](/episodes/137)
+- **Test file analysis** — also in [#137](/episodes/137)
+- **dig over DNS for LLM** — also in [#137](/episodes/137)
+

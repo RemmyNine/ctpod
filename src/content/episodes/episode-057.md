@@ -4,6 +4,7 @@ episode: 57
 ---
 
 
+
 # Episode 57 Technical Breakdown from Miami Hacking Event — H1-305
 
 **Guests:** Justin Gardner (Rhynorater), Joel Margolis (Teknogeek)
@@ -139,3 +140,16 @@ Live hacking event debrief from H1-305 Miami (Capital One) — recorded onsite
 1. **Live hacking event debrief from H1-305 Miami (Capital One) — recorded onsite**
 2. **Client-side path traversal + open redirect + fetch auto-follows redirects = XSS **
 3. **Track your time during events — it helps with cutting losses and managing ADHD/f**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Joel Margolis (Teknogeek)** — also appears in [#057](/episodes/57)
+- **Justin Gardner (Rhynorater)** — also appears in [#057](/episodes/57)
+
+**Bugs & Vulnerabilities:**
+- **Side CSP-Locked XSS Near-Miss** — Capital One Client-Side CSP-Locked XSS Near-Miss ([search](/search?q=Side%20CSP-Locked%20XSS%20Near-Miss))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

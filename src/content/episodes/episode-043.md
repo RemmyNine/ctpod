@@ -4,6 +4,7 @@ episode: 43
 ---
 
 
+
 # Episode 43 Caido — The Up-And-Coming HTTP Proxy
 
 ### TL;DR
@@ -103,3 +104,15 @@ Interview with Emil (Caido co-founder) — Rust backend, client-server architect
 1. **Interview with Emil (Caido co-founder) — Rust backend, client-server architectur**
 2. **Rust backend provides stability and performance vs Java (Burp); but async Rust i**
 3. **Client-server architecture: zero license-per-machine issues, runs on Chromebook/**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Convert workflows** — also in [#043](/episodes/43)
+- **Workflows as plugin replacement** — also in [#043](/episodes/43)
+

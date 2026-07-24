@@ -4,6 +4,7 @@ episode: 49
 ---
 
 
+
 # Episode 49 Getting Live Hacking Event Invites & Bug Bounty Collab with Nagli
 
 ### TL;DR
@@ -154,3 +155,19 @@ Collab with Nagli: found ASP.NET source code leak (wwwroot.zip) -> RCE via deser
 1. **Collab with Nagli: found ASP.NET source code leak (wwwroot.zip) -> RCE via deser**
 2. **wwwroot.zip backup file in ASP.NET: contains web.config with machine key -> YSoS**
 3. **Source code disclosure alone is critical; chaining to RCE proves impact**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **> RCE** — ASP.NET Machine Key -> RCE ([search](/search?q=>%20RCE))
+- **> S3 Bucket Read** — Swagger File -> S3 Bucket Read ([search](/search?q=>%20S3%20Bucket%20Read))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Decompile ASP.NET DLLs with .Peek** — also in [#049](/episodes/49)
+- **PHP type juggling (0e hash collision)** — also in [#049](/episodes/49)
+- **Program-specific nucleus templates** — also in [#049](/episodes/49)
+- **Source code version fingerprinting via readme** — also in [#049](/episodes/49)
+

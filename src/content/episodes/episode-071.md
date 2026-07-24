@@ -4,6 +4,7 @@ episode: 71
 ---
 
 
+
 # Episode 71 More VDP Chats & AI Bias Bounty Strats with Keith Hoodlet
 
 **Guest:** Keith Hoodlet
@@ -111,3 +112,14 @@ Keith built AppSec at Thermo Fisher from scratch (Fortune 100, 130K employees, 1
 1. **Keith built AppSec at Thermo Fisher from scratch (Fortune 100, 130K employees, 1**
 2. **At Thermo Fisher: 11 AppSec people for thousands of developers across 130K emplo**
 3. **Variant analysis from VDP findings: one VDP bug taught devs how to hack their ow**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Keith Hoodlet** — also appears in [#071](/episodes/71)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

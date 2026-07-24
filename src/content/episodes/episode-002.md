@@ -4,6 +4,7 @@ episode: 2
 ---
 
 
+
 # Episode 2 Exploit Writing & Automation / Do you need to know how to program to hack?
 
 ### TL;DR
@@ -176,3 +177,26 @@ Justin found an arbitrary account takeover via MD5-hashed password reset tokens 
 1. **Justin found an arbitrary account takeover via MD5-hashed password reset tokens **
 2. **Always check password reset token hashes: if MD5, try concatenating email + time**
 3. **Use `adb reverse tcp:8080 tcp:8080` to proxy Android traffic through Burp over U**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Account Takeover (High)** — Password Reset Token Hash Predictable — Account Takeover (High) ([search](/search?q=Account%20Takeover%20(High)))
+- **Digit PIN Brute Force — Full Device Takeover** — IoT Device 4-Digit PIN Brute Force — Full Device Takeover ([search](/search?q=Digit%20PIN%20Brute%20Force%20—%20Full%20Device%20Takeover))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **307 redirect for POST preservation** — also in [#002](/episodes/2)
+- **Crypto protocol replication in same language** — also in [#002](/episodes/2)
+- **EMMC firmware extraction** — also in [#002](/episodes/2)
+- **Horizontal scaling over optimization** — also in [#002](/episodes/2)
+- **MD5 token prediction** — also in [#002](/episodes/2)
+
+**Advice:**
+- *""If you're trying to reverse crypto stuff, use the language and the library that you know in the same language of the server" — Justin"*
+- *""Just take Java and just run it on your computer. Copy paste the code and get all the Android specific stuff out of there and just run it locally" — Joel"*
+- *""Scale when it needs to scale and do it the fastest way" — Joel on automation"*
+- *+1 more pieces of advice*
+

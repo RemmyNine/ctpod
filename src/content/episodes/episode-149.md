@@ -4,6 +4,7 @@ episode: 149
 ---
 
 
+
 # Episode 149 DEFCON Debrief
 
 ### TL;DR
@@ -125,3 +126,13 @@ Justin and Joseph recap their favorite DEFCON 33 talks
 
 #### 11. The practical takeaway
 1. **Justin and Joseph recap their favorite DEFCON 33 talks**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO** — Passkey Shim via Malicious Extension — ATO ([search](/search?q=ATO))
+- **TheHulk** — DOM Clobbering at Scale — TheHulk ([search](/search?q=TheHulk))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

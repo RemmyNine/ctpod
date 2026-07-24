@@ -4,6 +4,7 @@ episode: 69
 ---
 
 
+
 # Episode 69 Johan Carlsson — 3-Month Check-in on Full-time Bug Bounty
 
 **Guest:** Johan Carlsson (joaxcar)
@@ -144,3 +145,14 @@ Johan found a GitHub CSP bypass: HTML injection → form action hijacking → Ho
 1. **Johan found a GitHub CSP bypass: HTML injection → form action hijacking → Hotwir**
 2. **Google's CSP Evaluator does NOT warn about missing `form-action` — it only evalu**
 3. **`form-action` is one of the few directives NOT covered by `default-src` — if abs**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Johan Carlsson (joaxcar)** — also appears in [#069](/episodes/69)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

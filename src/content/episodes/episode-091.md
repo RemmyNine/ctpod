@@ -4,6 +4,7 @@ episode: 91
 ---
 
 
+
 # Episode 91 Zero to LHE in 9 Months (feat gr3pme)
 
 **Guest:** Brandyn Murtagh (gr3pme)
@@ -180,3 +181,21 @@ Journey from 0 bug bounty experience to Live Hacking Event performer in ~10 mont
 1. **Journey from 0 bug bounty experience to Live Hacking Event performer in ~10 mont**
 2. **Build a preloaded "attack vector ideation" document before starting any target —**
 3. **Use the products you already pay for as bug bounty targets — you already have ac**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Brandyn Murtagh (gr3pme)** — also appears in [#091](/episodes/91)
+
+**Bugs & Vulnerabilities:**
+- **Stored XSS via Payment Reference** — FinTech Bank ATO — Stored XSS via Payment Reference ([search](/search?q=Stored%20XSS%20via%20Payment%20Reference))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Attack vector ideation document** — also in [#091](/episodes/91)
+- **Ecosystem hacking** — also in [#091](/episodes/91)
+- **OAuth response_type abuse** — also in [#091](/episodes/91)
+- **Object property enumeration by state** — also in [#091](/episodes/91)
+

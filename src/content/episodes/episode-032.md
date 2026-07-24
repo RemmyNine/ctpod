@@ -4,6 +4,7 @@ episode: 32
 ---
 
 
+
 # Episode 32 The Great Write-up Low-down
 
 **Guests/Hosts:** Justin Gardner (solo — Joel had con flu)  
@@ -172,3 +173,20 @@ Solo episode covering major write-ups and research from DefCon season
 1. **Solo episode covering major write-ups and research from DefCon season**
 2. **Single-packet attack**: Send all HTTP/2 request headers except the last byte + o**
 3. **IIS cookie-less session injection**: `/(S(X))/` in path is stripped by .NET `Rem**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO** — UUIDv1 Sandwich Attack — ATO ([search](/search?q=ATO))
+- **IDOR** — Points.com mass data leak via secondary context — IDOR ([search](/search?q=IDOR))
+- **Race condition** — GitLab email race condition — Race condition ([search](/search?q=Race%20condition))
+- **Weak crypto** — Points.com JWT secret `"secret"` — Weak crypto ([search](/search?q=Weak%20crypto))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Content discovery with Chat GPT** — also in [#032](/episodes/32)
+- **Secondary context exploitation** — also in [#032](/episodes/32)
+- **Single-packet attack (HTTP/2)** — also in [#032](/episodes/32)
+

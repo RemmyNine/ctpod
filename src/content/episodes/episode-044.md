@@ -4,6 +4,7 @@ episode: 44
 ---
 
 
+
 # Episode 44 URL Parsing & Auth Bypass Magic
 
 ### TL;DR
@@ -152,3 +153,16 @@ Deep dive into all 9 parts of a URL (scheme, user:pass, domain, port, path, quer
 1. **Deep dive into all 9 parts of a URL (scheme, user:pass, domain, port, path, quer**
 2. **username:password@host can bypass open redirect/host validation checks — backsla**
 3. **Fragment (`#`) is "a comment in a URL" — use it to truncate suffixes appended by**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Double-slash open redirect** — also in [#044](/episodes/44)
+- **Token recipient confusion** — also in [#044](/episodes/44)
+- **URL fragment as truncation** — also in [#044](/episodes/44)
+

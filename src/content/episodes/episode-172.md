@@ -4,6 +4,7 @@ episode: 172
 ---
 
 
+
 # Episode 172 Source Code Review Meta Analysis
 
 ### TL;DR
@@ -126,3 +127,19 @@ Three root causes of vulns: (1) trace data flow better than dev, (2) know contex
 1. **Three root causes of vulns: (1) trace data flow better than dev, (2) know contex**
 2. **[ ] Trace data flow end-to-end: every source to every sink — the developer often**
 3. **[ ] When user input enters a "complex environment" (SQL, config files, templates**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Alternative source hunting** — also in [#172](/episodes/172)
+- **Bad regex patterns** — also in [#172](/episodes/172)
+- **Custom sanitizer fuzzing** — also in [#172](/episodes/172)
+- **Data flow tracing** — also in [#172](/episodes/172)
+- **Dynamic function calling** — also in [#172](/episodes/172)
+- **Non-global replacement** — also in [#172](/episodes/172)
+

@@ -4,6 +4,7 @@ episode: 133
 ---
 
 
+
 # Episode 133 Building Hacker Communities — Bug Bounty Village, getDisclosed, and the LHE Squad
 
 **Source:** Show notes (feed) — condensed.
@@ -111,3 +112,16 @@ Harley (Infinite Logins) and Ari on Bug Bounty Village at DEFCON.
 1. **Harley (Infinite Logins) and Ari on Bug Bounty Village at DEFCON.**
 2. **[ ] BBV at DEFCON 2025: 30% more space, 70 chairs, CTF with real web app + triag**
 3. **[ ] CTF: intentionally-vulnerable multi-app system (APIs, LLM) — no instructions**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Data exposure** — Supabase View RLS Bypass — Data exposure ([search](/search?q=Data%20exposure))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **API path truncation** — also in [#133](/episodes/133)
+- **Vibe-coded app security** — also in [#133](/episodes/133)
+

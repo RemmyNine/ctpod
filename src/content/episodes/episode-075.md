@@ -4,6 +4,7 @@ episode: 75
 ---
 
 
+
 # Episode 75 Rerun of The OG Bug Bounty King — Frans Rosen
 
 **Show notes only — no full transcript.** This is a rerun of an earlier episode (30 episodes back) aired when Justin and Joel were sick. The description confirms it is a replay of a prior Frans Rosen interview. No new technical content.
@@ -69,3 +70,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Understand the vulnerability class** — Know how it works and why it matters
 2. **Master the exploitation technique** — Practice the specific steps to exploit it
 3. **Apply the mental model** — Use the thinking patterns to find similar bugs in other targets
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

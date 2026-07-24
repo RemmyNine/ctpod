@@ -4,6 +4,7 @@ episode: 106
 ---
 
 
+
 # Episode 106 Announcing Our New Co-Host Rez0
 
 **Host:** Justin Gardner (Rhynorater)
@@ -173,3 +174,17 @@ Joseph Thacker (Rez0) joins as co-host — going full-time bug bounty
 1. **Joseph Thacker (Rez0) joins as co-host — going full-time bug bounty**
 2. **DoubleClickJacking bypasses X-Frame-Options, SameSite, and CSP — uses popups, no**
 3. **Gareth Hayes: ISO 2022 JP charset escape sequences in JS URLs → `jav%1B(B%20ascr**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Two-Click ATO** — DoubleClickJacking — Two-Click ATO ([search](/search?q=Two-Click%20ATO))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **PDF/JSON polyglot for CSPT** — also in [#106](/episodes/106)
+- **UTF-8→ISO 2022 JP escape in URLs** — also in [#106](/episodes/106)
+- **curl-cffi** — also in [#106](/episodes/106)
+

@@ -4,6 +4,7 @@ episode: 1
 ---
 
 
+
 # Episode 1 Introductions, Bug Bounty Reports, and BB Tips
 
 ### TL;DR
@@ -190,3 +191,25 @@ GitLab RCE via GitHub import using Sawyer class object injection leading to Redi
 1. **GitLab RCE via GitHub import using Sawyer class object injection leading to Redi**
 2. **Read minified JS files; signup endpoints, hidden routes, and admin cookies can b**
 3. **When you encounter an S3 file upload, find where the file lands (other upload en**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Deserialization → Redis Injection → RCE** — GitLab RCE via GitHub Import — Deserialization → Redis Injection → RCE ([search](/search?q=Deserialization%20→%20Redis%20Injection%20→%20RCE))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **307 redirect preservation** — also in [#001](/episodes/1)
+- **ADB reverse proxy** — also in [#001](/episodes/1)
+- **AWS metadata SSRF** — also in [#001](/episodes/1)
+- **JS file enumeration** — also in [#001](/episodes/1)
+- **Java class reuse for crypto reversing** — also in [#001](/episodes/1)
+
+**Advice:**
+- *""Track your sources and sinks really well" — Justin on finding bugs in import features"*
+- *""Look for something dangerous like a command being executed and go backwards to see if there's an entry point" — Joel on source code auditing"*
+- *""Throw that payload in your payload list" — Joel on reusing object injection payloads across Ruby on Rails apps"*
+- *+3 more pieces of advice*
+

@@ -4,6 +4,7 @@ episode: 36
 ---
 
 
+
 # Episode 36 Bug Bounty Ethics & CT Exclusive Bug Reports
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis (live from Tokyo live hacking event)  
@@ -163,3 +164,18 @@ Ethics debate: is all bug bounty hunting ethical? Edge cases: reporting unexploi
 1. **Ethics debate: is all bug bounty hunting ethical? Edge cases: reporting unexploi**
 2. **Ethics**: Reporting a configuration that is technically unexploitable is a grey **
 3. **Gone out of scope for impact?** It's like trespassing to save someone's cat — go**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **ATO** — Cookie Prioritization ATO via Session Fixation + Cookie Bomb — ATO ([search](/search?q=ATO))
+- **PostMessage XSS** — PostMessage origin bypass via overrideURL — PostMessage XSS ([search](/search?q=PostMessage%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cookie path prioritization** — also in [#036](/episodes/36)
+- **Fetch shimming for XSS** — also in [#036](/episodes/36)
+- **Mobile proxy via adb** — also in [#036](/episodes/36)
+

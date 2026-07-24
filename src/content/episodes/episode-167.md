@@ -4,6 +4,7 @@ episode: 167
 ---
 
 
+
 # Episode 167 Stealing Bugs with Valeriy Shevchenko
 
 ### TL;DR
@@ -114,3 +115,13 @@ Valeriy documented everything including screenshot evidence of working credentia
 1. **Valeriy documented everything including screenshot evidence of working credentia**
 2. **[ ] Document findings with video/screenshots immediately — when a server goes do**
 3. **[ ] Investigate third-party suppliers/agencies linked from the main site — they **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Node.js Path Traversal → AWS Credentials** — Acquisitions Prep — Node.js Path Traversal → AWS Credentials ([search](/search?q=Node.js%20Path%20Traversal%20→%20AWS%20Credentials))
+- **Party Supplier → Main Domain WordPress Takeover** — Third-Party Supplier → Main Domain WordPress Takeover ([search](/search?q=Party%20Supplier%20→%20Main%20Domain%20WordPress%20Takeover))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

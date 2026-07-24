@@ -4,6 +4,7 @@ episode: 179
 ---
 
 
+
 # Episode 179 Maintaining Motivation in Post-AI Bug Bounty World
 
 ### TL;DR
@@ -115,3 +116,17 @@ Motivation challenges: AI doing most of the finding reduces personal satisfactio
 1. **Motivation challenges: AI doing most of the finding reduces personal satisfactio**
 2. **[ ] Set specific, measurable goals for hacking sessions ("ATO on X platform") ra**
 3. **[ ] Collaborate with newer hackers — their excitement can rekindle your own; hel**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Friend-as-manager motivation** — also in [#179](/episodes/179)
+- **Goal-based agents** — also in [#179](/episodes/179)
+- **LHE method** — also in [#179](/episodes/179)
+- **Video POC for faster triage** — also in [#179](/episodes/179)
+

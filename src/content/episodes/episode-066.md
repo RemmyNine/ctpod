@@ -4,6 +4,7 @@ episode: 66
 ---
 
 
+
 # Episode 66 CDN-CGI Research, Intent To Ship, and Louis Vuitton
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -96,3 +97,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Justin found an OAuth redirect_uri bypass using `?` + `@` in the username part —**
 2. **OAuth redirect_uri host check bypass: `https://target.com?@evil.com` — the `?` m**
 3. **Cloudflare `/cdn-cgi/image/onerror=redirect&url=https://subdomain.evil.com` → 30**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

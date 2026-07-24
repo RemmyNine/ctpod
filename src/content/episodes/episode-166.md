@@ -4,6 +4,7 @@ episode: 166
 ---
 
 
+
 # Episode 166 Rez0's Top Claude Skill Secrets
 
 ### TL;DR
@@ -122,3 +123,17 @@ Claude Code skills: markdown files with frontmatter (title, description) that ge
 1. **Claude Code skills: markdown files with frontmatter (title, description) that ge**
 2. **[ ] Build skills for custom workflows (Kaido integration, target-specific gadget**
 3. **[ ] Structure hacking notes in a funnel: notes (everything) → leads (interesting**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Fallback skill architecture** — also in [#166](/episodes/166)
+- **Session search skill** — also in [#166](/episodes/166)
+- **Subagent limiting for overnight runs** — also in [#166](/episodes/166)
+- **Validator agent** — also in [#166](/episodes/166)
+

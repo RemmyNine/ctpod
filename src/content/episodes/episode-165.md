@@ -4,6 +4,7 @@ episode: 165
 ---
 
 
+
 # Episode 165 Protobuf Hacking, AI-Powered Bug Hunting, and Self-Improving Claude Workflows
 
 ### TL;DR
@@ -138,3 +139,16 @@ Protobuf decoding in Google: many parameters are base64-encoded binary Protobuf 
 1. **Protobuf decoding in Google: many parameters are base64-encoded binary Protobuf **
 2. **[ ] Decode base64-encoded Protobuf strings in requests — even without field name**
 3. **[ ] For Google hacking: Protobuf fields have wire type (3 bits), field number (4**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Kaido + Claude integration** — also in [#165](/episodes/165)
+- **Protobuf binary injection via base64** — also in [#165](/episodes/165)
+- **Self-improving Claude.md** — also in [#165](/episodes/165)
+

@@ -4,6 +4,7 @@ episode: 123
 ---
 
 
+
 # Episode 123 Hacking AI Series: Vulnus ex Machina — Part 2
 
 ### TL;DR
@@ -142,3 +143,21 @@ AI vulnerability framework: delivery (source of payload) + impactful action (wha
 1. **AI vulnerability framework: delivery (source of payload) + impactful action (wha**
 2. **Delivery spectrum**: user pasting text (least severe) → user clicking link → use**
 3. **Impactful action spectrum**: deceiving user (least) → leaking data → creating/up**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **"Additional instructions:"** — also in [#123](/episodes/123)
+- **ANSI escape sequences** — also in [#123](/episodes/123)
+- **Avoid `evil.com`** — also in [#123](/episodes/123)
+- **Iterative exploitation** — also in [#123](/episodes/123)
+- **Path traversal in tool names** — also in [#123](/episodes/123)
+- **Pity-based compliance** — also in [#123](/episodes/123)
+- **Pre-request the tool's normal action** — also in [#123](/episodes/123)
+- **SSRF via tool call** — also in [#123](/episodes/123)
+

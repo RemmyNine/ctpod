@@ -4,6 +4,7 @@ episode: 51
 ---
 
 
+
 # Episode 51 Hacker Stats 2023 & 2024 Goals
 
 ### TL;DR
@@ -129,3 +130,15 @@ Franz Rosen's XSS CTF: used JavaScript `String.prototype.replace` with `$&` (mat
 1. **Franz Rosen's XSS CTF: used JavaScript `String.prototype.replace` with `$&` (mat**
 2. **`String.replace()` has special replacement patterns: `$&` (matched substring), `**
 3. **HackerOne crit: a simple HTML `<iframe>` injection in report analytics template **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Blind CSS exfiltration** — also in [#051](/episodes/51)
+- **Regex replacement injection** — also in [#051](/episodes/51)
+

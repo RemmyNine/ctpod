@@ -4,6 +4,7 @@ episode: 58
 ---
 
 
+
 # Episode 58 Youssef Sammouda — Client-Side & ATO War Stories
 
 **Guest:** Youssef Sammouda
@@ -147,3 +148,17 @@ Youssef is one of the most technically creative client-side hackers — postMess
 1. **Youssef is one of the most technically creative client-side hackers — postMessag**
 2. **postMessage race conditions work when there's a delay (HTTP request) between ori**
 3. **Sending massive postMessages (5MB each) can bog down the receiving page's event **
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Youssef Sammouda** — also appears in [#058](/episodes/58)
+
+**Bugs & Vulnerabilities:**
+- **Math.random → DOM XSS** — Facebook Messenger Chat Plugin — Math.random → DOM XSS ([search](/search?q=Math.random%20→%20DOM%20XSS))
+- **Side Race Condition — OAuth Token Leak** — Facebook Client-Side Race Condition — OAuth Token Leak ([search](/search?q=Side%20Race%20Condition%20—%20OAuth%20Token%20Leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **to-Text-Fragment Cross-Site Search Oracle** — Scroll-to-Text-Fragment Cross-Site Search Oracle ([search](/search?q=to-Text-Fragment%20Cross-Site%20Search%20Oracle))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

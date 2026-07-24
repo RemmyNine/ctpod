@@ -4,6 +4,7 @@ episode: 16
 ---
 
 
+
 # Episode 16 The Hacker's Toolkit
 
 ### TL;DR
@@ -161,3 +162,26 @@ Every tool in The Hacker's Toolkit: FeroxBuster, FFUF, Caido, Burp, HTTPx, Go Wi
 1. **Every tool in The Hacker's Toolkit: FeroxBuster, FFUF, Caido, Burp, HTTPx, Go Wi**
 2. **FeroxBuster: Rust-based, recursive, fast; FFUF for complex fuzzing (cookie/heade**
 3. **HTTPx: pipe `gau` output to HTTPx for quick status code/content-type filtering**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Establishing Reliable C2 in VDI Environment** — DNS Shell via DNSchef — Establishing Reliable C2 in VDI Environment ([search](/search?q=Establishing%20Reliable%20C2%20in%20VDI%20Environment))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Burp → Caido transition** — also in [#016](/episodes/16)
+- **DNS C2 via DNSchef** — also in [#016](/episodes/16)
+- **VIM `:w !sudo tee %`** — also in [#016](/episodes/16)
+- **VSCode Todo Highlight** — also in [#016](/episodes/16)
+- **Wildcard cert on POC domain** — also in [#016](/episodes/16)
+- **Zero-tier VPN + NFS** — also in [#016](/episodes/16)
+
+**Advice:**
+- *""If the same task takes you 5+ minutes and you do it regularly, automate it" — Justin"*
+- *""Caido + Burp is my combo: Caido is catching up fast, plugin system coming" — Justin"*
+- *""Zero-tier for NFS: mount your VPS drives on your laptop, no more SCP" — Joel"*
+- *+1 more pieces of advice*
+

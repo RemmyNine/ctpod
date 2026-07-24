@@ -4,6 +4,7 @@ episode: 45
 ---
 
 
+
 # Episode 45 The OG Bug Bounty King — Frans Rosen
 
 ### TL;DR
@@ -166,3 +167,18 @@ Frans Rosen: OG bug bounty legend, co-founder of Detectify
 1. **Frans Rosen: OG bug bounty legend, co-founder of Detectify**
 2. **"Automationism" — don't compete on automation speed; go deep manually for high-i**
 3. **Take three days to understand a program's taxonomy (casing styles, naming conven**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Account Hijacking via State Breaking** — OAuth "Dirty Dancing" — Account Hijacking via State Breaking ([search](/search?q=Account%20Hijacking%20via%20State%20Breaking))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **PostMessage port jacking** — also in [#045](/episodes/45)
+- **Service worker + CRLF injection** — also in [#045](/episodes/45)
+- **Stop at the right time** — also in [#045](/episodes/45)
+- **Taxonomy analysis** — also in [#045](/episodes/45)
+

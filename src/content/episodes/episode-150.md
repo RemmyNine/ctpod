@@ -4,6 +4,7 @@ episode: 150
 ---
 
 
+
 # Episode 150 ASP.NET MVC Patterns, Popping Oracle Identity, and Esoteric Subdomain Enumeration
 
 ### TL;DR
@@ -119,3 +120,12 @@ Oracle Identity Manager pre-auth RCE (CVE-2025-61757): central security filter b
 
 #### 11. The practical takeaway
 1. **Oracle Identity Manager pre-auth RCE (CVE-2025-61757): central security filter b**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **auth RCE (CVE-2025-61757)** — Oracle Identity Manager Pre-auth RCE (CVE-2025-61757) ([search](/search?q=auth%20RCE%20(CVE-2025-61757)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

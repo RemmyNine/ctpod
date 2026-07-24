@@ -4,6 +4,7 @@ episode: 126
 ---
 
 
+
 # Episode 126 Hacking AI Series: Vulnus ex Machina — Part 3
 
 ### TL;DR
@@ -190,3 +191,23 @@ Claude 4 Sonnet/Opus released — Opus is best for hard problems (coding, revers
 1. **Claude 4 Sonnet/Opus released — Opus is best for hard problems (coding, reversin**
 2. **Claude 4 Sonnet for inline code editing; Claude 4 Opus for hard problems (coding**
 3. **Claude Code is better than Cursor/Windsurf for agentic workflows (vibe coding, s**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **$2** — Invisible Unicode Tags in HackerOne Hi — $2,500 ([search](/search?q=$2))
+- **500** — Invisible Unicode Tags in HackerOne Hi — $2,500 ([search](/search?q=500))
+- **Markdown — $5k-$10k** — Prompt Injection in Google Docs Auto-Markdown — $5k-$10k ([search](/search?q=Markdown%20—%20$5k-$10k))
+- **offset Text)** — Indirect Prompt Injection via Image (RGB-offset Text) ([search](/search?q=offset%20Text)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **"Additional instructions:" prompt** — also in [#126](/episodes/126)
+- **AI clickjacking** — also in [#126](/episodes/126)
+- **Invisible Unicode tags** — also in [#126](/episodes/126)
+- **Iterative prompt injection** — also in [#126](/episodes/126)
+- **Probability formula** — also in [#126](/episodes/126)
+- **RGB-offset image text** — also in [#126](/episodes/126)
+

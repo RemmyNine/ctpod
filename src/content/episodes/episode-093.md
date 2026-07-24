@@ -4,6 +4,7 @@ episode: 93
 ---
 
 
+
 # Episode 93 A Chat with Dr. Bouman — Life as a Hacker and a Doctor
 
 **Guest:** Dr. Jonathan Bouman
@@ -181,3 +182,23 @@ Dr. Bouman (GP + hacker) has been exclusively hacking Amazon for 6+ years; colla
 1. **Dr. Bouman (GP + hacker) has been exclusively hacking Amazon for 6+ years; colla**
 2. **When you see Base64 in a URL parameter, treat it as "eczema on the skin" — somet**
 3. **Use Burp's active scanner selectively: disable paths with images/fonts/CSS, enab**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Dr. Jonathan Bouman** — also appears in [#093](/episodes/93)
+
+**Bugs & Vulnerabilities:**
+- **Ransomware Attack Simulation** — Dutch Healthcare Chain — Ransomware Attack Simulation ([search](/search?q=Ransomware%20Attack%20Simulation))
+- **S3 Key Leak** — FileSender SSTI — S3 Key Leak ([search](/search?q=S3%20Key%20Leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Active scanner SSTI methodology** — also in [#093](/episodes/93)
+- **Android MITM setup** — also in [#093](/episodes/93)
+- **Git commit tracking for fix bypass** — also in [#093](/episodes/93)
+- **SSTI via error messages** — also in [#093](/episodes/93)
+- **iOS MITM setup** — also in [#093](/episodes/93)
+

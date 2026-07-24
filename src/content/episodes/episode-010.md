@@ -4,6 +4,7 @@ episode: 10
 ---
 
 
+
 # Episode 10 The Life of a Full-Time Bug Bounty Hunter + BB News + Reports from Mentees
 
 ### TL;DR
@@ -158,3 +159,24 @@ PortSwigger Daily Swig newsletter discontinued; new XSS vectors published by Por
 1. **PortSwigger Daily Swig newsletter discontinued; new XSS vectors published by Por**
 2. **PortSwigger new XSS vectors: `navigation.navigate()` and `a` tag with `href` con**
 3. **For full-timers: pipeline of unpaid bugs funding current expenses while finding **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Address Takeover** — GraphQL IDOR with False Negative Response — Address Takeover ([search](/search?q=Address%20Takeover))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CVSS attack complexity high** — also in [#010](/episodes/10)
+- **CVSS privilege required None via guest accounts** — also in [#010](/episodes/10)
+- **Ghost account privilege escalation** — also in [#010](/episodes/10)
+- **Hash-based request signing bypass** — also in [#010](/episodes/10)
+
+**Advice:**
+- *""On a new target, spend at least 16 hours on one part before moving along" — Justin on deep diving"*
+- *""Paying on triage is the way to go — Shopify does this" — Joel"*
+- *""Self-sign-up accounts should be PR:None, not PR:Low" — Justin on CVSS argument"*
+- *+1 more pieces of advice*
+

@@ -4,6 +4,7 @@ episode: 50
 ---
 
 
+
 # Episode 50 Mathias 'Fall in a well' Karlsson — Bug Bounty Prophet
 
 ### TL;DR
@@ -150,3 +151,18 @@ Interview with Mathias Karlsson (avlid) — Detectify co-founder, AssetNote cont
 1. **Interview with Mathias Karlsson (avlid) — Detectify co-founder, AssetNote contri**
 2. **Never let go of your data: store everything, grep it later when a new vulnerabil**
 3. **Collaboration + specialization: become expert in one technology, distribute find**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **> production)** — DynamoDB Injection (CTF challenge -> production) ([search](/search?q=>%20production)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Byte order mark injection** — also in [#050](/episodes/50)
+- **Headless browser DNS/network log auditing** — also in [#050](/episodes/50)
+- **Host header port injection for SSRF** — also in [#050](/episodes/50)
+- **MXSS via html parsers (hackaplaneten.se)** — also in [#050](/episodes/50)
+

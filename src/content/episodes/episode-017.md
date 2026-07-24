@@ -4,6 +4,7 @@ episode: 17
 ---
 
 
+
 # Episode 17 LA Live Chat with Five Legendary Hackers
 
 ### TL;DR
@@ -199,3 +200,26 @@ Live from H1-213 (Los Angeles): Corbin, Sam Curry, Franz Rosen, n0gl3y, Dr. Bowm
 1. **Live from H1-213 (Los Angeles): Corbin, Sam Curry, Franz Rosen, n0gl3y, Dr. Bowm**
 2. **When brute-forcing directories, pay attention to Set-Cookie headers in responses**
 3. **Jasper Systems runs the world's telecom IoT SIM management; API accessible via p**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **$28k** — Unicode Homoglyph ATO (duplicate from Ep. 15) — $28k ([search](/search?q=$28k))
+- **180M SIM Card Access** — AT&T SIM Portal → Jasper Systems — 180M SIM Card Access ([search](/search?q=180M%20SIM%20Card%20Access))
+- **Major Label Admin Panel** — Music Distribution Blind XSS — Major Label Admin Panel ([search](/search?q=Major%20Label%20Admin%20Panel))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cached directory session** — also in [#017](/episodes/17)
+- **Challenge goal-setting** — also in [#017](/episodes/17)
+- **Creative POC investments** — also in [#017](/episodes/17)
+- **SSRF→SSTI chain** — also in [#017](/episodes/17)
+
+**Advice:**
+- *""Spend money on your POC. Even if it doesn't work, you've got a good story." — Dr. Bowman"*
+- *""Set a challenge goal like 'auth bypass' and keep pushing until you find it" — n0gl3y"*
+- *""I just have a phonebook of experts; different people for different bug classes" — n0gl3y"*
+- *+1 more pieces of advice*
+

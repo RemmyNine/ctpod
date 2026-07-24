@@ -4,6 +4,7 @@ episode: 37
 ---
 
 
+
 # Episode 37 Tokyo Hacking & Interview with 0xLupin
 
 ### TL;DR
@@ -107,3 +108,17 @@ Live hacking event in Tokyo with lessons on picking which bugs to argue
 1. **Live hacking event in Tokyo with lessons on picking which bugs to argue**
 2. **At live hacking events, pick fights strategically — not every bug is worth argui**
 3. **Many winning bugs were simple technically but required out-of-the-box recon thin**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **> Gmail** — Bard Prompt Injection -> Gmail/Docs Leak ([search](/search?q=>%20Gmail))
+- **Docs Leak** — Bard Prompt Injection -> Gmail/Docs Leak ([search](/search?q=Docs%20Leak))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Prompt injection via browser** — also in [#037](/episodes/37)
+- **Prompt injection via image/OCR** — also in [#037](/episodes/37)
+

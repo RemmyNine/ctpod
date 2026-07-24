@@ -4,6 +4,7 @@ episode: 136
 ---
 
 
+
 # Episode 136 Hacking Cluely, AI Prod Sec, and How To Not Get Sued with Jack Cable
 
 **Source:** Show notes (feed) — condensed.
@@ -115,3 +116,16 @@ Jack Cable found postMessage screenshot handler in Cluely desktop app — screen
 1. **Jack Cable found postMessage screenshot handler in Cluely desktop app — screen r**
 2. **[ ] Electron apps: postMessage handlers exposed to ANY opened window.**
 3. **[ ] Publishing system prompts from desktop apps = DMCA risk, but security resear**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Privacy violation** — Cluely Desktop PostMessage Screen Capture — Privacy violation ([search](/search?q=Privacy%20violation))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Electron app audit** — also in [#136](/episodes/136)
+- **Race conditions via curl** — also in [#136](/episodes/136)
+

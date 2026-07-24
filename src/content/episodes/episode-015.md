@@ -4,6 +4,7 @@ episode: 15
 ---
 
 
+
 # Episode 15 The Israeli Million-Dollar Hacker (n0gl3y Interview)
 
 ### TL;DR
@@ -189,3 +190,26 @@ n0gl3y (Noam) went from ~$1k earned to million-dollar hacker in ~2 years
 1. **n0gl3y (Noam) went from ~$1k earned to million-dollar hacker in ~2 years**
 2. **Automation infrastructure: Axiom + DigitalOcean + bash loops + cron + text files**
 3. **Number of commits (~20k) backs up recon data every 30 minutes to avoid data loss**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **$28k** — Unicode Homoglyph ATO — $28k ([search](/search?q=$28k))
+- **JWT Leakage** — Web Cache Deception on ChatGPT — JWT Leakage ([search](/search?q=JWT%20Leakage))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Axiom + bash automation** — also in [#015](/episodes/15)
+- **Burp Active Scan custom profile** — also in [#015](/episodes/15)
+- **Flat file data store** — also in [#015](/episodes/15)
+- **Multi-A rebind correction** — also in [#015](/episodes/15)
+- **Unicode homoglyph authentication bypass** — also in [#015](/episodes/15)
+
+**Advice:**
+- *""80% of good bugs come from automation or collaboration" — n0gl3y"*
+- *""I can't focus manually on programs outside of live hacking events" — n0gl3y on manual vs automation hacking"*
+- *""Have a 'phonebook' of experts — different people for different bug classes" — n0gl3y"*
+- *+1 more pieces of advice*
+

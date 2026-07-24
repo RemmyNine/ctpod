@@ -4,6 +4,7 @@ episode: 145
 ---
 
 
+
 # Episode 145 Gr3pme's Secret: Bug Bounty Note Taking Methodology
 
 **Show notes episode** — minimal transcript, methodology-focused solo episode by Brandyn (gr3pme).
@@ -97,3 +98,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Brandyn shares his complete Notion-based note-taking framework for long-term tar**
 2. **Create a target template capturing tech stack (frameworks, languages, third-part**
 3. **Maintain a "brainstorm/risk" section listing every conceivable attack vector wit**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

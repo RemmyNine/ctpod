@@ -4,6 +4,7 @@ episode: 72
 ---
 
 
+
 # Episode 72 Research TLDRs & Smuggling Payloads in Well-Known Data Types
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -149,3 +150,12 @@ PDF.js XSS (CVE-2024-4367): font glyph rendering JavaScript evals user-controlle
 1. **PDF.js XSS (CVE-2024-4367): font glyph rendering JavaScript evals user-controlle**
 2. **PDF.js vulnerability: font data embedded in PDF is concatenated into a JavaScrip**
 3. **IPv6 address ambiguity: `[::1]` is loopback, but `[::1%25eth0]` can be parsed as**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2024-4367)** — PDF.js XSS (CVE-2024-4367) ([search](/search?q=2024-4367)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

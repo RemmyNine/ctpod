@@ -4,6 +4,7 @@ episode: 130
 ---
 
 
+
 # Episode 130 Minecraft Hacks to Google Hacking Star — Valentino
 
 **Source:** Show notes (feed) — condensed, detailed bug descriptions.
@@ -155,3 +156,20 @@ Valentino: Tomcat JMXProxy RCE, HTML sanitizer bypass, Vertex AI command injecti
 1. **Valentino: Tomcat JMXProxy RCE, HTML sanitizer bypass, Vertex AI command injecti**
 2. **[ ] Tomcat reverse proxy: `../;` (Orange Tsai path normalization) bypasses proxy**
 3. **[ ] HTML sanitizer: nest many open `<p>` tags before XSS payload — depth/allowli**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Authorization bypass** — "Free After Use" — Authorization bypass ([search](/search?q=Authorization%20bypass))
+- **RCE** — Tomcat JMXProxy RCE — RCE ([search](/search?q=RCE))
+- **XSS** — MercadoLibre HTML Sanitizer Bypass — XSS ([search](/search?q=XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Content injection in code generation** — also in [#130](/episodes/130)
+- **Nesting depth exhaustion** — also in [#130](/episodes/130)
+- **Semicolon path normalization** — also in [#130](/episodes/130)
+- **URI parser truncation** — also in [#130](/episodes/130)
+

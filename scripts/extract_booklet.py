@@ -20,7 +20,7 @@ for fname in sorted(os.listdir(SRC)):
     if not m:
         continue
     num = int(m.group(1))
-    with open(os.path.join(SRC, fname), "r") as f:
+    with open(os.path.join(SRC, fname), "r", encoding="utf-8") as f:
         raw = f.read()
 
     # Strip frontmatter
@@ -184,7 +184,7 @@ data = {
 }
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
-with open(OUT, "w") as f:
+with open(OUT, "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
 print(f"Booklet data written to {OUT}")
@@ -197,4 +197,7 @@ print(f"  Guests: {len(guests)}")
 print(f"  Suggestions: {len(suggestions)}")
 print(f"\nTop bug types:")
 for t, c in list(bug_type_counts.items())[:15]:
-    print(f"  {t}: {c}")
+    try:
+        print(f"  {t}: {c}")
+    except Exception:
+        print(f"  {t.encode('ascii', 'ignore').decode()}: {c}")

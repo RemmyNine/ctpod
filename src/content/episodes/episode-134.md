@@ -4,6 +4,7 @@ episode: 134
 ---
 
 
+
 # Episode 134 XBOW — AI Hacking Agent and Human in the Loop with Diego Djurado
 
 **Source:** Show notes (feed) — condensed.
@@ -137,3 +138,18 @@ ATO chain: API downgrade → JSONP → referer ACL → AEM dispatcher bypass XSS
 1. **ATO chain: API downgrade → JSONP → referer ACL → AEM dispatcher bypass XSS.**
 2. **[ ] ATO: API downgrade B5→B2 + JSONP + referer ACL + AEM dispatcher bypass.**
 3. **[ ] XBOW XXE: autonomous WSDL discovery, DTD hosting, error-based XXE for `/etc/**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Step Bypass — ATO** — Account Takeover via Multi-Step Bypass — ATO ([search](/search?q=Step%20Bypass%20—%20ATO))
+- **XXE (CVE-2025-49493)** — XBOW XXE in Akamai CloudTest — XXE (CVE-2025-49493) ([search](/search?q=XXE%20(CVE-2025-49493)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **API downgrade** — also in [#134](/episodes/134)
+- **Coordinator-Solver architecture** — also in [#134](/episodes/134)
+- **Interact.sh integration** — also in [#134](/episodes/134)
+

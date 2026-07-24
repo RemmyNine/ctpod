@@ -4,6 +4,7 @@ episode: 143
 ---
 
 
+
 # Episode 143 New Cohost + Client-Side Gadgets, LHE Meta — Instant Global Admin in Entra!
 
 **Source:** Show notes (feed) — condensed.
@@ -138,3 +139,18 @@ Brandyn announced as 3rd co-host.
 1. **Brandyn announced as 3rd co-host.**
 2. **[ ] LHE: focus volume on ONE app; deep bugs after dupe window.**
 3. **[ ] WAF bypass via internal DNS: employees → no WAF → deliver through business l**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Global admin ATO** — Microsoft Entra Actor Token — Global admin ATO ([search](/search?q=Global%20admin%20ATO))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Internal DNS WAF bypass** — also in [#143](/episodes/143)
+- **Secondary context RBAC bypass** — also in [#143](/episodes/143)
+- **Unsigned JWT with signed inner token** — also in [#143](/episodes/143)
+- **`attributes[0].value` XSS** — also in [#143](/episodes/143)
+

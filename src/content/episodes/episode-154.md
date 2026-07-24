@@ -4,6 +4,7 @@ episode: 154
 ---
 
 
+
 # Episode 154 Starting a Pentesting Company on Top of Bug Bounty
 
 ### TL;DR
@@ -92,3 +93,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Joseph and Brandyn discuss transitioning from bug bounty to pentesting for incom**
 2. **Diversification**: Pentesting provides guaranteed cash vs bug bounty's uncertain**
 3. **Inbound leads**: Build personal brand (talks, write-ups, X) → clients reach out **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

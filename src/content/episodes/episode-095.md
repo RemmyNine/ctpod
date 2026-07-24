@@ -4,6 +4,7 @@ episode: 95
 ---
 
 
+
 # Episode 95 Attacking Chrome Extensions with MatanBer
 
 **Guest:** MatanBer
@@ -159,3 +160,20 @@ Manifest V3 extension structure: content script (isolated world), injected scrip
 1. **Manifest V3 extension structure: content script (isolated world), injected scrip**
 2. **Check `externally_connectable` in manifest.json — if present, `chrome.runtime` A**
 3. **Content scripts share DOM but not JS environment with the page — but custom even**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **MatanBer** — also appears in [#095](/episodes/95)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CSS injection in extension pages** — also in [#095](/episodes/95)
+- **Chrome extension debugging** — also in [#095](/episodes/95)
+- **Isolated world → main world bridge hijack** — also in [#095](/episodes/95)
+- **`web_accessible_resources` → redirect → clickjack** — also in [#095](/episodes/95)
+

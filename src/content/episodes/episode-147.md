@@ -4,6 +4,7 @@ episode: 147
 ---
 
 
+
 # Episode 147 Stupid Simple Hacking Workflow Tips
 
 ### TL;DR
@@ -102,3 +103,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Kaido EvenBetter plugin command palette PR adds convert workflows (Ctrl+K base64**
 2. **Use Kaido Command Palette (via EvenBetter PR) for quick encodings: highlight tex**
 3. **Chrome DevTools "Edit as HTML"** — right-click node → copy all HTML for AI conte**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

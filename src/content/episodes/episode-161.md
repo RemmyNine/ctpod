@@ -4,6 +4,7 @@ episode: 161
 ---
 
 
+
 # Episode 161 Cross-Consumer Attacks & DTMF Tone Exfil
 
 ### TL;DR
@@ -127,3 +128,11 @@ YesWeHack 2026 report: 91% Burp Suite adoption vs 18% Kaido; top tools: Burp, ff
 
 #### 11. The practical takeaway
 1. **YesWeHack 2026 report: 91% Burp Suite adoption vs 18% Kaido; top tools: Burp, ff**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

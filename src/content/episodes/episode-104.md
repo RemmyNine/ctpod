@@ -4,6 +4,7 @@ episode: 104
 ---
 
 
+
 # Episode 104 2024 Hacker Stats & 2025 Goals
 
 **Host:** Justin Gardner (Rhynorater)
@@ -86,3 +87,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **2024 stats: 126 bugs (25% increase), 7 crits, 45 highs, 57 mediums, 18 lows**
 2. **Template for personal bug bounty inventory: satisfaction with bug count, impact,**
 3. **Template for goal setting: growth areas, collaborators, hours/week, earnings, bu**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

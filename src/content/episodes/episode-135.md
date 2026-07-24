@@ -4,6 +4,7 @@ episode: 135
 ---
 
 
+
 # Episode 135 Akamai's Ryan Barnett on WAFs, Unicode Confusables, and Triage Stories
 
 **Source:** Show notes (feed) — condensed.
@@ -139,3 +140,18 @@ Ryan Barnett on WAF challenges, sources vs sinks world.
 1. **Ryan Barnett on WAF challenges, sources vs sinks world.**
 2. **[ ] Use images of exploit code, not text — APIs/AI agents scrape and re-serve wi**
 3. **[ ] Third-party chat/analytics beacon full URIs to provider — attacker payloads **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Stored XSS** — TypePad Accidental Stored XSS — Stored XSS ([search](/search?q=Stored%20XSS))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **HTML entity encoding bypass via scraping** — also in [#135](/episodes/135)
+- **Mojibake** — also in [#135](/episodes/135)
+- **TLS fingerprint for whitelisting** — also in [#135](/episodes/135)
+- **WAF bypass by context confusion** — also in [#135](/episodes/135)
+

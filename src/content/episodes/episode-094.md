@@ -4,6 +4,7 @@ episode: 94
 ---
 
 
+
 # Episode 94 Zendesk Fiasco & the CTBB Naughty List
 
 **Hosts:** Justin Gardner (Rhynorater), Joel Margolis (Teknogeek)
@@ -131,3 +132,17 @@ Zendesk email spoofing bug closed as "Informative" by H1 triage; researcher disc
 1. **Zendesk email spoofing bug closed as "Informative" by H1 triage; researcher disc**
 2. **Email spoofing bugs require extra scrutiny on Zendesk (history of impactful emai**
 3. **Live chat/third-party integrations are often the weakest link — HMAC-based auth **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Based Helpdesk Ticket Leak** — Zendesk Email-Based Helpdesk Ticket Leak ([search](/search?q=Based%20Helpdesk%20Ticket%20Leak))
+- **Live Chat HMAC Auth Bypass** — Ophion Security — Live Chat HMAC Auth Bypass ([search](/search?q=Live%20Chat%20HMAC%20Auth%20Bypass))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Program accountability tracking** — also in [#094](/episodes/94)
+- **Third-party integration assessment** — also in [#094](/episodes/94)
+

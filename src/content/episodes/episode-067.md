@@ -4,6 +4,7 @@ episode: 67
 ---
 
 
+
 # Episode 67 VDPs & Accidental Program VS Hacker Debate Part 2
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -103,3 +104,11 @@ In-depth debate on VDPs: whether they're harmful to the ecosystem vs appropriate
 1. **In-depth debate on VDPs: whether they're harmful to the ecosystem vs appropriate**
 2. **HackerOne should separate VDP rep from bounty rep on leaderboards — Bugcrowd alr**
 3. **Program leaderboards should default to last 365 days, not all-time — top hackers**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

@@ -4,6 +4,7 @@ episode: 53
 ---
 
 
+
 # Episode 53 500k/yr as Full-Time Bug Hunter & Content Creator — Nahamsec
 
 ### TL;DR
@@ -141,3 +142,16 @@ Ben (Nahamsec) shares journey from Twitch streaming burnout to 500K bug bounty y
 1. **Ben (Nahamsec) shares journey from Twitch streaming burnout to 500K bug bounty y**
 2. **Streaming recon 4-5 days/week made him great at recon but bad at finding bugs (p**
 3. **Switching from recon to manual: analyzed past reports to find strengths; realize**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Blind XSS with custom payload** — also in [#053](/episodes/53)
+- **Credit card/Banking accounts as attack surface** — also in [#053](/episodes/53)
+- **Fraud detection as trigger** — also in [#053](/episodes/53)
+

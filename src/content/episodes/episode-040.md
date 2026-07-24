@@ -4,6 +4,7 @@ episode: 40
 ---
 
 
+
 # Episode 40 Bug Bounty Mentoring
 
 *No full transcript available — show notes only.*
@@ -74,3 +75,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 
 #### 11. The practical takeaway
 1. **Episode focuses on mentoring beginners in bug bounty**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

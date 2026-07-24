@@ -4,6 +4,7 @@ episode: 42
 ---
 
 
+
 # Episode 42 Renniepak Interview & Intigriti LHE Recap
 
 ### TL;DR
@@ -120,3 +121,16 @@ Renee (Renniepak) — top 11 on Intigriti, full-time bounty hunter for 1.5 years
 1. **Renee (Renniepak) — top 11 on Intigriti, full-time bounty hunter for 1.5 years**
 2. **Web3/Web2 bridge: mint your own NFT with XSS payloads in metadata fields; platfo**
 3. **postMessage is critically underexplored — origin checks are often missing or use**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **721 NFT Metadata** — XSS via ERC-721 NFT Metadata ([search](/search?q=721%20NFT%20Metadata))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Reflected XSS via browser extension** — also in [#042](/episodes/42)
+- **postMessage origin regex bypass** — also in [#042](/episodes/42)
+

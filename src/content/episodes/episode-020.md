@@ -4,6 +4,7 @@ episode: 20
 ---
 
 
+
 # Episode 20 Hacker Brain Hacks — Overcoming Bug Bounty's Mental Tolls
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis  
@@ -115,3 +116,16 @@ Full episode on the psychological challenges of bug bounty: before/during/after 
 1. **Full episode on the psychological challenges of bug bounty: before/during/after **
 2. **Before hacking:** Fight procrastination by just starting; pick programs that int**
 3. **During hacking:** Stay in the zone — take notes on things to automate later, do **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Document everything** — also in [#020](/episodes/20)
+- **Goal-setting with tiers** — also in [#020](/episodes/20)
+- **Persist iteratively** — also in [#020](/episodes/20)
+

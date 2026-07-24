@@ -4,6 +4,7 @@ episode: 180
 ---
 
 
+
 # Episode 180 State of Bug Bounty Maturity Posture Report
 
 ### TL;DR
@@ -157,3 +158,21 @@ Bug bounty program maturity varies wildly — top programs offer SLAs, transpare
 3. **[ ] Check platform transparency reports before investing recon time — median triage > 30 days = budget time accordingly**
 4. **[ ] Prioritize programs with published severity guidelines and min/max bounty ranges per tier**
 5. **[ ] Monitor program health signals quarterly; drop consistently low-scoring programs from active rotation**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Market Fintech — No Response After 90 Days** — Mid-Market Fintech — No Response After 90 Days ([search](/search?q=Market%20Fintech%20—%20No%20Response%20After%2090%20Days))
+- **Severity Downgrade Without Explanation** — Generic Program — Severity Downgrade Without Explanation ([search](/search?q=Severity%20Downgrade%20Without%20Explanation))
+- **Silent Policy Change** — Enterprise Program — Silent Policy Change ([search](/search?q=Silent%20Policy%20Change))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Bounty range transparency scoring** — also in [#180](/episodes/180)
+- **Program maturity scoring matrix** — also in [#180](/episodes/180)
+- **Program triage SLA tracking** — also in [#180](/episodes/180)
+- **Public report analysis** — also in [#180](/episodes/180)
+- **Severity guideline auditing** — also in [#180](/episodes/180)
+

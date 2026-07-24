@@ -4,6 +4,7 @@ episode: 151
 ---
 
 
+
 # Episode 151 Client-side Advanced Topics
 
 ### TL;DR
@@ -101,3 +102,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Deep dive on third-party cookie partitioning (CHIPS), postMessage advanced techn**
 2. **CHIPS (Cookies Having Independent Partitioned State)**: Partitioned cookies are **
 3. **PostMessage advanced:**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

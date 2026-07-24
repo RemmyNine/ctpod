@@ -4,6 +4,7 @@ episode: 155
 ---
 
 
+
 # Episode 155 2025 Hacker Stats & 2026 Goals
 
 ### TL;DR
@@ -89,3 +90,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Year-end retrospective: Justin (104 bugs, 22.27 avg impact), Joseph (100 bugs, 2**
 2. **Report everything meaningful** — Brandyn's mindset shift to full-time: submit ev**
 3. **Google report quality bonus**: POC videos with realistic-looking UI dramatically**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

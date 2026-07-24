@@ -4,6 +4,7 @@ episode: 8
 ---
 
 
+
 # Episode 8 PostMessage Bugs, CSS Injection, and Bug Drops
 
 ### TL;DR
@@ -148,3 +149,22 @@ PostMessage bugs: Franz Rosen's Chrome extension detects postMessage events; eas
 1. **PostMessage bugs: Franz Rosen's Chrome extension detects postMessage events; eas**
 2. **Franz Rosen's postMessage Tracker Chrome extension: logs all `window.postMessage**
 3. **Use `window.opener` reference to reach back across same-origin windows for data **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Credit Card Data Exfiltration (Critical)** — CSS Injection → CSS Keylogger — Credit Card Data Exfiltration (Critical) ([search](/search?q=Credit%20Card%20Data%20Exfiltration%20(Critical)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CSS Painting API** — also in [#008](/episodes/8)
+- **CSS blacklist bypass** — also in [#008](/episodes/8)
+- **CSS exfiltration** — also in [#008](/episodes/8)
+- **PostMessage enumeration** — also in [#008](/episodes/8)
+
+**Advice:**
+- *""PostMessage is like an API for the client-side webpage" — Joel"*
+- *""When you get a reference to a window via `window.opener`, you can send postMessages and interact cross-origin" — Joel"*
+

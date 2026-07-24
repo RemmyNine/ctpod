@@ -4,6 +4,7 @@ episode: 108
 ---
 
 
+
 # Episode 108 How to Hack Salesforce, ServiceNow, and Other SaaS Products With Aaron Costello
 
 **Guest:** Aaron Costello (AppOmni)
@@ -193,3 +194,21 @@ SaaS misconfigurations are a bug class: same payload works across 1000s of compa
 1. **SaaS misconfigurations are a bug class: same payload works across 1000s of compa**
 2. **SaaS misconfigurations > zero-days: you find the pattern once, apply across unli**
 3. **ServiceNow: "widgets" (simple list, unordered list, data brokers) are API endpoi**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Aaron Costello (AppOmni)** — also appears in [#108](/episodes/108)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AppCache + Cookie bombing** — also in [#108](/episodes/108)
+- **Named credential brute-force** — also in [#108](/episodes/108)
+- **SaaS misconfiguration pattern** — also in [#108](/episodes/108)
+- **Salesforce Apex discovery** — also in [#108](/episodes/108)
+- **ServiceNow widget enumeration** — also in [#108](/episodes/108)
+

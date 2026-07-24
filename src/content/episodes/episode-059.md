@@ -4,6 +4,7 @@ episode: 59
 ---
 
 
+
 # Episode 59 Bug Bounty Gadget Hunting & Hacker's Intuition
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -138,3 +139,15 @@ A "gadget" is a behavior or primitive that isn't itself a vulnerability but can 
 1. **A "gadget" is a behavior or primitive that isn't itself a vulnerability but can **
 2. **DOM clobbering via HTML injection can go 5+ layers deep using nested iframes wit**
 3. **Image injection (stored) can be weaponized by pointing `src` to the logout endpo**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Joel Margolis** — also appears in [#059](/episodes/59)
+- **Justin Gardner** — also appears in [#059](/episodes/59)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

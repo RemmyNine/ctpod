@@ -4,6 +4,7 @@ episode: 76
 ---
 
 
+
 # Episode 76 Match & Replace — HTTP Proxies' Most Underrated Feature
 
 **TL;DR**
@@ -123,3 +124,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Understand the vulnerability class** — Know how it works and why it matters
 2. **Master the exploitation technique** — Practice the specific steps to exploit it
 3. **Apply the mental model** — Use the thinking patterns to find similar bugs in other targets
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

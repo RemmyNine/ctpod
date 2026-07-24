@@ -4,6 +4,7 @@ episode: 96
 ---
 
 
+
 # Episode 96 Cookies & Caching with MatanBer
 
 **Guest:** MatanBer
@@ -171,3 +172,21 @@ Cookie quoting: Java/Python environments use double-quoted cookie values — `ke
 1. **Cookie quoting: Java/Python environments use double-quoted cookie values — `key=**
 2. **Cookie ordering: path length descending, then chronological (last set wins). Set**
 3. **Safari: closing curly bracket `}` in cookie attribute value discards all subsequ**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Cache — Force-Cache Fetch Leak** — Medium Cache-Cache — Force-Cache Fetch Leak ([search](/search?q=Cache%20—%20Force-Cache%20Fetch%20Leak))
+- **Out** — Safari Cookie Attribute Comment-Out ([search](/search?q=Out))
+- **Partial to Full Cookie Injection** — Cookie Quoting — Partial to Full Cookie Injection ([search](/search?q=Partial%20to%20Full%20Cookie%20Injection))
+- **Service Worker Hijack** — Cache API Poisoning — Service Worker Hijack ([search](/search?q=Service%20Worker%20Hijack))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cache API for XSS persistence** — also in [#096](/episodes/96)
+- **Cookie quoting to reorder/comment** — also in [#096](/episodes/96)
+- **Force-cache cross-site leak** — also in [#096](/episodes/96)
+- **Safari cookie `}` truncation** — also in [#096](/episodes/96)
+

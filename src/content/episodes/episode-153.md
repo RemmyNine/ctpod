@@ -4,6 +4,7 @@ episode: 153
 ---
 
 
+
 # Episode 153 Hacking Robots with Matt Brown
 
 ### TL;DR
@@ -120,3 +121,12 @@ Hardware hacking methodology: debug interfaces (UART, JTAG, USB/ADB) → firmwar
 
 #### 11. The practical takeaway
 1. **Hardware hacking methodology: debug interfaces (UART, JTAG, USB/ADB) → firmware **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **IDOR** — Incremental Session Token in Industrial Control System — IDOR ([search](/search?q=IDOR))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

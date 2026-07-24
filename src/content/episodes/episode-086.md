@@ -4,6 +4,7 @@ episode: 86
 ---
 
 
+
 # Episode 86 The X-Correlation between Frans & RCE — Research Drop
 
 **Show notes only.** Frans Rosen previews his new presentation on x-correlation injection, server-side JSON injection, fuzzing blindly, and optimizing blind RCE. Video recommended. No full transcript available.
@@ -69,3 +70,11 @@ The techniques discussed focus on finding attack surface and identifying vulnera
 1. **Understand the vulnerability class** — Know how it works and why it matters
 2. **Master the exploitation technique** — Practice the specific steps to exploit it
 3. **Apply the mental model** — Use the thinking patterns to find similar bugs in other targets
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

@@ -4,6 +4,7 @@ episode: 25
 ---
 
 
+
 # Episode 25 2xMVH & Multi-million dollar hacker Inhibitor181 (Cosmin)
 
 **Guests/Hosts:** Justin Gardner, Joel Margolis, Cosmin (Inhibitor181)  
@@ -126,3 +127,20 @@ Cosmin is a 2x MVP (Most Valuable Hacker) at HackerOne live events, specializing
 1. **Cosmin is a 2x MVP (Most Valuable Hacker) at HackerOne live events, specializing**
 2. **In multi-target live events, pick ONE target per event and go deep; splitting at**
 3. **Build "tricks.txt" — a file of small quirks/behaviors that inform your gut insti**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Cosmin** — also appears in [#025](/episodes/25)
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Gut-driven iteration** — also in [#025](/episodes/25)
+- **Single-technology deep expertise** — also in [#025](/episodes/25)
+- **Video PoC for complex bugs** — also in [#025](/episodes/25)
+- **Word list from documentation** — also in [#025](/episodes/25)
+

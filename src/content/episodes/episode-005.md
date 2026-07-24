@@ -4,6 +4,7 @@ episode: 5
 ---
 
 
+
 # Episode 5 AI Security, Hacking WiFi, the New XSS Hunter, and more
 
 ### TL;DR
@@ -175,3 +176,25 @@ New XSS Hunter by Truffle Security (partnered with original XSS Hunter author ma
 1. **New XSS Hunter by Truffle Security (partnered with original XSS Hunter author ma**
 2. **XSS Hunter payloads: prefix with a unique marker string to identify which input **
 3. **Save All Resources Chrome extension to bulk-download JS files from DevTools**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Credential Disclosure** — Hardcoded Encrypted Secrets in Android App — Credential Disclosure ([search](/search?q=Credential%20Disclosure))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **ChatGPT for assembly analysis** — also in [#005](/episodes/5)
+- **MD5 collision for resource dedup bypass** — also in [#005](/episodes/5)
+- **Resource Override** — also in [#005](/episodes/5)
+- **Source map extraction** — also in [#005](/episodes/5)
+- **XSS Hunter payload tagging** — also in [#005](/episodes/5)
+
+**Advice:**
+- *""Use unique numbers/strings with XSS payloads so you can identify which field triggered it" — Justin"*
+- *""Always Google random strings you find in applications" — Joel on discovering shared codebases"*
+- *""Source maps: check if Chrome auto-unpacks them in the sources tab" — Justin"*
+- *+1 more pieces of advice*
+

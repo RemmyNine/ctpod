@@ -4,6 +4,7 @@ episode: 47
 ---
 
 
+
 # Episode 47 CSP Research, Iframe Hopping, and Client-side Shenanigans
 
 ### TL;DR
@@ -144,3 +145,16 @@ CSS/visual: discussed struggles of getting back into hacking after breaks
 1. **CSS/visual: discussed struggles of getting back into hacking after breaks**
 2. **Notes are critical for restarting after a break; take notes on program taxonomy,**
 3. **Stick to one program and take detailed notes — top program specialists out-earn **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Origin Iframe (Wallarm research)** — CSP Bypass via Same-Origin Iframe (Wallarm research) ([search](/search?q=Origin%20Iframe%20(Wallarm%20research)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Iframe Sandwich** — also in [#047](/episodes/47)
+- **Wildcard DNS profiling** — also in [#047](/episodes/47)
+

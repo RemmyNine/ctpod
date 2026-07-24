@@ -4,6 +4,7 @@ episode: 169
 ---
 
 
+
 # Episode 169 Attacking OAuth 2.1
 
 ### TL;DR
@@ -148,3 +149,20 @@ OAuth 2.1 changes: PKCE mandatory, implicit and password credential flows remove
 1. **OAuth 2.1 changes: PKCE mandatory, implicit and password credential flows remove**
 2. **[ ] OAuth 2.1 PKCE is mandatory — test PKCE downgrade by stripping `code_challen**
 3. **[ ] CIMD flow: attacker supplies `client_manifest_uri`, server fetches it — SSRF**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2025-4144)** — PKCE Bypass in Cloudflare Workers (CVE-2025-4144) ([search](/search?q=2025-4144)))
+- **OAuth Account Takeover (ZeroPath)** — Django-OAuth Account Takeover (ZeroPath) ([search](/search?q=OAuth%20Account%20Takeover%20(ZeroPath)))
+- **Proxy Auth Bypass (CVE-2025-54576)** — OAuth2-Proxy Auth Bypass (CVE-2025-54576) ([search](/search?q=Proxy%20Auth%20Bypass%20(CVE-2025-54576)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CIMD SSRF** — also in [#169](/episodes/169)
+- **Mutable claim abuse** — also in [#169](/episodes/169)
+- **PKCE downgrade attack** — also in [#169](/episodes/169)
+- **Token passthrough → confused deputy** — also in [#169](/episodes/169)
+

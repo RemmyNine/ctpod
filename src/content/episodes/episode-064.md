@@ -4,6 +4,7 @@ episode: 64
 ---
 
 
+
 # Episode 64 .NET Remoting, CDN Attack Surface, and Recon vs Main App
 
 **Guests:** Justin Gardner, Joel Margolis
@@ -119,3 +120,11 @@ Code White released .NET remoting objref leak research — use `__RequestVerb` h
 1. **Code White released .NET remoting objref leak research — use `__RequestVerb` hea**
 2. **For .NET remoting over HTTP: you need the object reference URL which is normally**
 3. **Code White's GitHub repo `HttpRemotingObjRefLeak` contains a Python script for a**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+

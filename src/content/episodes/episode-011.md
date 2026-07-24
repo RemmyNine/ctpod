@@ -4,6 +4,7 @@ episode: 11
 ---
 
 
+
 # Episode 11 CVSS, Web Cache Deception, and SSTI
 
 ### TL;DR
@@ -152,3 +153,25 @@ Acropalypse vulnerability: Google Pixel screenshot cropping left original image 
 1. **Acropalypse vulnerability: Google Pixel screenshot cropping left original image **
 2. **Acropalypse: cropped PNG/Screenshot files retain original data at end of file; c**
 3. **For SSRF: test HTTPS→HTTP redirect bypass for request filter libraries**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **$26k)** — SSTI via Payment Notification — CVE-2020-12668 (Critical, $26k) ([search](/search?q=$26k)))
+- **CVE-2020-12668 (Critical** — SSTI via Payment Notification — CVE-2020-12668 (Critical, $26k) ([search](/search?q=CVE-2020-12668%20(Critical))
+- **PII Leakage (High)** — Web Cache Deception — PII Leakage (High) ([search](/search?q=PII%20Leakage%20(High)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **CVSS Scope:Changed** — also in [#011](/episodes/11)
+- **CVSS argument for guest accounts** — also in [#011](/episodes/11)
+- **Cache safety** — also in [#011](/episodes/11)
+- **Web cache deception extension tricks** — also in [#011](/episodes/11)
+
+**Advice:**
+- *""Read the CVSS documentation to find arguments for your bugs" — Justin"*
+- *""For web cache deception, always add random URL parameters to avoid poisoning real user data" — Joel"*
+- *""If you have UUIDs in your system but I can get them via an oracle, they're not a mitigating factor" — Justin"*
+

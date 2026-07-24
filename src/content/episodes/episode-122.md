@@ -4,6 +4,7 @@ episode: 122
 ---
 
 
+
 # Episode 122 We Won Google's AI Hacking Event in Tokyo
 
 ### TL;DR
@@ -146,3 +147,18 @@ Google LHE: 70 AI-focused reports, $220k+ paid out (record), 25 researchers
 1. **Google LHE: 70 AI-focused reports, $220k+ paid out (record), 25 researchers**
 2. **AI vulns break into three components: delivery, info access, exfiltration/impact**
 3. **React/CodeAct architecture: LLM generates reasoning → plan → action (code). The **
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Cultural/linguistic filter bypass** — also in [#122](/episodes/122)
+- **Frankenstein token bypass** — also in [#122](/episodes/122)
+- **Naming tool calls explicitly** — also in [#122](/episodes/122)
+- **Planner-directed prompt engineering** — also in [#122](/episodes/122)
+- **Small model classifier evasion** — also in [#122](/episodes/122)
+

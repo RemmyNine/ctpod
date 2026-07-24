@@ -4,6 +4,7 @@ episode: 3
 ---
 
 
+
 # Episode 3 H1-407 Event Madness & Takeaways Part 1
 
 ### TL;DR
@@ -148,3 +149,22 @@ DLL hijacking on Windows executables as exploitation technique (not always a val
 1. **DLL hijacking on Windows executables as exploitation technique (not always a val**
 2. **Use ILSpy or dotPeek to decompile .NET/C# binaries back to source code**
 3. **For Python binaries: PyInstaller Extractor → .pyc → Uncompyle6 → .py**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Binary language identification** — also in [#003](/episodes/3)
+- **Decompilation pipeline per language** — also in [#003](/episodes/3)
+- **GraphQL field enumeration via error messages** — also in [#003](/episodes/3)
+- **SameSite Lax+POST timer reset** — also in [#003](/episodes/3)
+- **Windows URI handler enumeration** — also in [#003](/episodes/3)
+
+**Advice:**
+- *""If you have a Windows native app, enumerate the Windows URI handlers" — Justin"*
+- *""Beware of capitalization in GraphQL — try different case on inputs" — Joel"*
+

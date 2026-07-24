@@ -4,6 +4,7 @@ episode: 97
 ---
 
 
+
 # Episode 97 Bcrypt Hash Input Truncation & Mobile Device Threat Modeling
 
 **Hosts:** Justin Gardner (Rhynorater), Joel Margolis (Teknogeek)
@@ -159,3 +160,20 @@ Okta bcrypt bug: usernames 52+ characters → bcrypt truncates the (username+pas
 1. **Okta bcrypt bug: usernames 52+ characters → bcrypt truncates the (username+passw**
 2. **Bcrypt truncates at 72 characters (or 52 in some implementations). If username +**
 3. **PortSwigger: `document.URL` contains URL credentials (`user:pass@host`), `window**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Android** — NdevTK — Android/Chrome Web Attack Surface ([search](/search?q=Android))
+- **Chrome Web Attack Surface** — NdevTK — Android/Chrome Web Attack Surface ([search](/search?q=Chrome%20Web%20Attack%20Surface))
+- **Concealing Payloads in URL Credentials** — PortSwigger — Concealing Payloads in URL Credentials ([search](/search?q=Concealing%20Payloads%20in%20URL%20Credentials))
+- **PHP Filter Chain Tool** — Lightyear — PHP Filter Chain Tool ([search](/search?q=PHP%20Filter%20Chain%20Tool))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **PHP filter chains with Lightyear** — also in [#097](/episodes/97)
+- **URL credential smuggling** — also in [#097](/episodes/97)
+- **javascript:name XSS** — also in [#097](/episodes/97)
+

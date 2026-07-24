@@ -4,6 +4,7 @@ episode: 181
 ---
 
 
+
 # Episode 181 Bug Bounty Singularity
 
 ### TL;DR
@@ -195,3 +196,23 @@ AI agent fleets are reaching a singularity point where autonomous bug discovery 
 3. **[ ] Invest in context store (vector DB + graph) and operation ID audit trail from day one**
 4. **[ ] Output machine-readable PoCs — triage automation will make this mandatory for priority handling**
 5. **[ ] The new hunter skillset: workflow architecture, prompt engineering, tool abstraction, fleet orchestration**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Auth Bypass via OAuth Misconfiguration** — AI Agent — Auth Bypass via OAuth Misconfiguration ([search](/search?q=Auth%20Bypass%20via%20OAuth%20Misconfiguration))
+- **Automated SSRF Chain Discovery** — AI Agent — Automated SSRF Chain Discovery ([search](/search?q=Automated%20SSRF%20Chain%20Discovery))
+- **Business Logic Flaw in Payment Flow** — AI Agent — Business Logic Flaw in Payment Flow ([search](/search?q=Business%20Logic%20Flaw%20in%20Payment%20Flow))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Coverage verification loop** — also in [#181](/episodes/181)
+- **Machine-readable PoC generation** — also in [#181](/episodes/181)
+- **Multi-agent swarm architecture** — also in [#181](/episodes/181)
+- **Operation ID audit trail** — also in [#178](/episodes/178), [#181](/episodes/181)
+- **Orchestrator-planner pattern** — also in [#181](/episodes/181)
+- **Shared context store (vector DB + graph)** — also in [#181](/episodes/181)
+- **Unified API abstraction layer** — also in [#181](/episodes/181)
+

@@ -4,6 +4,7 @@ episode: 18
 ---
 
 
+
 # Episode 18 Audit Code, Earn Bounties
 
 ### TL;DR
@@ -189,3 +190,27 @@ Home Assistant RCE: path traversal on reverse proxy bypasses auth → unauthenti
 1. **Home Assistant RCE: path traversal on reverse proxy bypasses auth → unauthentica**
 2. **Home Assistant auth bypass via `path traversal + auth bypass on reverse proxy: `**
 3. **Git config injection: lines >1024 bytes get split mid-line; this can inject arbi**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Arbitrary Command Execution** — Git Config Injection — Arbitrary Command Execution ([search](/search?q=Arbitrary%20Command%20Execution))
+- **Path Traversal Auth Bypass** — Home Assistant RCE — Path Traversal Auth Bypass ([search](/search?q=Path%20Traversal%20Auth%20Bypass))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Config file line-length injection** — also in [#018](/episodes/18)
+- **Docker container source extraction** — also in [#018](/episodes/18)
+- **GitHub search for error strings** — also in [#018](/episodes/18)
+- **LFI→source code disclosure** — also in [#018](/episodes/18)
+- **Path traversal auth bypass** — also in [#018](/episodes/18)
+- **npm/pip package auditing** — also in [#018](/episodes/18)
+
+**Advice:**
+- *""If you have an LFD, ask for permission to read source code — it might bump your report to a crit" — Justin"*
+- *""Read the RFCs. The cookie spec has bugs documented by the maintainers themselves." — Joel on cookie research"*
+- *""Use Todo Highlight in VSCode to mark code flow analysis steps" — Joel"*
+- *+33 more pieces of advice*
+

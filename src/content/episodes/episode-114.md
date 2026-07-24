@@ -4,6 +4,7 @@ episode: 114
 ---
 
 
+
 # Episode 114 Single Page Application Hacking Playbook
 
 ### TL;DR
@@ -181,3 +182,24 @@ BusFactor's CSPT chain: client-side path traversal → file upload (JSON) → `r
 1. **BusFactor's CSPT chain: client-side path traversal → file upload (JSON) → `redir**
 2. **For client-side path traversal (CSPT): need one of three escalation paths — open**
 3. **When the file download returns a JSON blob with URL instead of redirecting, chec**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **$22k** — BusFactor's CSPT Chain — $7.5k / $22k ([search](/search?q=$22k))
+- **$7.5k** — BusFactor's CSPT Chain — $7.5k / $22k ([search](/search?q=$7.5k))
+- **000 Live API Keys** — Common Crawl Secret Scanning — 12,000 Live API Keys ([search](/search?q=000%20Live%20API%20Keys))
+- **12** — Common Crawl Secret Scanning — 12,000 Live API Keys ([search](/search?q=12))
+- **Click Jacking — Pop-Under and Window Focus** — Double-Click Jacking — Pop-Under and Window Focus ([search](/search?q=Click%20Jacking%20—%20Pop-Under%20and%20Window%20Focus))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **API backend swapping** — also in [#114](/episodes/114)
+- **Application-level 404 vs server-level 404** — also in [#114](/episodes/114)
+- **CORS bypass via cache** — also in [#114](/episodes/114)
+- **CSPT + ?redirect param** — also in [#114](/episodes/114)
+- **JWT email vs sub claim test** — also in [#114](/episodes/114)
+- **`text/plain` + JSON body** — also in [#114](/episodes/114)
+

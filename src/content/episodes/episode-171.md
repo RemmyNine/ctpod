@@ -4,6 +4,7 @@ episode: 171
 ---
 
 
+
 # Episode 171 Path-Scoped Cookie Hacks with Uppercase & Post-based Raw Protobuf XSS
 
 ### TL;DR
@@ -153,3 +154,19 @@ Path-scoped cookies: switching a character to uppercase in the path bypasses the
 1. **Path-scoped cookies: switching a character to uppercase in the path bypasses the**
 2. **[ ] Cookie path scoping is case-sensitive; HTTP paths often aren't — `/abc` (low**
 3. **[ ] For raw Protobuf XSS via form: ensure payload is in pure ASCII range (0x01-0**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Scoped Cookie Bypass with Uppercase** — Path-Scoped Cookie Bypass with Uppercase ([search](/search?q=Scoped%20Cookie%20Bypass%20with%20Uppercase))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Age → DOB derivation** — also in [#171](/episodes/171)
+- **Case-sensitive cookie path bypass** — also in [#171](/episodes/171)
+- **Control-click + hidden UI** — also in [#171](/episodes/171)
+- **Keydown user gesture** — also in [#171](/episodes/171)
+- **Protobuf form submission XSS** — also in [#171](/episodes/171)
+

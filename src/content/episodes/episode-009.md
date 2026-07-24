@@ -4,6 +4,7 @@ episode: 9
 ---
 
 
+
 # Episode 9 Headless Browser SSRF & RebindMultiA Tool Release + Web3 Bug
 
 ### TL;DR
@@ -163,3 +164,26 @@ RebindMultiA tool release: DNS rebinding using multi-A record fallback behavior 
 1. **RebindMultiA tool release: DNS rebinding using multi-A record fallback behavior **
 2. **Headless browser SSRF: find HTML injection points in PDF/image generation; use `**
 3. **For blind SSRF in headless browsers, use DNS rebinding to bypass localhost restr**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Server-Side Template Injection → CVE-2020-12668** — PayPal SSTI — Server-Side Template Injection → CVE-2020-12668 ([search](/search?q=Server-Side%20Template%20Injection%20→%20CVE-2020-12668))
+- **Unauthenticated Node Reset** — Web3 RPC Server — Unauthenticated Node Reset ([search](/search?q=Unauthenticated%20Node%20Reset))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Chrome DevTools Protocol popup bypass** — also in [#009](/episodes/9)
+- **HTTP stall technique** — also in [#009](/episodes/9)
+- **Headless browser SSRF** — also in [#009](/episodes/9)
+- **Multi-A DNS rebinding (Windows)** — also in [#009](/episodes/9)
+- **WC3 BroadcastChannel API** — also in [#009](/episodes/9)
+
+**Advice:**
+- *""If you have a headless browser, try CRLF injection in URL path to smuggle HTTP requests" — Justin"*
+- *""Research what specific library is rendering PDFs — read the docs" — Justin on Jonathan Bowman's mpdf LFI technique"*
+- *""Use Lo0p's tip: respond with headers but no body to stall HTTP requests" — Justin"*
+- *+1 more pieces of advice*
+

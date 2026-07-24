@@ -4,6 +4,7 @@ episode: 125
 ---
 
 
+
 # Episode 125 How to Win Live Hacking Events
 
 ### TL;DR
@@ -164,3 +165,20 @@ Jorian's ultimate double-clickjacking POC: window.moveTo + pop-under + fake Clou
 1. **Jorian's ultimate double-clickjacking POC: window.moveTo + pop-under + fake Clou**
 2. **Attack vector value**: `(impact × viability) / friction` — prioritize high-impac**
 3. **Scope call**: pick what the team wants hacked (impact) but balance with anticipa**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **2025-4123 — Open Redirect to SSRF** — Grafana CVE-2025-4123 — Open Redirect to SSRF ([search](/search?q=2025-4123%20—%20Open%20Redirect%20to%20SSRF))
+- **Clickjacking POC (Jorian)** — Ultimate Double-Clickjacking POC (Jorian) ([search](/search?q=Clickjacking%20POC%20(Jorian)))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Advocate for bugs** — also in [#125](/episodes/125)
+- **Attack vector value formula** — also in [#125](/episodes/125)
+- **Double-clickjack + moveTo** — also in [#125](/episodes/125)
+- **Scope triage** — also in [#125](/episodes/125)
+- **Show-and-tell trading** — also in [#125](/episodes/125)
+

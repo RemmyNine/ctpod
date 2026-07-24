@@ -4,6 +4,7 @@ episode: 48
 ---
 
 
+
 # Episode 48 MVH, DEFCON Black Badge, Googler — Sam Erb
 
 ### TL;DR
@@ -118,3 +119,15 @@ Interview with Sam Erb (erbbysam) — Google Security Engineer, DEFCON Black Bad
 1. **Interview with Sam Erb (erbbysam) — Google Security Engineer, DEFCON Black Badge**
 2. **Focus on unauthenticated endpoints for highest CVSS; "aim for CVSS 10.0 and avoi**
 3. **Custom automation for specific programs beats generic tooling**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **JS webpack monitoring** — also in [#048](/episodes/48)
+- **Static secrets in open source libraries** — also in [#048](/episodes/48)
+

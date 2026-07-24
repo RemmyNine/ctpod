@@ -4,6 +4,7 @@ episode: 98
 ---
 
 
+
 # Episode 98 Team 82 Sharon Brizinov — The Live Hacking Polymath
 
 **Guest:** Sharon Brizinov (Team 82 / Claroty)
@@ -172,3 +173,23 @@ IoT/SCADA hacking methodology: firmware extraction (vendor website → transitio
 1. **IoT/SCADA hacking methodology: firmware extraction (vendor website → transition **
 2. **Device-to-cloud communication is often overlooked by developers — impersonate th**
 3. **For firmware: get previous unencrypted versions first; they contain the decrypti**
+---
+
+### 📖 Darsnameh
+
+**Guests:**
+- **Sharon Brizinov (Team 82 / Claroty)** — also appears in [#098](/episodes/98)
+
+**Bugs & Vulnerabilities:**
+- **in-the-Middle for IoT Cloud Communication** — Man-in-the-Middle for IoT Cloud Communication ([search](/search?q=in-the-Middle%20for%20IoT%20Cloud%20Communication))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **to-Cloud Impersonation — Device Takeover** — IoT Device-to-Cloud Impersonation — Device Takeover ([search](/search?q=to-Cloud%20Impersonation%20—%20Device%20Takeover))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **Binary patching for emulation** — also in [#098](/episodes/98)
+- **Documentation tracker** — also in [#098](/episodes/98)
+- **Firmware decryption via transition version** — also in [#098](/episodes/98)
+- **Metrics-driven target selection (Pwn2Own)** — also in [#098](/episodes/98)
+- **ReCAPTCHA bypass** — also in [#098](/episodes/98)
+

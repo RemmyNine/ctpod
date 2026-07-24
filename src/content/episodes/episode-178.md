@@ -4,6 +4,7 @@ episode: 178
 ---
 
 
+
 # Episode 178 600k in ~3 months — BruteCat pt 2
 
 ### TL;DR
@@ -179,3 +180,28 @@ BruteCat built a full AI-driven Google API scanning system: 3,600 Google-owned A
 1. **BruteCat built a full AI-driven Google API scanning system: 3,600 Google-owned A**
 2. **[ ] Google API key harvesting: scrape 60K APKs, use Chrome extension with `chrom**
 3. **[ ] First-party auth origin brute force — valid origins include `www.google.com`**
+---
+
+### 📖 Darsnameh
+
+**Bugs & Vulnerabilities:**
+- **Full Data Leak** — LDR (Google Internal Investigation Tool) — Full Data Leak ([search](/search?q=Full%20Data%20Leak))
+- **Full PII Dump** — Google Voice Provider API — No Auth, Full PII Dump ([search](/search?q=Full%20PII%20Dump))
+- **IAM Policy Takeover** — PLX (Google Internal Dashboard) — IAM Policy Takeover ([search](/search?q=IAM%20Policy%20Takeover))
+- **No Auth** — Google Voice Provider API — No Auth, Full PII Dump ([search](/search?q=No%20Auth))
+- **Private Video Leak** — YouTube Partner CMS — Private Video Leak ([search](/search?q=Private%20Video%20Leak))
+- **Staging → Prod IDOR** — Ad Exchange — Staging → Prod IDOR ([search](/search?q=Staging%20→%20Prod%20IDOR))
+- **test** — 10. Self-test ([search](/search?q=test))
+- **world application** — 7. Real-world application ([search](/search?q=world%20application))
+
+**Techniques:**
+- **AI-first-party auth abstraction** — also in [#178](/episodes/178)
+- **Binary/ELF C-Handler dumping** — also in [#178](/episodes/178)
+- **Coverage verification** — also in [#178](/episodes/178)
+- **Error normalization** — also in [#178](/episodes/178)
+- **Feature flag abuse** — also in [#178](/episodes/178)
+- **Free trial billing isolation** — also in [#178](/episodes/178)
+- **Key filtering by project domain** — also in [#178](/episodes/178)
+- **Operation ID audit trail** — also in [#178](/episodes/178), [#181](/episodes/181)
+- **Response dedup by hash** — also in [#178](/episodes/178)
+
