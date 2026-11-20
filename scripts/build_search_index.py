@@ -34,7 +34,7 @@ for fname in sorted(os.listdir(SRC)):
             body = parts[2]
 
     # Create snippet (first ~300 chars of TL;DR or body text)
-    tldr_match = re.search(r'### TL;DR\s*\n(.*?)(?=\n### |\n---|\Z)', body, re.DOTALL)
+    tldr_match = re.search(r'(?m)^#{2,3} TL;DR\s*\n(.*?)(?=\n#{2,3} |\n---|\Z)', body, re.DOTALL)
     if tldr_match:
         tldr_text = re.sub(r'[\r\n]+', ' ', tldr_match.group(1)).strip()
         tldr_text = re.sub(r'\s+', ' ', tldr_text)

@@ -5,18 +5,26 @@ import bookletData from "../data/booklet-data.json";
 const data = bookletData;
 const bugTypeEntries = Object.entries(data.bugs_by_type).sort((a, b) => b[1].length - a[1].length);
 const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompare(b.name));
+const groups: Record<string, typeof sortedTechniques> = {};
+for (const technique of sortedTechniques) {
+  const letter = technique.name[0].toUpperCase();
+  (groups[letter] ??= []).push(technique);
+}
 ---
 
-<DocLayout title="Reference Booklet — CTBBP">
+<DocLayout title="Reference booklet" section="booklet">
   <div class="booklet">
-    <header class="booklet-header">
-      <div class="booklet-label">Reference Booklet</div>
+    <header class="page-heading">
+      <p class="page-kicker">REFERENCE BOOKLET</p>
       <h1>The CTBBP Compendium</h1>
-      <p class="booklet-sub">
-        A comprehensive cross-episode reference cataloging every bug, technique,
-        guest, and piece of advice across all 179 episodes.
-      </p>
+      <p>Cross-references to vulnerabilities, guests, and concepts from {data.total_episodes} episode summaries.</p>
     </header>
+    <nav class="booklet-jump" aria-label="Booklet contents">
+      <a href="#vulnerabilities">Vulnerabilities</a>
+      <a href="#guests">Guests</a>
+      <a href="#techniques">Techniques</a>
+      <a href="#advice">Advice</a>
+    </nav>
 
     <!-- Stats -->
     <section class="stats-grid">
@@ -26,11 +34,11 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
       </div>
       <div class="stat-card">
         <div class="stat-num">{data.total_bugs}</div>
-        <div class="stat-label">Bugs Documented</div>
+        <div class="stat-label">Bug entries</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">{data.total_techniques}</div>
-        <div class="stat-label">Techniques</div>
+        <div class="stat-label">Indexed concepts</div>
       </div>
       <div class="stat-card">
         <div class="stat-num">{data.total_guests}</div>
@@ -43,15 +51,15 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
     </section>
 
     <!-- Bug Type Quick Reference -->
-    <section class="booklet-section">
+    <section class="booklet-section" id="vulnerabilities">
       <h2>Vulnerability Catalog</h2>
-      <p>Every bug type encountered across episodes, with episode references.</p>
+      <p>Frequently indexed vulnerability categories, with links to the relevant episode notes.</p>
       <div class="bug-type-grid">
         {bugTypeEntries.slice(0, 30).map(([type, bugs]) => (
           <details class="bug-type-card">
             <summary class="bug-type-summary">
               <span class="bug-type-name">{type}</span>
-              <span class="bug-type-count">{bugs.length} episode{bugs.length > 1 ? "s" : ""}</span>
+              <span class="bug-type-count">{bugs.length} {bugs.length === 1 ? "entry" : "entries"} <span class="disclosure-mark" aria-hidden="true">+</span></span>
             </summary>
             <div class="bug-type-detail">
               {bugs.map((b) => (
@@ -67,18 +75,17 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
     </section>
 
     <!-- Guest Roster -->
-    <section class="booklet-section">
+    <section class="booklet-section" id="guests">
       <h2>Guest Roster</h2>
-      <p>All guest hackers and researchers who appeared on the podcast.</p>
+      <p>Guests named in the archive, with links to their episode summaries.</p>
       <div class="guest-grid">
         {data.guests.map((g) => (
           <div class="guest-card">
             <div class="guest-name">{g.name}</div>
             <div class="guest-episodes">
-              Episodes: {g.episodes.slice(0, 5).map((ep) => (
-                <a href={`/blog/${ep}`} class="guest-ep">#{String(ep).padStart(3, "0")}</a>
-              )).join(", ")}
-              {g.episodes.length > 5 && <span class="guest-more">+{g.episodes.length - 5} more</span>}
+              {g.episodes.map((ep) => (
+                <a href={`/blog/${ep}/`} class="guest-ep" aria-label={`Episode ${ep}`}>#{String(ep).padStart(3, "0")}</a>
+              ))}
             </div>
           </div>
         ))}
@@ -86,19 +93,11 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
     </section>
 
     <!-- Technique Index -->
-    <section class="booklet-section">
+    <section class="booklet-section" id="techniques">
       <h2>Technique Index</h2>
-      <p>All hacking techniques and primitives cataloged from every episode. Search by keyword.</p>
+      <p>Concepts from the episode notes, sorted alphabetically. For a specific topic, use <a href="/search/">archive search</a>.</p>
       <div class="technique-list">
-        {(() => {
-          // Group by first letter
-          const groups = {};
-          sortedTechniques.forEach((t) => {
-            const letter = t.name[0].toUpperCase();
-            if (!groups[letter]) groups[letter] = [];
-            groups[letter].push(t);
-          });
-          return Object.entries(groups).map(([letter, items]) => (
+        {Object.entries(groups).map(([letter, items]) => (
             <div class="tech-group">
               <h3 class="tech-letter">{letter}</h3>
               <ul class="tech-items">
@@ -111,16 +110,15 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
                 ))}
               </ul>
             </div>
-          ));
-        })()}
+        ))}
       </div>
     </section>
 
 
     <!-- Advice / Quotes -->
-    <section class="booklet-section">
+    <section class="booklet-section" id="advice">
       <h2>Wisdom from the Pod</h2>
-      <p>A selection of notable advice and quotes from hackers across all episodes.</p>
+      <p>A selection of advice and quotes from the archive. Verify exact wording against the original recordings.</p>
       <div class="advice-list">
         {data.suggestions.slice(0, 40).map((a) => (
           <div class="advice-card">
@@ -130,44 +128,20 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
         ))}
       </div>
       <p class="advice-footnote">
-        Showing 40 of {data.suggestions_count} recorded pieces of advice.
+        Showing {Math.min(40, data.suggestions.length)} of {data.suggestions_count} indexed advice entries.
       </p>
     </section>
   </div>
 </DocLayout>
 
 <style>
+  .booklet-jump { display: flex; flex-wrap: wrap; gap: .45rem; margin: .9rem 0 1rem; }
+  .booklet-jump a { display: inline-flex; align-items: center; min-height: 44px; padding: .25rem .65rem; background: var(--bg-card); border: 1px solid var(--border); font-size: var(--text-sm); }
+  .booklet-jump a:hover { border-color: var(--accent); }
   .booklet {
     padding-bottom: 3rem;
-  }
-
-  .booklet-header {
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .booklet-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.5rem;
-  }
-
-  .booklet-header h1 {
-    font-family: var(--font-body);
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    margin: 0;
-  }
-
-  .booklet-sub {
-    margin-top: 0.5rem;
-    color: var(--text-secondary);
-    font-size: 0.9rem;
+    max-width: 76rem;
+    margin-inline: auto;
   }
 
   /* Stats */
@@ -446,4 +420,18 @@ const sortedTechniques = [...data.techniques].sort((a, b) => a.name.localeCompar
     }
     .booklet-header h1 { font-size: 1.5rem; }
   }
+</style>
+
+<style>
+  .booklet-section h2 { font-family: var(--font-display); font-size: var(--text-xl); }
+  .stats-grid .stat-num { font-family: var(--font-display); }
+  .stats-grid .stat-label, .guest-ep, .tech-ep, .bug-type-count, .bug-ref-ep { font-size: var(--text-xs); }
+  .guest-episodes { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .guest-episodes .guest-ep { display: inline-flex; align-items: center; min-height: 29px; padding: .15rem .3rem; margin: 0; }
+  .bug-type-summary { min-height: 44px; }
+  .bug-type-summary::-webkit-details-marker { display: none; }
+  .disclosure-mark { display: inline-block; margin-left: .35rem; color: var(--accent); }
+  .bug-type-card[open] .disclosure-mark { rotate: 45deg; }
+  .bug-type-name, .guest-name, .tech-name { overflow-wrap: anywhere; }
+  .bug-type-detail, .tech-desc { overflow-wrap: anywhere; }
 </style>

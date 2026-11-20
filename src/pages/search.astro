@@ -1,291 +1,148 @@
 ---
 import DocLayout from "@layouts/DocLayout.astro";
 import searchIndex from "../data/search-index.json";
-import bookletData from "../data/booklet-data.json";
-// Sort by episode number
-const index = [...searchIndex].sort((a, b) => a.episode - b.episode);
-const bugTypeNames = Object.keys(bookletData.bug_type_counts).slice(0, 40);
+import booklet from "../data/booklet-data.json";
+import { getCollection } from "astro:content";
+
+const episodes = (await getCollection("episodes")).sort((a, b) => b.data.episode - a.data.episode);
+const index = new Map(searchIndex.map(item => [item.episode, item]));
+const categoriesByEpisode = new Map<number, Set<string>>();
+for (const [category, findings] of Object.entries(booklet.bugs_by_type)) {
+  for (const { episode } of findings) {
+    if (!categoriesByEpisode.has(episode)) categoriesByEpisode.set(episode, new Set());
+    categoriesByEpisode.get(episode)!.add(category);
+  }
+}
+const filters = Object.entries(booklet.bug_type_counts).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([name]) => name);
 ---
 
-<DocLayout title="Search — CTBBP">
+<DocLayout title="Search the archive" section="search">
   <div class="search-page">
-    <div class="search-header">
-      <div class="search-label">SEARCH</div>
-      <h1>Search Episodes</h1>
-      <p class="search-sub">Search across all 179 episodes by title, keyword, bug type, or technique.</p>
-    </div>
+    <header class="page-heading">
+      <p class="page-kicker">EPISODE INDEX / 001–{episodes[0].data.episode}</p>
+      <h1>Search episodes</h1>
+      <p>Find any of the {episodes.length} summaries by episode number, title, topic, or keyword.</p>
+    </header>
 
-    <div class="search-controls">
-      <div class="search-input-wrap">
-        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-          <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.5"/>
-          <path d="M14 14l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-        <input
-          type="text"
-          class="search-input"
-          id="searchInput"
-          placeholder="Search episodes, bugs, techniques…"
-          autofocus
-        />
-        <span class="search-hint" id="searchHint">Type to search</span>
+    <section class="search-panel" aria-label="Search and sort">
+      <label for="searchInput">Find in the archive</label>
+      <form action="/search/" method="get" role="search" class="query-form">
+        <input type="search" name="q" id="searchInput" placeholder="Try “cloud” or “201”" autocomplete="off" />
+        <button type="button" id="clearSearch" hidden>Clear</button>
+      </form>
+      <div class="quick-filters" aria-label="Suggested topics">
+        <span>Topics</span>
+        {filters.map((type) => <button type="button" data-filter={type} aria-pressed="false">{type}</button>)}
       </div>
+    </section>
 
-      <div class="search-filters" id="searchFilters">
-        <span class="search-filter-label">Quick filters:</span>
-        {bugTypeNames.slice(0, 12).map((type) => (
-          <button class="search-filter-tag" data-filter={type}>{type}</button>
-        ))}
-      </div>
+    <div class="results-toolbar">
+      <p id="searchHint" role="status" aria-live="polite">{episodes.length} episodes</p>
+      <div class="sort"><label for="resultOrder">Order</label><select id="resultOrder"><option value="newest">Newest first</option><option value="oldest">Oldest first</option></select></div>
     </div>
-
-    <div class="search-results" id="searchResults">
-      {index.map((ep) => (
-        <a href={`/blog/${ep.episode}`} class="search-result-item" data-episode={ep.episode} data-keywords={ep.keywords.join(" ")} data-title={ep.title}>
-          <div class="result-top">
-            <span class="result-num">#{String(ep.episode).padStart(3, "0")}</span>
-          </div>
-          <div class="result-title">{ep.title}</div>
-          <div class="result-snippet">{ep.snippet.slice(0, 200)}</div>
-          <div class="result-keywords">
-            {ep.keywords.slice(0, 5).map((kw) => (
-              <span class="result-kw">{kw}</span>
-            ))}
-          </div>
-        </a>
-      ))}
+    <div class="empty-state" id="noResults" hidden>
+      <h2>No matching episodes</h2>
+      <p>Try a different topic, a shorter phrase, or an episode number.</p>
+      <button type="button" id="resetSearch">Show all episodes</button>
     </div>
+    <ol class="search-results" id="searchResults" role="list">
+      {episodes.map(({ data }) => {
+        const meta = index.get(data.episode);
+        const snippet = meta?.snippet?.replace(`Episode ${data.episode} ${data.title}`, "").replace(/^\s*TL;DR\s*-?\s*/, "").trim();
+        const categories = [...(categoriesByEpisode.get(data.episode) ?? [])];
+        const keywords = (meta?.keywords ?? []).filter(keyword => !/^(guests?|hosts?|target\/context|root cause|description|technique|impact|key technical details|exploitation steps).*:$/i.test(keyword));
+        return (
+          <li data-episode={data.episode} data-search={[data.title, data.description, snippet, ...categories, ...keywords].join(" ")}>
+            <a href={`/blog/${data.episode}/`} class="search-result">
+              <span class="result-number">{String(data.episode).padStart(3,"0")}</span>
+              <div class="result-copy">
+                <h2>{data.title}</h2>
+                {(data.description || snippet) && <p>{data.description ?? snippet}</p>}
+                {categories.length > 0 && <span class="result-tags">{categories.slice(0, 3).join(" · ")}</span>}
+              </div>
+              <span class="result-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        );
+      })}
+    </ol>
   </div>
 </DocLayout>
 
 <script>
-  const input = document.getElementById("searchInput");
-  const hint = document.getElementById("searchHint");
-  const results = document.getElementById("searchResults");
-  const items = results.querySelectorAll(".search-result-item");
-  const filterTags = document.querySelectorAll(".search-filter-tag");
+  const input = document.querySelector<HTMLInputElement>("#searchInput")!;
+  const hint = document.querySelector<HTMLElement>("#searchHint")!;
+  const results = document.querySelector<HTMLOListElement>("#searchResults")!;
+  const items = [...results.querySelectorAll<HTMLLIElement>("li[data-episode]")];
+  const filterTags = document.querySelectorAll<HTMLButtonElement>("button[data-filter]");
+  const clear = document.querySelector<HTMLButtonElement>("#clearSearch")!;
+  const reset = document.querySelector<HTMLButtonElement>("#resetSearch")!;
+  const empty = document.querySelector<HTMLElement>("#noResults")!;
+  const order = document.querySelector<HTMLSelectElement>("#resultOrder")!;
+  const normalize = (value: string) => value.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"").trim();
 
-  function filterResults() {
-    const q = (input?.value || "").toLowerCase().trim();
+  function filterResults(save = false) {
+    const query = normalize(input.value);
+    const episode = query.match(/^(?:ep(?:isode)?[ .#]*)?#?0*(\d+)$/i)?.[1];
     let count = 0;
-    items.forEach((item) => {
-      const title = item.dataset.title?.toLowerCase() || "";
-      const keywords = item.dataset.keywords?.toLowerCase() || "";
-      const ep = item.dataset.episode || "";
-      const matches = !q || title.includes(q) || keywords.includes(q) || ep === q;
-      item.style.display = matches ? "" : "none";
-      if (matches) count++;
-    });
-    if (hint) {
-      hint.textContent = q ? `${count} result${count !== 1 ? "s" : ""}` : `${items.length} episodes`;
+    for (const item of items) {
+      item.hidden = !!query && (episode ? item.dataset.episode !== episode : !normalize(item.dataset.search ?? "").includes(query));
+      if (!item.hidden) count++;
+    }
+    for (const tag of filterTags) tag.setAttribute("aria-pressed", String(query === normalize(tag.dataset.filter ?? "")));
+    hint.textContent = query ? `${count} result${count === 1 ? "" : "s"}` : `${items.length} episodes`;
+    empty.hidden = count > 0;
+    clear.hidden = !input.value;
+    if (save) {
+      const url = new URL(location.href);
+      if (query) url.searchParams.set("q", input.value.trim());
+      else url.searchParams.delete("q");
+      try { history.replaceState(null, "", url); } catch { /* sandboxed previews may deny URL updates */ }
     }
   }
 
-  if (input) {
-    input.addEventListener("input", filterResults);
-    // Also filter on load
-    filterResults();
-  }
-
-  // Quick filter tags
-  filterTags.forEach((tag) => {
-    tag.addEventListener("click", () => {
-      const filter = tag.dataset.filter;
-      if (input) {
-        input.value = filter;
-        filterResults();
-        input.focus();
-      }
-    });
+  input.value = new URLSearchParams(location.search).get("q") ?? "";
+  filterResults();
+  const update = () => filterResults(true);
+  input.addEventListener("input", update);
+  input.form?.addEventListener("submit", (event) => { event.preventDefault(); update(); });
+  const resetQuery = () => { input.value = ""; update(); input.focus(); };
+  clear.addEventListener("click", resetQuery);
+  reset.addEventListener("click", resetQuery);
+  for (const tag of filterTags) tag.addEventListener("click", () => {
+    input.value = tag.getAttribute("aria-pressed") === "true" ? "" : tag.dataset.filter ?? "";
+    update();
   });
+  order.addEventListener("change", () => results.append(...(order.value === "oldest" ? [...items].reverse() : items)));
 </script>
 
 <style>
-  .search-page {
-    padding-bottom: 3rem;
-  }
-
-  .search-header {
-    margin-bottom: 1.75rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .search-label {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 0.4rem;
-  }
-
-  .search-header h1 {
-    font-family: var(--font-body);
-    font-size: 1.75rem;
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    margin: 0;
-  }
-
-  .search-sub {
-    margin-top: 0.35rem;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-  }
-
-  /* Input */
-  .search-controls {
-    margin-bottom: 1.5rem;
-  }
-
-  .search-input-wrap {
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-
-  .search-input-icon {
-    position: absolute;
-    left: 1rem;
-    color: var(--text-tertiary);
-    pointer-events: none;
-  }
-
-  .search-input {
-    width: 100%;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    padding: 0.75rem 1rem 0.75rem 3rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    background: var(--bg-card);
-    color: var(--text);
-    outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-
-  .search-input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--border);
-  }
-
-  .search-input::placeholder {
-    color: var(--text-tertiary);
-  }
-
-  .search-hint {
-    position: absolute;
-    right: 1rem;
-    font-size: 0.75rem;
-    color: var(--text-tertiary);
-    pointer-events: none;
-  }
-
-  /* Filter tags */
-  .search-filters {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-    flex-wrap: wrap;
-    margin-top: 0.75rem;
-  }
-
-  .search-filter-label {
-    font-size: 0.7rem;
-    color: var(--text-tertiary);
-    font-weight: 500;
-    margin-right: 0.25rem;
-  }
-
-  .search-filter-tag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
-    border: 1px solid var(--border);
-    background: var(--bg-card);
-    color: var(--text-secondary);
-    cursor: pointer;
-    font-family: var(--font-body);
-    transition: border-color 0.12s, color 0.12s;
-  }
-
-  .search-filter-tag:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: var(--accent-bg);
-  }
-
-  /* Results */
-  .search-results {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .search-result-item {
-    display: block;
-    padding: 0.85rem 1rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    background: var(--bg-card);
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s;
-  }
-
-  .search-result-item:hover {
-    border-color: var(--accent);
-  }
-
-  .result-top {
-    margin-bottom: 0.2rem;
-  }
-
-  .result-num {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .result-title {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text);
-    line-height: 1.3;
-  }
-
-  .result-snippet {
-    font-size: 0.78rem;
-    color: var(--text-secondary);
-    line-height: 1.45;
-    margin-top: 0.3rem;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-  }
-
-  .result-keywords {
-    display: flex;
-    gap: 0.3rem;
-    flex-wrap: wrap;
-    margin-top: 0.4rem;
-  }
-
-  .result-kw {
-    font-size: 0.65rem;
-    padding: 0.1rem 0.45rem;
-    background: var(--bg-code);
-    border: 1px solid var(--border-light);
-    border-radius: 999px;
-    color: var(--text-tertiary);
-  }
-
-  @media (max-width: 640px) {
-    .search-header h1 { font-size: 1.35rem; }
-    .search-input { font-size: 0.9rem; }
-  }
+  .search-page { max-width: 76rem; margin-inline: auto; }
+  .search-panel { margin-top: 1.5rem; background: var(--bg-code); border: 1px solid var(--border); padding: clamp(.85rem, 2vw, 1.5rem); }
+  .search-panel label { display: block; margin-bottom: .35rem; color: var(--text); font-size: var(--text-sm); font-weight: 700; }
+  .query-form { display: flex; gap: .45rem; }
+  .query-form input, .sort select { min-height: 44px; min-width: 0; padding: .55rem .7rem; border: 1px solid var(--border-hover); border-radius: var(--radius-xs); background: var(--bg-elevated); color: var(--text); }
+  .query-form input { flex: 1; }
+  button { min-height: 44px; border: 1px solid var(--border); background: var(--bg-elevated); color: var(--text); border-radius: var(--radius-xs); padding: .25rem .65rem; cursor: pointer; font-size: var(--text-sm); }
+  button:hover, button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+  button[aria-pressed="true"] { background: var(--accent-bg); }
+  .quick-filters { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin-top: .7rem; }
+  .quick-filters span, .result-number, .result-tags { font: 500 var(--text-xs)/1.4 var(--font-mono); }
+  .quick-filters span { color: var(--text-tertiary); margin-right: .2rem; }
+  .quick-filters button { font-size: var(--text-xs); overflow-wrap: anywhere; }
+  .results-toolbar, .sort { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
+  .results-toolbar { justify-content: space-between; margin: .85rem 0 .55rem; }
+  .results-toolbar p, .sort label, .sort select { font-size: var(--text-sm); color: var(--text-secondary); margin: 0; }
+  .search-results { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
+  .search-results li { margin: 0; border-bottom: 1px solid var(--border); }
+  .search-result { display: grid; grid-template-columns: 2.8rem minmax(0, 1fr) auto; gap: .6rem; padding: .85rem .55rem; color: var(--text); }
+  .search-result:hover { background: var(--bg-hover); }
+  .result-number, .result-arrow { color: var(--accent); padding-top: .15rem; }
+  .result-copy h2 { margin: 0; font: 700 clamp(1.05rem, 1rem + .45vw, 1.35rem)/1.25 var(--font-display); }
+  .result-copy p { font-size: var(--text-sm); color: var(--text-secondary); margin: .3rem 0 0; max-width: 75ch; overflow-wrap: anywhere; }
+  .result-tags { display: block; color: var(--text-tertiary); margin-top: .3rem; }
+  .empty-state { border: 1px dashed var(--border-hover); text-align: center; padding: 2rem .75rem; margin-top: .75rem; }
+  .empty-state h2 { margin: 0; }
+  .empty-state p { margin: .5rem 0 1rem; color: var(--text-secondary); }
+  @media (max-width: 480px) { .search-result { grid-template-columns: 1.75rem minmax(0,1fr) auto; gap: .35rem; padding-inline: .2rem; } }
 </style>

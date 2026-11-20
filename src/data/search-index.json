@@ -5161,5 +5161,197 @@
       "What it is:",
       "When to use it:"
     ]
+  },
+  {
+    "episode": 185,
+    "title": "Harley & Ariel - Your Guide to Bug Bounty Village 2026",
+    "snippet": "Episode 185 Harley & Ariel - Your Guide to Bug Bounty Village 2026 TL;DR - Harley and Ariel share contrasting stories about serious account and transaction-authorization flaws, emphasizing how impact depends on the full context. - Bug Bounty Village 2026 will feature a realistic AI-themed CTF, in-person and remote partici",
+    "keywords": [
+      "Guests:",
+      "Bug Bounty Village",
+      "AI-assisted research governance",
+      "Report quality and triage",
+      "Community-led security learning"
+    ]
+  },
+  {
+    "episode": 186,
+    "title": "Is Sol 5.6 SuperHuman for Bug Bounty?",
+    "snippet": "Episode 186 Is Sol 5.6 SuperHuman for Bug Bounty? TL;DR - The hosts debate bounty programs lowering rewards or narrowing accepted severity based on claims about their internal AI detection, and discuss how GitHub’s VIP tiers change incentives. - A reported GitHub vulnerability illustrates the security ris",
+    "keywords": [
+      "Critique and review",
+      "Bug bounty severity and reward structure",
+      "Gated VIP bounty access",
+      "AI-assisted security research"
+    ]
+  },
+  {
+    "episode": 187,
+    "title": "Are Live Hacking Events even worth it?",
+    "snippet": "Episode 187 Are Live Hacking Events even worth it? TL;DR - Live hacking events remain valuable for motivation and community, though AI-assisted research is changing how participants find bugs. - When many researchers use similar AI tools, duplicate findings become more common; experience and focused invest",
+    "keywords": [
+      "AI-assisted security research",
+      "Duplicate findings",
+      "Human validation",
+      "Frontier-class vulnerabilities"
+    ]
+  },
+  {
+    "episode": 188,
+    "title": "DEFCON 34 Hotel Room Debrief",
+    "snippet": "Episode 188 DEFCON 34 Hotel Room Debrief TL;DR - The panel reflects on DEF CON 34, including Bug Bounty Village, conference talks, live events, and the value of meeting fellow researchers. - Guests discuss workshops and presentations on AI-assisted security research, software extensions, and hard",
+    "keywords": [
+      "Guests:",
+      "Threat modeling",
+      "AI-assisted security research",
+      "Device-to-cloud security",
+      "Vulnerability-report quality"
+    ]
+  },
+  {
+    "episode": 189,
+    "title": "What Happened to HackerOne with Joel Margolis",
+    "snippet": "Episode 189 What Happened to HackerOne with Joel Margolis TL;DR - Margolis says HackerOne remains functional, but contrasts its current feel with an earlier era of close community ties and researcher-focused events. - He argues that platform feedback from researchers and customers needs visible ownership, priorit",
+    "keywords": [
+      "Guests:",
+      "Researcher-centered platform design",
+      "Feedback accountability",
+      "AI and report-data governance",
+      "Triage scalability"
+    ]
+  },
+  {
+    "episode": 190,
+    "title": "Hacker Life Coaching & is Rez0 a Claude Shill?",
+    "snippet": "Episode 190 Hacker Life Coaching & is Rez0 a Claude Shill? TL;DR - Joseph Thacker and Justin Gardner compare their experiences with Codex and Claude, then discuss where limited AI research capacity may have the greatest value. - They weigh high-impact findings against many smaller reports and consider program resp",
+    "keywords": [
+      "Impact versus volume",
+      "AI-assisted research validation",
+      "Bounty-program fit",
+      "Focused work"
+    ]
+  },
+  {
+    "episode": 191,
+    "title": "Rez0s Sick Caching Bug & Local AI vs Subsidized tokens",
+    "snippet": "Episode 191 Rez0s Sick Caching Bug & Local AI vs Subsidized tokens TL;DR - Joseph describes a chatbot privacy issue involving automated agent behavior, rendered content, and cache behavior, and reflects on the importance of a clear, convincing proof of concept. - Justin reports a sharp increase in AI-assisted bug bounty s",
+    "keywords": [
+      "Cache isolation",
+      "AI-agent privacy boundary",
+      "Local-model resilience",
+      "Model task allocation"
+    ]
+  },
+  {
+    "episode": 192,
+    "title": "Hackbot Proof-of-Concept Skill Creation",
+    "snippet": "Episode 192 Hackbot Proof-of-Concept Skill Creation TL;DR - Gardner wants vulnerability evidence to serve three audiences: triagers assessing the claim, teams verifying a fix, and researchers checking their own work. - Clear observations and independent verification carry more weight than an unexplained out",
+    "keywords": [
+      "Reproducible evidence",
+      "Triage clarity"
+    ]
+  },
+  {
+    "episode": 193,
+    "title": "Browser Logic Errors & XS-Leaks with Jorian Woltjer",
+    "snippet": "Episode 193 Browser Logic Errors & XS-Leaks with Jorian Woltjer TL;DR - Woltjer recounts a CTFd research finding that used differences in browser-observable responses to illustrate how small status and history behaviors can create cross-site information leaks. - An inconsistent script-loading result led to an ORB inves",
+    "keywords": [
+      "Guests:",
+      "Cross-site leaks (XS-Leaks)",
+      "Visited-link privacy",
+      "Opaque Response Blocking (ORB)",
+      "Service-worker request mediation"
+    ]
+  },
+  {
+    "episode": 194,
+    "title": "Using Jev for Bug Bounty",
+    "snippet": "Episode 194 Using Jev for Bug Bounty TL;DR - The hosts discuss Jev as a fast, low-cost model for ranking and classification, while noting that its accuracy and resistance to manipulation need evaluation. - They consider how AI access, model harnesses, and human guidance are changing bug-bount",
+    "keywords": [
+      "Jev",
+      "Cyber Verification Program",
+      "Model harness",
+      "Bug-bounty scope and incentives"
+    ]
+  },
+  {
+    "episode": 195,
+    "title": "Frans Rosen on the AI Age of Bug Bounty",
+    "snippet": "Episode 195 Frans Rosen on the AI Age of Bug Bounty TL;DR - AI can accelerate vulnerability discovery and analysis, but similar tools and workflows are also increasing duplicate submissions and pressure on program queues. - Rosen sees experienced researchers’ contextual knowledge, threat modeling, and abili",
+    "keywords": [
+      "Guests:",
+      "Impact escalation",
+      "Duplicate pressure",
+      "Contextual threat modeling",
+      "Researcher-AI collaboration"
+    ]
+  },
+  {
+    "episode": 196,
+    "title": "Local AI - The Future of Pentesting & Bug Bounty?",
+    "snippet": "Episode 196 Local AI - The Future of Pentesting & Bug Bounty? TL;DR - A host describes building a local AI setup for flexible inference, while the discussion stresses that speed and persistent context do not guarantee useful work. - The hosts see near-term opportunities in pentesting as AI reduces testing and reporti",
+    "keywords": [
+      "Local inference",
+      "Memory harness",
+      "Verification of AI-assisted work",
+      "Pentest delivery economics"
+    ]
+  },
+  {
+    "episode": 197,
+    "title": "800 Bugs w/ DeepSeek + Local Model Hacks",
+    "snippet": "Episode 197 800 Bugs w/ DeepSeek + Local Model Hacks TL;DR - The hosts discuss results they attribute to DeepSeek and argue that comparison across models requires looking at the surrounding tools and context. - Local models offer privacy and control, but hardware cost, speed, and software maturity make them ",
+    "keywords": [
+      "Harness engineering",
+      "Programmatic verifier",
+      "Reflection or judge agent",
+      "Model diversity"
+    ]
+  },
+  {
+    "episode": 198,
+    "title": "Scariest Bugs of 2026 - Halloween Special",
+    "snippet": "Episode 198 Scariest Bugs of 2026 - Halloween Special TL;DR - The hosts share anecdotes about authorization failures, cross-tenant exposure, unsafe AI sandbox design, and sensitive information being accessible beyond its intended boundary. - Several stories highlight that a sandbox or agent prompt is not a su",
+    "keywords": [
+      "Sandbox isolation",
+      "Cross-tenant authorization",
+      "Sensitive-data exposure",
+      "Privilege boundaries in job systems"
+    ]
+  },
+  {
+    "episode": 199,
+    "title": "Hardware LHE Rehash",
+    "snippet": "Episode 199 Hardware LHE Rehash TL;DR - The hosts share varied approaches to the hardware event, from hands-on device work to firmware and cloud-focused research. - Their stories include complex findings involving device behavior, wireless configuration, and relationships between device ",
+    "keywords": [
+      "Hardware live-hacking event",
+      "Firmware analysis",
+      "Device-to-cloud trust",
+      "AI-assisted security research"
+    ]
+  },
+  {
+    "episode": 200,
+    "title": "Cloud Hacking w/ Nick Copi",
+    "snippet": "Episode 200 Cloud Hacking w/ Nick Copi TL;DR - A cloud service’s custom integration code can create security risks that are easy to miss without understanding the service’s architecture and trust boundaries. - Cloud assessments should distinguish customer-controlled weaknesses from provider fai",
+    "keywords": [
+      "Guests:",
+      "Shared responsibility model",
+      "Data plane and control plane",
+      "Confused deputy",
+      "Managed identity"
+    ]
+  },
+  {
+    "episode": 201,
+    "title": "The bomb inside your inbox w/ Gareth Heyes",
+    "snippet": "Episode 201 The bomb inside your inbox w/ Gareth Heyes TL;DR - Heyes recounts historical browser security flaws and describes how curiosity about unexpected behavior led to deeper research. - The discussion presents shared fuzzing as a way to compare browser behavior and identify differences relevant to HTML s",
+    "keywords": [
+      "Guests:",
+      "Cross-origin browser behavior",
+      "Shared fuzzing",
+      "Sanitizer-parser discrepancy",
+      "CSS injection"
+    ]
   }
 ]

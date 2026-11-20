@@ -1,316 +1,138 @@
 ---
 import DocLayout from "@layouts/DocLayout.astro";
 import { getCollection } from "astro:content";
-import bookletData from "../../data/booklet-data.json";
+import booklet from "../../data/booklet-data.json";
 
 export async function getStaticPaths() {
-  const episodes = await getCollection("episodes");
-  return episodes.map((ep) => ({
-    params: { id: String(ep.data.episode) },
-    props: { entry: ep },
+  const all = (await getCollection("episodes")).sort((a, b) => a.data.episode - b.data.episode);
+  return all.map((entry, index) => ({
+    params: { id: String(entry.data.episode) },
+    props: { entry, previous: all[index - 1]?.data, next: all[index + 1]?.data },
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
-const prev = entry.data.episode > 1 ? entry.data.episode - 1 : null;
-const totalEpisodes = bookletData.total_episodes || 184;
-const next = entry.data.episode < totalEpisodes ? entry.data.episode + 1 : null;
-
-// Find tools mentioned in this episode from booklet data
-const epNum = entry.data.episode;
-const epsTools = bookletData.techniques
-  .filter((t: any) => t.episode === epNum)
-  .map((t: any) => t.name)
-  .slice(0, 8);
-
-// Find guests for this episode
-const epsGuests = bookletData.guests.filter((g: any) =>
-  g.episodes.includes(epNum)
-);
-
-// Find bug types for this episode
-const epsBugTypes: string[] = [];
-for (const [type, bugs] of Object.entries(bookletData.bug_type_counts)) {
-  const matching = (bookletData as any).bugs_by_type[type]?.filter(
-    (b: any) => b.episode === epNum
-  );
-  if (matching?.length > 0) {
-    epsBugTypes.push(type);
-  }
-}
+const { entry, previous, next } = Astro.props;
+const { Content, headings } = await entry.render();
+const { episode, title, date, source, description } = entry.data;
+const epNumber = String(episode).padStart(3, "0");
+const sections = headings.filter(({ depth }) => depth === 2 || depth === 3);
+const concepts = booklet.techniques.filter((item) => item.episode === episode).slice(0, 6);
+const guests = booklet.guests.filter((guest) => guest.episodes.includes(episode));
+const categories = Object.entries(booklet.bugs_by_type).filter(([, items]) => items.some((item) => item.episode === episode)).slice(0, 4);
+const formattedDate = date && new Intl.DateTimeFormat("en", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" }).format(date);
 ---
 
-<DocLayout title={`Episode ${entry.data.episode} — ${entry.data.title}`} currentEpisode={epNum}>
-  <article class="episode-article">
-    <header class="episode-header">
-      <div class="episode-meta">
-        <a href="/" class="back-link">← All episodes</a>
-      </div>
-      <div class="episode-number-badge">Episode {entry.data.episode}</div>
-      <h1 class="episode-title">{entry.data.title}</h1>
-
-      <!-- Tools & Guests bar -->
-      <div class="episode-meta-bar">
-        {epsGuests.length > 0 && (
-          <div class="meta-section">
-            <span class="meta-label">Guests</span>
-            <div class="meta-items">
-              {epsGuests.map((g: any) => (
-                <span class="meta-item meta-item--guest">{g.name}</span>
-              ))}
-            </div>
-          </div>
-        )}
-        {epsTools.length > 0 && (
-          <div class="meta-section">
-            <span class="meta-label">Techniques</span>
-            <div class="meta-items">
-              {epsTools.slice(0, 6).map((t: string) => {
-                const techEntry = (bookletData as any).techniques_by_name?.[t];
-                const epRefs = techEntry?.slice(0, 3) || [];
-                return (
-                  <a href={`/blog/${epRefs[0] || epNum}`} class="meta-item meta-item--tech">{t}</a>
-                );
-              })}
-            </div>
-          </div>
-        )}
-        {epsBugTypes.length > 0 && (
-          <div class="meta-section">
-            <span class="meta-label">Bug Types</span>
-            <div class="meta-items">
-              {epsBugTypes.slice(0, 4).map((bt) => (
-                <a href={`/search?q=${encodeURIComponent(bt)}`} class="meta-item meta-item--bug">{bt}</a>
-              ))}
-            </div>
-          </div>
-        )}
+<DocLayout title={`Episode ${episode}: ${title}`} currentEpisode={episode} description={description}>
+  <article class="episode">
+    <header class="episode-head">
+      <a class="back" href="/search/">← All episodes</a>
+      <div class="issue-line"><span>EPISODE {epNumber}</span>{date && <time datetime={date.toISOString().slice(0,10)}>{formattedDate}</time>}</div>
+      <h1>{title}</h1>
+      {description && <p class="episode-deck">{description}</p>}
+      <div class="head-foot">
+        {guests.length > 0 && <div class="guest-line"><span>GUEST{guests.length === 1 ? "" : "S"}</span>{guests.map(g => g.name).join(", ")}</div>}
+        {source && <a class="transcript" href={source} target="_blank" rel="noopener">Original episode &amp; transcript <span aria-hidden="true">↗</span></a>}
       </div>
     </header>
 
-    <div class="content">
-      <Content />
+    <div class="reading-grid">
+      {sections.length > 0 && (
+        <aside class="reading-index" aria-label="Episode contents">
+          <details class="contents-details" open>
+            <summary id="contents-title">In this episode</summary>
+            <nav aria-labelledby="contents-title">
+              <ol role="list">
+                {sections.map(({ slug, text, depth }) => <li class:list={{ "contents-nested": depth === 3 && !!source }}><a href={`#${slug}`}>{text}</a></li>)}
+              </ol>
+            </nav>
+          </details>
+        </aside>
+      )}
+      <div class:list={["episode-prose", source && guests.length > 0 && "with-guest-metadata"]}><Content /></div>
     </div>
 
-    <nav class="episode-nav">
-      {prev ? (
-        <a href={`/blog/${prev}`} class="nav-link nav-prev">
-          <span class="nav-arrow">←</span>
-          <span class="nav-label">Episode {prev}</span>
-        </a>
-      ) : (
-        <div></div>
-      )}
-      {next ? (
-        <a href={`/blog/${next}`} class="nav-link nav-next">
-          <span class="nav-label">Episode {next}</span>
-          <span class="nav-arrow">→</span>
-        </a>
-      ) : (
-        <div></div>
-      )}
+    {(concepts.length > 0 || categories.length > 0) && (
+      <section class="related-topics" aria-label="Indexed topics">
+        <h2>Explore related topics</h2>
+        {[...concepts.map(t => t.name), ...categories.map(([name]) => name)].map(topic => (
+          <a href={`/search/?q=${encodeURIComponent(topic)}`}>{topic} <span aria-hidden="true">↗</span></a>
+        ))}
+      </section>
+    )}
+
+    <nav class="neighbor-nav" aria-label="Adjacent episodes">
+      {previous && <a href={`/blog/${previous.episode}/`} rel="prev"><span>← PREVIOUS · EPISODE {previous.episode}</span><strong>{previous.title}</strong></a>}
+      {next && <a href={`/blog/${next.episode}/`} rel="next"><span>NEXT · EPISODE {next.episode} →</span><strong>{next.title}</strong></a>}
     </nav>
   </article>
 </DocLayout>
 
+<script>
+  // Rehype sanitization prefixes markdown IDs to protect against DOM clobbering.
+  // Align the contents links with the rendered IDs whether or not it does so.
+  for (const link of document.querySelectorAll<HTMLAnchorElement>(".reading-index a[href^='#']")) {
+    const id = decodeURIComponent(link.getAttribute("href")!.slice(1));
+    if (!document.getElementById(id) && document.getElementById(`user-content-${id}`)) {
+      link.setAttribute("href", `#user-content-${id}`);
+    }
+  }
+  const contents = document.querySelector<HTMLDetailsElement>(".contents-details");
+  const compact = window.matchMedia("(max-width: 1000px)");
+  const syncContents = () => { if (contents) contents.open = !compact.matches; };
+  syncContents();
+  compact.addEventListener("change", syncContents);
+</script>
+
 <style>
-  .episode-article {
-    padding-bottom: 3rem;
+  .episode { max-width: 76rem; margin-inline: auto; }
+  .episode-head { border-bottom: 1px solid var(--border); padding-bottom: 1.4rem; }
+  .back { display: inline-block; color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: 1.2rem; }
+  .issue-line { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; color: var(--accent); font: 500 var(--text-xs)/1.5 var(--font-mono); letter-spacing: .06em; }
+  .issue-line time { color: var(--text-tertiary); letter-spacing: 0; }
+  h1 { font: 700 clamp(2.45rem, 4.7vw, 5rem)/.96 var(--font-display); letter-spacing: -.053em; max-width: 20ch; margin: .55rem 0 0; overflow-wrap: anywhere; }
+  .episode-deck { max-width: 64ch; margin: .85rem 0 0; font-size: var(--text-base); color: var(--text-secondary); }
+  .head-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .65rem 1rem; }
+  .head-foot:not(:empty) { margin-top: .8rem; }
+  .guest-line { color: var(--text-secondary); font-size: var(--text-sm); }
+  .guest-line span { color: var(--accent); font: 500 var(--text-xs)/1 var(--font-mono); margin-right: .55rem; }
+  .transcript { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .3rem .65rem; background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius-xs); font-size: var(--text-sm); }
+  .transcript:hover { border-color: var(--accent); }
+  .reading-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(8.5rem, 13rem); gap: clamp(1rem, 3vw, 3rem); padding-top: 1.5rem; align-items: start; }
+  .reading-index { grid-column: 2; grid-row: 1; position: sticky; top: 5.25rem; max-height: calc(100dvh - 6rem); overflow: auto; border-left: 1px solid var(--border); padding: .35rem 0 .45rem 1rem; }
+  .reading-index summary, .related-topics h2 { font: 500 var(--text-xs)/1.4 var(--font-mono); color: var(--accent); text-transform: uppercase; letter-spacing: .06em; margin: 0 0 .6rem; }
+  .reading-index summary { cursor: pointer; }
+  .reading-index ol { list-style: none; margin: 0; padding: 0; }
+  .reading-index li { margin: 0; }
+  .reading-index a { display: block; padding: .28rem 0; color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.35; }
+  .reading-index a:hover { color: var(--accent); }
+  .reading-index .contents-nested { padding-left: .65rem; }
+  .reading-index .contents-nested a { font-size: var(--text-xs); }
+  .episode-prose { grid-column: 1; grid-row: 1; min-width: 0; max-width: 68ch; line-height: 1.72; overflow-wrap: anywhere; }
+  .episode-prose :global(h1) { display: none; }
+  .with-guest-metadata > :global(p:first-child) { display: none; }
+  .episode-prose :global(h2), .episode-prose :global(h3) { font-family: var(--font-display); padding-bottom: .4rem; margin-top: 1.8rem; }
+  .episode-prose :global(h2) { font-size: var(--text-xl); border-bottom: 1px solid var(--border); }
+  .episode-prose :global(h3) { font-size: clamp(1.15rem, 1rem + .6vw, 1.45rem); }
+  .episode-prose :global(h2:first-child) { margin-top: 0; }
+  .with-guest-metadata > :global(p:first-child + h2) { margin-top: 0; }
+  .episode-prose :global(li) { padding-left: .2rem; margin-top: .5rem; }
+  .episode-prose :global(a) { text-decoration: underline; text-underline-offset: .18em; }
+  .episode-prose :global(table) { display: block; overflow-x: auto; }
+  .related-topics { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .related-topics a { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; padding: .25rem .55rem; margin: 0 .35rem .4rem 0; border: 1px solid var(--border); border-radius: var(--radius-xs); font-size: var(--text-xs); background: var(--bg-card); }
+  .related-topics a:hover { border-color: var(--accent); }
+  .neighbor-nav { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: .7rem; margin-top: 1.7rem; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .neighbor-nav a { display: grid; gap: .35rem; min-width: 0; padding: .75rem; border: 1px solid var(--border); background: var(--bg-card); font-size: var(--text-sm); overflow-wrap: anywhere; }
+  .neighbor-nav a:hover { border-color: var(--accent); }
+  .neighbor-nav a[rel="next"] { grid-column: 2; text-align: right; }
+  .neighbor-nav a span { font: 500 var(--text-xs)/1.3 var(--font-mono); }
+  @media (max-width: 1000px) {
+    .reading-grid { display: flex; flex-direction: column; gap: .8rem; }
+    .reading-index { position: static; width: 100%; max-height: none; }
+    .reading-index summary { min-height: 44px; padding-block: .75rem; margin: 0; }
   }
-
-  .episode-header {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .episode-meta {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 0.75rem;
-  }
-
-  .back-link {
-    font-size: 0.8rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    text-decoration: none;
-  }
-
-  .back-link:hover {
-    color: var(--accent);
-  }
-
-  .episode-number-badge {
-    font-size: 0.7rem;
-    font-weight: 600;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 0.3rem;
-  }
-
-  .episode-title {
-    font-family: var(--font-body);
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin: 0;
-    line-height: 1.2;
-    color: var(--text);
-  }
-
-  /* Tools & Guests bar */
-  .episode-meta-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 1rem;
-    padding: 0.75rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-  }
-
-  .meta-section {
-    display: grid;
-    grid-template-columns: 7rem 1fr;
-    gap: 0 0.75rem;
-    align-items: start;
-  }
-
-  .meta-label {
-    font-size: 0.65rem;
-    font-weight: 600;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    padding-top: 0.25rem;
-    line-height: 1.4;
-  }
-
-  .meta-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem 0.4rem;
-  }
-
-  .meta-item {
-    font-size: 0.72rem;
-    padding: 0.15rem 0.5rem;
-    border-radius: 999px;
-    text-decoration: none;
-  }
-
-  .meta-item--guest {
-    background: var(--green-bg);
-    color: var(--green);
-    font-weight: 500;
-  }
-
-  .meta-item--tech {
-    background: var(--blue-bg);
-    color: var(--blue);
-  }
-
-  .meta-item--tech:hover {
-    background: var(--blue);
-    color: var(--text-on-accent);
-  }
-
-  .meta-item--bug {
-    background: var(--orange-bg);
-    color: var(--orange);
-  }
-
-  .meta-item--bug:hover {
-    background: var(--orange);
-    color: var(--text-on-accent);
-  }
-
-  /* Content */
-  .content {
-    font-size: 0.92rem;
-    line-height: 1.7;
-  }
-
-  .content :global(h3) {
-    font-size: 1.05rem;
-    font-weight: 600;
-    margin-top: 1.75rem;
-    padding-bottom: 0.3rem;
-    border-bottom: 1px solid var(--border-light);
-  }
-
-  .content :global(h3:first-child) {
-    margin-top: 0;
-  }
-
-  .content :global(ul) {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  .content :global(li) {
-    position: relative;
-    padding-left: 1.2rem;
-    margin-top: 0.25rem;
-  }
-
-  .content :global(li::before) {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.65em;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
-  .content :global(hr) {
-    margin: 1.75rem 0;
-  }
-
-  /* Navigation */
-  .episode-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.75rem;
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid var(--border);
-  }
-
-  .nav-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.65rem 0.85rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: border-color 0.15s, color 0.15s;
-  }
-
-  .nav-link:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-
-  .nav-next { justify-content: flex-end; }
-  .nav-prev { justify-content: flex-start; }
-  .nav-arrow { font-size: 1.1rem; line-height: 1; }
-
-  @media (max-width: 640px) {
-    .episode-title { font-size: 1.35rem; }
-    .episode-nav { grid-template-columns: 1fr; }
-    .meta-section { grid-template-columns: 1fr; gap: 0.15rem 0; }
-    .meta-label { padding-top: 0; }
+  @media (max-width: 540px) {
+    .neighbor-nav { grid-template-columns: 1fr; }
+    .neighbor-nav a[rel="next"] { grid-column: 1; text-align: left; }
   }
 </style>
