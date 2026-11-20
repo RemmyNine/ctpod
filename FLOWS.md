@@ -9,5 +9,8 @@
 | Search | Type a title or episode number, use a quick filter, change order, and clear | Results match, order changes, counts update, and an empty state offers reset |
 | Booklet | Jump to a section, expand a vulnerability category, and follow a guest/technique link | Sections and linked episode pages are reachable |
 | Quotes | Follow a quote to its episode | The episode title and number match the quote card |
+| Home | Search for an episode from the homepage | The search page opens with the query applied |
+| Desktop and mobile | Open the episode index from the masthead | Full titles wrap; the drawer can be searched and dismissed without losing the page |
+| Reader | Jump to a chapter or scroll past a heading | The contents list marks the current section |
 
 Check all five page types at desktop and 375 px, and repeat the changed flows on the hosted preview. Check that 001–201 are contiguous and the 17 new entries have dates, source URLs, and timestamped transcript summaries.

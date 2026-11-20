@@ -3,116 +3,67 @@ import DocLayout from "@layouts/DocLayout.astro";
 import { getCollection } from "astro:content";
 import booklet from "../data/booklet-data.json";
 
-const episodes = (await getCollection("episodes")).sort((a, b) => b.data.episode - a.data.episode);
-const [featured, ...recent] = episodes.slice(0, 7);
-const formatDate = (value: Date) => new Intl.DateTimeFormat("en", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }).format(value);
+const episodes = (await getCollection("episodes")).sort((a,b) => b.data.episode - a.data.episode);
+const [lead, ...recent] = episodes.slice(0, 7).map(ep => ep.data);
+const date = (d: Date) => new Intl.DateTimeFormat("en", {month:"short",day:"numeric", year:"numeric",timeZone:"UTC"}).format(d);
+const [headline, guest] = lead.title.split(/\s+w\/\s+/i);
 ---
-
 <DocLayout title="Critical Thinking Bug Bounty Podcast" section="archive">
-  <div class="archive">
-    <section class="archive-hero" aria-labelledby="archive-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="signal-dot"></span> THE PODCAST ARCHIVE</p>
-        <h1 id="archive-title">Critical<br />Thinking<span>.</span></h1>
-        <p class="hero-sub">The Bug Bounty Podcast, indexed. Explore episode summaries, security research, and lessons from the people doing the work.</p>
-        <div class="hero-actions">
-          <a class="action action-primary" href={`/blog/${featured.data.episode}/`}>Read the latest episode <span aria-hidden="true">↗</span></a>
-          <a class="action" href="/search/">Search the archive <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-      <figure class="archive-cover">
-        <img src="/archive-cover.webp" alt="" width="720" height="540" fetchpriority="high" />
-        <figcaption><span>CRITICAL THINKING</span><span>EP. 001–{featured.data.episode}</span></figcaption>
-      </figure>
-    </section>
-
-    <dl class="archive-stats" aria-label="Archive statistics">
-      <div><dt>Episodes</dt><dd>{episodes.length}</dd></div>
-      <div><dt>Vulnerability categories</dt><dd>{Object.keys(booklet.bugs_by_type).length}</dd></div>
-      <div><dt>Indexed concepts</dt><dd>{booklet.total_techniques}</dd></div>
-    </dl>
-
-    <section class="archive-issues" aria-labelledby="latest-title">
-      <div class="section-line">
-        <h2 id="latest-title">Latest episodes</h2>
-        <a href="/search/">All episodes <span aria-hidden="true">↗</span></a>
-      </div>
-      <div class="issue-grid">
-        <article class="featured-issue">
-          <p class="eyebrow">LATEST RELEASE <span class="issue-sep">/</span> EP. {featured.data.episode}</p>
-          <h3><a href={`/blog/${featured.data.episode}/`}>{featured.data.title}</a></h3>
-          {featured.data.description && <p class="featured-desc">{featured.data.description}</p>}
-          <div class="featured-foot">
-            {featured.data.date && <time datetime={featured.data.date.toISOString().slice(0,10)}>{formatDate(featured.data.date)}</time>}
-            <a href={`/blog/${featured.data.episode}/`}>Read summary <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <ol class="issue-list" aria-label="Recent episodes">
-          {recent.map(({ data }) => (
-            <li><a href={`/blog/${data.episode}/`}><span class="issue-number">{data.episode}</span><span>{data.title}</span><span class="issue-arrow" aria-hidden="true">↗</span></a></li>
-          ))}
-        </ol>
-      </div>
-    </section>
-
-    <footer class="archive-foot">
-      <p>An independent companion to the <a href="https://www.criticalthinkingpodcast.io/">Critical Thinking Bug Bounty Podcast</a>. Summaries are AI-assisted; verify important claims against the original episodes.</p>
-      <a href="https://x.com/NineRemmy">Built by Remmy9 <span aria-hidden="true">↗</span></a>
-    </footer>
+  <div class="home-intro">
+    <div><p class="kicker">CRITICAL THINKING / BUG BOUNTY PODCAST</p><h1>Episode archive<span>.</span></h1></div>
+    <form class="home-search" action="/search/" role="search">
+      <label for="home-q">Search all {episodes.length} episodes</label>
+      <div><input type="search" name="q" id="home-q" placeholder="Topic, title, or episode number" required /><button type="submit" aria-label="Search the archive"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.7"/><path d="m15 15 5 5" stroke="currentColor" stroke-width="1.7"/></svg></button></div>
+    </form>
   </div>
+  <article class="cover">
+    <div class="cover-copy">
+      <p class="kicker"><span class="on-air"></span> LATEST EPISODE <span class="cover-id">/ {lead.episode}</span></p>
+      <h2><a href={`/blog/${lead.episode}/`}>{headline}</a></h2>
+      <div class="cover-byline">{guest && <span>With {guest}</span>}{lead.date && <time datetime={lead.date.toISOString().slice(0,10)}>{date(lead.date)}</time>}</div>
+      <a class="read-link" href={`/blog/${lead.episode}/`}>Read episode summary <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="cover-art"><img src="/archive-cover.webp" width="720" height="540" alt="" fetchpriority="high" /><span aria-hidden="true">CT / {lead.episode}</span></div>
+  </article>
+  <div class="lower-grid">
+    <section aria-labelledby="recent-title">
+      <header class="section-head"><h2 id="recent-title">Recent episodes</h2><a href="/search/">View all {episodes.length} <span aria-hidden="true">→</span></a></header>
+      <ol class="ledger" role="list">{recent.map(ep => <li><a href={`/blog/${ep.episode}/`}>
+        <span class="ep-no">{ep.episode}</span><span class="ep-title">{ep.title}</span>
+        {ep.date && <time datetime={ep.date.toISOString().slice(0,10)}>{date(ep.date)}</time>}<span class="arrow" aria-hidden="true">↗</span>
+      </a></li>)}</ol>
+    </section>
+    <aside class="shelf" aria-labelledby="shelf-title">
+      <p class="kicker">REFERENCE SHELF</p><h2 id="shelf-title">Beyond the episodes</h2>
+      <a href="/booklet/"><strong>Reference booklet <span>↗</span></strong><small>Browse {booklet.total_techniques} indexed concepts and their episode references.</small></a>
+      <a href="/quotes/"><strong>Quotes &amp; advice <span>↗</span></strong><small>Revisit observations from the episode notes.</small></a>
+    </aside>
+  </div>
+  <footer class="colophon"><p>An independent companion to the <a href="https://www.criticalthinkingpodcast.io/">Critical Thinking Bug Bounty Podcast</a>. Check AI-assisted summaries against the original recordings.</p><a href="https://x.com/NineRemmy">Built by Remmy9 ↗</a></footer>
 </DocLayout>
-
 <style>
-  .archive { --rule: var(--border); }
-  .archive-hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .85fr); align-items: center; gap: clamp(1.5rem, 5vw, 5rem); padding: 1rem 0 2.5rem; }
-  .eyebrow, figcaption, .issue-number { font: 500 var(--text-xs)/1.5 var(--font-mono); letter-spacing: .08em; }
-  .eyebrow { display: flex; align-items: center; gap: .6rem; color: var(--accent); margin: 0 0 1rem; }
-  .signal-dot { width: .55rem; height: .55rem; border-radius: 50%; background: var(--accent); }
-  h1 { font: 700 clamp(3.2rem, 7.3vw, 7.35rem)/.83 var(--font-display); letter-spacing: -.07em; margin: 0 0 1.4rem; }
-  h1 span { color: var(--accent); }
-  .hero-sub { color: var(--text-secondary); max-width: 40ch; font-size: var(--text-base); margin: 0; }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
-  .action { display: inline-flex; min-height: 44px; align-items: center; justify-content: space-between; gap: .7rem; padding: .55rem .8rem; color: var(--text); border: 1px solid var(--rule); border-radius: var(--radius-xs); font-size: var(--text-sm); }
-  .action:hover { background: var(--bg-hover); }
-  .action-primary { background: var(--ink); color: white; border-color: var(--ink); }
-  .action-primary:hover { background: var(--accent); color: white; border-color: var(--accent); }
-  .archive-cover { margin: 0; border: 1px solid var(--rule); background: var(--bg-elevated); min-width: 0; padding: .55rem; }
-  .archive-cover img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 0; background: #b94920; }
-  figcaption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .35rem; padding: .65rem .2rem .1rem; color: var(--text-tertiary); }
-  .archive-stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); border-block: 1px solid var(--rule); margin: 0; }
-  .archive-stats div { display: flex; flex-direction: column-reverse; padding: 1rem 1.25rem; }
-  .archive-stats div:first-child { padding-left: 0; }
-  .archive-stats div + div { border-left: 1px solid var(--rule); }
-  dt { font: 500 var(--text-xs)/1.5 var(--font-mono); color: var(--text-secondary); }
-  dd { font: 700 var(--text-xl)/1.2 var(--font-display); margin: 0; }
-  .archive-issues { padding-top: 1.9rem; }
-  .section-line { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .8rem; }
-  .section-line h2 { margin: 0; font: 700 var(--text-xl)/1.1 var(--font-display); }
-  .section-line a, .archive-foot, .featured-foot { font-size: var(--text-sm); }
-  .issue-grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 1rem; }
-  .featured-issue { display: flex; flex-direction: column; padding: clamp(1.05rem, 2.5vw, 2rem); background: var(--bg-code); border: 1px solid var(--rule); }
-  .issue-sep { color: var(--text-tertiary); }
-  .featured-issue h3 { font: 700 var(--text-xl)/1.1 var(--font-display); margin: 0; }
-  .featured-issue h3 a { color: var(--text); font-weight: inherit; }
-  .featured-issue h3 a:hover { color: var(--accent); }
-  .featured-desc { color: var(--text-secondary); }
-  .featured-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem; margin-top: auto; padding-top: 1rem; }
-  .featured-foot time { color: var(--text-secondary); }
-  .issue-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule); }
-  .issue-list li { margin: 0; border-bottom: 1px solid var(--rule); }
-  .issue-list a { display: grid; grid-template-columns: 2.15rem minmax(0,1fr) auto; gap: .5rem; align-items: center; min-height: 44px; padding: .45rem .5rem; color: var(--text); font-size: var(--text-sm); }
-  .issue-list a:hover { background: var(--bg-hover); }
-  .issue-number, .issue-arrow { color: var(--accent); }
-  .archive-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; border-top: 1px solid var(--rule); color: var(--text-secondary); margin-top: 2rem; padding-top: .75rem; }
-  .archive-foot p { margin: 0; max-width: 65ch; }
-  .archive-foot > a { white-space: nowrap; }
-  @media (max-width: 850px) { .archive-hero { gap: 1rem; } }
-  @media (max-width: 610px) {
-    .archive-hero, .issue-grid { grid-template-columns: 1fr; }
-    .archive-hero { padding: .75rem 0 1.5rem; gap: 1.5rem; }
-    .archive-cover img { aspect-ratio: 2 / 1; object-position: center 42%; }
-    .archive-stats div { padding: .7rem .55rem; }
-    .archive-stats dt { min-height: 3em; }
-    .archive-foot { flex-direction: column; }
-  }
+  .home-intro,.section-head,.colophon,.cover-byline{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .home-intro{margin:0 0 1.7rem;align-items:end}
+  .kicker,.ep-no,.ledger time,.cover-art span{font:500 var(--text-xs)/1.4 var(--font-mono);letter-spacing:.065em}
+  .kicker{margin:0 0 .6rem;color:var(--text-tertiary);}
+  h1,h2,.ep-title,.shelf strong{font-family:var(--font-display);font-weight:700}
+  h1{font-size:clamp(2.5rem,5vw,4.7rem);letter-spacing:-.055em;line-height:.98}h1 span{color:var(--accent)}
+  .home-search{width:min(19rem,38%)}.home-search label{display:block;font-size:var(--text-xs);color:var(--text-secondary);margin-bottom:.32rem}
+  .home-search div{display:flex;background:var(--bg-elevated);border:1px solid var(--border-hover);border-radius:5px}
+  .home-search input,.home-search button{border:0;background:none;min-height:44px}.home-search input{width:0;flex:1;padding:0 .7rem;font-size:var(--text-sm);color:var(--text)}.home-search button{display:grid;place-items:center;cursor:pointer;color:var(--accent);width:44px}
+  .cover{display:grid;grid-template-columns:1.18fr 1fr;background:#202723;color:#faf6ed;border-radius:8px;overflow:hidden}
+  .cover-copy{padding:clamp(1.45rem,3.5vw,3.5rem);align-self:center}.cover .kicker{color:#ffb78d;display:flex;align-items:center;gap:.55rem}.on-air{width:.5rem;height:.5rem;border-radius:50%;background:#ff925b}.cover-id{color:#c6c9bb}
+  .cover h2{font-size:clamp(2.55rem,4.9vw,4.95rem);line-height:.98;letter-spacing:-.051em;margin:.95rem 0;max-width:16ch;color:inherit}
+  .cover h2 a{color:inherit;font-weight:inherit}.cover h2 a:hover{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.08em}
+  .cover-byline{justify-content:start;flex-wrap:wrap;gap:.45rem 1rem;color:#d2d4c8;font-size:var(--text-sm)}.cover-byline time{color:#c4c8bd}
+  .read-link{margin-top:1.35rem;display:inline-flex;gap:1.1rem;align-items:center;min-height:44px;border-radius:4px;background:#ffd7ba;color:#24251f;padding:.65rem .9rem;font-size:var(--text-sm);font-weight:700}.read-link:hover{background:#fff0df;color:#222}
+  .cover-art{position:relative;min-height:100%;background:#c25621}.cover-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;border-radius:0}.cover-art span{position:absolute;bottom:.85rem;right:1rem;color:white;background:#252720;padding:.23rem .45rem}
+  .lower-grid{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(13rem,1fr);align-items:start;gap:clamp(1.3rem,4vw,3.7rem);margin:2.35rem 0 2.5rem}
+  .section-head{padding-bottom:.65rem;border-bottom:2px solid var(--text)}.section-head h2,.shelf h2{font-size:var(--text-xl);line-height:1.1;letter-spacing:-.035em;margin:0}.section-head a{font-size:var(--text-sm);white-space:nowrap}
+  .ledger{margin:0;padding:0;list-style:none}.ledger li{margin:0;border-bottom:1px solid var(--border)}.ledger a{color:var(--text);display:grid;grid-template-columns:2.6rem 1fr auto 1rem;align-items:center;gap:.8rem;min-height:4.2rem;padding:.55rem .2rem}.ledger a:hover{background:var(--bg-hover)}
+  .ep-no,.arrow{color:var(--accent)}.ep-title{font-size:clamp(1.1rem,1.4vw,1.4rem);line-height:1.15}.ledger time{letter-spacing:0;color:var(--text-tertiary);white-space:nowrap}
+  .shelf{background:#eeece2;border:1px solid var(--border);border-radius:6px;padding:clamp(1rem,2.2vw,1.75rem)}.shelf h2{font-size:1.65rem;margin:0 0 1rem}.shelf a{display:block;border-top:1px solid var(--border);padding:.8rem 0;color:var(--text)}.shelf a:last-child{padding-bottom:0}.shelf a:hover strong{color:var(--accent)}.shelf strong{display:flex;justify-content:space-between;align-items:center;font-size:1.08rem}.shelf strong span{color:var(--accent)}.shelf small{display:block;color:var(--text-secondary);font-size:var(--text-sm);line-height:1.45;margin-top:.22rem}
+  .colophon{border-top:1px solid var(--border);padding-top:1rem;font-size:var(--text-sm);color:var(--text-secondary)}.colophon p{margin:0;max-width:70ch}.colophon>a{white-space:nowrap}
+  @media(max-width:760px){.lower-grid{grid-template-columns:1fr}.home-intro{align-items:start}.cover{grid-template-columns:1.4fr 1fr}.ledger a{min-height:3.8rem}}
+  @media(max-width:580px){.home-intro{display:block;margin-bottom:1rem}.home-search{width:100%;margin-top:.8rem}.home-search label{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}.cover{grid-template-columns:minmax(0,1fr) 20%}.cover h2{font-size:clamp(1.9rem,8vw,2.7rem)}.cover-copy{padding:1.2rem .9rem}.cover-art img{object-position:50%}.cover-art span{display:none}.cover-byline{gap:.2rem .65rem;font-size:.84rem}.read-link{margin-top:.8rem}.lower-grid{margin-top:1.5rem}.ledger a{grid-template-columns:2rem minmax(0,1fr) 1rem;gap:.55rem}.ledger time{display:none}.colophon{display:block}.colophon>a{display:inline-block;margin-top:.5rem}}
 </style>
