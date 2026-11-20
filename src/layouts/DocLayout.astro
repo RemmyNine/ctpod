@@ -26,6 +26,7 @@ const number = (n: number) => String(n).padStart(3, "0");
     <div class="brand-area">
       <button type="button" class="episode-toggle" aria-controls="episode-sidebar" aria-expanded="false" aria-label="Open episode list">
         <svg aria-hidden="true" width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"/></svg>
+        <span>Index</span>
       </button>
       <a href="/" class="masthead-brand">
         <img src="/favicon.svg" width="29" height="29" alt="" />
@@ -78,12 +79,11 @@ const number = (n: number) => String(n).padStart(3, "0");
     const main = document.querySelector<HTMLElement>(".main-content");
     const masthead = document.querySelector<HTMLElement>(".masthead");
     const skip = document.querySelector<HTMLElement>(".skip-link");
-    const mobile = window.matchMedia("(max-width: 800px)");
 
     function setRail(open: boolean, focus = false) {
       if (!rail || !toggle || !backdrop) return;
       rail.dataset.open = String(open);
-      rail.inert = mobile.matches && !open;
+      rail.inert = !open;
       if (main) main.inert = open;
       if (masthead) masthead.inert = open;
       if (skip) skip.inert = open;
@@ -104,7 +104,6 @@ const number = (n: number) => String(n).padStart(3, "0");
     toggle?.addEventListener("click", () => setRail(toggle.getAttribute("aria-expanded") !== "true", true));
     close?.addEventListener("click", () => setRail(false, true));
     backdrop?.addEventListener("click", () => setRail(false, true));
-    mobile.addEventListener("change", () => setRail(false));
     document.addEventListener("keydown", (event) => {
       if (toggle?.getAttribute("aria-expanded") !== "true") return;
       if (event.key === "Escape") setRail(false, true);
@@ -129,11 +128,6 @@ const number = (n: number) => String(n).padStart(3, "0");
       }
       if (empty) empty.hidden = count > 0;
     });
-    const current = rail?.querySelector<HTMLElement>('[aria-current="page"]');
-    const scroll = rail?.querySelector<HTMLElement>(".rail-scroll");
-    if (current && scroll && !mobile.matches && current.offsetTop > scroll.clientHeight) {
-      scroll.scrollTop = current.offsetTop - scroll.clientHeight / 3;
-    }
   </script>
 </BaseLayout>
 
@@ -169,7 +163,7 @@ const number = (n: number) => String(n).padStart(3, "0");
   .rail-list a { min-height: 44px; display: grid; grid-template-columns: 2rem minmax(0, 1fr); align-items: center; gap: .35rem; padding: .34rem .35rem; color: var(--rail-text); font-size: var(--text-sm); line-height: 1.25; }
   .rail-list a:hover, .rail-list a[aria-current] { background: #38382f; color: var(--rail-accent); }
   .rail-number { font: 500 var(--text-xs)/1.3 var(--font-mono); color: var(--rail-dim); }
-  .rail-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rail-title { overflow-wrap: anywhere; }
   .rail-empty { padding: .5rem; color: var(--rail-dim); font-size: var(--text-sm); }
   .rail-foot { padding: .9rem; border-top: 1px solid #ffffff24; }
   .main-content { width: 100%; min-width: 0; max-width: 91rem; margin-inline: auto; padding: clamp(1.25rem, 3.25vw, 3.45rem) clamp(1rem, 4vw, 4rem) 3rem; }
@@ -180,15 +174,16 @@ const number = (n: number) => String(n).padStart(3, "0");
     .masthead-source { display: none; }
     .masthead-nav a { padding: 0 .48rem; }
     .masthead-nav a[aria-current]::after { inset-inline: .48rem; }
+  }
     .archive-shell { display: block; }
-    .episode-toggle { display: grid; place-items: center; width: 44px; height: 44px; margin-left: -.45rem; }
-    .episode-rail { position: fixed; z-index: 11; left: 0; top: 0; width: min(19rem, 86vw); height: 100dvh; visibility: hidden; }
+    .episode-toggle { display: flex; align-items:center; justify-content:center; gap:.35rem; min-width:44px; height:44px; padding:0 .8rem; margin-right:.85rem; border-right:1px solid var(--border); border-radius:0; font-size:var(--text-sm); }
+    .episode-rail { position: fixed; z-index: 11; left: 0; top: 0; width: min(26rem, 90vw); height: 100dvh; visibility: hidden; }
     .episode-rail[data-open="true"] { visibility: visible; }
     .rail-label { padding-right: 2.85rem; min-height: 1.75rem; }
     .rail-close { display: grid; place-items: center; position: absolute; right: .55rem; top: .4rem; width: 44px; height: 44px; font-size: 1.6rem; }
     .rail-backdrop:not([hidden]) { display: block; position: fixed; z-index: 10; inset: 0; background: #1d211e88; border: 0; width: 100%; cursor: pointer; }
-    body:has(.episode-rail[data-open="true"]) { overflow: hidden; }
-  }
+    :global(body):has(.episode-rail[data-open="true"]) { overflow: hidden; }
+  @media(max-width:600px){.episode-toggle{margin:0 .15rem 0 -.4rem;padding:0;border:0}.episode-toggle span{display:none}}
   @media (max-width: 435px) { .wordmark-sub, .masthead-brand img { display: none; } .masthead-nav { gap: 0; } .masthead-nav a { font-size: .83rem; } }
   @media (max-width: 340px) { .masthead-nav a { padding-inline: .32rem; } .masthead-brand { font-size: .86rem; } }
 </style>

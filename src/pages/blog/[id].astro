@@ -81,10 +81,30 @@ const formattedDate = date && new Intl.DateTimeFormat("en", { month: "long", day
   const syncContents = () => { if (contents) contents.open = !compact.matches; };
   syncContents();
   compact.addEventListener("change", syncContents);
+  const chapters = Array.from(document.querySelectorAll<HTMLAnchorElement>(".reading-index a")).map(link => ({
+    link, heading: document.getElementById(decodeURIComponent(link.hash.slice(1)))
+  })).filter(item => item.heading);
+  let selected: HTMLAnchorElement | undefined;
+  let pending = false;
+  function markChapter() {
+    pending = false;
+    const boundary = (document.querySelector(".masthead")?.getBoundingClientRect().bottom ?? 68) + 48;
+    const current = [...chapters].reverse().find(item => item.heading!.getBoundingClientRect().top <= boundary)?.link;
+    if (current === selected) return;
+    selected?.removeAttribute("aria-current");
+    current?.setAttribute("aria-current", "location");
+    selected = current;
+  }
+  function scheduleMark() {
+    if (!pending) { pending = true; requestAnimationFrame(markChapter); }
+  }
+  window.addEventListener("scroll", scheduleMark, {passive:true});
+  window.addEventListener("resize", scheduleMark);
+  window.addEventListener("pageshow", scheduleMark);
 </script>
 
 <style>
-  .episode { max-width: 76rem; margin-inline: auto; }
+  .episode { max-width: 65rem; margin-inline: auto; }
   .episode-head { border-bottom: 1px solid var(--border); padding-bottom: 1.4rem; }
   .back { display: inline-block; color: var(--text-secondary); font-size: var(--text-sm); margin-bottom: 1.2rem; }
   .issue-line { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; color: var(--accent); font: 500 var(--text-xs)/1.5 var(--font-mono); letter-spacing: .06em; }
@@ -105,6 +125,7 @@ const formattedDate = date && new Intl.DateTimeFormat("en", { month: "long", day
   .reading-index li { margin: 0; }
   .reading-index a { display: block; padding: .28rem 0; color: var(--text-secondary); font-size: var(--text-sm); line-height: 1.35; }
   .reading-index a:hover { color: var(--accent); }
+  .reading-index a[aria-current="location"] { color:var(--accent);font-weight:700;box-shadow:inset 2px 0 var(--accent);padding-left:.55rem; }
   .reading-index .contents-nested { padding-left: .65rem; }
   .reading-index .contents-nested a { font-size: var(--text-xs); }
   .episode-prose { grid-column: 1; grid-row: 1; min-width: 0; max-width: 68ch; line-height: 1.72; overflow-wrap: anywhere; }
