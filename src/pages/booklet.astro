@@ -23,7 +23,6 @@ for (const technique of sortedTechniques) {
       <a href="#vulnerabilities">Vulnerabilities</a>
       <a href="#guests">Guests</a>
       <a href="#techniques">Techniques</a>
-      <a href="#advice">Advice</a>
     </nav>
 
     <!-- Stats -->
@@ -43,10 +42,6 @@ for (const technique of sortedTechniques) {
       <div class="stat-card">
         <div class="stat-num">{data.total_guests}</div>
         <div class="stat-label">Guests</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-num">{data.suggestions_count}</div>
-        <div class="stat-label">Pieces of Advice</div>
       </div>
     </section>
 
@@ -115,22 +110,6 @@ for (const technique of sortedTechniques) {
     </section>
 
 
-    <!-- Advice / Quotes -->
-    <section class="booklet-section" id="advice">
-      <h2>Wisdom from the Pod</h2>
-      <p>A selection of advice and quotes from the archive. Verify exact wording against the original recordings.</p>
-      <div class="advice-list">
-        {data.suggestions.slice(0, 40).map((a) => (
-          <div class="advice-card">
-            <p class="advice-text">{a.text}</p>
-            <a href={`/blog/${a.episode}`} class="advice-ep">Episode {a.episode}</a>
-          </div>
-        ))}
-      </div>
-      <p class="advice-footnote">
-        Showing {Math.min(40, data.suggestions.length)} of {data.suggestions_count} indexed advice entries.
-      </p>
-    </section>
   </div>
 </DocLayout>
 
@@ -368,51 +347,6 @@ for (const technique of sortedTechniques) {
     flex-shrink: 0;
   }
 
-
-  /* Advice */
-  .advice-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .advice-card {
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 0.75rem 0.85rem;
-    background: var(--bg-card);
-    transition: border-color 0.15s;
-  }
-
-  .advice-card:hover {
-    border-color: var(--accent);
-  }
-
-  .advice-text {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: var(--text);
-    margin: 0;
-  }
-
-  .advice-ep {
-    font-size: 0.7rem;
-    color: var(--accent);
-    text-decoration: none;
-    margin-top: 0.3rem;
-    display: inline-block;
-  }
-
-  .advice-ep:hover {
-    text-decoration: underline;
-  }
-
-  .advice-footnote {
-    margin-top: 0.75rem;
-    font-size: 0.75rem;
-    color: var(--text-tertiary);
-    text-align: center;
-  }
 
   @media (max-width: 640px) {
     .stats-grid {
