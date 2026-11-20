@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:portable": "npm run build && node scripts/package_portable.mjs",
     "preview": "astro preview",
     "deploy": "npx wrangler deploy"
   },
