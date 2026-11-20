@@ -67,22 +67,33 @@ for fname in sorted(os.listdir(SRC)):
                 ep_data["guests"].append(main_name)
     # Also try "Guests:" or "Hosts:" separately
     if not gh_match:
-        g_match = re.search(r'\*\*Guests?:\*\*\s*(.+)', header)
+        g_match = re.search(r'\*\*Guests?:\*\*[ \t]*(.+)', header)
         if g_match:
             for n in re.split(r'[,;]', g_match.group(1)):
                 n = n.strip().strip("*").strip()
-                if n and n not in guests_seen:
+                if not n:
+                    continue
+                if n not in guests_seen:
                     guests_seen.add(n)
                     guests.append({"name": n, "episodes": [num]})
-                    ep_data["guests"].append(n)
+                else:
+                    guest = next(g for g in guests if g["name"] == n)
+                    if num not in guest["episodes"]:
+                        guest["episodes"].append(num)
+                ep_data["guests"].append(n)
 
     # --- BUGS ---
-    bug_sections = re.split(r'(?m)^####\s+', body)
+    findings = re.search(
+        r'(?im)^#{2,3} Bugs and Findings[ \t]*\n(.*?)(?=\n#{1,3} |\n---|\Z)',
+        body,
+        re.DOTALL,
+    )
+    bug_sections = re.split(r'(?m)^####[ \t]+', findings.group(1)) if findings else []
     for bs in bug_sections[1:]:
         lines = bs.split("\n")
         title_line = lines[0].strip()
         bug_type_raw = ""
-        type_sep = re.search(r'[—–\-]\s*(.+?)$', title_line)
+        type_sep = re.search(r'\s+[—–-]\s+(.+?)$', title_line)
         if type_sep:
             bug_type_raw = type_sep.group(1).strip()
         target = ""
@@ -120,12 +131,12 @@ for fname in sorted(os.listdir(SRC)):
         types = re.split(r'[,/]', bug_type_raw)
         for t in types:
             t = t.strip()
-            if t:
+            if t and not re.fullmatch(r'\$\s*[\d.,]+\s*[kKmM]?', t):
                 bugs_by_type[t].append({"episode": num, "title": title_line, "target": target, "root_cause": root_cause, "impact": impact})
         ep_data["bugs"].append(bug_entry)
 
     # --- TECHNIQUES ---
-    tech_section = re.search(r'(?m)^### Techniques and Primitives\n(.+?)(?=\n### |\n---|\Z)', body, re.DOTALL)
+    tech_section = re.search(r'(?m)^#{2,3} (?:Techniques and Primitives|Reference concepts)\n(.+?)(?=\n#{2,3} |\n---|\Z)', body, re.DOTALL)
     if tech_section:
         for line in tech_section.group(1).split("\n"):
             ls = line.strip()

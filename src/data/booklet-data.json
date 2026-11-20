@@ -1,24 +1,21 @@
 {
   "bug_type_counts": {
-    "world application": 184,
-    "test": 184,
-    "RCE": 7,
-    "ATO": 6,
-    "XSS": 5,
+    "RCE": 8,
+    "ATO": 7,
+    "XSS": 4,
     "ATO (High)": 2,
-    "$28k": 2,
     "SSRF escalation": 2,
     "Race condition": 2,
     "IDOR": 2,
     "Information Disclosure": 2,
     "Stored XSS": 2,
+    "Data Exfiltration": 2,
     "Deserialization → Redis Injection → RCE": 1,
     "Account Takeover (High)": 1,
-    "Digit PIN Brute Force — Full Device Takeover": 1,
+    "Full Device Takeover": 1,
     "NTLM Hash Leak": 1,
-    "www-form-urlencoded CSRF Bypass": 1,
     "Credential Disclosure": 1,
-    "of-Sale App — WebSocket Key Reset → Session Takeover": 1,
+    "WebSocket Key Reset → Session Takeover": 1,
     "Authentication Bypass": 1,
     "Open Redirect → SSRF → XSS": 1,
     "CVE-2022-21449 (Psychic Signatures)": 1,
@@ -50,90 +47,59 @@
     "Weak crypto": 1,
     "Phishing via CSS": 1,
     "Slack takeover via email-to-ticket": 1,
-    "style Password Theft — Credential theft": 1,
+    "Credential theft": 1,
     "Data leak": 1,
     "PostMessage XSS": 1,
-    "> Gmail": 1,
-    "Docs Leak": 1,
     "1M in 4-5 months": 1,
-    "> OAuth Account Takeover (Evan Connolly — Tesla)": 1,
-    "721 NFT Metadata": 1,
+    "Tesla)": 1,
     "Account Hijacking via State Breaking": 1,
     "Uber)": 1,
-    "Origin Iframe (Wallarm research)": 1,
-    "> RCE": 1,
-    "> S3 Bucket Read": 1,
-    "> production)": 1,
-    "2023-7028 — Account Takeover": 1,
-    "Agent Header (Security Plugin)": 1,
-    "Side CSP-Locked XSS Near-Miss": 1,
-    "Side Race Condition — OAuth Token Leak": 1,
+    "Account Takeover": 1,
+    "OAuth Token Leak": 1,
     "Math.random → DOM XSS": 1,
-    "to-Text-Fragment Cross-Site Search Oracle": 1,
     "Masato Kinugawa)": 1,
-    "Attributes": 1,
-    "Redirect to XSS": 1,
-    "2024-4367)": 1,
     "Stored XSS via Payment Reference": 1,
     "One Payload for All": 1,
-    "Fi Chipset 0-Click Buffer Overflow": 1,
     "S3 Key Leak": 1,
     "Ransomware Attack Simulation": 1,
-    "Based Helpdesk Ticket Leak": 1,
     "Live Chat HMAC Auth Bypass": 1,
     "Partial to Full Cookie Injection": 1,
-    "Out": 1,
-    "Cache — Force-Cache Fetch Leak": 1,
+    "Force-Cache Fetch Leak": 1,
     "Service Worker Hijack": 1,
     "Concealing Payloads in URL Credentials": 1,
     "PHP Filter Chain Tool": 1,
     "Android": 1,
     "Chrome Web Attack Surface": 1,
-    "to-Cloud Impersonation — Device Takeover": 1,
-    "in-the-Middle for IoT Cloud Communication": 1,
+    "Device Takeover": 1,
     "Conditional Prompt Injection + Data Exfiltration": 1,
     "HTML Image Tag Exfiltration": 1,
     "Plugin Data Exfiltration via Video Creation": 1,
     "Unicode Normalization to Backslash": 1,
-    "Site POST Without Content-Type": 1,
     "DOS on Major Sites": 1,
     "Two-Click ATO": 1,
     "HttpOnly Cookie Theft via Legacy Parsing": 1,
     "Git Credentials Belong To Us": 1,
     "Mutation XSS": 1,
     "API Data Leak": 1,
-    "a-Bug: Session Fixation ATO Chain": 1,
-    "2022-JP Charset Sniffing": 1,
     "Partial Cookie Injection to Session Fixation": 1,
     "Wildcard Cache Deception": 1,
-    "Fit Unicode Encoding — Escape Injection": 1,
-    "Level SQL Injection via Integer Overflow": 1,
-    "$7.5k": 1,
-    "$22k": 1,
+    "Escape Injection": 1,
     "12": 1,
     "000 Live API Keys": 1,
-    "Click Jacking — Pop-Under and Window Focus": 1,
+    "Pop-Under and Window Focus": 1,
     "Unauthenticated ATO in GitLab (Ruby-SAML)": 1,
-    "Only to Form URL Leak": 1,
-    "Only Doc": 1,
     "OAuth Token Leak via localhost Redirect": 1,
     "Configuration Data Leak ($25k)": 1,
-    "Forwarded-Host": 1,
-    "Auth SQLi in Halo ITSM": 1,
     "Full Remote Exploitation": 1,
-    "day — Link Header Referrer Leak": 1,
+    "Link Header Referrer Leak": 1,
     "Git Secrets Recovery": 1,
     "RCE via Exposed MCP Servers": 1,
-    "Origin Iframe Click Detection via userActivation": 1,
-    "Clickjacking POC (Jorian)": 1,
-    "2025-4123 — Open Redirect to SSRF": 1,
-    "$2": 1,
+    "Open Redirect to SSRF": 1,
     "500": 1,
-    "offset Text)": 1,
-    "Markdown — $5k-$10k": 1,
+    "$5k-$10k": 1,
     "CSP bypass": 1,
     "AI markdown image exfil": 1,
-    "origin — Login CSRF enabler": 1,
+    "Login CSRF enabler": 1,
     "Stored XSS-style persistence": 1,
     "Authorization bypass": 1,
     "Metadata read": 1,
@@ -141,17 +107,16 @@
     "Credential disclosure": 1,
     "Filename confusion": 1,
     "Extension bypass": 1,
-    "Zip Empty Entry — Archive name reuse": 1,
+    "Archive name reuse": 1,
     "Data exposure": 1,
-    "Step Bypass — ATO": 1,
     "XXE (CVE-2025-49493)": 1,
     "Privacy violation": 1,
     "Cache poisoning": 1,
     "OAuth leak": 1,
-    "Based Client-Side Desync via MITM — Client-side desync (CVE-2022-22720)": 1,
+    "Client-side desync (CVE-2022-22720)": 1,
     "XSS escalation": 1,
     "Cookie injection": 1,
-    "Leak — Data exfiltration": 1,
+    "Data exfiltration": 1,
     "CSRF (CVE-2022-21703)": 1,
     "DoS": 1,
     "RCE ($111": 1,
@@ -160,45 +125,29 @@
     "Global admin ATO": 1,
     "Info Disclosure": 1,
     "Network Access": 1,
-    "Click SIP Exploit — RCE": 1,
     "ATO via XSS": 1,
     "Tool Hijacking": 1,
     "Arbitrary File Read": 1,
     "System Prompt Injection": 1,
     "TheHulk": 1,
-    "auth RCE (CVE-2025-61757)": 1,
-    "Data Exfiltration": 1,
     "Salesforce Agent Force Injection": 1,
-    "Site ETag Length Leak — Data Exfiltration": 1,
-    "2025-27422) — LPE": 1,
-    "Unsubscribe Header → SSRF": 1,
+    "LPE": 1,
     "Multi-role Bypass": 1,
     "YAML `!!binary` Tag Confusion": 1,
-    "Site ETag Length Leak": 1,
     ".NET Framework RCE via HTTP Client Proxy + WSDL": 1,
     "Blind to Full Read via Redirect Chain": 1,
-    "Based SSTI — getattr Payload": 1,
-    "Based Blind SSTI": 1,
+    "getattr Payload": 1,
     "Octal-Encoded AWS Metadata IP": 1,
     "Node.js Path Traversal → AWS Credentials": 1,
-    "Party Supplier → Main Domain WordPress Takeover": 1,
-    "Prod Upload → PostMessage → XSS → AI Home Automation Takeover": 1,
-    "Signature Platform — Link Leak → Unauthorized Signing": 1,
-    "Side Path Traversal via Fetch — Tab in URL": 1,
-    "2025-4144)": 1,
-    "OAuth Account Takeover (ZeroPath)": 1,
-    "Proxy Auth Bypass (CVE-2025-54576)": 1,
-    "Scoped Cookie Bypass with Uppercase": 1,
+    "Link Leak → Unauthorized Signing": 1,
+    "Tab in URL": 1,
     "AMPscript Double-Eval Template Injection": 1,
     "CBC Bit-Flipping IV Recovery": 1,
-    "2026-41940)": 1,
-    "Parameter Prompt Injection → GitHub Auto-Deploy": 1,
     "Second-Order via Link Shortener + Embedded API Key": 1,
     "Social Media Mega-Crit": 1,
     "Stored XSS via 404 Reflection": 1,
     "Dispatcher Bypass → JCR Enumeration": 1,
     "Universal Dispatcher Bypass": 1,
-    "encoding XSS": 1,
     "Cloud CRM API → Stubby RCE": 1,
     "Application Integration IDOR + Filter Injection": 1,
     "No Auth": 1,
@@ -208,7 +157,7 @@
     "Private Video Leak": 1,
     "IAM Policy Takeover": 1,
     "Severity Downgrade Without Explanation": 1,
-    "Market Fintech — No Response After 90 Days": 1,
+    "No Response After 90 Days": 1,
     "Silent Policy Change": 1,
     "Automated SSRF Chain Discovery": 1,
     "Business Logic Flaw in Payment Flow": 1,
@@ -219,8 +168,8 @@
     "$15k CSPT to Account Takeover & 2FA Bypass": 1,
     "GitLost Private Repository Exfiltration": 1,
     "Razor SSTI to RCE via Reflection": 1,
-    "Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot": 1,
-    "Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine": 1,
+    "Mass Auth Bypass Discovered via 0xMoose Hackbot": 1,
+    "Business Logic Price Manipulation via Hackbot State Machine": 1,
     "Agentic FBDL Environment Exploit Validation": 1
   },
   "bugs_by_type": {
@@ -233,24 +182,6 @@
         "impact": "Critical — $15,000"
       }
     ],
-    "$2": [
-      {
-        "episode": 126,
-        "title": "Invisible Unicode Tags in HackerOne Hi — $2,500",
-        "target": "HackerOne Hi (AI summarization of reports)",
-        "root_cause": "Hi uses LLM to summarize reports; invisible Unicode tags in report content are invisible to triagers but visible to the LLM",
-        "impact": "$2,500 — report severity inflation"
-      }
-    ],
-    "$22k": [
-      {
-        "episode": 114,
-        "title": "BusFactor's CSPT Chain — $7.5k / $22k",
-        "target": "[Redacted] program",
-        "root_cause": "Client-side path traversal allowed manipulating fetch URL. File upload stored file on S3. File download endpoint `?redirect=true` returned a redirect instead of JSON URL.",
-        "impact": "$7,500 (first target), $22,000 (better-protected target)"
-      }
-    ],
     "$26k)": [
       {
         "episode": 11,
@@ -260,29 +191,13 @@
         "impact": "$26,000 Critical — LFI on production server"
       }
     ],
-    "$28k": [
+    "$5k-$10k": [
       {
-        "episode": 15,
-        "title": "Unicode Homoglyph ATO — $28k",
-        "target": "Large public program (live hacking event)",
-        "root_cause": "SSO (single sign-on) between subdomains normalized Unicode characters differently; registering with homoglyph \"а\" (Cyrillic) → SSO normalized to Latin \"a\" on another subdomain → logged in as admin@company.com",
-        "impact": "$28,000 — full authentication bypass"
-      },
-      {
-        "episode": 17,
-        "title": "Unicode Homoglyph ATO (duplicate from Ep. 15) — $28k",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "$7.5k": [
-      {
-        "episode": 114,
-        "title": "BusFactor's CSPT Chain — $7.5k / $22k",
-        "target": "[Redacted] program",
-        "root_cause": "Client-side path traversal allowed manipulating fetch URL. File upload stored file on S3. File download endpoint `?redirect=true` returned a redirect instead of JSON URL.",
-        "impact": "$7,500 (first target), $22,000 (better-protected target)"
+        "episode": 126,
+        "title": "Prompt Injection in Google Docs Auto-Markdown — $5k-$10k",
+        "target": "Google Bard/Gemini with Google Docs integration",
+        "root_cause": "Gemini reads Google Docs content; if doc contains prompt injection, and user asks about it, Gemini renders markdown — including markdown images — leaking chat history in the image URL",
+        "impact": "$5,000-$10,000 — chat history exfiltration"
       }
     ],
     ".NET Framework RCE via HTTP Client Proxy + WSDL": [
@@ -330,69 +245,6 @@
         "impact": ""
       }
     ],
-    "2022-JP Charset Sniffing": [
-      {
-        "episode": 111,
-        "title": "Encoding Differential: ISO-2022-JP Charset Sniffing",
-        "target": "Server-side DOMPurify with no charset defined in HTTP response",
-        "root_cause": "Browser sniffs charset when none is set; ISO-2022-JP escape sequences can switch encoding mid-document; DOMPurify (in JSDOM) uses UTF-8 internally",
-        "impact": "Full DOMPurify bypass (server-side)"
-      }
-    ],
-    "2023-7028 — Account Takeover": [
-      {
-        "episode": 54,
-        "title": "GitLab CVE-2023-7028 — Account Takeover",
-        "target": "",
-        "root_cause": "Password reset endpoint accepted array parameter for email",
-        "impact": "Critical — unauthenticated account takeover; CVSS 10.0"
-      }
-    ],
-    "2024-4367)": [
-      {
-        "episode": 72,
-        "title": "PDF.js XSS (CVE-2024-4367)",
-        "target": "",
-        "root_cause": "Font data from PDF is concatenated into JavaScript code and `eval()`'d for glyph rendering — unsanitized string interpolation",
-        "impact": ""
-      }
-    ],
-    "2025-27422) — LPE": [
-      {
-        "episode": 157,
-        "title": "MediaTek Kernel Driver Heap Overflow (CVE-2025-27422) — LPE",
-        "target": "MediaTek Wi-Fi drivers on Netgear routers (and many other devices including Starlink)",
-        "root_cause": "ioctl handler copies data from userland structure to kernel structure using a `char`-type size field (max 255) without bounds checking",
-        "impact": ""
-      }
-    ],
-    "2025-4123 — Open Redirect to SSRF": [
-      {
-        "episode": 125,
-        "title": "Grafana CVE-2025-4123 — Open Redirect to SSRF",
-        "target": "Grafana instances",
-        "root_cause": "`/\\` (slash + backslash) at start of URL causes browser to interpret it as protocol-relative absolute URL",
-        "impact": "$3,700 — open redirect → SSRF"
-      }
-    ],
-    "2025-4144)": [
-      {
-        "episode": 169,
-        "title": "PKCE Bypass in Cloudflare Workers (CVE-2025-4144)",
-        "target": "Cloudflare Workers OAuth provider",
-        "root_cause": "`handleTokenRequest` accepted a `code_verifier` even when the initial authorization request omitted `code_challenge`",
-        "impact": "Auth code interception; account takeover"
-      }
-    ],
-    "2026-41940)": [
-      {
-        "episode": 174,
-        "title": "cPanel Auth Bypass (CVE-2026-41940)",
-        "target": "cPanel/WHM",
-        "root_cause": "Auth material written to disk at `/var/cpanel/sessions/raw/<session_id>` in CRLF-delimited format; CRLF injection via combined cookie+auth header smuggling",
-        "impact": "Pre-auth → full authentication bypass"
-      }
-    ],
     "500": [
       {
         "episode": 126,
@@ -402,65 +254,11 @@
         "impact": "$2,500 — report severity inflation"
       }
     ],
-    "721 NFT Metadata": [
-      {
-        "episode": 42,
-        "title": "XSS via ERC-721 NFT Metadata",
-        "target": "NFT marketplaces/platforms that accept ERC-721 tokens",
-        "root_cause": "Platforms trust metadata from user-minted NFTs; they don't re-validate input",
-        "impact": "XSS in the platform's primary UI, can lead to wallet/account compromise"
-      }
-    ],
     "750)": [
       {
         "episode": 142,
         "title": "Facebook Messenger E2E Path Traversal → RCE — RCE ($111,750)",
         "target": "",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "> Gmail": [
-      {
-        "episode": 37,
-        "title": "Bard Prompt Injection -> Gmail/Docs Leak",
-        "target": "Google Bard, when connected to Gmail and Google Workspace",
-        "root_cause": "Prompt injection via browser page or image processing can take over the LLM's prompt flow",
-        "impact": "High — exfiltration of private email and document contents"
-      }
-    ],
-    "> OAuth Account Takeover (Evan Connolly — Tesla)": [
-      {
-        "episode": 39,
-        "title": "Open Redirect -> OAuth Account Takeover (Evan Connolly — Tesla)",
-        "target": "Tesla Retail Tool (TRT)",
-        "root_cause": "External IDP (used by everyone) didn't require email verification; could register with ex-employee's email",
-        "impact": "Access to internal Tesla sites and data"
-      }
-    ],
-    "> RCE": [
-      {
-        "episode": 49,
-        "title": "ASP.NET Machine Key -> RCE",
-        "target": "ASP.NET app with exposed wwwroot.zip backup file",
-        "root_cause": "Production machine key (`<machineKey>` in `web.config`) leaked via backup",
-        "impact": "RCE on production server"
-      }
-    ],
-    "> S3 Bucket Read": [
-      {
-        "episode": 49,
-        "title": "Swagger File -> S3 Bucket Read",
-        "target": "Internal API with publicly accessible Swagger docs",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "> production)": [
-      {
-        "episode": 50,
-        "title": "DynamoDB Injection (CTF challenge -> production)",
-        "target": "Applications using AWS DynamoDB",
         "root_cause": "",
         "impact": ""
       }
@@ -524,6 +322,13 @@
         "impact": "Full account takeover; high/critical"
       },
       {
+        "episode": 134,
+        "title": "Account Takeover via Multi-Step Bypass — ATO",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      },
+      {
         "episode": 144,
         "title": "PostMessage → PPT → WS Override → XSS → ATO — ATO",
         "target": "",
@@ -579,6 +384,15 @@
         "impact": ""
       }
     ],
+    "Account Takeover": [
+      {
+        "episode": 54,
+        "title": "GitLab CVE-2023-7028 — Account Takeover",
+        "target": "",
+        "root_cause": "Password reset endpoint accepted array parameter for email",
+        "impact": "Critical — unauthenticated account takeover; CVSS 10.0"
+      }
+    ],
     "Account Takeover (High)": [
       {
         "episode": 2,
@@ -595,15 +409,6 @@
         "target": "Food delivery service",
         "root_cause": "Server validated address change via numeric `address_id` only, no user ownership check",
         "impact": "Address takeover, PII leakage"
-      }
-    ],
-    "Agent Header (Security Plugin)": [
-      {
-        "episode": 55,
-        "title": "Unauthenticated Stored XSS via User-Agent Header (Security Plugin)",
-        "target": "A security plugin (unnamed)",
-        "root_cause": "User-Agent header from blocked requests was stored in logs and rendered unescaped in the admin dashboard",
-        "impact": ""
       }
     ],
     "Agentic FBDL Environment Exploit Validation": [
@@ -651,12 +456,12 @@
         "impact": ""
       }
     ],
-    "Attributes": [
+    "Archive name reuse": [
       {
-        "episode": 68,
-        "title": "HTMX + DomPurify Bypass via data- Attributes",
+        "episode": 132,
+        "title": "7-Zip Empty Entry — Archive name reuse",
         "target": "",
-        "root_cause": "DomPurify allows all `data-*` attributes by default; HTMX supports `data-hx-*` prefix for all its attributes",
+        "root_cause": "",
         "impact": ""
       }
     ],
@@ -667,15 +472,6 @@
         "target": "SaaS platform with multi-tenant OAuth implementation",
         "root_cause": "Auth-specialist agent enumerated OAuth flows; discovered `redirect_uri` validation bypass via subdomain takeover on deprecated domain",
         "impact": "Critical — full account takeover across all tenants"
-      }
-    ],
-    "Auth SQLi in Halo ITSM": [
-      {
-        "episode": 118,
-        "title": "Pre-Auth SQLi in Halo ITSM",
-        "target": "Halo ITSM (.NET / C#)",
-        "root_cause": "Controller without `[Authorize]` decorator; `FromBody` string parameter; string concatenation into SQL query instead of parameterized query",
-        "impact": "Pre-auth SQL injection in IT management software"
       }
     ],
     "Auth bypass": [
@@ -723,42 +519,6 @@
         "impact": "Critical — cloud credentials, internal service access"
       }
     ],
-    "Based Blind SSTI": [
-      {
-        "episode": 163,
-        "title": "Boolean Error-Based Blind SSTI",
-        "target": "Template engines with error suppression (only 500 returned)",
-        "root_cause": "Division by zero expression: `1/(controlled_expression)` — if expression evaluates to 0, server returns 500; if non-zero, normal response",
-        "impact": "Blind data exfiltration over Boolean oracle"
-      }
-    ],
-    "Based Client-Side Desync via MITM — Client-side desync (CVE-2022-22720)": [
-      {
-        "episode": 139,
-        "title": "Apache Pause-Based Client-Side Desync via MITM — Client-side desync (CVE-2022-22720)",
-        "target": "",
-        "root_cause": "Apache 60s timeout. Attacker pauses request mid-way → timeout → remaining bytes = next request (desync).",
-        "impact": ""
-      }
-    ],
-    "Based Helpdesk Ticket Leak": [
-      {
-        "episode": 94,
-        "title": "Zendesk Email-Based Helpdesk Ticket Leak",
-        "target": "Zendesk helpdesk platform",
-        "root_cause": "Email spoofing allows sending emails that appear to come from Zendesk; email security headers misconfiguration leaks ticket contents",
-        "impact": "Eventually led to ~$50K across multiple affected companies after disclosure. Zendesk initially: Informative/NA."
-      }
-    ],
-    "Based SSTI — getattr Payload": [
-      {
-        "episode": 163,
-        "title": "Error-Based SSTI — getattr Payload",
-        "target": "Python template engines (Jinja2, etc.)",
-        "root_cause": "`getattr(obj, controlled_string)` returns the attribute value; if it's non-callable, error message includes the attribute name (which is the exfiltrated data)",
-        "impact": "Full data exfiltration via error messages (when verbose errors enabled)"
-      }
-    ],
     "Blind to Full Read via Redirect Chain": [
       {
         "episode": 163,
@@ -775,6 +535,15 @@
         "target": "E-commerce platform with complex checkout process",
         "root_cause": "Logic agent modeled state transitions in checkout flow; discovered race condition allowing quantity manipulation post-payment-init",
         "impact": "High — price manipulation, inventory bypass"
+      }
+    ],
+    "Business Logic Price Manipulation via Hackbot State Machine": [
+      {
+        "episode": 184,
+        "title": "E-Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine",
+        "target": "E-commerce platform with complex checkout flow and multi-currency conversion",
+        "root_cause": "State machine flaw allowed negative quantity parameters in discounted cart items during currency conversion",
+        "impact": "High — $8,500"
       }
     ],
     "CBC Bit-Flipping IV Recovery": [
@@ -840,15 +609,6 @@
         "impact": ""
       }
     ],
-    "Cache — Force-Cache Fetch Leak": [
-      {
-        "episode": 96,
-        "title": "Medium Cache-Cache — Force-Cache Fetch Leak",
-        "target": "HeroCTF v6 challenge (Mizu.re writeup)",
-        "root_cause": "Browser cache keyed by (top-level site, current site, resource URL). `<img>` can load a resource with credentials (SameSite=None) but cannot read response. `fetch()` with `cache: \"force-cache\"` can read from cache but cannot send credentials to `Access-Control-Allow-Origin: *` endpoints",
-        "impact": ""
-      }
-    ],
     "Chrome Web Attack Surface": [
       {
         "episode": 97,
@@ -858,31 +618,13 @@
         "impact": ""
       }
     ],
-    "Click Jacking — Pop-Under and Window Focus": [
+    "Client-side desync (CVE-2022-22720)": [
       {
-        "episode": 114,
-        "title": "Double-Click Jacking — Pop-Under and Window Focus",
-        "target": "Any page with a single-click authorization action",
-        "root_cause": "`window.focus()` rarely works; `window.open('', 'known-name')` focuses via shared browsing context. Pop-under + `moveTo` enables reliable double-click hijacking.",
-        "impact": "Depends on the single-click action — can be ATO"
-      }
-    ],
-    "Click SIP Exploit — RCE": [
-      {
-        "episode": 146,
-        "title": "IoT Tabletop Device Zero-Click SIP Exploit — RCE / ATO",
-        "target": "Major consumer IoT tabletop device (camera/mic/speaker)",
-        "root_cause": "SIP auth token generation accepted injection characters; FROM field could be overwritten via parameter injection in the token-generation HTTP request",
+        "episode": 139,
+        "title": "Apache Pause-Based Client-Side Desync via MITM — Client-side desync (CVE-2022-22720)",
+        "target": "",
+        "root_cause": "Apache 60s timeout. Attacker pauses request mid-way → timeout → remaining bytes = next request (desync).",
         "impact": ""
-      }
-    ],
-    "Clickjacking POC (Jorian)": [
-      {
-        "episode": 125,
-        "title": "Ultimate Double-Clickjacking POC (Jorian)",
-        "target": "Any single-click authorization action",
-        "root_cause": "Combination of window.moveTo (to align buttons), pop-under (to obscure window), and fake CAPTCHA with double-click trigger",
-        "impact": "Full ATO via one auth click"
       }
     ],
     "Cloud CRM API → Stubby RCE": [
@@ -892,15 +634,6 @@
         "target": "Google Cloud CRM API (production)",
         "root_cause": "`GenericStubbyTypeTaskV2` endpoint in workflow execution API — allows executing arbitrary stubby RPC calls internally",
         "impact": "RCE on Google production — $75K (highly privileged production user)"
-      }
-    ],
-    "Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine": [
-      {
-        "episode": 184,
-        "title": "E-Commerce Giant — Business Logic Price Manipulation via Hackbot State Machine",
-        "target": "E-commerce platform with complex checkout flow and multi-currency conversion",
-        "root_cause": "State machine flaw allowed negative quantity parameters in discounted cart items during currency conversion",
-        "impact": "High — $8,500"
       }
     ],
     "Concealing Payloads in URL Credentials": [
@@ -966,6 +699,15 @@
         "impact": "Windows credentials leaked."
       }
     ],
+    "Credential theft": [
+      {
+        "episode": 33,
+        "title": "CAPTCHA-style Password Theft — Credential theft",
+        "target": "Password manager web app",
+        "root_cause": "The password manager displayed passwords in an iframe embeddable on any page; attacker could display but not read cross-origin",
+        "impact": "Plaintext password theft; critical"
+      }
+    ],
     "Credit Card Data Exfiltration (Critical)": [
       {
         "episode": 8,
@@ -1000,6 +742,22 @@
         "target": "Google Vertex AI / Gemini Enterprise",
         "root_cause": "Gemini's RAG pulled data from Gmail, Calendar, Google Docs — attacker-controlled Calendar entries/Docs with embedded instructions were processed as part of the prompt context",
         "impact": ""
+      },
+      {
+        "episode": 156,
+        "title": "Cross-Site ETag Length Leak — Data Exfiltration",
+        "target": "SECCON CTF challenge",
+        "root_cause": "ETag header length changes by 1 when response size crosses hex digit boundary (0xFF → 0x100 = 3→4 hex chars)",
+        "impact": ""
+      }
+    ],
+    "Data exfiltration": [
+      {
+        "episode": 140,
+        "title": "CSS Font-Leak — Data exfiltration",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
       }
     ],
     "Data exposure": [
@@ -1029,13 +787,13 @@
         "impact": "$33,000 (GitLab max bounty)"
       }
     ],
-    "Digit PIN Brute Force — Full Device Takeover": [
+    "Device Takeover": [
       {
-        "episode": 2,
-        "title": "IoT Device 4-Digit PIN Brute Force — Full Device Takeover",
-        "target": "Undisclosed Android-based IoT tablet with custom casting/pairing protocol",
-        "root_cause": "4-digit PIN (1000–9999 = 9000 possibilities), 10 attempts per session before reset, but sessions could be restarted infinitely with no rate limiting",
-        "impact": "Full device takeover + persistence; bounty amount undisclosed"
+        "episode": 98,
+        "title": "IoT Device-to-Cloud Impersonation — Device Takeover",
+        "target": "Multiple IoT consumer devices",
+        "root_cause": "Device identity uses serial number + MAC address. MAC is 6 bytes (3 OUI, 3 brute-forceable). Serial numbers visible on eBay product photos, YouTube unboxings. Some devices have poor randomized identifiers.",
+        "impact": "Full device takeover — control any device from outside the local network, bypass firewalls"
       }
     ],
     "Dispatcher Bypass → JCR Enumeration": [
@@ -1056,13 +814,13 @@
         "impact": ""
       }
     ],
-    "Docs Leak": [
+    "Escape Injection": [
       {
-        "episode": 37,
-        "title": "Bard Prompt Injection -> Gmail/Docs Leak",
-        "target": "Google Bard, when connected to Gmail and Google Workspace",
-        "root_cause": "Prompt injection via browser page or image processing can take over the LLM's prompt flow",
-        "impact": "High — exfiltration of private email and document contents"
+        "episode": 113,
+        "title": "Worst-Fit Unicode Encoding — Escape Injection",
+        "target": "Any text encoding conversion at system boundaries",
+        "root_cause": "When a character is not in the target charset, \"best-fit\" encoding maps it to the closest ASCII equivalent. Full-width double quote → `\"`, Yen/Won signs → `\\`, full-width backslash → `\\`",
+        "impact": "SQL injection, XSS, command injection depending on context"
       }
     ],
     "Establishing Reliable C2 in VDI Environment": [
@@ -1083,15 +841,6 @@
         "impact": ""
       }
     ],
-    "Fi Chipset 0-Click Buffer Overflow": [
-      {
-        "episode": 92,
-        "title": "MediaTek Wi-Fi Chipset 0-Click Buffer Overflow",
-        "target": "MediaTek MT chipsets (6000/7000 series) used in Android and IoT devices",
-        "root_cause": "Buffer overflow in Wi-Fi chipset driver/SDK",
-        "impact": "0-click RCE on affected devices"
-      }
-    ],
     "File read": [
       {
         "episode": 31,
@@ -1110,22 +859,13 @@
         "impact": ""
       }
     ],
-    "Fit Unicode Encoding — Escape Injection": [
+    "Force-Cache Fetch Leak": [
       {
-        "episode": 113,
-        "title": "Worst-Fit Unicode Encoding — Escape Injection",
-        "target": "Any text encoding conversion at system boundaries",
-        "root_cause": "When a character is not in the target charset, \"best-fit\" encoding maps it to the closest ASCII equivalent. Full-width double quote → `\"`, Yen/Won signs → `\\`, full-width backslash → `\\`",
-        "impact": "SQL injection, XSS, command injection depending on context"
-      }
-    ],
-    "Forwarded-Host": [
-      {
-        "episode": 118,
-        "title": "React Router CPDoS via X-Forwarded-Host",
-        "target": "Remix/React Router applications",
-        "root_cause": "React Router's server-side rendering uses `X-Forwarded-Host` header split on `:` to extract port; inserting `/` after the port allows path prepending. Combined with `_data` query param exclusion from cache key → cache poison",
-        "impact": "Cache poisoning DoS — widely exploitable"
+        "episode": 96,
+        "title": "Medium Cache-Cache — Force-Cache Fetch Leak",
+        "target": "HeroCTF v6 challenge (Mizu.re writeup)",
+        "root_cause": "Browser cache keyed by (top-level site, current site, resource URL). `<img>` can load a resource with credentials (SameSite=None) but cannot read response. `fetch()` with `cache: \"force-cache\"` can read from cache but cannot send credentials to `Access-Control-Allow-Origin: *` endpoints",
+        "impact": ""
       }
     ],
     "Full Admin Access": [
@@ -1144,6 +884,15 @@
         "target": "Google's internal LDR (investigation/reporting tool)",
         "root_cause": "LDR API exposed publicly at non-corp domain; no auth on most endpoints; wildcard origin allowlist (`*.google.com`)",
         "impact": "Read/write access to all Google internal investigations"
+      }
+    ],
+    "Full Device Takeover": [
+      {
+        "episode": 2,
+        "title": "IoT Device 4-Digit PIN Brute Force — Full Device Takeover",
+        "target": "Undisclosed Android-based IoT tablet with custom casting/pairing protocol",
+        "root_cause": "4-digit PIN (1000–9999 = 9000 possibilities), 10 attempts per session before reset, but sessions could be restarted infinitely with no rate limiting",
+        "impact": "Full device takeover + persistence; bounty amount undisclosed"
       }
     ],
     "Full PII Dump": [
@@ -1313,22 +1062,31 @@
         "impact": "RCE via chain of information disclosure + deserialization"
       }
     ],
-    "Leak — Data exfiltration": [
+    "LPE": [
       {
-        "episode": 140,
-        "title": "CSS Font-Leak — Data exfiltration",
-        "target": "",
-        "root_cause": "",
+        "episode": 157,
+        "title": "MediaTek Kernel Driver Heap Overflow (CVE-2025-27422) — LPE",
+        "target": "MediaTek Wi-Fi drivers on Netgear routers (and many other devices including Starlink)",
+        "root_cause": "ioctl handler copies data from userland structure to kernel structure using a `char`-type size field (max 255) without bounds checking",
         "impact": ""
       }
     ],
-    "Level SQL Injection via Integer Overflow": [
+    "Link Header Referrer Leak": [
       {
-        "episode": 113,
-        "title": "Protocol-Level SQL Injection via Integer Overflow",
-        "target": "PostgreSQL, MySQL, MongoDB binary protocols",
-        "root_cause": "Integer overflow in length field of database binary protocol. Sending ~4GB payload causes length integer to overflow to a small value; data after the truncated length is interpreted as new binary protocol messages",
-        "impact": "Stacked-query SQL injection"
+        "episode": 121,
+        "title": "Slonser's Chrome 0-day — Link Header Referrer Leak",
+        "target": "Any page that loads user-controlled image URLs",
+        "root_cause": "Chrome processes `Link` headers on subresource (image) responses. `Link: <url>; rel=prefetch; referrerpolicy=unsafe-url` — causes browser to prefetch `url` with the **full referrer** (including query parameters and hash)",
+        "impact": "One-click ATO (leak OAuth code) — saw 15+ ATO payouts in CTBB community"
+      }
+    ],
+    "Link Leak → Unauthorized Signing": [
+      {
+        "episode": 168,
+        "title": "E-Signature Platform — Link Leak → Unauthorized Signing",
+        "target": "E-signature platform",
+        "root_cause": "Creator of contract can access the recipient's signing link via a hidden API endpoint",
+        "impact": "Sign any contract as any recipient; complete integrity bypass"
       }
     ],
     "Live Chat HMAC Auth Bypass": [
@@ -1340,6 +1098,15 @@
         "impact": "Access to other users' live chat messages/conversations"
       }
     ],
+    "Login CSRF enabler": [
+      {
+        "episode": 128,
+        "title": "Credentialless iframe same-origin — Login CSRF enabler",
+        "target": "Sites using credentialless iframes.",
+        "root_cause": "Credentialless iframes are same-origin with regular iframes (opaque origin not implemented).",
+        "impact": "Enables login CSRF without logout."
+      }
+    ],
     "Major Label Admin Panel": [
       {
         "episode": 17,
@@ -1349,24 +1116,6 @@
         "impact": "High; disclosed to label's CTO after summer holidays"
       }
     ],
-    "Markdown — $5k-$10k": [
-      {
-        "episode": 126,
-        "title": "Prompt Injection in Google Docs Auto-Markdown — $5k-$10k",
-        "target": "Google Bard/Gemini with Google Docs integration",
-        "root_cause": "Gemini reads Google Docs content; if doc contains prompt injection, and user asks about it, Gemini renders markdown — including markdown images — leaking chat history in the image URL",
-        "impact": "$5,000-$10,000 — chat history exfiltration"
-      }
-    ],
-    "Market Fintech — No Response After 90 Days": [
-      {
-        "episode": 180,
-        "title": "Mid-Market Fintech — No Response After 90 Days",
-        "target": "Series B fintech with $50K+ bounty budget listed",
-        "root_cause": "No dedicated triage team; reports sit in queue until engineering team has capacity",
-        "impact": "Report eventually triaged as Medium after hunter escalated via platform support"
-      }
-    ],
     "Masato Kinugawa)": [
       {
         "episode": 60,
@@ -1374,6 +1123,15 @@
         "target": "Microsoft Teams desktop app (Electron)",
         "root_cause": "XSS in the app + preload script with `postMessage` listener that did `location.href = msg.url` → open redirect gadget",
         "impact": ""
+      }
+    ],
+    "Mass Auth Bypass Discovered via 0xMoose Hackbot": [
+      {
+        "episode": 184,
+        "title": "Multi-Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot",
+        "target": "Global enterprise SaaS platform with hundreds of microservices",
+        "root_cause": "Inconsistent JWT signature validation across newly deployed internal microservice routing layers",
+        "impact": "Critical — $25,000 across multiple disclosures"
       }
     ],
     "Math.random → DOM XSS": [
@@ -1439,6 +1197,15 @@
         "impact": "Full PII exposure for any Google account"
       }
     ],
+    "No Response After 90 Days": [
+      {
+        "episode": 180,
+        "title": "Mid-Market Fintech — No Response After 90 Days",
+        "target": "Series B fintech with $50K+ bounty budget listed",
+        "root_cause": "No dedicated triage team; reports sit in queue until engineering team has capacity",
+        "impact": "Report eventually triaged as Medium after hunter escalated via platform support"
+      }
+    ],
     "Node.js Path Traversal → AWS Credentials": [
       {
         "episode": 167,
@@ -1448,13 +1215,13 @@
         "impact": "$10,500 — AWS access to database etc."
       }
     ],
-    "OAuth Account Takeover (ZeroPath)": [
+    "OAuth Token Leak": [
       {
-        "episode": 169,
-        "title": "Django-OAuth Account Takeover (ZeroPath)",
-        "target": "Django-allauth library (2M monthly downloads)",
-        "root_cause": "Used `preferred_username` from OAuth response as account UID — this claim is mutable on many providers (Okta, NetIQ)",
-        "impact": "Full account takeover"
+        "episode": 58,
+        "title": "Facebook Client-Side Race Condition — OAuth Token Leak",
+        "target": "apps.facebook.com — games iframe requesting OAuth token from parent",
+        "root_cause": "Origin validated at request time but not at response time; async HTTP request to server for OAuth token; client can race to change the targetOrigin via postMessage while request is in-flight",
+        "impact": ""
       }
     ],
     "OAuth Token Leak via localhost Redirect": [
@@ -1493,22 +1260,13 @@
         "impact": "XSS across three major WAFs"
       }
     ],
-    "Only Doc": [
+    "Open Redirect to SSRF": [
       {
-        "episode": 116,
-        "title": "Google Apps Script: Editor List Leak from Read-Only Doc",
-        "target": "Google Docs",
-        "root_cause": "`getEditors()` returns full editor email list; accessible via Apps Script even with only read access",
-        "impact": "$15,000"
-      }
-    ],
-    "Only to Form URL Leak": [
-      {
-        "episode": 116,
-        "title": "Google Apps Script: Read-Only to Form URL Leak",
-        "target": "Google Forms + Sheets",
-        "root_cause": "`SpreadsheetApp.openById(id)` opens a spreadsheet with read-only access; `getFormUrl()` returns the associated form URL — this should only be accessible to editors",
-        "impact": "$7,500"
+        "episode": 125,
+        "title": "Grafana CVE-2025-4123 — Open Redirect to SSRF",
+        "target": "Grafana instances",
+        "root_cause": "`/\\` (slash + backslash) at start of URL causes browser to interpret it as protocol-relative absolute URL",
+        "impact": "$3,700 — open redirect → SSRF"
       }
     ],
     "Open Redirect → SSRF → XSS": [
@@ -1518,33 +1276,6 @@
         "target": "Netlify IPX image processing library; all Netlify-deployed static sites",
         "root_cause": "1. Open redirect from path confusion",
         "impact": "Universal XSS on any Netlify static site — critical for Web3 (wallet draining)"
-      }
-    ],
-    "Origin Iframe (Wallarm research)": [
-      {
-        "episode": 47,
-        "title": "CSP Bypass via Same-Origin Iframe (Wallarm research)",
-        "target": "CSP with `unsafe-inline` and `data:` but no external domains",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "Origin Iframe Click Detection via userActivation": [
-      {
-        "episode": 124,
-        "title": "Cross-Origin Iframe Click Detection via userActivation",
-        "target": "Any page that can embed iframes",
-        "root_cause": "`navigator.userActivation.isActive` returns true when a user activation (click, keypress) is active, even if it originated in a cross-origin iframe",
-        "impact": "Enables reliable clickjacking with multiple clicks; clipboard data theft"
-      }
-    ],
-    "Out": [
-      {
-        "episode": 96,
-        "title": "Safari Cookie Attribute Comment-Out",
-        "target": "Safari browser",
-        "root_cause": "Safari's cookie parser treats `}` as a cookie-attribute terminator — everything after `}` in a Set-Cookie header is ignored",
-        "impact": ""
       }
     ],
     "PHP Filter Chain Tool": [
@@ -1563,15 +1294,6 @@
         "target": "TechCrunch API endpoint",
         "root_cause": "Caching server cached responses based on URL, including authenticated user data (tokens, PII)",
         "impact": "High; sensitive PII exposure"
-      }
-    ],
-    "Parameter Prompt Injection → GitHub Auto-Deploy": [
-      {
-        "episode": 175,
-        "title": "Wormable Q-Parameter Prompt Injection → GitHub Auto-Deploy",
-        "target": "AI app with GitHub connector and Q-parameter injection",
-        "root_cause": "GET parameter auto-injects into AI prompt as if from the user; AI has GitHub write access",
-        "impact": "Wormable AI exploit — automatic propagation through GitHub Pages CI/CD"
       }
     ],
     "Partial Auth Token Exposure via Wayback": [
@@ -1599,15 +1321,6 @@
         "target": "Java/Python web apps (CherryPy, web.py, aiohttp, etc.)",
         "root_cause": "Some servers parse `\"` as a cookie value delimiter — `x=\"value; with; semicolons\"` is valid. A cookie value starting with `\"` comments out all subsequent cookies until matching `\"`",
         "impact": ""
-      }
-    ],
-    "Party Supplier → Main Domain WordPress Takeover": [
-      {
-        "episode": 167,
-        "title": "Third-Party Supplier → Main Domain WordPress Takeover",
-        "target": "Large company with third-party content agency",
-        "root_cause": "Agency domain had Symfony debug mode enabled → PHP info leaked creds; same creds reused on main domain WordPress admin",
-        "impact": "Full content takeover of main domain; stored XSS"
       }
     ],
     "Path Traversal Auth Bypass": [
@@ -1646,6 +1359,15 @@
         "impact": ""
       }
     ],
+    "Pop-Under and Window Focus": [
+      {
+        "episode": 114,
+        "title": "Double-Click Jacking — Pop-Under and Window Focus",
+        "target": "Any page with a single-click authorization action",
+        "root_cause": "`window.focus()` rarely works; `window.open('', 'known-name')` focuses via shared browsing context. Pop-under + `moveTo` enables reliable double-click hijacking.",
+        "impact": "Depends on the single-click action — can be ATO"
+      }
+    ],
     "PostMessage XSS": [
       {
         "episode": 36,
@@ -1671,24 +1393,6 @@
         "target": "YouTube Content ID / CMS system",
         "root_cause": "Every uploaded video becomes a CMS asset named `auto-generated-asset-<videoId>`; CMS search API returns all assets including private/unlisted ones",
         "impact": "$12K — leaks ALL unlisted/private videos from YouTube partner channels"
-      }
-    ],
-    "Prod Upload → PostMessage → XSS → AI Home Automation Takeover": [
-      {
-        "episode": 168,
-        "title": "Pre-Prod Upload → PostMessage → XSS → AI Home Automation Takeover",
-        "target": "Home automation AI assistant",
-        "root_cause": "PostMessage listener had origin check `*.target.com` — any subdomain could inject prompts; file upload rendered as HTML on pre-production domain without `Content-Disposition: attachment`",
-        "impact": "Full home automation takeover — disarm alarms, unlock doors, open garage"
-      }
-    ],
-    "Proxy Auth Bypass (CVE-2025-54576)": [
-      {
-        "episode": 169,
-        "title": "OAuth2-Proxy Auth Bypass (CVE-2025-54576)",
-        "target": "OAuth2-Proxy (Kubernetes gateway)",
-        "root_cause": "Regex pattern for path-based auth bypass matched against the entire request URI including query parameters",
-        "impact": "Complete auth bypass for protected endpoints"
       }
     ],
     "RCE": [
@@ -1739,6 +1443,13 @@
         "title": "Electron RCE via React XSS → IPC — RCE",
         "target": "",
         "root_cause": "",
+        "impact": ""
+      },
+      {
+        "episode": 146,
+        "title": "IoT Tabletop Device Zero-Click SIP Exploit — RCE / ATO",
+        "target": "Major consumer IoT tabletop device (camera/mic/speaker)",
+        "root_cause": "SIP auth token generation accepted injection characters; FROM field could be overwritten via parameter injection in the token-generation HTTP request",
         "impact": ""
       }
     ],
@@ -1794,15 +1505,6 @@
         "impact": "Critical — Remote Code Execution (RCE)"
       }
     ],
-    "Redirect to XSS": [
-      {
-        "episode": 68,
-        "title": "HTMX HX-Redirect to XSS",
-        "target": "",
-        "root_cause": "`HX-Redirect` response header triggers `window.location.href = headerValue` without validation",
-        "impact": ""
-      }
-    ],
     "S3 Key Leak": [
       {
         "episode": 93,
@@ -1835,15 +1537,6 @@
         "target": "Salesforce Agent Force / CRM",
         "root_cause": "Lead forms allow arbitrary HTML injection in description field (32K limit); CSP had an expired domain in the allowlist",
         "impact": ""
-      }
-    ],
-    "Scoped Cookie Bypass with Uppercase": [
-      {
-        "episode": 171,
-        "title": "Path-Scoped Cookie Bypass with Uppercase",
-        "target": "App where a cookie must be absent for a vulnerability to trigger",
-        "root_cause": "Cookie `Path` attribute is case-sensitive; HTTP server treats paths case-insensitively",
-        "impact": "Authentication/cookie-dependent vulnerability bypass"
       }
     ],
     "Second-Order via Link Shortener + Embedded API Key": [
@@ -1882,42 +1575,6 @@
         "impact": "High (downgraded from Critical) — $3,200 vs published $8,000-15,000 range"
       }
     ],
-    "Side CSP-Locked XSS Near-Miss": [
-      {
-        "episode": 57,
-        "title": "Capital One Client-Side CSP-Locked XSS Near-Miss",
-        "target": "Capital One app — a URL parameter controlled the API host for fetch requests; CSP connect-src was `self` + `*.googleapis.com`",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "Side Path Traversal via Fetch — Tab in URL": [
-      {
-        "episode": 168,
-        "title": "Client-Side Path Traversal via Fetch — Tab in URL",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "Side Race Condition — OAuth Token Leak": [
-      {
-        "episode": 58,
-        "title": "Facebook Client-Side Race Condition — OAuth Token Leak",
-        "target": "apps.facebook.com — games iframe requesting OAuth token from parent",
-        "root_cause": "Origin validated at request time but not at response time; async HTTP request to server for OAuth token; client can race to change the targetOrigin via postMessage while request is in-flight",
-        "impact": ""
-      }
-    ],
-    "Signature Platform — Link Leak → Unauthorized Signing": [
-      {
-        "episode": 168,
-        "title": "E-Signature Platform — Link Leak → Unauthorized Signing",
-        "target": "E-signature platform",
-        "root_cause": "Creator of contract can access the recipient's signing link via a hidden API endpoint",
-        "impact": "Sign any contract as any recipient; complete integrity bypass"
-      }
-    ],
     "Silent Policy Change": [
       {
         "episode": 180,
@@ -1925,33 +1582,6 @@
         "target": "Large enterprise with 5+ year program history",
         "root_cause": "Program quietly reduced max bounty from $50K to $15K without announcement; hunters discovered via public reports",
         "impact": "Critical — $12,000 vs expected $25,000-50,000"
-      }
-    ],
-    "Site ETag Length Leak": [
-      {
-        "episode": 163,
-        "title": "Cross-Site ETag Length Leak",
-        "target": "Web app where response length varies based on secret data",
-        "root_cause": "ETag header reflects hex-encoded content length; a 1-byte difference in response size creates a 1-byte difference in ETag; browser sends ETag back as `If-None-Match` header; overflowing `If-None-Match` past the 16KB Node.js limit triggers a 431 error; Chrome replaces navigation history entry on 431 (no history length change)",
-        "impact": "Cross-site information leak; binary oracle for secret extraction"
-      }
-    ],
-    "Site ETag Length Leak — Data Exfiltration": [
-      {
-        "episode": 156,
-        "title": "Cross-Site ETag Length Leak — Data Exfiltration",
-        "target": "SECCON CTF challenge",
-        "root_cause": "ETag header length changes by 1 when response size crosses hex digit boundary (0xFF → 0x100 = 3→4 hex chars)",
-        "impact": ""
-      }
-    ],
-    "Site POST Without Content-Type": [
-      {
-        "episode": 103,
-        "title": "Cross-Site POST Without Content-Type",
-        "target": "Applications that check `if request.contentType != 'application/json'` for CSRF protection",
-        "root_cause": "`fetch()` with a Blob body sends NO Content-Type header. The conditional check `if request.contentType and request.contentType != 'application/json'` fails (first condition false) → CSRF check skipped",
-        "impact": ""
       }
     ],
     "Slack takeover via email-to-ticket": [
@@ -1979,15 +1609,6 @@
         "target": "Google Ad Exchange (critical advertising platform)",
         "root_cause": "Cookie-matching API dumped all account IDs unauth; staging environment (`adx-buyer`) pointed to prod database with no access controls",
         "impact": "Unauthorized access to critical advertising platform data"
-      }
-    ],
-    "Step Bypass — ATO": [
-      {
-        "episode": 134,
-        "title": "Account Takeover via Multi-Step Bypass — ATO",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
       }
     ],
     "Stored XSS": [
@@ -2042,13 +1663,22 @@
         "impact": ""
       }
     ],
-    "Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot": [
+    "Tab in URL": [
       {
-        "episode": 184,
-        "title": "Multi-Tenant SaaS — Mass Auth Bypass Discovered via 0xMoose Hackbot",
-        "target": "Global enterprise SaaS platform with hundreds of microservices",
-        "root_cause": "Inconsistent JWT signature validation across newly deployed internal microservice routing layers",
-        "impact": "Critical — $25,000 across multiple disclosures"
+        "episode": 168,
+        "title": "Client-Side Path Traversal via Fetch — Tab in URL",
+        "target": "",
+        "root_cause": "",
+        "impact": ""
+      }
+    ],
+    "Tesla)": [
+      {
+        "episode": 39,
+        "title": "Open Redirect -> OAuth Account Takeover (Evan Connolly — Tesla)",
+        "target": "Tesla Retail Tool (TRT)",
+        "root_cause": "External IDP (used by everyone) didn't require email verification; could register with ex-employee's email",
+        "impact": "Access to internal Tesla sites and data"
       }
     ],
     "TheHulk": [
@@ -2132,15 +1762,6 @@
         "impact": "Universal dispatcher bypass; access to `querybuilder`, internal JSPs, and arbitrary `/libs` resources"
       }
     ],
-    "Unsubscribe Header → SSRF": [
-      {
-        "episode": 160,
-        "title": "List-Unsubscribe Header → SSRF / XSS",
-        "target": "Email servers (Horde, Nextcloud)",
-        "root_cause": "`List-Unsubscribe` SMTP header supports HTTP and `mailto:` URIs; RFC allows arbitrary URI schemes; backend mail clients render these without sanitization",
-        "impact": ""
-      }
-    ],
     "Weak crypto": [
       {
         "episode": 32,
@@ -2148,6 +1769,15 @@
         "target": "Points.com console admin panel",
         "root_cause": "JWT signing key = literally the word `\"secret\"`",
         "impact": "Arbitrary session forging → full admin access to all rewards programs"
+      }
+    ],
+    "WebSocket Key Reset → Session Takeover": [
+      {
+        "episode": 6,
+        "title": "Shopify Point-of-Sale App — WebSocket Key Reset → Session Takeover",
+        "target": "Shopify POS app — customer/shop-owner pairing via QR code",
+        "root_cause": "In the message handler, if an unknown message type was received, it reset the rolling public key handshake. Attacker could send bogus message → key reset → inject own public key",
+        "impact": "Session/device takeover; triaged immediately once engineer saw the code reference"
       }
     ],
     "Wildcard Cache Deception": [
@@ -2187,13 +1817,6 @@
         "target": "",
         "root_cause": "",
         "impact": ""
-      },
-      {
-        "episode": 160,
-        "title": "List-Unsubscribe Header → SSRF / XSS",
-        "target": "Email servers (Horde, Nextcloud)",
-        "root_cause": "`List-Unsubscribe` SMTP header supports HTTP and `mailto:` URIs; RFC allows arbitrary URI schemes; backend mail clients render these without sanitization",
-        "impact": ""
       }
     ],
     "XSS (HTML injection)": [
@@ -2232,2692 +1855,13 @@
         "impact": "Config injection, parser differential exploitation"
       }
     ],
-    "Zip Empty Entry — Archive name reuse": [
-      {
-        "episode": 132,
-        "title": "7-Zip Empty Entry — Archive name reuse",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "a-Bug: Session Fixation ATO Chain": [
-      {
-        "episode": 111,
-        "title": "Bring-a-Bug: Session Fixation ATO Chain",
-        "target": "Main web application with login page",
-        "root_cause": "UUIDv4 linked to two cookies (one session, one `__Host-` prefixed). App detects cookie mismatch and tries to remove cookies by reading path from request URL and using it in `Set-Cookie` header.",
-        "impact": "Full account takeover"
-      }
-    ],
-    "auth RCE (CVE-2025-61757)": [
-      {
-        "episode": 150,
-        "title": "Oracle Identity Manager Pre-auth RCE (CVE-2025-61757)",
-        "target": "Oracle Identity Governance suite",
-        "root_cause": "Central security filter handling all routes had a regex bypass — developers allowed all `.wadle` files through; appending `;.wadle` to any route bypassed auth",
-        "impact": ""
-      }
-    ],
-    "day — Link Header Referrer Leak": [
-      {
-        "episode": 121,
-        "title": "Slonser's Chrome 0-day — Link Header Referrer Leak",
-        "target": "Any page that loads user-controlled image URLs",
-        "root_cause": "Chrome processes `Link` headers on subresource (image) responses. `Link: <url>; rel=prefetch; referrerpolicy=unsafe-url` — causes browser to prefetch `url` with the **full referrer** (including query parameters and hash)",
-        "impact": "One-click ATO (leak OAuth code) — saw 15+ ATO payouts in CTBB community"
-      }
-    ],
-    "encoding XSS": [
-      {
-        "episode": 176,
-        "title": "jQuery.text() / .textContent Re-encoding XSS",
-        "target": "Any app using DOMPurify then reading value back via `.text()` or `.textContent`",
-        "root_cause": "`.text()` / `.textContent` returns decoded HTML entities — if that value is then inserted into DOM, escaped payloads become live",
-        "impact": "XSS bypassing DOMPurify"
-      }
-    ],
-    "in-the-Middle for IoT Cloud Communication": [
-      {
-        "episode": 98,
-        "title": "Man-in-the-Middle for IoT Cloud Communication",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "of-Sale App — WebSocket Key Reset → Session Takeover": [
-      {
-        "episode": 6,
-        "title": "Shopify Point-of-Sale App — WebSocket Key Reset → Session Takeover",
-        "target": "Shopify POS app — customer/shop-owner pairing via QR code",
-        "root_cause": "In the message handler, if an unknown message type was received, it reset the rolling public key handshake. Attacker could send bogus message → key reset → inject own public key",
-        "impact": "Session/device takeover; triaged immediately once engineer saw the code reference"
-      }
-    ],
-    "offset Text)": [
-      {
-        "episode": 126,
-        "title": "Indirect Prompt Injection via Image (RGB-offset Text)",
-        "target": "AI app that processes user images",
-        "root_cause": "Text can be embedded in image with RGB values shifted by 1 — invisible to humans, visible to AI",
-        "impact": "$4,270 — prompt injection leading to malicious link generation"
-      }
-    ],
-    "origin — Login CSRF enabler": [
-      {
-        "episode": 128,
-        "title": "Credentialless iframe same-origin — Login CSRF enabler",
-        "target": "Sites using credentialless iframes.",
-        "root_cause": "Credentialless iframes are same-origin with regular iframes (opaque origin not implemented).",
-        "impact": "Enables login CSRF without logout."
-      }
-    ],
-    "style Password Theft — Credential theft": [
-      {
-        "episode": 33,
-        "title": "CAPTCHA-style Password Theft — Credential theft",
-        "target": "Password manager web app",
-        "root_cause": "The password manager displayed passwords in an iframe embeddable on any page; attacker could display but not read cross-origin",
-        "impact": "Plaintext password theft; critical"
-      }
-    ],
-    "test": [
-      {
-        "episode": 1,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 2,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 3,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 4,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 5,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 6,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 7,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 8,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 9,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 10,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 11,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 12,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 13,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 14,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 15,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 16,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 17,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 18,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 19,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 20,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 21,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 22,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 23,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 24,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 25,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 26,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 27,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 28,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 29,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 30,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 31,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 32,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 33,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 34,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 35,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 36,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 37,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 38,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 39,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 40,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 41,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 42,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 43,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 44,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 45,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 46,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 47,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 48,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 49,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 50,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 51,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 52,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 53,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 54,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 55,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 56,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 57,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 58,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 59,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 60,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 61,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 62,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 63,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 64,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 65,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 66,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 67,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 68,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 69,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 70,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 71,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 72,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 73,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 74,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 75,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 76,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 77,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 78,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 79,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 80,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 81,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 82,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 83,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 84,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 85,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 86,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 87,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 88,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 89,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 90,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 91,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 92,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 93,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 94,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 95,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 96,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 97,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 98,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 99,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 100,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 101,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 102,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 103,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 104,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 105,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 106,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 107,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 108,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 109,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 110,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 111,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 112,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 113,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 114,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 115,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 116,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 117,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 118,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 119,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 120,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 121,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 122,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 123,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 124,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 125,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 126,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 127,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 128,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 129,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 130,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 131,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 132,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 133,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 134,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 135,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 136,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 137,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 138,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 139,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 140,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 141,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 142,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 143,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 144,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 145,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 146,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 147,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 148,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 149,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 150,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 151,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 152,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 153,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 154,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 155,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 156,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 157,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 158,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 159,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 160,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 161,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 162,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
+    "getattr Payload": [
       {
         "episode": 163,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 164,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 165,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 166,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 167,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 168,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 169,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 170,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 171,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 172,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 173,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 174,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 175,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 176,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 177,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 178,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 179,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 180,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 181,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 182,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 183,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 184,
-        "title": "10. Self-test",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "to-Cloud Impersonation — Device Takeover": [
-      {
-        "episode": 98,
-        "title": "IoT Device-to-Cloud Impersonation — Device Takeover",
-        "target": "Multiple IoT consumer devices",
-        "root_cause": "Device identity uses serial number + MAC address. MAC is 6 bytes (3 OUI, 3 brute-forceable). Serial numbers visible on eBay product photos, YouTube unboxings. Some devices have poor randomized identifiers.",
-        "impact": "Full device takeover — control any device from outside the local network, bypass firewalls"
-      }
-    ],
-    "to-Text-Fragment Cross-Site Search Oracle": [
-      {
-        "episode": 58,
-        "title": "Scroll-to-Text-Fragment Cross-Site Search Oracle",
-        "target": "Any Chrome-browsed page",
-        "root_cause": "",
-        "impact": ""
-      }
-    ],
-    "world application": [
-      {
-        "episode": 1,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 2,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 3,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 4,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 5,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 6,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 7,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 8,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 9,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 10,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 11,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 12,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 13,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 14,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 15,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 16,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 17,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 18,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 19,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 20,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 21,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 22,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 23,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 24,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 25,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 26,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 27,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 28,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 29,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 30,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 31,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 32,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 33,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 34,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 35,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 36,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 37,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 38,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 39,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 40,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 41,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 42,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 43,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 44,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 45,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 46,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 47,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 48,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 49,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 50,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 51,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 52,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 53,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 54,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 55,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 56,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 57,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 58,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 59,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 60,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 61,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 62,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 63,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 64,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 65,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 66,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 67,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 68,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 69,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 70,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 71,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 72,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 73,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 74,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 75,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 76,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 77,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 78,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 79,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 80,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 81,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 82,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 83,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 84,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 85,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 86,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 87,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 88,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 89,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 90,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 91,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 92,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 93,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 94,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 95,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 96,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 97,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 98,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 99,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 100,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 101,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 102,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 103,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 104,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 105,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 106,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 107,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 108,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 109,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 110,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 111,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 112,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 113,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 114,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 115,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 116,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 117,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 118,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 119,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 120,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 121,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 122,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 123,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 124,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 125,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 126,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 127,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 128,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 129,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 130,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 131,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 132,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 133,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 134,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 135,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 136,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 137,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 138,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 139,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 140,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 141,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 142,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 143,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 144,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 145,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 146,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 147,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 148,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 149,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 150,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 151,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 152,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 153,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 154,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 155,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 156,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 157,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 158,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 159,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 160,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 161,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 162,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 163,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 164,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 165,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 166,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 167,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 168,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 169,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 170,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 171,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 172,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 173,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 174,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 175,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 176,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 177,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 178,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 179,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 180,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 181,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 182,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 183,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
-      },
-      {
-        "episode": 184,
-        "title": "7. Real-world application",
-        "target": "",
-        "root_cause": "",
-        "impact": ""
+        "title": "Error-Based SSTI — getattr Payload",
+        "target": "Python template engines (Jinja2, etc.)",
+        "root_cause": "`getattr(obj, controlled_string)` returns the attribute value; if it's non-callable, error message includes the attribute name (which is the exfiltrated data)",
+        "impact": "Full data exfiltration via error messages (when verbose errors enabled)"
       }
     ],
     "write": [
@@ -4927,15 +1871,6 @@
         "target": "Applications using JDBC connectors",
         "root_cause": "If attacker controls query string parameters in the JDBC URL, certain connectors allow arbitrary file operations via logging or other features",
         "impact": "Arbitrary file read/write on the server"
-      }
-    ],
-    "www-form-urlencoded CSRF Bypass": [
-      {
-        "episode": 4,
-        "title": "JSON → x-www-form-urlencoded CSRF Bypass",
-        "target": "Web application expecting JSON but accepting form-encoded",
-        "root_cause": "Application accepts x-www-form-urlencoded data but also parses nested objects using square bracket notation",
-        "impact": ""
       }
     ]
   },
@@ -7479,6 +4414,336 @@
       "episode": 184,
       "name": "Agentic Test Environment Provisioning",
       "description": "Automatically spinning up isolated containerized test environments modeled after target web stacks for safe exploit verification"
+    },
+    {
+      "episode": 185,
+      "name": "Bug Bounty Village",
+      "description": "A DEF CON community space organized around bug bounty talks, hands-on activities, a CTF, and opportunities for researchers to connect."
+    },
+    {
+      "episode": 185,
+      "name": "AI-assisted research governance",
+      "description": "The oversight practices needed when AI agents assist security research, including authorization awareness, scope limits, and human accountability."
+    },
+    {
+      "episode": 185,
+      "name": "Report quality and triage",
+      "description": "The practice of communicating findings with clear reproduction steps, evidence, and impact so reviewers can assess them effectively."
+    },
+    {
+      "episode": 185,
+      "name": "Community-led security learning",
+      "description": "A model of learning that brings researchers, platforms, and program representatives together for shared discussion and practical feedback."
+    },
+    {
+      "episode": 186,
+      "name": "Critique and review",
+      "description": "A quality-control stage that challenges initial output before teams rely on it."
+    },
+    {
+      "episode": 186,
+      "name": "Bug bounty severity and reward structure",
+      "description": "The program rules that determine which vulnerability severities are in scope, how reports are classified, and how findings are compensated."
+    },
+    {
+      "episode": 186,
+      "name": "Gated VIP bounty access",
+      "description": "A program model that offers higher rewards or other benefits to selected researchers while keeping a public tier available."
+    },
+    {
+      "episode": 186,
+      "name": "AI-assisted security research",
+      "description": "The use of AI models and agent-based tools to help researchers analyze software and develop hypotheses, subject to human validation and authorized scope."
+    },
+    {
+      "episode": 187,
+      "name": "AI-assisted security research",
+      "description": "Using AI tools to broaden or deepen security investigations, while retaining human responsibility for assessing the results."
+    },
+    {
+      "episode": 187,
+      "name": "Duplicate findings",
+      "description": "Overlapping discoveries that become more likely when researchers use similar tools and approaches on the same scope."
+    },
+    {
+      "episode": 187,
+      "name": "Human validation",
+      "description": "Reviewing a candidate finding to confirm its behavior, security relevance, and supporting evidence before reporting."
+    },
+    {
+      "episode": 187,
+      "name": "Frontier-class vulnerabilities",
+      "description": "The episode’s term for particularly consequential security issues that researchers are encouraged to pursue."
+    },
+    {
+      "episode": 188,
+      "name": "Threat modeling",
+      "description": "Assessing a system’s intended use, likely risks, and organizational assumptions to interpret security findings in context."
+    },
+    {
+      "episode": 188,
+      "name": "AI-assisted security research",
+      "description": "Using AI tools to support research tasks while retaining human oversight to assess relevance, correctness, and quality."
+    },
+    {
+      "episode": 188,
+      "name": "Device-to-cloud security",
+      "description": "The security of the connections and authorization boundaries between physical devices and the cloud services they use."
+    },
+    {
+      "episode": 188,
+      "name": "Vulnerability-report quality",
+      "description": "Presenting a finding clearly and responsibly, with enough contextual evidence to support impact assessment without overstating its consequences."
+    },
+    {
+      "episode": 189,
+      "name": "Researcher-centered platform design",
+      "description": "A product and community approach that treats researchers as essential users whose feedback and experience shape platform priorities."
+    },
+    {
+      "episode": 189,
+      "name": "Feedback accountability",
+      "description": "A structured process for tracking researcher and customer requests, setting expectations, and communicating what action was taken."
+    },
+    {
+      "episode": 189,
+      "name": "AI and report-data governance",
+      "description": "Transparent policies and user choices governing how researcher submissions and their derived information may inform AI-related products."
+    },
+    {
+      "episode": 189,
+      "name": "Triage scalability",
+      "description": "The challenge of consistently assessing reports as volume grows, while maintaining clear communication and reducing avoidable back-and-forth."
+    },
+    {
+      "episode": 190,
+      "name": "Impact versus volume",
+      "description": "The tradeoff between pursuing a small number of consequential findings and producing many smaller reports."
+    },
+    {
+      "episode": 190,
+      "name": "AI-assisted research validation",
+      "description": "The hosts’ discussion of using AI tools in security research while checking findings and managing false positives."
+    },
+    {
+      "episode": 190,
+      "name": "Bounty-program fit",
+      "description": "Selecting programs with attention to response speed, research suitability, and how related products may share technical patterns."
+    },
+    {
+      "episode": 190,
+      "name": "Focused work",
+      "description": "Preserving uninterrupted time as a way to make research more sustainable alongside family and other responsibilities."
+    },
+    {
+      "episode": 191,
+      "name": "Cache isolation",
+      "description": "A security property ensuring cached content or responses cannot unintentionally reveal information across users or contexts."
+    },
+    {
+      "episode": 191,
+      "name": "AI-agent privacy boundary",
+      "description": "The limits on what sensitive data an application’s automated assistant can access and how its actions may expose that data."
+    },
+    {
+      "episode": 191,
+      "name": "Local-model resilience",
+      "description": "Using locally run AI as a fallback for service outages, subscription limits, or data-handling requirements."
+    },
+    {
+      "episode": 191,
+      "name": "Model task allocation",
+      "description": "Choosing bounded support tasks for different models while retaining human review and avoiding assumptions that delegated work is complete."
+    },
+    {
+      "episode": 192,
+      "name": "Reproducible evidence",
+      "description": "Evidence that another reviewer can independently assess and connect to the behavior described in a report."
+    },
+    {
+      "episode": 192,
+      "name": "Triage clarity",
+      "description": "The ability to understand the affected actors, system context, observed behavior, and claimed impact without reconstructing the report."
+    },
+    {
+      "episode": 193,
+      "name": "Cross-site leaks (XS-Leaks)",
+      "description": "Information inference through browser-observable differences, even when an attacker cannot directly read a cross-origin response."
+    },
+    {
+      "episode": 193,
+      "name": "Visited-link privacy",
+      "description": "Browser history and link styling can expose state that websites may not intend to disclose; partitioning and careful browser behavior reduce this risk."
+    },
+    {
+      "episode": 193,
+      "name": "Opaque Response Blocking (ORB)",
+      "description": "A browser mechanism that blocks certain cross-origin responses from being used in contexts such as scripts; its interactions with service workers can produce surprising outcomes."
+    },
+    {
+      "episode": 193,
+      "name": "Service-worker request mediation",
+      "description": "Service workers can intercept and forward requests, potentially changing request metadata in ways that affect downstream browser handling."
+    },
+    {
+      "episode": 194,
+      "name": "Jev",
+      "description": "A compact model discussed as a fast, low-cost selector among predefined choices, with potential uses in ranking and classification."
+    },
+    {
+      "episode": 194,
+      "name": "Cyber Verification Program",
+      "description": "A program discussed as providing trusted access tiers to cyber defenders for certain AI models."
+    },
+    {
+      "episode": 194,
+      "name": "Model harness",
+      "description": "The surrounding prompts, tools, and workflow that shape how an AI model performs a research task."
+    },
+    {
+      "episode": 194,
+      "name": "Bug-bounty scope and incentives",
+      "description": "The rules defining eligible assets and rewarded findings, which influence researcher behavior and program trust."
+    },
+    {
+      "episode": 195,
+      "name": "Impact escalation",
+      "description": "Demonstrating that a known issue has greater consequences than initially assessed; the hosts discuss whether this contribution should receive distinct recognition."
+    },
+    {
+      "episode": 195,
+      "name": "Duplicate pressure",
+      "description": "The increase in overlapping reports when researchers use similar scanners, AI tools, or discovery approaches."
+    },
+    {
+      "episode": 195,
+      "name": "Contextual threat modeling",
+      "description": "Assessing security significance in light of a company’s systems, environment, and business or sector-specific expectations."
+    },
+    {
+      "episode": 195,
+      "name": "Researcher-AI collaboration",
+      "description": "Using AI to assist with selected analysis while relying on human knowledge to guide questions, interpret results, and judge relevance."
+    },
+    {
+      "episode": 196,
+      "name": "Local inference",
+      "description": "Running a model on locally controlled hardware, discussed as a way to reduce dependence on hosted-service limits and address some client data constraints."
+    },
+    {
+      "episode": 196,
+      "name": "Memory harness",
+      "description": "A system for compacting and retrieving prior session context; the hosts discuss its potential value and the need to test whether long-lived sessions remain reliable."
+    },
+    {
+      "episode": 196,
+      "name": "Verification of AI-assisted work",
+      "description": "Independent review of an AI system’s claimed activity against actual records, since apparent progress may not establish that meaningful assessment occurred."
+    },
+    {
+      "episode": 196,
+      "name": "Pentest delivery economics",
+      "description": "The relationship between assessment fees, time saved through AI assistance, reporting effort, and potential future price competition."
+    },
+    {
+      "episode": 197,
+      "name": "Harness engineering",
+      "description": "The design of an agent workflow, including its prompts, tools, skills, memory, and task boundaries, which can shape results beyond the underlying model."
+    },
+    {
+      "episode": 197,
+      "name": "Programmatic verifier",
+      "description": "A test or rule that checks whether an agent completed required validation steps or supplied evidence meeting defined criteria."
+    },
+    {
+      "episode": 197,
+      "name": "Reflection or judge agent",
+      "description": "An independent model-based reviewer that assesses a proposed finding and helps distinguish a lead from a sufficiently supported report."
+    },
+    {
+      "episode": 197,
+      "name": "Model diversity",
+      "description": "Using different models for separate tasks or parallel reviews to benefit from their differing strengths and investigative approaches."
+    },
+    {
+      "episode": 198,
+      "name": "Sandbox isolation",
+      "description": "The separation of untrusted or user-triggered execution from credentials, customer data, and other services; the hosts' anecdotes show why configuration matters as much as the sandbox label."
+    },
+    {
+      "episode": 198,
+      "name": "Cross-tenant authorization",
+      "description": "Access controls that ensure one customer or workspace cannot affect another; agent registration and shared-data stories illustrate the need to enforce tenant boundaries throughout a service."
+    },
+    {
+      "episode": 198,
+      "name": "Sensitive-data exposure",
+      "description": "Unauthorized access to personal, medical, or operational information, with potential consequences that extend beyond technical severity."
+    },
+    {
+      "episode": 198,
+      "name": "Privilege boundaries in job systems",
+      "description": "Separation between customer-controlled work and the services that schedule or dispatch it, particularly when those services process source code or queued tasks."
+    },
+    {
+      "episode": 199,
+      "name": "Hardware live-hacking event",
+      "description": "A time-bounded security research event focused on examining hardware products and their associated software and services."
+    },
+    {
+      "episode": 199,
+      "name": "Firmware analysis",
+      "description": "Examining device software to understand how a product operates and where its security-relevant components interact."
+    },
+    {
+      "episode": 199,
+      "name": "Device-to-cloud trust",
+      "description": "The relationships through which a device identifies itself and accesses cloud services, including the security implications of shared credentials or permissions."
+    },
+    {
+      "episode": 199,
+      "name": "AI-assisted security research",
+      "description": "Using AI to help interpret unfamiliar code or protocols, with researchers responsible for checking conclusions and assessing impact."
+    },
+    {
+      "episode": 200,
+      "name": "Shared responsibility model",
+      "description": "The division of security responsibilities between a cloud provider and the customer using its services."
+    },
+    {
+      "episode": 200,
+      "name": "Data plane and control plane",
+      "description": "The data plane processes customer workloads; the control plane provisions, manages, and records cloud resources."
+    },
+    {
+      "episode": 200,
+      "name": "Confused deputy",
+      "description": "A trust-boundary failure in which a service with greater authority performs an action for a less-privileged user without adequate permission checks."
+    },
+    {
+      "episode": 200,
+      "name": "Managed identity",
+      "description": "A cloud-provided identity used by a workload to access other services; its permissions should be narrowly scoped."
+    },
+    {
+      "episode": 201,
+      "name": "Cross-origin browser behavior",
+      "description": "Unexpected browser properties or behaviors that can undermine assumptions about boundaries between origins."
+    },
+    {
+      "episode": 201,
+      "name": "Shared fuzzing",
+      "description": "Collaborative testing in which researchers define cases and compare observed behavior across browsers."
+    },
+    {
+      "episode": 201,
+      "name": "Sanitizer-parser discrepancy",
+      "description": "A difference between how a sanitizer interprets content and how a browser ultimately parses or renders it."
+    },
+    {
+      "episode": 201,
+      "name": "CSS injection",
+      "description": "Untrusted input affecting page styling, which can alter presentation or user interaction even without conventional script execution."
     }
   ],
   "techniques_by_name": {
@@ -7506,6 +4771,9 @@
     "AI Execution Sandbox Security": [
       182
     ],
+    "AI and report-data governance": [
+      189
+    ],
     "AI business logic flaws": [
       140
     ],
@@ -7517,6 +4785,21 @@
     ],
     "AI plugin takeover": [
       24
+    ],
+    "AI-agent privacy boundary": [
+      191
+    ],
+    "AI-assisted research governance": [
+      185
+    ],
+    "AI-assisted research validation": [
+      190
+    ],
+    "AI-assisted security research": [
+      186,
+      187,
+      188,
+      199
     ],
     "AI-first-party auth abstraction": [
       178
@@ -7653,8 +4936,20 @@
     "Bounty range transparency scoring": [
       180
     ],
+    "Bounty-program fit": [
+      190
+    ],
     "Browser Sanitizer API Bypass": [
       183
+    ],
+    "Bug Bounty Village": [
+      185
+    ],
+    "Bug bounty severity and reward structure": [
+      186
+    ],
+    "Bug-bounty scope and incentives": [
+      194
     ],
     "Burp Active Scan custom profile": [
       15
@@ -7716,6 +5011,9 @@
     "CSS exfiltration": [
       8
     ],
+    "CSS injection": [
+      201
+    ],
     "CSS injection in extension pages": [
       95
     ],
@@ -7739,6 +5037,9 @@
     ],
     "Cache API for XSS persistence": [
       96
+    ],
+    "Cache isolation": [
+      191
     ],
     "Cache path normalization discrepancy": [
       113
@@ -7806,6 +5107,9 @@
     "Cloud egress differential testing": [
       127
     ],
+    "Community-led security learning": [
+      185
+    ],
     "Conditional corruption": [
       120
     ],
@@ -7821,6 +5125,9 @@
     "Config-driven recon": [
       19
     ],
+    "Confused deputy": [
+      200
+    ],
     "Content discovery with Chat GPT": [
       32
     ],
@@ -7829,6 +5136,9 @@
     ],
     "Content-Disposition: attachment bypass via directory": [
       168
+    ],
+    "Contextual threat modeling": [
+      195
     ],
     "Control-click + hidden UI": [
       171
@@ -7881,8 +5191,20 @@
     "Credit card/Banking accounts as attack surface": [
       53
     ],
+    "Critique and review": [
+      186
+    ],
     "Cross-language system prompt extraction": [
       101
+    ],
+    "Cross-origin browser behavior": [
+      201
+    ],
+    "Cross-site leaks (XS-Leaks)": [
+      193
+    ],
+    "Cross-tenant authorization": [
+      198
     ],
     "Crypto protocol replication in same language": [
       2
@@ -7895,6 +5217,9 @@
     ],
     "Custom sanitizer fuzzing": [
       172
+    ],
+    "Cyber Verification Program": [
+      194
     ],
     "DLL hijacking for E2E RCE": [
       142
@@ -7920,6 +5245,9 @@
     "Data flow tracing": [
       172
     ],
+    "Data plane and control plane": [
+      200
+    ],
     "Decompilation + debugging": [
       19
     ],
@@ -7931,6 +5259,12 @@
     ],
     "Device code flow as universal redirect": [
       110
+    ],
+    "Device-to-cloud security": [
+      188
+    ],
+    "Device-to-cloud trust": [
+      199
     ],
     "Directory brute force on JS directories": [
       21
@@ -7971,8 +5305,14 @@
     "Double-slash open redirect": [
       44
     ],
+    "Duplicate findings": [
+      187
+    ],
     "Duplicate header smuggling": [
       163
+    ],
+    "Duplicate pressure": [
+      195
     ],
     "Dynamic function calling": [
       172
@@ -8016,17 +5356,26 @@
     "Feature flag abuse": [
       178
     ],
+    "Feedback accountability": [
+      189
+    ],
     "Fetch shimming for XSS": [
       36
     ],
     "FetchLater persistence": [
       128
     ],
+    "Firmware analysis": [
+      199
+    ],
     "Firmware decryption via transition version": [
       98
     ],
     "Flat file data store": [
       15
+    ],
+    "Focused work": [
+      190
     ],
     "Force re-login for CSRF": [
       28
@@ -8058,8 +5407,14 @@
     "Friend-as-manager motivation": [
       179
     ],
+    "Frontier-class vulnerabilities": [
+      187
+    ],
     "GSLB address alias": [
       177
+    ],
+    "Gated VIP bounty access": [
+      186
     ],
     "GetSchemas": [
       6
@@ -8109,6 +5464,12 @@
     "HackenProof's submission fee model": [
       173
     ],
+    "Hardware live-hacking event": [
+      199
+    ],
+    "Harness engineering": [
+      197
+    ],
     "Hash-based request signing bypass": [
       10
     ],
@@ -8139,6 +5500,9 @@
     "Human tokens / mouth tokens": [
       170
     ],
+    "Human validation": [
+      187
+    ],
     "Hunt forgotten knowledge": [
       139
     ],
@@ -8150,6 +5514,12 @@
     ],
     "Iframe sandwich": [
       144
+    ],
+    "Impact escalation": [
+      195
+    ],
+    "Impact versus volume": [
+      190
     ],
     "Ingress endpoint cycling": [
       21
@@ -8211,6 +5581,9 @@
     "Java class reuse for crypto reversing": [
       1
     ],
+    "Jev": [
+      194
+    ],
     "Kaido + Claude integration": [
       165
     ],
@@ -8235,6 +5608,12 @@
     "Link header referrer leak": [
       121
     ],
+    "Local inference": [
+      196
+    ],
+    "Local-model resilience": [
+      191
+    ],
     "MD5 collision for resource dedup bypass": [
       5
     ],
@@ -8247,8 +5626,14 @@
     "Machine-readable PoC generation": [
       181
     ],
+    "Managed identity": [
+      200
+    ],
     "Mandork": [
       128
+    ],
+    "Memory harness": [
+      196
     ],
     "Meta referrer tag bypass": [
       4
@@ -8267,6 +5652,15 @@
     ],
     "Model Context Protocol (MCP) Security Tooling": [
       182
+    ],
+    "Model diversity": [
+      197
+    ],
+    "Model harness": [
+      194
+    ],
+    "Model task allocation": [
+      191
     ],
     "Mojibake": [
       135
@@ -8361,6 +5755,9 @@
     "Old SSRF regression testing": [
       164
     ],
+    "Opaque Response Blocking (ORB)": [
+      193
+    ],
     "Open redirect bypasses": [
       7
     ],
@@ -8410,6 +5807,9 @@
     "Pause-based desync": [
       139
     ],
+    "Pentest delivery economics": [
+      196
+    ],
     "Perimeter injection": [
       39
     ],
@@ -8446,6 +5846,9 @@
     "Pre-request the tool's normal action": [
       123
     ],
+    "Privilege boundaries in job systems": [
+      198
+    ],
     "Probability formula": [
       126
     ],
@@ -8466,6 +5869,9 @@
     ],
     "Program-specific nucleus templates": [
       49
+    ],
+    "Programmatic verifier": [
+      197
     ],
     "Project Wycheproof": [
       7
@@ -8548,6 +5954,9 @@
     "Reflected XSS via browser extension": [
       42
     ],
+    "Reflection or judge agent": [
+      197
+    ],
     "Regex debug with `monitor()`": [
       141
     ],
@@ -8557,8 +5966,20 @@
     "Regression testing against old AI exfiltration bugs": [
       170
     ],
+    "Report quality and triage": [
+      185
+    ],
     "Report splitting strategy": [
       177
+    ],
+    "Reproducible evidence": [
+      192
+    ],
+    "Researcher-AI collaboration": [
+      195
+    ],
+    "Researcher-centered platform design": [
+      189
     ],
     "Resource Override": [
       5
@@ -8608,6 +6029,12 @@
     "SameSite Lax+POST timer reset": [
       3
     ],
+    "Sandbox isolation": [
+      198
+    ],
+    "Sanitizer-parser discrepancy": [
+      201
+    ],
     "Scope triage": [
       125
     ],
@@ -8632,8 +6059,14 @@
     "Sensitive acronym": [
       12
     ],
+    "Sensitive-data exposure": [
+      198
+    ],
     "Service worker + CRLF injection": [
       45
+    ],
+    "Service-worker request mediation": [
+      193
     ],
     "ServiceNow widget enumeration": [
       108
@@ -8646,6 +6079,12 @@
     ],
     "Shared context store (vector DB + graph)": [
       181
+    ],
+    "Shared fuzzing": [
+      201
+    ],
+    "Shared responsibility model": [
+      200
     ],
     "Show-and-tell trading": [
       125
@@ -8758,6 +6197,9 @@
     "Third-party trust chain": [
       107
     ],
+    "Threat modeling": [
+      188
+    ],
     "Token Recipient Confusion": [
       46
     ],
@@ -8772,6 +6214,12 @@
     ],
     "Tree-of-thought prompting": [
       24
+    ],
+    "Triage clarity": [
+      192
+    ],
+    "Triage scalability": [
+      189
     ],
     "URI parser truncation": [
       130
@@ -8827,6 +6275,9 @@
     "Validator agent with SSH resume": [
       175
     ],
+    "Verification of AI-assisted work": [
+      196
+    ],
     "Vibe-coded app security": [
       133
     ],
@@ -8841,6 +6292,12 @@
     ],
     "Virtual-host brute force": [
       21
+    ],
+    "Visited-link privacy": [
+      193
+    ],
+    "Vulnerability-report quality": [
+      188
     ],
     "WAF bypass by context confusion": [
       135
@@ -9503,13 +6960,20 @@
     {
       "name": "Ads Dawson",
       "episodes": [
-        184
+        184,
+        188
       ]
     },
     {
       "name": "Alex Chapman",
       "episodes": [
         31
+      ]
+    },
+    {
+      "name": "Ariel Garcia",
+      "episodes": [
+        185
       ]
     },
     {
@@ -9555,6 +7019,24 @@
       ]
     },
     {
+      "name": "Frans Rosen",
+      "episodes": [
+        195
+      ]
+    },
+    {
+      "name": "Gareth Heyes",
+      "episodes": [
+        201
+      ]
+    },
+    {
+      "name": "Harley Kimball",
+      "episodes": [
+        185
+      ]
+    },
+    {
       "name": "Inti De Ceukelaire",
       "episodes": [
         33
@@ -9569,13 +7051,22 @@
     {
       "name": "Jason Haddix",
       "episodes": [
-        63
+        63,
+        102
       ]
     },
     {
       "name": "Joel Margolis",
       "episodes": [
-        59
+        59,
+        60,
+        62,
+        64,
+        66,
+        67,
+        70,
+        72,
+        189
       ]
     },
     {
@@ -9603,6 +7094,12 @@
       ]
     },
     {
+      "name": "Jorian Woltjer",
+      "episodes": [
+        193
+      ]
+    },
+    {
       "name": "Joseph Thacker",
       "episodes": [
         184
@@ -9611,7 +7108,14 @@
     {
       "name": "Justin Gardner",
       "episodes": [
-        59
+        59,
+        60,
+        62,
+        64,
+        66,
+        67,
+        70,
+        72
       ]
     },
     {
@@ -9629,13 +7133,21 @@
     {
       "name": "MatanBer",
       "episodes": [
-        95
+        95,
+        96
       ]
     },
     {
       "name": "Matthias (security researcher)",
       "episodes": [
         68
+      ]
+    },
+    {
+      "name": "Nick Copi",
+      "episodes": [
+        188,
+        200
       ]
     },
     {
@@ -9678,6 +7190,12 @@
       "name": "Shubs",
       "episodes": [
         30
+      ]
+    },
+    {
+      "name": "Vitor Falcão",
+      "episodes": [
+        188
       ]
     },
     {
@@ -10090,9 +7608,9 @@
       "text": "*\"If you have an LFD, ask for permission to read source code\"* — **it might bump your report to a crit\" — Justin**"
     }
   ],
-  "total_episodes": 184,
-  "total_bugs": 2352,
-  "total_techniques": 508,
+  "total_episodes": 201,
+  "total_bugs": 327,
+  "total_techniques": 574,
   "total_tools": 488,
-  "total_guests": 32
+  "total_guests": 39
 }

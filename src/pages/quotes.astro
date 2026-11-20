@@ -17,21 +17,19 @@ const quotes = allSuggestions
   .sort((a: any, b: any) => b.episode - a.episode);
 ---
 
-<DocLayout title="Good Quotes — CTBBP">
+<DocLayout title="Quotes and advice" section="quotes">
   <div class="quotes-page">
-    <header class="quotes-header">
-      <div class="quotes-label">Good Quotes</div>
+    <header class="page-heading">
+      <p class="page-kicker">QUOTES &amp; ADVICE</p>
       <h1>Wisdom from the Podcast</h1>
-      <p class="quotes-sub">
-        Notable quotes, advice, and insights from hackers and researchers across all 179 episodes.
-      </p>
-      <div class="quotes-count">{quotes.length} quotes from 179 episodes</div>
+      <p>Advice and observations collected in the episode notes. Verify exact wording against the original recordings.</p>
     </header>
+    <p class="quotes-count">{quotes.length} entries from {new Set(quotes.map(q => q.episode)).size} episodes</p>
 
     <div class="quotes-list">
       {quotes.map((q: any) => (
         <a href={`/blog/${q.episode}`} class="quote-item">
-          <div class="quote-mark">"</div>
+          <div class="quote-mark" aria-hidden="true">“</div>
           <div class="quote-content">
             <p class="quote-text">{q.text}</p>
             <div class="quote-meta">
@@ -47,40 +45,11 @@ const quotes = allSuggestions
 
 <style>
   .quotes-page {
-    max-width: 720px;
-  }
-
-  .quotes-header {
-    margin-bottom: 40px;
-  }
-
-  .quotes-label {
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-
-  .quotes-header h1 {
-    font-family: var(--font-body);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--text);
-    margin: 0 0 12px;
-    line-height: 1.2;
-  }
-
-  .quotes-sub {
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin: 0 0 12px;
+    max-width: 56rem;
   }
 
   .quotes-count {
-    font-size: 13px;
+    font-size: var(--text-xs);
     color: var(--text-tertiary);
     font-family: var(--font-mono);
   }
@@ -107,6 +76,7 @@ const quotes = allSuggestions
   .quote-item:hover {
     background: var(--bg-hover, rgba(0, 0, 0, 0.02));
   }
+  .quote-item:focus-visible { outline-offset: -3px; }
 
   .quote-mark {
     font-family: Georgia, serif;
@@ -125,18 +95,18 @@ const quotes = allSuggestions
   }
 
   .quote-text {
-    font-size: 15px;
+    font-size: var(--text-base);
     line-height: 1.65;
     color: var(--text);
     margin: 0 0 10px;
-    font-style: italic;
+    overflow-wrap: anywhere;
   }
 
   .quote-meta {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 12px;
+    font-size: var(--text-xs);
   }
 
   .quote-ep {
@@ -163,8 +133,5 @@ const quotes = allSuggestions
       width: 24px;
     }
 
-    .quote-text {
-      font-size: 14px;
-    }
   }
 </style>
